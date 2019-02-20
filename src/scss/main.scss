@@ -1,0 +1,14 @@
+@import '_reset.scss';
+@import '_fonts.scss';
+@import '_variables.scss';
+@import '_animations.scss';
+@import '_structure.scss';
+@import '_theme.scss';
+
+@media  (max-width: 940px) and (min-width: 100px){
+  @import '_940_mobile.scss';
+}
+
+@media  (max-width: 580px){
+  @import '_580_mobile.scss';
+}
