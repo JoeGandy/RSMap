@@ -1,19 +1,8 @@
 import React, {Component} from 'react'
 import MapMarker from "./MapMarker";
 import L from 'leaflet';
-import {withPrefix} from 'gatsby'
+import * as MapIcons from "../logic/MapIcons";
 
-const iconPerson = new L.Icon({
-    iconUrl: require('../../static/icons/agility_shortcut.png'),
-    iconRetinaUrl: require('../../static/icons/agility_shortcut.png'),
-    iconAnchor: new L.Point(30,30),
-    popupAnchor: new L.Point(0,-30),
-    shadowUrl: null,
-    shadowSize: null,
-    shadowAnchor: null,
-    iconSize: new L.Point(60,60),
-    className: 'leaflet-div-icon'
-});
 
 export default class MapMarkers extends Component {
     constructor(props) {
@@ -23,7 +12,10 @@ export default class MapMarkers extends Component {
 
     render() {
         return (
-            <MapMarker position={{lat:76.90817663339624,lng:312.0227050781250}} icon={iconPerson} />
+            <>
+                <MapMarker position={{lat: 76.90817663339624, lng: 312.0227050781250}} icon={MapIcons.iconAgility}/>
+                <MapMarker position={{lat: 77.20226173611962, lng: 319.01550292968756}} icon={MapIcons.iconAgility}/>
+            </>
         )
     }
 }

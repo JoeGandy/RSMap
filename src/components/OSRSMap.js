@@ -33,6 +33,7 @@ export default class OSRSMap extends Component {
                 zoom={6}
                 center={center}
                 maxZoom={8}
+                minZoom={4}
                 onClick={this.handleClick}
             >
                 <Pane name="cyan-rectangle" style={{zIndex: 500}} leaflet={'test'}>

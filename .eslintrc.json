@@ -1,0 +1,17 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "16.0"
+    }
+  },
+  "plugins": [
+    "react"
+  ]
+}
