@@ -14,10 +14,19 @@ L.Icon.Default.mergeOptions({
 });
 
 export default class OSRSMap extends Component {
+
     constructor(props) {
         super(props);
+        this.state = {
+            zoomLevel: 6
+        };
 
         this.handleClick = this.handleClick.bind(this);
+        this.handleZoomEnd = this.handleZoomEnd.bind(this);
+    }
+
+    handleZoomEnd() {
+        this.setState({zoomLevel: this.map.viewport.zoom});
     }
 
     handleClick(e) {
@@ -25,16 +34,19 @@ export default class OSRSMap extends Component {
     }
 
     render() {
-
         const center = [76.40881056467734, 317.13134765625006];
 
         return (
             <Map
+                ref={(ref) => {
+                    this.map = ref;
+                }}
                 zoom={6}
                 center={center}
                 maxZoom={8}
                 minZoom={4}
                 onClick={this.handleClick}
+                onZoomEnd={this.handleZoomEnd}
             >
                 <Pane name="cyan-rectangle" style={{zIndex: 500}} leaflet={'test'}>
                     <Rectangle
@@ -45,7 +57,7 @@ export default class OSRSMap extends Component {
                     attribution="RSMap - From OSRS Data"
                     url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
                 />
-                <MapMarkers />
+                <MapMarkers zoomLevel={this.state.zoomLevel}/>
             </Map>
         )
     }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Marker, Popup} from "react-leaflet";
+import {AgilityShortcutIcon} from "../classes/Icons";
 
 const marker = {lat: 76.40881056467734, lng: 317.13134765625006};
 
@@ -9,19 +10,24 @@ export default class MapMarker extends Component {
 
         this.state = {
             position: this.props.position,
+            icon: this.props.icon
         };
+    }
 
-        setTimeout(function () {
-            // this.setState({markerPos: {"lat": 76.40881056467734, "lng": 317.13134765625006}});
-        }, 500);
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props !== prevProps) {
+            this.setState({icon: this.props.icon});
+        }
     }
 
     render() {
-        console.log(this.state.position);
+        let icon = this.state.icon;
+
         return (
             <Marker
                 position={this.state.position}
-                icon={this.props.icon}
+                icon={this.state.icon}
             >
                 <Popup>You are here</Popup>
             </Marker>
