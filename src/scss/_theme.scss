@@ -6,3 +6,11 @@
   width:100%;
   height:100%;
 }
+
+* {
+  cursor: crosshair;
+}
+
+.leaflet-div-icon{
+  background:none !important;
+}
