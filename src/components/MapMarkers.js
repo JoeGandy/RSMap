@@ -44,11 +44,10 @@ export default class MapMarkers extends Component {
     render() {
         return (
             <>
-                <MapMarker
-                    position={{"lat":76.35967119570851,"lng":316.97204589843756}}
-                    icon={this.state.icons.TeleportHome}
-                    title={"Lumbridge Home Teleport"}
-                />
+                {this.state.icons.map(function (icon, i) {
+                    return <MapMarker key={i} position={icon.options.position} icon={icon}
+                                      title={icon.options.title}/>
+                })}
             </>
         )
     }

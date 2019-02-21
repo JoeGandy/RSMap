@@ -1,3 +1,4 @@
+
 var Crawler = require("crawler");
 
 
@@ -36,13 +37,11 @@ var download = function(url, dest, cb) {
 
 
 function getBaseSettings(image_name, type, text, safe_name){
-    //let folder = '../../static/icons/';
-    let folder = __dirname + '/test/';
+    let folder = __dirname + '/../../static/icons/';
+    //let folder = __dirname + '/test/';
     return {
-        iconUrl: require(folder + type + '/' + image_name),
-        iconRetinaUrl: require(folder + type + '/' + image_name),
+        url: folder + type + '/' + image_name,
         className: 'teleport ' + safe_name,
-        category: Categories.MISC,
         iconText: text
     }
 }
@@ -67,13 +66,9 @@ var c = new Crawler({
                 let img_name = img.split("/").slice(-1)[0].split("?")[0];
                 let img_url = "https://oldschool.runescape.wiki" + img;
                 for(let line of lines){
-                    console.log("Image Name: " + img_name);
-                    console.log("Text: "  + line);
-                    console.log("Image URL: " + img_url);
-                    console.log('---');
-                    download(img_url, __dirname + "/test/" + img_name);
+                    download(img_url, __dirname + "/../../static/icons/teleport/" + img_name);
                     let safe_line = makeSafeForCSS(line);
-                    result[safe_line] = getBaseSettings(img_name, 'Teleport', text, safe_line);
+                    result[safe_line] = getBaseSettings(img_name, 'teleport', text, safe_line);
                 }
             });
         }

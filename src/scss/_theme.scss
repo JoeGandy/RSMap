@@ -15,3 +15,11 @@
 .leaflet-div-icon{
   background:none !important;
 }
+
+.leaflet-marker-icon{
+  transition:
+          width 100ms,
+          height 100ms,
+          margin 100ms;
+  transition-timing-function: linear;
+}

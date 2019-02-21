@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import {Map, Pane, Rectangle, TileLayer} from "react-leaflet";
+import {Map, Pane, Rectangle, TileLayer, Polyline} from "react-leaflet";
 import {withPrefix} from 'gatsby';
 import MapMarkers from "./MapMarkers";
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import * as Icons from "../classes/Icons";
 
 delete L.Icon.Default.prototype._getIconUrl;
 
@@ -18,7 +19,8 @@ export default class OSRSMap extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            zoomLevel: 6
+            zoomLevel: 6,
+            line: null
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -31,6 +33,17 @@ export default class OSRSMap extends Component {
 
     handleClick(e) {
         console.log(JSON.stringify(e.latlng));
+
+        let cloesest_icon = Icons.getClosestIcon(e.latlng.lat, e.latlng.lng);
+
+        this.setState({
+            line: [
+                e.latlng,
+                new L.latLng(cloesest_icon.position.lat, cloesest_icon.position.lng)
+            ]
+        });
+
+        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
     }
 
     render() {
@@ -58,6 +71,7 @@ export default class OSRSMap extends Component {
                     url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
                 />
                 <MapMarkers zoomLevel={this.state.zoomLevel}/>
+                {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
             </Map>
         )
     }
