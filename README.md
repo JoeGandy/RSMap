@@ -16,3 +16,7 @@ Planned features (goals):
 - Region highlighting?
 - Click on boat locations to see where they go
 - Dungeon maps
+- Quest icon to show quest with basic info
+- Stores to show what they sell w/ quanitities 
+- Agility short cuts to show where they go and level needed
+- Farm patch info
