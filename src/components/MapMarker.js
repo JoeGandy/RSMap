@@ -28,8 +28,14 @@ export default class MapMarker extends Component {
             <Marker
                 position={this.state.position}
                 icon={this.state.icon}
+                onMouseOver={(e) => {
+                    e.target.openPopup();
+                }}
+                onMouseOut={(e) => {
+                    e.target.closePopup();
+                }}
             >
-                <Popup>You are here</Popup>
+                <Popup>{this.props.title}</Popup>
             </Marker>
         )
     }

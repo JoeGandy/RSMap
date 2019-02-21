@@ -2,10 +2,10 @@ import {Categories, IconBaseClass} from "./IconBaseClass";
 import * as L from "leaflet";
 
 export const Icons = {
-    AgilityShortcutIcon: {
-        iconUrl: require('../../static/icons/agility_shortcut.png'),
-        iconRetinaUrl: require('../../static/icons/agility_shortcut.png'),
-        className: 'agility_shortcut',
+    TeleportHome: {
+        iconUrl: require('../../static/icons/Teleports/Home_Teleport_icon.webp'),
+        iconRetinaUrl: require('../../static/icons/Teleports/Home_Teleport_icon.webp'),
+        className: 'teleport teleport_home',
         category: Categories.MISC
     }
 };

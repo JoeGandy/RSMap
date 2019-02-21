@@ -3,7 +3,28 @@ import MapMarker from "./MapMarker";
 import {Icons, rewriteIcons} from "../classes/Icons";
 import {IconBaseClass} from "../classes/IconBaseClass";
 
-
+//Marker types needed:
+/*
+    - Click to go to places, i.e. click boat transport to see other side
+    - Click to swap layer, to see dungeons
+    - Static broken up into categories
+        - Spell book teleports
+            - Regular
+            - Lunar
+            - Arceus
+            - Ancients
+        - Jewlery Teleports
+        - Skill Capes
+        - Fairy Rings
+        - Scrolls
+        - Tele Tabs
+        - Spirit Trees
+        - Minigame teleports
+        - Diary Gear
+        - Air Balloon
+        - Hnome glider
+   - clue scroll dig point, needs to be dynamic and move based on input, url params?
+ */
 export default class MapMarkers extends Component {
     constructor(props) {
         super(props);
@@ -23,8 +44,11 @@ export default class MapMarkers extends Component {
     render() {
         return (
             <>
-                <MapMarker position={{lat: 76.90817663339624, lng: 312.0227050781250}} icon={this.state.icons.AgilityShortcutIcon}/>
-                <MapMarker position={{lat: 77.20226173611962, lng: 319.01550292968756}} icon={this.state.icons.AgilityShortcutIcon}/>
+                <MapMarker
+                    position={{"lat":76.35967119570851,"lng":316.97204589843756}}
+                    icon={this.state.icons.TeleportHome}
+                    title={"Lumbridge Home Teleport"}
+                />
             </>
         )
     }
