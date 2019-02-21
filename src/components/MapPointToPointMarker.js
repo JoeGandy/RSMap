@@ -1,11 +1,8 @@
 import React, {Component} from 'react'
 import {Map, Marker, Polyline, Popup} from "react-leaflet";
 import {AgilityShortcutIcon} from "../classes/Icons";
-import MapMarkers from "./OSRSMap";
 
-const marker = {lat: 76.40881056467734, lng: 317.13134765625006};
-
-export default class MapMarker extends Component {
+export default class MapPointToPointMarker extends Component {
     constructor(props) {
         super(props);
 
@@ -42,6 +39,14 @@ export default class MapMarker extends Component {
                 >
                     <Popup>{this.props.title}</Popup>
                 </Marker>
+                {this.state.active ?
+                    <Polyline
+                        weight={6}
+                        color={'yellow'}
+                        dashArray={[15, 15]}
+                        positions={this.props.icon.options.positions}
+                        opacity={0.5}
+                    /> : null}
             </>
         )
     }

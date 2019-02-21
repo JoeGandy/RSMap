@@ -61,11 +61,6 @@ export default class OSRSMap extends Component {
                 onClick={this.handleClick}
                 onZoomEnd={this.handleZoomEnd}
             >
-                <Pane name="cyan-rectangle" style={{zIndex: 500}} leaflet={'test'}>
-                    <Rectangle
-                        bounds={[[77.99362024696188, 303.39843750000006], [77.32457910035559, 306.66137695312506]]}
-                        color="cyan"/>
-                </Pane>
                 <TileLayer
                     attribution="RSMap - From OSRS Data"
                     url={withPrefix("/map/generated/{z}/{x}/{y}.png")}

@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import MapMarker from "./MapMarker";
-import {Icons, rewriteIcons} from "../classes/Icons";
+import {rewriteIcons} from "../classes/Icons";
 import {IconBaseClass} from "../classes/IconBaseClass";
+import MapPointToPointMarker from "./MapPointToPointMarker";
 
 //Marker types needed:
 /*
@@ -30,8 +31,7 @@ export default class MapMarkers extends Component {
         super(props);
         this.state = {
             icons: rewriteIcons()
-        }
-
+        };
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -42,11 +42,22 @@ export default class MapMarkers extends Component {
     }
 
     render() {
+
         return (
             <>
-                {this.state.icons.map(function (icon, i) {
+                {this.state.icons.teleports.map(function (icon, i) {
                     return <MapMarker key={i} position={icon.options.position} icon={icon}
                                       title={icon.options.title}/>
+                })}
+                {this.state.icons.point_to_points.map(function (icon, i) {
+                    return <div key={i}>
+                        <MapPointToPointMarker position={icon.options.positions[0]} icon={icon}
+                                               title={icon.options.title}/>
+                        <MapPointToPointMarker position={icon.options.positions[icon.options.positions.length - 1]}
+                                               icon={icon}
+                                               title={icon.options.title}/>
+                        })}
+                    </div>
                 })}
             </>
         )

@@ -22,9 +22,12 @@ function deg2rad(deg) {
 
 //Re renders the icons, almost definitely a more efficient way to be handling this, but it'll do for now
 export function rewriteIcons() {
-    let icons = [];
-    for (let key in Icons) {
-        icons[key] = new IconBaseClass(Icons[key]);
+    let icons = {};
+    for (let type of types) {
+        icons[type.label] = [];
+        for (let key in type.data) {
+            icons[type.label][key] = new IconBaseClass(type.data[key]);
+        }
     }
     return icons;
 }
@@ -32,7 +35,7 @@ export function rewriteIcons() {
 export function getClosestIcon(lat, lng) {
     let shortest = 30000;
     let closest = null;
-    for (let icon of Icons) {
+    for (let icon of Teleports) {
         let distance = getDistanceFromLatLonInKm(lat, lng, icon.position.lat, icon.position.lng);
         if (distance < shortest) {
             shortest = distance;
@@ -42,7 +45,7 @@ export function getClosestIcon(lat, lng) {
     return closest;
 }
 
-export const Icons = [
+export const Teleports = [
     // >>>>>>>>>>>>>>>>>>>>> Standard Spell book >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     {
         iconUrl: require('../../static/icons/teleport/Home_Teleport_icon.png'),
@@ -169,31 +172,74 @@ export const Icons = [
     {
         iconUrl: require('../../static/icons/teleport/Lassar_Teleport_icon.png'),
         className: 'teleport teleport_lassar regular_spellbook',
-        position: {"lat":79.9799791857134,"lng":302.9095458984375},
+        position: {"lat": 79.9799791857134, "lng": 302.9095458984375},
         title: "Teleport to Lassar "
     },
     {
         iconUrl: require('../../static/icons/teleport/Dareeyak_Teleport_icon.png'),
         className: 'teleport teleport_dareeyak regular_spellbook',
-        position: {"lat":82.08290127808056,"lng":300.44860839843756},
+        position: {"lat": 82.08290127808056, "lng": 300.44860839843756},
         title: "Teleport to Dareeyak"
     },
     {
         iconUrl: require('../../static/icons/teleport/Carrallangar_Teleport_icon.png'),
         className: 'teleport teleport_carrallangar regular_spellbook',
-        position: {"lat":81.88140252510168,"lng":313.34106445312506},
+        position: {"lat": 81.88140252510168, "lng": 313.34106445312506},
         title: "Teleport to Carrallangar "
     },
     {
         iconUrl: require('../../static/icons/teleport/Annakarl_Teleport_icon.png'),
         className: 'teleport teleport_annakarl regular_spellbook',
-        position: {"lat":83.63932291491399,"lng":321.41601562500006},
+        position: {"lat": 83.63932291491399, "lng": 321.41601562500006},
         title: "Teleport to Annakarl "
     },
     {
         iconUrl: require('../../static/icons/teleport/Ghorrock_Teleport_icon.png'),
         className: 'teleport teleport_ghorrock regular_spellbook',
-        position: {"lat":83.7896675689016,"lng":299.09729003906256},
+        position: {"lat": 83.7896675689016, "lng": 299.09729003906256},
         title: "Teleport to Ghorrock "
     },
+];
+
+export const PointToPoints = [
+    // >>>>>>>>>>>>>>>>>>>>> Agility Shortcuts >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    {
+        iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+        className: 'agility_shortcut',
+        positions: [
+            {"lat":75.71969873605714,"lng":318.54858398437506},
+            {"lat":75.72105364905663,"lng":319.40551757812506}
+        ],
+        title: "River lum grapple"
+    },
+    // <<<<<<<<<<<<<<<<<<<<<< Agility Shortcuts <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    // >>>>>>>>>>>>>>>>>>>>> Boats >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'agility_shortcut',
+        positions: [
+            {"lat":76.57815922398312,"lng":305.43090820312506},
+            {"lat":76.11662168423263,"lng":307.24365234375},
+            {"lat":75.59587329063447,"lng":307.28759765625006},
+            {"lat":74.0799247270789,"lng":302.25585937500006},
+            {"lat":74.64256835016351,"lng":299.52026367187506},
+            {"lat":75.33672086232664,"lng":300.89355468750006},
+            {"lat":76.34411731923645,"lng":294.79614257812506},
+            {"lat":77.64124536695779,"lng":294.10400390625006},
+            {"lat":78.03696523649174,"lng":291.39038085937506}
+        ],
+        title: "Entrana ↔ Port Sarim"
+    }
+    // <<<<<<<<<<<<<<<<<<<<<< Boats <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+];
+
+const types = [
+    {
+        label: 'teleports',
+        data: Teleports
+    },
+    {
+        label: 'point_to_points',
+        data: PointToPoints
+    }
 ];
