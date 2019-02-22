@@ -42,7 +42,6 @@ export default class MapMarkers extends Component {
     }
 
     render() {
-
         return (
             <>
                 {this.state.icons.teleports.map(function (icon, i) {
@@ -52,9 +51,9 @@ export default class MapMarkers extends Component {
                 {this.state.icons.point_to_points.map(function (icon, i) {
                     return <div key={i}>
                         <MapPointToPointMarker position={icon.options.positions[0]} icon={icon}
-                                               title={icon.options.title}/>
+                                               title={icon.options.title} end={false}/>
                         <MapPointToPointMarker position={icon.options.positions[icon.options.positions.length - 1]}
-                                               icon={icon}
+                                               icon={icon} end={icon.options.one_way}
                                                title={icon.options.title}/>
                         })}
                     </div>

@@ -36,8 +36,12 @@ export default class MapPointToPointMarker extends Component {
                         e.target.closePopup();
                         this.setState({active: false});
                     }}
+                    opacity={this.props.end ? 0.4 : 1}
                 >
-                    <Popup>{this.props.title}</Popup>
+                    <Popup>
+                        <h4>{this.props.title}</h4>
+                        {this.props.icon.options.description ? <p>{this.props.icon.options.description}</p> : null}
+                    </Popup>
                 </Marker>
                 {this.state.active ?
                     <Polyline

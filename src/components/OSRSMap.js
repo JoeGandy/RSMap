@@ -43,7 +43,7 @@ export default class OSRSMap extends Component {
             ]
         });
 
-        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
     }
 
     render() {

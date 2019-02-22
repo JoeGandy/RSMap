@@ -9,7 +9,7 @@
 }
 
 * {
-  cursor: crosshair;
+  cursor: crosshair !important;
 }
 
 .leaflet-div-icon{
@@ -25,4 +25,8 @@
 
   box-shadow:0 0 20px 4px rgb(255, 255, 0);
   border-radius:50px;
+}
+
+.one_way_end{
+  border:5px solid red;
 }

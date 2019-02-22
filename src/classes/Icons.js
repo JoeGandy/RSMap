@@ -212,11 +212,21 @@ export const PointToPoints = [
         ],
         title: "River lum grapple"
     },
+    {
+        iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+        className: 'agility_shortcut',
+        positions: [
+            {"lat":75.12668436992617,"lng":294.03259277343756},
+            {"lat":74.87075679591987,"lng":294.09851074218756}
+        ],
+        title: "Brimhaven Grapple"
+    },
     // <<<<<<<<<<<<<<<<<<<<<< Agility Shortcuts <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     // >>>>>>>>>>>>>>>>>>>>> Boats >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //<<<<<< Two ways >>>>>>>>>>>>>>
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'agility_shortcut',
+        className: 'boat_transport',
         positions: [
             {"lat":76.57815922398312,"lng":305.43090820312506},
             {"lat":76.11662168423263,"lng":307.24365234375},
@@ -229,9 +239,115 @@ export const PointToPoints = [
             {"lat":78.03696523649174,"lng":291.39038085937506}
         ],
         title: "Entrana ↔ Port Sarim"
-    }
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":76.34411731923645,"lng":304.32128906250006},
+            {"lat":76.32854604438678,"lng":306.88110351562506},
+            {"lat":75.54659778735001,"lng":307.28759765625006},
+            {"lat":74.11003203722439,"lng":301.94824218750006},
+            {"lat":74.43167575527531,"lng":300.56396484375006},
+            {"lat":75.16048677152297,"lng":299.43786621093756}
+        ],
+        title: "Karajama ↔ Port Sarim"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":76.07570266770183,"lng":304.97497558593756},
+            {"lat":76.02405595861573,"lng":307.38647460937506},
+            {"lat":75.75894014501688,"lng":307.88085937500006},
+            {"lat":74.44935750063425,"lng":304.07958984375006},
+            {"lat":69.4575536150494,"lng":302.56347656250006},
+            {"lat":68.3910896345649,"lng":280.28320312500006},
+            {"lat":64.78816837781196,"lng":279.92065429687506}
+        ],
+        title: "Void Knights' Outpost ↔ Port Sarim"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":76.59090394154062,"lng":287.37487792968756},
+            {"lat":76.93552245725151,"lng":285.85327148437506},
+            {"lat":76.99251884527192,"lng":282.61230468750006},
+            {"lat":76.98757235359201,"lng":281.34887695312506},
+            {"lat":77.20104488844608,"lng":280.97534179687506}
+        ],
+        title: "Brimhaven ↔ Ardougne"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":77.62006466839729,"lng":284.07348632812506},
+            {"lat":77.823323145214,"lng":284.95239257812506},
+            {"lat":77.7256119827769,"lng":285.87524414062506},
+            {"lat":77.06403564302136,"lng":286.01806640625006},
+            {"lat":77.0344894800739,"lng":287.32543945312506},
+            {"lat":77.14372454012101,"lng":287.83630371093756}
+        ],
+        title: "Witchaven ↔ Fishing Platform"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":74.11303971567467,"lng":286.39160156250006},
+            {"lat":71.77737688385326,"lng":279.53613281250006}
+        ],
+        title: "Tai Brwo Wannai ↔ Feldip Hills (East)",
+        description: "You need a herb to get a ride: Rogue's Purse, Ardrigal, Snake weed, Volencia Moss"
+    },
+    //<<<<<< One ways >>>>>>>>>>>>>>
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        one_way: true,
+        positions: [
+            {"lat":79.16823815620724,"lng":289.48425292968756},
+            {"lat":78.92821835577044,"lng":289.81933593750006},
+            {"lat":78.90710049623647,"lng":287.82531738281256}
+        ],
+        title: "Catherby ➝ Keep Le Faye",
+        description: "Get in the crate behind the candle store"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        one_way: true,
+        positions: [
+            {"lat":71.63426216732036,"lng":286.61682128906256},
+            {"lat":71.79454673720774,"lng":283.79882812500006},
+            {"lat":75.1548582574413,"lng":282.13989257812506},
+            {"lat":75.27261992123154,"lng":281.21704101562506}
+        ],
+        title: "Cairn Isle (below) ➝ Port Khazard",
+        description: "Get in the crate behind the candle store"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        one_way: true,
+        positions: [
+            {"lat":71.6308002628789,"lng":286.92993164062506},
+            {"lat":71.62214274510511,"lng":284.67773437500006},
+            {"lat":69.67998950911426,"lng":285.44677734375006},
+            {"lat":69.38804929116819,"lng":303.20068359375006},
+            {"lat":74.71224441731964,"lng":304.23339843750006},
+            {"lat":75.7805453532386,"lng":307.65014648437506},
+            {"lat":76.4654918099891,"lng":306.76025390625006},
+            {"lat":76.61381450204217,"lng":305.78247070312506}
+        ],
+        title: "Cairn Isle (below) ➝ Port Khazard",
+        description: "Get in the crate behind the candle store"
+    },
     // <<<<<<<<<<<<<<<<<<<<<< Boats <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ];
+
 
 const types = [
     {
@@ -243,3 +359,30 @@ const types = [
         data: PointToPoints
     }
 ];
+
+
+//Multi points
+/*
+- Trander boats
+- Log flumes
+- gliders
+- Kourend Ships
+
+ */
+/* Need to create multi point to points
+{
+    iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+    className: 'boat_transport',
+    positions: [
+        {"lat":76.74417651594321,"lng":305.96923828125},
+        {"lat":75.75894014501688,"lng":307.88085937500006},
+        {"lat":74.44935750063425,"lng":304.07958984375006},
+        {"lat":69.4575536150494,"lng":302.56347656250006},
+        {"lat":67.32292427995345,"lng":260.68359375000006},
+        {"lat":73.57816726137321,"lng":241.61132812500003},
+        {"lat":78.93770843550641,"lng":241.08398437500003},
+        {"lat":78.84457080539549,"lng":221.85791015625003},
+        {"lat":78.87852828127829,"lng":203.72497558593753}
+    ],
+    title: "Lands End ↔ Port Sarim",
+}*/
