@@ -20,11 +20,13 @@ export default class OSRSMap extends Component {
         super(props);
         this.state = {
             zoomLevel: 6,
-            line: null
+            line: null,
+            center: {"lat": 76.40881056467734, "lng": 317.13134765625006}
         };
 
         this.handleClick = this.handleClick.bind(this);
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
+        this.centerMap = this.centerMap.bind(this);
     }
 
     handleZoomEnd() {
@@ -42,20 +44,21 @@ export default class OSRSMap extends Component {
                 new L.latLng(cloesest_icon.position.lat, cloesest_icon.position.lng)
             ]
         });
+        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+    }
 
-        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+    centerMap(_center){
+        this.setState({center: {"lat": _center.lat, "lng": _center.lng}})
     }
 
     render() {
-        const center = [76.40881056467734, 317.13134765625006];
-
         return (
             <Map
                 ref={(ref) => {
                     this.map = ref;
                 }}
                 zoom={6}
-                center={center}
+                center={this.state.center}
                 maxZoom={8}
                 minZoom={4}
                 onClick={this.handleClick}
@@ -65,7 +68,7 @@ export default class OSRSMap extends Component {
                     attribution="RSMap - From OSRS Data"
                     url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
                 />
-                <MapMarkers zoomLevel={this.state.zoomLevel}/>
+                <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} />
                 {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
             </Map>
         )
