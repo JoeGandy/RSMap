@@ -48,6 +48,10 @@ export default class MapMarkers extends Component {
                     return <MapMarker key={i} position={icon.options.position} icon={icon}
                                       title={icon.options.title}/>
                 })}
+                {this.state.icons.fairy_rings.map(function (icon, i) {
+                    return <MapMarker key={i} position={icon.options.position} icon={icon}
+                                      title={icon.options.title}/>
+                })}
                 {this.state.icons.point_to_points.map(function (icon, i) {
                     return <div key={i}>
                         <MapPointToPointMarker position={icon.options.positions[0]} icon={icon}

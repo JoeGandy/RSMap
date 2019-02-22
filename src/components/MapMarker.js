@@ -40,7 +40,10 @@ export default class MapMarker extends Component {
                         this.setState({active: false});
                     }}
                 >
-                    <Popup>{this.props.title}</Popup>
+                    <Popup>
+                        <h4>{this.props.title}</h4>
+                        {this.props.icon.options.description ? <p>{this.props.icon.options.description}</p> : null}
+                    </Popup>
                 </Marker>
             </>
         )

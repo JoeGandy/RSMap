@@ -42,8 +42,130 @@ export function getClosestIcon(lat, lng) {
             closest = icon;
         }
     }
+    for (let icon of FairyRings) {
+        let distance = getDistanceFromLatLonInKm(lat, lng, icon.position.lat, icon.position.lng);
+        if (distance < shortest) {
+            shortest = distance;
+            closest = icon;
+        }
+    }
     return closest;
 }
+export const FairyRings = [
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":74.5915675990001,"lng":302.069091796875},
+        title: "Fairy ring",
+        description: "A I Q (aiq)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":76.81578187834086,"lng":282.55737304687506},
+        title: "Fairy ring",
+        description: "A I R (air)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":81.3265643369573,"lng":287.83081054687506},
+        title: "Fairy ring",
+        description: "A J R (ajr)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":83.73055909431551,"lng":269.37927246093756},
+        title: "Fairy ring",
+        description: "A J S (ajs)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":81.34559639180898,"lng":257.43713378906256},
+        title: "Fairy ring",
+        description: "A K Q (akq)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":71.65156224242223,"lng":274.05395507812506},
+        title: "Fairy ring",
+        description: "A K S (aks)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":81.55142594298475,"lng":269.57153320312506},
+        title: "Fairy ring",
+        description: "A L P (alp)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":80.05994617616484,"lng":341.82312011718756},
+        title: "Fairy ring",
+        description: "A L Q (alq)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":80.07226543955538,"lng":278.86596679687506},
+        title: "Fairy ring",
+        description: "A L S (als)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":77.92601462331328,"lng":329.35913085937506},
+        title: "Fairy ring",
+        description: "B I P (bip)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":74.29248881670038,"lng":318.75183105468756},
+        title: "Fairy ring",
+        description: "B I Q (biq)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":77.09964896517972,"lng":278.34411621093756},
+        title: "Fairy ring",
+        description: "B I S (bis)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":73.82022893610119,"lng":246.17065429687503},
+        title: "Fairy ring",
+        description: "B J S (bjs)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":73.22194329309737,"lng":261.79321289062506},
+        title: "Fairy ring",
+        description: "B K S (bks)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":79.31486848891893,"lng":333.24829101562506},
+        title: "Fairy ring",
+        description: "B K R (bkr)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":78.29381505701517,"lng":285.19958496093756},
+        title: "Fairy ring",
+        description: "B L R (blr)"
+    },
+    //Stil to do C codes and D codes
+];
 
 export const Teleports = [
     // >>>>>>>>>>>>>>>>>>>>> Standard Spell book >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -390,6 +512,39 @@ export const PointToPoints = [
         ],
         title: "Port Phasmatys ↔ Mos Le'Harmless"
     },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":82.44154190785918,"lng":283.08471679687506},
+            {"lat":82.7833364185014,"lng":280.33813476562506},
+            {"lat":84.28798568789594,"lng":279.93164062500006},
+            {"lat":84.34618778559923,"lng":279.79431152343756}
+        ],
+        title: "Rellekka (east) ↔ Iceberg"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":82.20155624480994,"lng":278.86047363281256},
+            {"lat":82.05485676133894,"lng":270.76904296875006},
+            {"lat":82.70145058672428,"lng":264.25415039062506},
+            {"lat":82.82187709826647,"lng":264.17175292968756}
+        ],
+        title: "Rellekka ↔ Jatizso"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":82.22165518221166,"lng":278.59680175781256},
+            {"lat":82.05485676133894,"lng":270.76904296875006},
+            {"lat":82.70145058672428,"lng":257.14599609375006},
+            {"lat":82.81294844307736,"lng":256.92077636718756}
+        ],
+        title: "Rellekka ↔ Neitiznot"
+    },
 
     //<<<<<< One ways >>>>>>>>>>>>>>
     {
@@ -446,6 +601,10 @@ const types = [
     {
         label: 'point_to_points',
         data: PointToPoints
+    },
+    {
+        label: 'fairy_rings',
+        data: FairyRings
     }
 ];
 
