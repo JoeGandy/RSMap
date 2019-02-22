@@ -164,7 +164,132 @@ export const FairyRings = [
         title: "Fairy ring",
         description: "B L R (blr)"
     },
-    //Stil to do C codes and D codes
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":83.64358148767488,"lng":270.23620605468756},
+        title: "Fairy ring",
+        description: "C I P (cip)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":74.88651947809277,"lng":271.22497558593756},
+        title: "Fairy ring",
+        description: "C I Q (ciq)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":82.67208232814555,"lng":190.54138183593753},
+        title: "Fairy ring",
+        description: "C I R (cir)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":83.51147766926859,"lng":212.6239013671875},
+        title: "Fairy ring",
+        description: "C I S (cis)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":80.95091652512318,"lng":282.89794921875006},
+        title: "Fairy ring",
+        description: "C J R (cjr)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":72.6038360424019,"lng":289.20959472656256},
+        title: "Fairy ring",
+        description: "C K R (ckr)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":79.78213873561926,"lng":331.79260253906256},
+        title: "Fairy ring",
+        description: "C K S (cks)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":76.18630710027861,"lng":307.73803710937506},
+        title: "Fairy ring",
+        description: "C L P (clp)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":66.52420417769652,"lng":285.06774902343756},
+        title: "Fairy ring",
+        description: "C L R (clr)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":74.07540384020064,"lng":281.37084960937506},
+        title: "Fairy ring",
+        description: "C L S (cls)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":75.22646574076222,"lng":309.58374023437506},
+        title: "Fairy ring",
+        description: "D I S (dis)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":76.56029664074973,"lng":279.79431152343756},
+        title: "Fairy ring",
+        description: "D J P (djp)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":81.75160686385584,"lng":200.36865234375},
+        title: "Fairy ring",
+        description: "D J R (djr)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":74.61052999955676,"lng":295.74645996093756},
+        title: "Fairy ring",
+        description: "D K P (dkp)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":80.05994617616484,"lng":310.70434570312506},
+        title: "Fairy ring",
+        description: "D K R (dkr)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":82.31770944958727,"lng":285.45776367187506},
+        title: "Fairy ring",
+        description: "D K S (dks)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":72.85659981428137,"lng":330.21606445312506},
+        title: "Fairy ring",
+        description: "D L Q (dlq)"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
+        className: 'fairy_ring',
+        position: {"lat":74.39920828363479,"lng":250.45532226562503},
+        title: "Fairy ring",
+        description: "D L R (dlr)"
+    },
 ];
 
 export const Teleports = [
@@ -544,6 +669,55 @@ export const PointToPoints = [
             {"lat":82.81294844307736,"lng":256.92077636718756}
         ],
         title: "Rellekka ↔ Neitiznot"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":81.97626600019842,"lng":277.41577148437506},
+            {"lat":82.56907533737537,"lng":275.55908203125006},
+            {"lat":82.63837466796491,"lng":272.68066406250006}
+        ],
+        title: "Rellekka ↔ Waterbirth Island"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":82.11310903654756,"lng":278.53637695312506},
+            {"lat":82.85884739680901,"lng":273.01025390625006},
+            {"lat":82.99145133235486,"lng":267.49511718750006},
+            {"lat":83.84174225396225,"lng":266.02294921875006},
+            {"lat":84.4740645845916,"lng":254.97070312500003},
+            {"lat":84.63769756726754,"lng":254.67407226562503}
+        ],
+        title: "Rellekka ↔ Ungael"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":82.05941121693256,"lng":277.81127929687506},
+            {"lat":82.1424513249561,"lng":273.77929687500006},
+            {"lat":82.30300897675623,"lng":257.93701171875006},
+            {"lat":82.72583469134848,"lng":250.59814453125003},
+            {"lat":82.93559934286549,"lng":250.46081542968753}
+        ],
+        title: "Rellekka ↔ Pirates Cove"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":82.95179467304061,"lng":251.17492675781253},
+            {"lat":83.13080913050881,"lng":251.42211914062503},
+            {"lat":83.19619730940111,"lng":252.37792968750003},
+            {"lat":83.30593848760384,"lng":251.76269531250003},
+            {"lat":83.60270411519305,"lng":247.22534179687503},
+            {"lat":83.6417567328638,"lng":245.70922851562503},
+            {"lat":83.73775349611977,"lng":245.51147460937503}
+        ],
+        title: "Pirates Cove ↔ Lunar Isle"
     },
 
     //<<<<<< One ways >>>>>>>>>>>>>>
