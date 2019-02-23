@@ -67,7 +67,6 @@ export default class MapPointToPointMarker extends Component {
                     <Polyline
                         weight={6}
                         color={'yellow'}
-                        dashArray={[15, 15]}
                         positions={this.props.icon.options.positions}
                         opacity={0.5}
                     /> : null}
