@@ -73,3 +73,41 @@ h1 {
     }
   }
 }
+
+
+.leaflet-popup-tip{
+  background: #dcbf8c !important;
+}
+
+.leaflet-popup-content-wrapper{
+  background: transparent url(../img/backdrop_745.gif) !important;
+  background-size:100% !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+  padding:20px 0 !important;
+  margin-bottom:20px !important;
+  font-family: 'RuneScape', serif;
+  font-size:1.3em;
+  min-width:200px !important;
+  text-align:center !important;
+
+
+  &:after,
+  &:before {
+    content: " ";
+    width: 100%;
+    background-image: url(../img/backdrop_765_top.gif);
+    background-size: 100% 100%;
+    display: flex;
+    height: 50px;
+    position: absolute;
+  }
+
+  &:before {
+    top: -25px;
+  }
+
+  &:after {
+    bottom: -6px;
+  }
+}

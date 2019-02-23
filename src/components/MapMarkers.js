@@ -67,7 +67,6 @@ export default class MapMarkers extends Component {
                             <MapPointToPointMarker position={icon.options.positions[icon.options.positions.length - 1]}
                                                    icon={icon} end={icon.options.one_way} centerMap={centerMap}
                                                    title={icon.options.title}/>
-                            })}
                         </div>
                         : null;
                 })}
