@@ -787,6 +787,17 @@ export const PointToPoints = [
         ],
         title: "Eagles Peak ↔ Piscatoris Fishing Colony"
     },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'boat_transport',
+        positions: [
+            {"lat":83.36839854826567,"lng":345.838623046875},
+            {"lat":83.68178108996156,"lng":342.509765625},
+            {"lat":84.24793541158849,"lng":340.76843261718756}
+
+        ],
+        title: "Fossil Island (Mushroom forest) ↔ Lithkren"
+    },
 
     //<<<<<< One ways >>>>>>>>>>>>>>
     {
@@ -1090,12 +1101,53 @@ export const PointToManyPoints = [
             {"lat":77.57877763581085,"lng":297.19116210937506},
             {"lat":79.18164994073766,"lng":298.18542480468756},
             {"lat":79.87622823235664,"lng":322.04772949218756},
-            
+
         ],
         positions: [
 
         ],
         title: "Balloon Transport System"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'magic_mushroom',
+        stops: [
+            {"lat":83.5337864118568,"lng":346.82739257812506},
+            {"lat":82.61299277110686,"lng":346.95373535156256},
+            {"lat":82.62146305852085,"lng":352.29858398437506},
+
+
+        ],
+        positions: [
+
+        ],
+        title: "Magic mushroom teleports"
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: 'fossil_island_row_boats',
+        stops: [
+            {"lat":83.70109641601667,"lng":350.72204589843756},
+            {"lat":83.75331316974862,"lng":352.76550292968756},
+            {"lat":83.02555186844917,"lng":350.46936035156256}
+
+
+        ],
+        positions: [
+            {"lat":83.70109641601667,"lng":350.72204589843756},
+            {"lat":83.75331316974862,"lng":352.76550292968756},
+            {"lat":83.63079724346103,"lng":355.30883789062506},
+            {"lat":83.22865871114548,"lng":358.4619140625},
+            {"lat":82.47614570236671,"lng":358.143310546875},
+            {"lat":82.07911723397942,"lng":352.47436523437506},
+            {"lat":82.28533149704582,"lng":349.310302734375},
+            {"lat":82.50056138051086,"lng":349.09057617187506},
+            {"lat":82.63415038289305,"lng":349.486083984375},
+            {"lat":82.65735415554457,"lng":349.94201660156256},
+            {"lat":82.86430834427168,"lng":349.3048095703125},
+            {"lat":83.02555186844917,"lng":350.46936035156256},
+        ],
+        title: "Fossil Island row boats"
     },
 ];
 

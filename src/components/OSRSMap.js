@@ -5,6 +5,7 @@ import {Map, Pane, Rectangle, TileLayer, Polyline} from "react-leaflet";
 import MapMarkers from "./MapMarkers";
 import * as Icons from "../classes/Icons";
 import L from "leaflet";
+import FiltersBox from "./FiltersBox";
 
 export default class OSRSMap extends Component {
 
@@ -46,24 +47,27 @@ export default class OSRSMap extends Component {
     render() {
         if (typeof window !== 'undefined') {
             return (
-                <Map
-                    ref={(ref) => {
-                        this.map = ref;
-                    }}
-                    zoom={6}
-                    center={this.state.center}
-                    maxZoom={8}
-                    minZoom={4}
-                    onClick={this.handleClick}
-                    onZoomEnd={this.handleZoomEnd}
-                >
-                    <TileLayer
-                        attribution="RSMap - From OSRS Data"
-                        url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
-                    />
-                    <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}/>
-                    {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
-                </Map>
+                <>
+                    <Map
+                        ref={(ref) => {
+                            this.map = ref;
+                        }}
+                        zoom={6}
+                        center={this.state.center}
+                        maxZoom={8}
+                        minZoom={4}
+                        onClick={this.handleClick}
+                        onZoomEnd={this.handleZoomEnd}
+                    >
+                        <TileLayer
+                            attribution="RSMap - From OSRS Data"
+                            url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
+                        />
+                        <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}/>
+                        {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
+                    </Map>
+                    <FiltersBox />
+                </>
             )
         } else {
             return <div>Page is loading...</div>
