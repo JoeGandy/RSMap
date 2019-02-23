@@ -1,18 +1,10 @@
 import React, {Component} from 'react'
-import {Map, Pane, Rectangle, TileLayer, Polyline} from "react-leaflet";
 import {withPrefix} from 'gatsby';
-import MapMarkers from "./MapMarkers";
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
+import {Map, Pane, Rectangle, TileLayer, Polyline} from "react-leaflet";
+import MapMarkers from "./MapMarkers";
 import * as Icons from "../classes/Icons";
-
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-    iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-});
+import L from "leaflet";
 
 export default class OSRSMap extends Component {
 
@@ -47,30 +39,34 @@ export default class OSRSMap extends Component {
         //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
     }
 
-    centerMap(_center){
+    centerMap(_center) {
         this.setState({center: {"lat": _center.lat, "lng": _center.lng}})
     }
 
     render() {
-        return (
-            <Map
-                ref={(ref) => {
-                    this.map = ref;
-                }}
-                zoom={6}
-                center={this.state.center}
-                maxZoom={8}
-                minZoom={4}
-                onClick={this.handleClick}
-                onZoomEnd={this.handleZoomEnd}
-            >
-                <TileLayer
-                    attribution="RSMap - From OSRS Data"
-                    url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
-                />
-                <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} />
-                {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
-            </Map>
-        )
+        if (typeof window !== 'undefined') {
+            return (
+                <Map
+                    ref={(ref) => {
+                        this.map = ref;
+                    }}
+                    zoom={6}
+                    center={this.state.center}
+                    maxZoom={8}
+                    minZoom={4}
+                    onClick={this.handleClick}
+                    onZoomEnd={this.handleZoomEnd}
+                >
+                    <TileLayer
+                        attribution="RSMap - From OSRS Data"
+                        url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
+                    />
+                    <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}/>
+                    {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
+                </Map>
+            )
+        } else {
+            return <div>Page is loading...</div>
+        }
     }
 }

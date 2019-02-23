@@ -25,8 +25,10 @@ export function rewriteIcons() {
     let icons = {};
     for (let type of types) {
         icons[type.label] = [];
-        for (let key in type.data) {
-            icons[type.label][key] = new IconBaseClass(type.data[key]);
+        if(typeof window !== 'undefined') {
+            for (let key in type.data) {
+                icons[type.label][key] = new IconBaseClass(type.data[key]);
+            }
         }
     }
     return icons;

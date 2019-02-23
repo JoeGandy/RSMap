@@ -6,7 +6,6 @@ export default class MapPointToPointMarker extends Component {
     constructor(props) {
         super(props);
 
-            console.log(props);
         this.state = {
             position: this.props.position,
             icon: this.props.icon,
@@ -43,8 +42,6 @@ export default class MapPointToPointMarker extends Component {
 
     render() {
         let icon = this.state.icon;
-        if(this.props.multiple)
-            console.log(this.props);
 
         return (
             <>
