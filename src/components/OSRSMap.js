@@ -26,7 +26,7 @@ export default class OSRSMap extends Component {
     }
 
     handleClick(e) {
-        console.log(JSON.stringify(e.latlng));
+        console.debug(JSON.stringify(e.latlng));
 
         let cloesest_icon = Icons.getClosestIcon(e.latlng.lat, e.latlng.lng);
 
@@ -36,7 +36,7 @@ export default class OSRSMap extends Component {
                 new L.latLng(cloesest_icon.position.lat, cloesest_icon.position.lng)
             ]
         });
-        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
     }
 
     centerMap(_center) {

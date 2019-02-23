@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import MapMarker from "./MapMarker";
+import MapMarker from "./MarkerTypes/MapMarker";
 import {rewriteIcons} from "../classes/Icons";
 import {IconBaseClass} from "../classes/IconBaseClass";
-import MapPointToPointMarker from "./MapPointToPointMarker";
+import MapPointToPointMarker from "./MarkerTypes/MapPointToPointMarker";
 
 //Marker types needed:
 /*
@@ -64,15 +64,12 @@ export default class MapMarkers extends Component {
                     </div>
                 })}
                 {this.state.icons.point_to_many_points.map(function (icon, i) {
-                    {icon.options.routes.map(function(route, i){
-                        return <div key={i}>
-                            <MapPointToPointMarker position={route[0]} icon={icon} multiple={true}
-                                                   title={icon.options.title}/>
-                            <MapPointToPointMarker position={route[route.length - 1]}
-                                                   icon={icon}
-                                                   title={icon.options.title} multiple={true} />
-                        </div>
-                    })}
+                    return <div key={i}>
+                        {icon.options.stops.map(function (stop, i) {
+                            return <MapPointToPointMarker key={i} position={stop} icon={icon}
+                                                          title={icon.options.title}/>
+                        })}
+                    </div>
                 })}
             </>
         )

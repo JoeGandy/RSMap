@@ -1,6 +1,6 @@
 import React from "react"
-import Header from "./header";
-import Footer from "./footer";
+import Header from "./Partials/header";
+import Footer from "./Partials/footer";
 import Helmet from "react-helmet";
 
 require('../scss/main.scss');

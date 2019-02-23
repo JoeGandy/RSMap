@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Map, Marker, Polyline, Popup} from "react-leaflet";
-import {AgilityShortcutIcon} from "../classes/Icons";
+import {AgilityShortcutIcon} from "../../classes/Icons";
 
 export default class MapPointToPointMarker extends Component {
     constructor(props) {
@@ -22,15 +22,16 @@ export default class MapPointToPointMarker extends Component {
         }
     }
 
-    onMarkerClick(e){
-        for(let i in this.props.icon.options.positions){
+    onMarkerClick(e) {
+        //Idea i had to click to jump to markers but needs a lot of work to be fluid, but it is functional
+        for (let i in this.props.icon.options.positions) {
             let position = this.props.icon.options.positions[i];
-            if(position.lat === e.latlng.lat && position.lng === e.latlng.lng){
+            if (position.lat === e.latlng.lat && position.lng === e.latlng.lng) {
                 let target = null;
-                if(i == 0){
+                if (i == 0) {
                     //goto last position
                     target = this.props.icon.options.positions[this.props.icon.options.positions.length - 1];
-                }else{
+                } else {
                     //goto first position
                     target = this.props.icon.options.positions[0];
                 }
@@ -41,8 +42,6 @@ export default class MapPointToPointMarker extends Component {
     }
 
     render() {
-        let icon = this.state.icon;
-
         return (
             <>
                 <Marker
@@ -65,16 +64,6 @@ export default class MapPointToPointMarker extends Component {
                     </Popup>
                 </Marker>
                 {this.state.active ?
-                    this.props.multiple ? 
-                    this.props.icon.routes.map(function(route, i){
-                        return <Polyline
-                        weight={6}
-                        color={'yellow'}
-                        dashArray={[15, 15]}
-                        positions={route}
-                        opacity={0.5}
-                    />
-                    }) : 
                     <Polyline
                         weight={6}
                         color={'yellow'}
