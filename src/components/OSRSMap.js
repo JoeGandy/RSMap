@@ -14,12 +14,14 @@ export default class OSRSMap extends Component {
         this.state = {
             zoomLevel: 6,
             line: null,
-            center: {"lat": 76.40881056467734, "lng": 317.13134765625006}
+            center: {"lat": 76.40881056467734, "lng": 317.13134765625006},
+            filters: {}
         };
 
         this.handleClick = this.handleClick.bind(this);
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
         this.centerMap = this.centerMap.bind(this);
+        this.updateFilters = this.updateFilters.bind(this);
     }
 
     handleZoomEnd() {
@@ -44,6 +46,10 @@ export default class OSRSMap extends Component {
         this.setState({center: {"lat": _center.lat, "lng": _center.lng}})
     }
 
+    updateFilters(filters){
+        this.setState({filters: filters});
+    }
+
     render() {
         if (typeof window !== 'undefined') {
             return (
@@ -63,10 +69,10 @@ export default class OSRSMap extends Component {
                             attribution="RSMap - From OSRS Data"
                             url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
                         />
-                        <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}/>
+                        <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} filters={this.state.filters}/>
                         {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                     </Map>
-                    <FiltersBox />
+                    <FiltersBox updateFilters={this.updateFilters}/>
                 </>
             )
         } else {

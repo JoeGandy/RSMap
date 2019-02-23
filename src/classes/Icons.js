@@ -1,4 +1,4 @@
-import {IconBaseClass} from "./IconBaseClass";
+import {Categories, IconBaseClass} from "./IconBaseClass";
 
 let icons_dir = '../../static/icons/teleport/';
 
@@ -57,241 +57,275 @@ export function getClosestIcon(lat, lng) {
 export const FairyRings = [
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 74.5915675990001, "lng": 302.069091796875},
         title: "Fairy ring",
-        description: "A I Q (aiq)"
+        description: "A I Q (aiq)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 76.81578187834086, "lng": 282.55737304687506},
         title: "Fairy ring",
-        description: "A I R (air)"
+        description: "A I R (air)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 81.3265643369573, "lng": 287.83081054687506},
         title: "Fairy ring",
-        description: "A J R (ajr)"
+        description: "A J R (ajr)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 83.73055909431551, "lng": 269.37927246093756},
         title: "Fairy ring",
-        description: "A J S (ajs)"
+        description: "A J S (ajs)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 81.34559639180898, "lng": 257.43713378906256},
         title: "Fairy ring",
-        description: "A K Q (akq)"
+        description: "A K Q (akq)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 71.65156224242223, "lng": 274.05395507812506},
         title: "Fairy ring",
-        description: "A K S (aks)"
+        description: "A K S (aks)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 81.55142594298475, "lng": 269.57153320312506},
         title: "Fairy ring",
-        description: "A L P (alp)"
+        description: "A L P (alp)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 80.05994617616484, "lng": 341.82312011718756},
         title: "Fairy ring",
-        description: "A L Q (alq)"
+        description: "A L Q (alq)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 80.07226543955538, "lng": 278.86596679687506},
         title: "Fairy ring",
-        description: "A L S (als)"
+        description: "A L S (als)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 77.92601462331328, "lng": 329.35913085937506},
         title: "Fairy ring",
-        description: "B I P (bip)"
+        description: "B I P (bip)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 74.29248881670038, "lng": 318.75183105468756},
         title: "Fairy ring",
-        description: "B I Q (biq)"
+        description: "B I Q (biq)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 77.09964896517972, "lng": 278.34411621093756},
         title: "Fairy ring",
-        description: "B I S (bis)"
+        description: "B I S (bis)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 73.82022893610119, "lng": 246.17065429687503},
         title: "Fairy ring",
-        description: "B J S (bjs)"
+        description: "B J S (bjs)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 73.22194329309737, "lng": 261.79321289062506},
         title: "Fairy ring",
-        description: "B K S (bks)"
+        description: "B K S (bks)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 79.31486848891893, "lng": 333.24829101562506},
         title: "Fairy ring",
-        description: "B K R (bkr)"
+        description: "B K R (bkr)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 78.29381505701517, "lng": 285.19958496093756},
         title: "Fairy ring",
-        description: "B L R (blr)"
+        description: "B L R (blr)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 83.64358148767488, "lng": 270.23620605468756},
         title: "Fairy ring",
-        description: "C I P (cip)"
+        description: "C I P (cip)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 74.88651947809277, "lng": 271.22497558593756},
         title: "Fairy ring",
-        description: "C I Q (ciq)"
+        description: "C I Q (ciq)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 82.67208232814555, "lng": 190.54138183593753},
         title: "Fairy ring",
-        description: "C I R (cir)"
+        description: "C I R (cir)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 83.51147766926859, "lng": 212.6239013671875},
         title: "Fairy ring",
-        description: "C I S (cis)"
+        description: "C I S (cis)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 80.95091652512318, "lng": 282.89794921875006},
         title: "Fairy ring",
-        description: "C J R (cjr)"
+        description: "C J R (cjr)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 72.6038360424019, "lng": 289.20959472656256},
         title: "Fairy ring",
-        description: "C K R (ckr)"
+        description: "C K R (ckr)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 79.78213873561926, "lng": 331.79260253906256},
         title: "Fairy ring",
-        description: "C K S (cks)"
+        description: "C K S (cks)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 76.18630710027861, "lng": 307.73803710937506},
         title: "Fairy ring",
-        description: "C L P (clp)"
+        description: "C L P (clp)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 66.52420417769652, "lng": 285.06774902343756},
         title: "Fairy ring",
-        description: "C L R (clr)"
+        description: "C L R (clr)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 74.07540384020064, "lng": 281.37084960937506},
         title: "Fairy ring",
-        description: "C L S (cls)"
+        description: "C L S (cls)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 75.22646574076222, "lng": 309.58374023437506},
         title: "Fairy ring",
-        description: "D I S (dis)"
+        description: "D I S (dis)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 76.56029664074973, "lng": 279.79431152343756},
         title: "Fairy ring",
-        description: "D J P (djp)"
+        description: "D J P (djp)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 81.75160686385584, "lng": 200.36865234375},
         title: "Fairy ring",
-        description: "D J R (djr)"
+        description: "D J R (djr)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 74.61052999955676, "lng": 295.74645996093756},
         title: "Fairy ring",
-        description: "D K P (dkp)"
+        description: "D K P (dkp)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 80.05994617616484, "lng": 310.70434570312506},
         title: "Fairy ring",
-        description: "D K R (dkr)"
+        description: "D K R (dkr)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 82.31770944958727, "lng": 285.45776367187506},
         title: "Fairy ring",
-        description: "D K S (dks)"
+        description: "D K S (dks)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 72.85659981428137, "lng": 330.21606445312506},
         title: "Fairy ring",
-        description: "D L Q (dlq)"
+        description: "D L Q (dlq)",
+        category: Categories.FAIRY_RINGS
     },
     {
         iconUrl: require('../../static/icons/misc/fairy_ring_icon.png'),
-        className: 'fairy_ring',
+        className: Categories.FAIRY_RINGS,
         position: {"lat": 74.39920828363479, "lng": 250.45532226562503},
         title: "Fairy ring",
-        description: "D L R (dlr)"
+        description: "D L R (dlr)",
+        category: Categories.FAIRY_RINGS
     },
 ];
 
@@ -299,155 +333,181 @@ export const Teleports = [
     // >>>>>>>>>>>>>>>>>>>>> Standard Spell book >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     {
         iconUrl: require('../../static/icons/teleport/Home_Teleport_icon.png'),
-        className: 'teleport teleport_home regular_spellbook',
+        className: 'teleport teleport_home ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 76.35967119570851, "lng": 317},
-        title: "Home Teleport Spell"
+        title: "Home Teleport Spell",
+        category: Categories.REGULAR_SPELLBOOK
+
     },
     {
         iconUrl: require('../../static/icons/teleport/Lumbridge_Teleport_icon.png'),
-        className: 'teleport teleport_lumbridge regular_spellbook',
+        className: 'teleport teleport_lumbridge ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 76.35967119570851, "lng": 317.3},
-        title: "Teleport to Lumbridge"
+        title: "Teleport to Lumbridge",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Varrock_Teleport_icon.png'),
-        className: 'teleport teleport_varrock regular_spellbook',
+        className: 'teleport teleport_varrock ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 79.19401548509859, "lng": 316.37329101562506},
-        title: "Teleport to Varrock"
+        title: "Teleport to Varrock",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Falador_Teleport_icon.png'),
-        className: 'teleport teleport_faladaor regular_spellbook',
+        className: 'teleport teleport_faladaor ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 78.66244812600279, "lng": 300.06408691406256},
-        title: "Teleport to Falador"
+        title: "Teleport to Falador",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Teleport_to_House_icon.png'),
-        className: 'teleport teleport_house teleport_rimmington regular_spellbook',
+        className: 'teleport teleport_house teleport_rimmington ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 76.43718024219102, "lng": 299.33898925781256},
-        title: "Teleport to House (Rimmington)"
+        title: "Teleport to House (Rimmington)",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Teleport_to_House_icon.png'),
-        className: 'teleport teleport_house teleport_yannile regular_spellbook',
+        className: 'teleport teleport_house teleport_yannile ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 74.27909894347644, "lng": 272.32360839843756},
-        title: "Teleport to House (Yannille)"
+        title: "Teleport to House (Yannille)",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Teleport_to_House_icon.png'),
-        className: 'teleport teleport_house teleport_rellekka regular_spellbook',
+        className: 'teleport teleport_house teleport_rellekka ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 81.50935493057601, "lng": 280.56884765625006},
-        title: "Teleport to House (Rellekka)"
+        title: "Teleport to House (Rellekka)",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Teleport_to_House_icon.png'),
-        className: 'teleport teleport_house teleport_brimhaven regular_spellbook',
+        className: 'teleport teleport_house teleport_brimhaven ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 75.70342995730704, "lng": 286.46850585937506},
-        title: "Teleport to House (Brimhaven)"
+        title: "Teleport to House (Brimhaven)",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Teleport_to_House_icon.png'),
-        className: 'teleport teleport_house teleport_taverly regular_spellbook',
+        className: 'teleport teleport_house teleport_taverly ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 79.69701350577613, "lng": 295.46081542968756},
-        title: "Teleport to House (Taverly)"
+        title: "Teleport to House (Taverly)",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Teleport_to_House_icon.png'),
-        className: 'teleport teleport_house teleport_pollnivneach regular_spellbook',
+        className: 'teleport teleport_house teleport_pollnivneach ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 72.6038360424019, "lng": 324.73388671875006},
-        title: "Teleport to House (Pollnivneach)"
+        title: "Teleport to House (Pollnivneach)",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Teleport_to_House_icon.png'),
-        className: 'teleport teleport_house teleport_hosidius regular_spellbook',
+        className: 'teleport teleport_house teleport_hosidius ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 80.29607550360463, "lng": 219.63867187500003},
-        title: "Teleport to House (Hosidius)"
+        title: "Teleport to House (Hosidius)",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Camelot_Teleport_icon.png'),
-        className: 'teleport teleport_camelot regular_spellbook',
+        className: 'teleport teleport_camelot ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 79.84818858331862, "lng": 286.38061523437506},
-        title: "Teleport to Camelot"
+        title: "Teleport to Camelot",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Ardougne_Teleport_icon.png'),
-        className: 'teleport teleport_ardougne regular_spellbook',
+        className: 'teleport teleport_ardougne ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 77.64712256067553, "lng": 280.04150390625006},
-        title: "Teleport to Ardougne"
+        title: "Teleport to Ardougne",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Watchtower_Teleport_icon.png'),
-        className: 'teleport teleport_watchtower regular_spellbook',
+        className: 'teleport teleport_watchtower ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 74.63238139647521, "lng": 272.51037597656256},
-        title: "Teleport to the Watchtower"
+        title: "Teleport to the Watchtower",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Trollheim_Teleport_icon.png'),
-        className: 'teleport teleport_trollheim regular_spellbook',
+        className: 'teleport teleport_trollheim ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 81.92164259401909, "lng": 295.20263671875006},
-        title: "Teleport to Trollheim"
+        title: "Teleport to Trollheim",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Ape_Atoll_Teleport_%28standard%29_icon.png'),
-        className: 'teleport teleport_apeatol regular_spellbook',
+        className: 'teleport teleport_apeatol ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 67.86519487931152, "lng": 289.03930664062506},
-        title: "Teleport to Ape Atol"
+        title: "Teleport to Ape Atol",
+        category: Categories.REGULAR_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Kourend_Castle_Teleport_icon.png'),
-        className: 'teleport teleport_kourendcastle regular_spellbook',
+        className: 'teleport teleport_kourendcastle ' + Categories.REGULAR_SPELLBOOK,
         position: {"lat": 81.88295389538273, "lng": 213.01391601562503},
-        title: "Teleport to Kourend Castle"
+        title: "Teleport to Kourend Castle",
+        category: Categories.REGULAR_SPELLBOOK
     },
     // <<<<<<<<<<<<<<<<<<<<< Standard Spell book <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     // >>>>>>>>>>>>>>>>>>>>> Ancient Spell book >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     {
         iconUrl: require('../../static/icons/teleport/Paddewwa_Teleport_icon.png'),
-        className: 'teleport teleport_paddewwa regular_spellbook',
+        className: 'teleport teleport_paddewwa ' + Categories.ANCIENT_SPELLBOOK,
         position: {"lat": 79.85302848224637, "lng": 308.58947753906256},
-        title: "Teleport to Paddewwa"
+        title: "Teleport to Paddewwa",
+        category: Categories.ANCIENT_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Senntisten_Teleport_icon.png'),
-        className: 'teleport teleport_senntisten regular_spellbook',
+        className: 'teleport teleport_senntisten ' + Categories.ANCIENT_SPELLBOOK,
         position: {"lat": 78.1344931829381, "lng": 325.71166992187506},
-        title: "Teleport to Paddewwa"
+        title: "Teleport to Paddewwa",
+        category: Categories.ANCIENT_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Kharyrll_Teleport_icon.png'),
-        className: 'teleport teleport_kharyrll regular_spellbook',
+        className: 'teleport teleport_kharyrll ' + Categories.ANCIENT_SPELLBOOK,
         position: {"lat": 79.95509868922989, "lng": 334.85778808593756},
-        title: "Teleport to Kharyrll "
+        title: "Teleport to Kharyrll ",
+        category: Categories.ANCIENT_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Lassar_Teleport_icon.png'),
-        className: 'teleport teleport_lassar regular_spellbook',
+        className: 'teleport teleport_lassar ' + Categories.ANCIENT_SPELLBOOK,
         position: {"lat": 79.9799791857134, "lng": 302.9095458984375},
-        title: "Teleport to Lassar "
+        title: "Teleport to Lassar ",
+        category: Categories.ANCIENT_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Dareeyak_Teleport_icon.png'),
-        className: 'teleport teleport_dareeyak regular_spellbook',
+        className: 'teleport teleport_dareeyak ' + Categories.ANCIENT_SPELLBOOK,
         position: {"lat": 82.08290127808056, "lng": 300.44860839843756},
-        title: "Teleport to Dareeyak"
+        title: "Teleport to Dareeyak",
+        category: Categories.ANCIENT_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Carrallangar_Teleport_icon.png'),
-        className: 'teleport teleport_carrallangar regular_spellbook',
+        className: 'teleport teleport_carrallangar ' + Categories.ANCIENT_SPELLBOOK,
         position: {"lat": 81.88140252510168, "lng": 313.34106445312506},
-        title: "Teleport to Carrallangar "
+        title: "Teleport to Carrallangar ",
+        category: Categories.ANCIENT_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Annakarl_Teleport_icon.png'),
-        className: 'teleport teleport_annakarl regular_spellbook',
+        className: 'teleport teleport_annakarl ' + Categories.ANCIENT_SPELLBOOK,
         position: {"lat": 83.63932291491399, "lng": 321.41601562500006},
-        title: "Teleport to Annakarl "
+        title: "Teleport to Annakarl ",
+        category: Categories.ANCIENT_SPELLBOOK
     },
     {
         iconUrl: require('../../static/icons/teleport/Ghorrock_Teleport_icon.png'),
-        className: 'teleport teleport_ghorrock regular_spellbook',
+        className: 'teleport teleport_ghorrock ' + Categories.ANCIENT_SPELLBOOK,
         position: {"lat": 83.7896675689016, "lng": 299.09729003906256},
-        title: "Teleport to Ghorrock "
+        title: "Teleport to Ghorrock ",
+        category: Categories.ANCIENT_SPELLBOOK
     },
 ];
 
@@ -455,28 +515,30 @@ export const PointToPoints = [
     // >>>>>>>>>>>>>>>>>>>>> Agility Shortcuts >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     {
         iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
-        className: 'agility_shortcut',
+        className: Categories.AGILITY_SHORTCUT,
         positions: [
             {"lat": 75.71969873605714, "lng": 318.54858398437506},
             {"lat": 75.72105364905663, "lng": 319.40551757812506}
         ],
-        title: "River lum grapple"
+        title: "River lum grapple",
+        category: Categories.AGILITY_SHORTCUT
     },
     {
         iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
-        className: 'agility_shortcut',
+        className: Categories.AGILITY_SHORTCUT,
         positions: [
             {"lat": 75.12668436992617, "lng": 294.03259277343756},
             {"lat": 74.87075679591987, "lng": 294.09851074218756}
         ],
-        title: "Brimhaven Grapple"
+        title: "Brimhaven Grapple",
+        category: Categories.AGILITY_SHORTCUT
     },
     // <<<<<<<<<<<<<<<<<<<<<< Agility Shortcuts <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     // >>>>>>>>>>>>>>>>>>>>> Boats >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     //<<<<<< Two ways >>>>>>>>>>>>>>
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 76.57815922398312, "lng": 305.43090820312506},
             {"lat": 76.11662168423263, "lng": 307.24365234375},
@@ -488,11 +550,12 @@ export const PointToPoints = [
             {"lat": 77.64124536695779, "lng": 294.10400390625006},
             {"lat": 78.03696523649174, "lng": 291.39038085937506}
         ],
-        title: "Entrana ↔ Port Sarim"
+        title: "Entrana ↔ Port Sarim",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 76.34411731923645, "lng": 304.32128906250006},
             {"lat": 76.32854604438678, "lng": 306.88110351562506},
@@ -501,11 +564,12 @@ export const PointToPoints = [
             {"lat": 74.43167575527531, "lng": 300.56396484375006},
             {"lat": 75.16048677152297, "lng": 299.43786621093756}
         ],
-        title: "Karajama ↔ Port Sarim"
+        title: "Karajama ↔ Port Sarim",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 76.07570266770183, "lng": 304.97497558593756},
             {"lat": 76.02405595861573, "lng": 307.38647460937506},
@@ -515,11 +579,12 @@ export const PointToPoints = [
             {"lat": 68.3910896345649, "lng": 280.28320312500006},
             {"lat": 64.78816837781196, "lng": 279.92065429687506}
         ],
-        title: "Void Knights' Outpost ↔ Port Sarim"
+        title: "Void Knights' Outpost ↔ Port Sarim",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 76.59090394154062, "lng": 287.37487792968756},
             {"lat": 76.93552245725151, "lng": 285.85327148437506},
@@ -527,11 +592,12 @@ export const PointToPoints = [
             {"lat": 76.98757235359201, "lng": 281.34887695312506},
             {"lat": 77.20104488844608, "lng": 280.97534179687506}
         ],
-        title: "Brimhaven ↔ Ardougne"
+        title: "Brimhaven ↔ Ardougne",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 77.62006466839729, "lng": 284.07348632812506},
             {"lat": 77.823323145214, "lng": 284.95239257812506},
@@ -540,21 +606,23 @@ export const PointToPoints = [
             {"lat": 77.0344894800739, "lng": 287.32543945312506},
             {"lat": 77.14372454012101, "lng": 287.83630371093756}
         ],
-        title: "Witchaven ↔ Fishing Platform"
+        title: "Witchaven ↔ Fishing Platform",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 74.11303971567467, "lng": 286.39160156250006},
             {"lat": 71.77737688385326, "lng": 279.53613281250006}
         ],
         title: "Tai Brwo Wannai ↔ Feldip Hills (East)",
-        description: "You need a herb to get a ride: Rogue's Purse, Ardrigal, Snake weed, Volencia Moss"
+        description: "You need a herb to get a ride: Rogue's Purse, Ardrigal, Snake weed, Volencia Moss",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 79.49665183507658, "lng": 326.18408203125006},
             {"lat": 79.55258052804618, "lng": 328.48022460937506},
@@ -587,21 +655,23 @@ export const PointToPoints = [
             {"lat": 82.97064254118051, "lng": 350.12878417968756},
             {"lat": 83.03954523258545, "lng": 350.0628662109375}
         ],
-        title: "Digsite ↔ Fossil island"
+        title: "Digsite ↔ Fossil island",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 75.54248405616636, "lng": 336.80236816406256},
             {"lat": 75.37837872661018, "lng": 337.1923828125},
             {"lat": 75.58493740869223, "lng": 341.40014648437506}
         ],
-        title: "Burgh de Rott ↔ Maeiverditch"
+        title: "Burgh de Rott ↔ Maeiverditch",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 80.60318958039112, "lng": 346.56372070312506},
             {"lat": 80.63452828742753, "lng": 349.991455078125},
@@ -610,11 +680,12 @@ export const PointToPoints = [
             {"lat": 77.27748451804051, "lng": 346.5252685546875},
             {"lat": 77.26174811323173, "lng": 345.97045898437506}
         ],
-        title: "Ectofuntus ↔ Slepe (below)"
+        title: "Ectofuntus ↔ Slepe (below)",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 79.95605676110063, "lng": 348.74450683593756},
             {"lat": 79.978067468869, "lng": 350.36499023437506},
@@ -623,11 +694,12 @@ export const PointToPoints = [
             {"lat": 80.77295426341277, "lng": 354.54528808593756}
         ],
         title: "Port Phasmatys ↔ Dragontooth Island",
-        description: "Costs 25 Ecto tokens"
+        description: "Costs 25 Ecto tokens",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 80.07131834076769, "lng": 349.134521484375},
             {"lat": 79.05096467804664, "lng": 353.9794921875},
@@ -638,65 +710,71 @@ export const PointToPoints = [
             {"lat": 71.17357781496057, "lng": 347.76123046875006},
             {"lat": 71.50400873687697, "lng": 347.34375000000006}
         ],
-        title: "Port Phasmatys ↔ Mos Le'Harmless"
+        title: "Port Phasmatys ↔ Mos Le'Harmless",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 82.44154190785918, "lng": 283.08471679687506},
             {"lat": 82.7833364185014, "lng": 280.33813476562506},
             {"lat": 84.28798568789594, "lng": 279.93164062500006},
             {"lat": 84.34618778559923, "lng": 279.79431152343756}
         ],
-        title: "Rellekka (east) ↔ Iceberg"
+        title: "Rellekka (east) ↔ Iceberg",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 82.39806458235162, "lng": 283.05175781250006},
             {"lat": 82.7833364185014, "lng": 280.33813476562506},
             {"lat": 83.86057046571278, "lng": 280.30517578125006},
             {"lat": 84.20871395105432, "lng": 292.31872558593756}
         ],
-        title: "Rellekka (east) ↔ Weiss"
+        title: "Rellekka (east) ↔ Weiss",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 82.20155624480994, "lng": 278.86047363281256},
             {"lat": 82.05485676133894, "lng": 270.76904296875006},
             {"lat": 82.70145058672428, "lng": 264.25415039062506},
             {"lat": 82.82187709826647, "lng": 264.17175292968756}
         ],
-        title: "Rellekka ↔ Jatizso"
+        title: "Rellekka ↔ Jatizso",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 82.22165518221166, "lng": 278.59680175781256},
             {"lat": 82.05485676133894, "lng": 270.76904296875006},
             {"lat": 82.70145058672428, "lng": 257.14599609375006},
             {"lat": 82.81294844307736, "lng": 256.92077636718756}
         ],
-        title: "Rellekka ↔ Neitiznot"
+        title: "Rellekka ↔ Neitiznot",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 81.97626600019842, "lng": 277.41577148437506},
             {"lat": 82.56907533737537, "lng": 275.55908203125006},
             {"lat": 82.63837466796491, "lng": 272.68066406250006}
         ],
-        title: "Rellekka ↔ Waterbirth Island"
+        title: "Rellekka ↔ Waterbirth Island",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 82.11310903654756, "lng": 278.53637695312506},
             {"lat": 82.85884739680901, "lng": 273.01025390625006},
@@ -705,11 +783,12 @@ export const PointToPoints = [
             {"lat": 84.4740645845916, "lng": 254.97070312500003},
             {"lat": 84.63769756726754, "lng": 254.67407226562503}
         ],
-        title: "Rellekka ↔ Ungael"
+        title: "Rellekka ↔ Ungael",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 82.0168018903175, "lng": 277.39929199218756},
             {"lat": 82.1424513249561, "lng": 273.77929687500006},
@@ -717,22 +796,24 @@ export const PointToPoints = [
             {"lat": 82.72583469134848, "lng": 250.59814453125003},
             {"lat": 82.93559934286549, "lng": 250.46081542968753}
         ],
-        title: "Rellekka ↔ Pirates Cove"
+        title: "Rellekka ↔ Pirates Cove",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 82.05941121693256, "lng": 277.81127929687506},
             {"lat": 83.05948730257296, "lng": 277.50366210937506},
             {"lat": 83.27641888844767, "lng": 275.48217773437506},
             {"lat": 83.34552174104411, "lng": 274.64721679687506}
         ],
-        title: "Rellekka ↔ Miscellania"
+        title: "Rellekka ↔ Miscellania",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 82.95179467304061, "lng": 251.17492675781253},
             {"lat": 83.13080913050881, "lng": 251.42211914062503},
@@ -742,11 +823,12 @@ export const PointToPoints = [
             {"lat": 83.6417567328638, "lng": 245.70922851562503},
             {"lat": 83.73775349611977, "lng": 245.51147460937503}
         ],
-        title: "Pirates Cove ↔ Lunar Isle"
+        title: "Pirates Cove ↔ Lunar Isle",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 76.40106327998241, "lng": 297.32299804687506},
             {"lat": 76.31555667837529, "lng": 290.41259765625006},
@@ -759,21 +841,23 @@ export const PointToPoints = [
             {"lat": 69.01354605132327, "lng": 274.51538085937506}
 
         ],
-        title: "Rimmington ↔ Corsair Cove"
+        title: "Rimmington ↔ Corsair Cove",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat": 79.23000193927321, "lng": 275.89416503906256},
             {"lat": 79.38997509071015, "lng": 276.89392089843756}
 
         ],
-        title: "Fishing Guild ↔ Kylie Minnow's fishing platform"
+        title: "Fishing Guild ↔ Kylie Minnow's fishing platform",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat":79.95701474252938,"lng":260.73852539062506},
             {"lat":80.0533064596745,"lng":260.99670410156256},
@@ -785,24 +869,26 @@ export const PointToPoints = [
             {"lat":81.58043073424783,"lng":259.95300292968756}
 
         ],
-        title: "Eagles Peak ↔ Piscatoris Fishing Colony"
+        title: "Eagles Peak ↔ Piscatoris Fishing Colony",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         positions: [
             {"lat":83.36839854826567,"lng":345.838623046875},
             {"lat":83.68178108996156,"lng":342.509765625},
             {"lat":84.24793541158849,"lng":340.76843261718756}
 
         ],
-        title: "Fossil Island (Mushroom forest) ↔ Lithkren"
+        title: "Fossil Island (Mushroom forest) ↔ Lithkren",
+        category: Categories.BOATS
     },
 
     //<<<<<< One ways >>>>>>>>>>>>>>
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         one_way: true,
         positions: [
             {"lat": 79.16823815620724, "lng": 289.48425292968756},
@@ -810,11 +896,12 @@ export const PointToPoints = [
             {"lat": 78.90710049623647, "lng": 287.82531738281256}
         ],
         title: "Catherby ➝ Keep Le Faye",
-        description: "Get in the crate behind the candle store"
+        description: "Get in the crate behind the candle store",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         one_way: true,
         positions: [
             {"lat": 71.63426216732036, "lng": 286.61682128906256},
@@ -823,11 +910,11 @@ export const PointToPoints = [
             {"lat": 75.27261992123154, "lng": 281.21704101562506}
         ],
         title: "Cairn Isle (below) ➝ Port Khazard",
-        description: "Get in the crate behind the candle store"
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport',
+        className: Categories.BOATS,
         one_way: true,
         positions: [
             {"lat": 71.6308002628789, "lng": 286.92993164062506},
@@ -839,8 +926,8 @@ export const PointToPoints = [
             {"lat": 76.4654918099891, "lng": 306.76025390625006},
             {"lat": 76.61381450204217, "lng": 305.78247070312506}
         ],
-        title: "Cairn Isle (below) ➝ Port Khazard",
-        description: "Get in the crate behind the candle store"
+        title: "Cairn Isle (below) ➝ Port Sarim",
+        category: Categories.BOATS
     },
     // <<<<<<<<<<<<<<<<<<<<<< Boats <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ];
@@ -848,7 +935,7 @@ export const PointToPoints = [
 export const PointToManyPoints = [
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport charter_ship',
+        className: Categories.BOATS + ' charter_ship',
         stops: [
             {"lat": 80.13834056838962, "lng": 348.67309570312506},
             {"lat": 80.13834056838962, "lng": 348.67309570312506},
@@ -923,11 +1010,12 @@ export const PointToManyPoints = [
 
 
         ],
-        title: "Charter Ship"
+        title: "Charter Ship",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'boat_transport zeah',
+        className: Categories.BOATS + ' zeah',
         stops: [
             {"lat": 76.74291687836927, "lng": 305.9637451171875},
             {"lat": 82.06017004062555, "lng": 224.81872558593753},
@@ -952,11 +1040,12 @@ export const PointToManyPoints = [
             {"lat": 78.88276578290562, "lng": 204.89501953125003},
             {"lat": 78.87958780617919, "lng": 203.719482421875},
         ],
-        title: "Zeah Boat"
+        title: "Zeah Boat",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'muli_destination canoes',
+        className: Categories.OTHER + 'muli_destination canoes',
         stops: [
             {"lat": 76.65191339742755, "lng": 318.27941894531256},
             {"lat": 78.1728342204629, "lng": 315.7196044921875},
@@ -1014,11 +1103,12 @@ export const PointToManyPoints = [
 
 
         ],
-        title: "River Lum Log boats"
+        title: "River Lum Log boats",
+        category: Categories.OTHER
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'carpet_ride',
+        className: Categories.CARPET_RIDES + ' carpet_ride',
         stops: [
             {"lat": 74.50522056937588, "lng": 322.89916992187506},
             {"lat": 74.5755046849982, "lng": 333.25927734375006},
@@ -1035,11 +1125,12 @@ export const PointToManyPoints = [
             {"lat": 74.50522056937588, "lng": 322.89916992187506},
 
         ],
-        title: "Desert Magic Carpets"
+        title: "Desert Magic Carpets",
+        category: Categories.CARPET_RIDES
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'carpet_ride',
+        className: Categories.CARPET_RIDES + ' carpet_ride',
         stops: [
             {"lat": 71.33949860626103, "lng": 325.140380859375},
             {"lat": 70.76158594641528, "lng": 328.71093750000006},
@@ -1057,11 +1148,12 @@ export const PointToManyPoints = [
 
 
         ],
-        title: "Desert Magic Carpets"
+        title: "Desert Magic Carpets",
+        category: Categories.CARPET_RIDES
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'gnome_glider',
+        className: Categories.GNOME_GLIDERS,
         stops: [
             {"lat":80.12798624249334,"lng":266.80847167968756},
             {"lat":80.11762115289953,"lng":292.17590332031256},
@@ -1070,16 +1162,15 @@ export const PointToManyPoints = [
             {"lat":71.98408532635747,"lng":300.49255371093756},
             {"lat":68.17563985633973,"lng":283.41979980468756},
             {"lat":71.88016180394868,"lng":272.07641601562506},
-
-
         ],
         positions: [
         ],
-        title: "Gnome Gliders"
+        title: "Gnome Gliders",
+        category: Categories.GNOME_GLIDERS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'spirit_trees',
+        className: Categories.SPIRIT_TREES,
         stops: [
             {"lat":76.96776789443538,"lng":272.99377441406256},
             {"lat":79.47459894016727,"lng":266.73706054687506},
@@ -1089,11 +1180,12 @@ export const PointToManyPoints = [
         ],
         positions: [
         ],
-        title: "Spirit Trees"
+        title: "Spirit Trees",
+        category: Categories.SPIRIT_TREES
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'balloon_transport',
+        className: Categories.BALLOON_TRANSPORT,
         stops: [
             {"lat":74.52282083394752,"lng":266.67663574218756},
             {"lat":78.28601082129987,"lng":289.57763671875006},
@@ -1106,32 +1198,30 @@ export const PointToManyPoints = [
         positions: [
 
         ],
-        title: "Balloon Transport System"
+        title: "Balloon Transport System",
+        category: Categories.BALLOON_TRANSPORT
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'magic_mushroom',
+        className: Categories.MAGIC_MUSHROOMS,
         stops: [
             {"lat":83.5337864118568,"lng":346.82739257812506},
             {"lat":82.61299277110686,"lng":346.95373535156256},
             {"lat":82.62146305852085,"lng":352.29858398437506},
-
-
         ],
         positions: [
 
         ],
-        title: "Magic mushroom teleports"
+        title: "Magic mushroom teleports",
+        category: Categories.MAGIC_MUSHROOMS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
-        className: 'fossil_island_row_boats',
+        className: Categories.BOATS,
         stops: [
             {"lat":83.70109641601667,"lng":350.72204589843756},
             {"lat":83.75331316974862,"lng":352.76550292968756},
             {"lat":83.02555186844917,"lng":350.46936035156256}
-
-
         ],
         positions: [
             {"lat":83.70109641601667,"lng":350.72204589843756},
@@ -1147,26 +1237,31 @@ export const PointToManyPoints = [
             {"lat":82.86430834427168,"lng":349.3048095703125},
             {"lat":83.02555186844917,"lng":350.46936035156256},
         ],
-        title: "Fossil Island row boats"
+        title: "Fossil Island row boats",
+        category: Categories.BOATS
     },
 ];
 
-const types = [
+export const types = [
     {
         label: 'teleports',
-        data: Teleports
+        data: Teleports,
+        shown: true
     },
     {
         label: 'point_to_points',
-        data: PointToPoints
+        data: PointToPoints,
+        shown: true
     },
     {
         label: 'point_to_many_points',
-        data: PointToManyPoints
+        data: PointToManyPoints,
+        shown: true
     },
     {
         label: 'fairy_rings',
-        data: FairyRings
+        data: FairyRings,
+        shown: true
     }
 ];
 

@@ -12,9 +12,33 @@ let zoomLevel = 6;
 
 const default_size = sizeConversion[zoomLevel];
 
-
 export const Categories = {
-    MISC: 'MISC'
+    REGULAR_SPELLBOOK: 'regular_spellbook',
+    ANCIENT_SPELLBOOK: 'ancient_spellbook',
+    AGILITY_SHORTCUT: 'agility_shortcut',
+    BOATS: 'boats',
+    FAIRY_RINGS: 'fairy_rings',
+    SPIRIT_TREES: 'spirit_trees',
+    BALLOON_TRANSPORT: 'balloon_transport_system',
+    MAGIC_MUSHROOMS: 'magic_mushroom',
+    GNOME_GLIDERS: 'gnome_glider',
+    CARPET_RIDES: 'carpet_ride',
+    OTHER: 'other'
+};
+
+export const Categories_name = {
+    [Categories.REGULAR_SPELLBOOK]: 'Standard Spellbook',
+    [Categories.ANCIENT_SPELLBOOK]: 'Ancient Spellbook',
+    [Categories.AGILITY_SHORTCUT]: 'Agility Shortcuts',
+    [Categories.BOATS]: 'Ships / Boats',
+    [Categories.FAIRY_RINGS]: 'Fairy Rings',
+    [Categories.SPIRIT_TREES]: 'Spirit Trees',
+    [Categories.BALLOON_TRANSPORT]: 'Balloon Transport',
+    [Categories.MAGIC_MUSHROOMS]: 'Magic Mushrooms',
+    [Categories.GNOME_GLIDERS]: 'Gnome Gliders',
+    [Categories.CARPET_RIDES]: 'Carpet Rides',
+    [Categories.OTHER]: 'Other',
+
 };
 
 export class IconBaseClass extends Icon {
