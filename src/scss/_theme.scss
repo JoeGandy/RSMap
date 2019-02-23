@@ -74,9 +74,15 @@ h1 {
   }
 }
 
-
+.leaflet-bar a,
 .leaflet-popup-tip{
   background: #dcbf8c !important;
+  color:black;
+}
+
+.leaflet-bar a:hover{
+  background: #a08456 !important;
+  color:black;
 }
 
 .leaflet-popup-content-wrapper{
