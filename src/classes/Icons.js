@@ -509,6 +509,197 @@ export const Teleports = [
         title: "Teleport to Ghorrock ",
         category: Categories.ANCIENT_SPELLBOOK
     },
+    // <<<<<<<<<<<<<<<<<<<<< Ancient Spell book <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    // >>>>>>>>>>>>>>>>>>>>> Lunar Spell book >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    {
+        iconUrl: require('../../static/icons/teleport/Home_Teleport_icon.png'),
+        className: 'teleport teleport_lunar_home ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":83.84292070051193,"lng":242.73193359375003},
+        title: "Home Teleport Spell (Lunar)",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Moonclan_Teleport_icon.png'),
+        className: 'teleport teleport_moonclan ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":83.8399741628462,"lng":243.09997558593753},
+        title: "Moonclan Teleport",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ourania_Teleport_icon.png'),
+        className: 'teleport teleport_ourania teleport_zmi ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":76.72653088877502,"lng":267.50610351562506},
+        title: "Ourania Teleport",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Waterbirth_Teleport_icon.png'),
+        className: 'teleport teleport_waterbirth ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":82.64822196607551,"lng":272.20825195312506},
+        title: "Waterbirth Teleport",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Barbarian_Teleport_icon.png'),
+        className: 'teleport teleport_barbiarn_outpost ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":80.84402736160101,"lng":270.68115234375006},
+        title: "Barbarian Teleport (Barbarian Outpost)",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Khazard_Teleport_icon.png'),
+        className: 'teleport teleport_khazard ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":75.38392435449046,"lng":279.63500976562506},
+        title: "Khazard Teleport",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Fishing_Guild_Teleport_icon.png'),
+        className: 'teleport teleport_fishing_guild ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":78.7827617628182,"lng":276.71264648437506},
+        title: "Fishing Guild Teleport",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Catherby_Teleport_icon.png'),
+        className: 'teleport teleport_catherby ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":79.50766114392374,"lng":289.12719726562506},
+        title: "Catherby Teleport",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ice_Plateau_Teleport_icon.png'),
+        className: 'teleport teleport_ice_plateau ' + Categories.LUNAR_SPELLBOOK,
+        position: {"lat":83.86878976571622,"lng":300.42114257812506},
+        title: "Ice Planteau Teleport",
+        category: Categories.LUNAR_SPELLBOOK
+    },
+    // <<<<<<<<<<<<<<<<<<<<< Lunar Spell book <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    // >>>>>>>>>>>>>>>>>>>>> Arceuus Spell book >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    {
+        iconUrl: require('../../static/icons/teleport/Home_Teleport_icon.png'),
+        className: 'teleport teleport_home_arceuus ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":83.60454003128096,"lng":217.05688476562503},
+        title: "Home Teleport Spell (Arceuus)",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Lumbridge_Graveyard_Teleport_icon.png'),
+        className: 'teleport teleport_lumbridge_graveyard ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":76.01742102194744,"lng":318.37280273437506},
+        title: "Lumbridge Graveyard Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Draynor_Manor_Teleport_icon.png'),
+        className: 'teleport teleport_draynor_manor ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":78.13901024442676,"lng":309.57275390625006},
+        title: "Draynor Manor Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Battlefront_Teleport_icon.png'),
+        className: 'teleport teleport_battlefront ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":82.46966951033005,"lng":193.52416992187503},
+        title: "Battlefront Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Mind_Altar_Teleport_icon.png'),
+        className: 'teleport teleport_mind_altar ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":80.10252542210563,"lng":301.01989746093756},
+        title: "Mind Altar Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Respawn_Teleport_icon.png'),
+        className: 'teleport teleport_respawn_edgeville ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":79.78895756946126,"lng":308.594970703125},
+        title: "Respawn Teleport ",
+        description: "Must have death location here",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Respawn_Teleport_icon.png'),
+        className: 'teleport teleport_respawn_lumbridge ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":76.28303027845439,"lng":317.14233398437506},
+        title: "Respawn Teleport ",
+        description: "Must have death location here",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Respawn_Teleport_icon.png'),
+        className: 'teleport teleport_respawn_falador ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":78.14013924493644,"lng":300.44311523437506},
+        title: "Respawn Teleport ",
+        description: "Must have death location here",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Respawn_Teleport_icon.png'),
+        className: 'teleport teleport_respawn_ardougne ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":77.65064755611985,"lng":279.72290039062506},
+        title: "Respawn Teleport ",
+        description: "Must have death location here",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Salve_Graveyard_Teleport_icon.png'),
+        className: 'teleport teleport_salve_graveyard ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":79.66749761579231,"lng":330.83129882812506},
+        title: "Salve Graveyard Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Fenkenstrain%27s_Castle_Teleport_icon.png'),
+        className: 'teleport teleport_fenkenstrains_castle ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":80.4248491549027,"lng":338.56567382812506},
+        title: "Fenkenstrain's Castle Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/West_Ardougne_Teleport_icon.png'),
+        className: 'teleport teleport_western_ardounge ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":77.62948272019062,"lng":268.01147460937506},
+        title: "Western Ardougne Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/West_Ardougne_Teleport_icon.png'),
+        className: 'teleport teleport_western_ardounge ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":77.62948272019062,"lng":268.01147460937506},
+        title: "Western Ardougne Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Harmony_Island_Teleport_icon.png'),
+        className: 'teleport teleport_harmoney_island ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":69.57097878993854,"lng":354.93530273437506},
+        title: "Harmoney Island Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Cemetery_Teleport_icon.png'),
+        className: 'teleport teleport_forgotten_cemetery ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":82.57617631552547,"lng":300.87158203125006},
+        title: "Forgotten Cemetery Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Barrows_Teleport_icon.png'),
+        className: 'teleport teleport_barrows ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":77.77572686730878,"lng":339.6478271484375},
+        title: "Barrows Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ape_Atoll_Teleport_%28Arceuus%29_icon.png'),
+        className: 'teleport teleport_ape_atol ' + Categories.ARCEUUS_SPELLBOOK,
+        position: {"lat":65.4924628822755,"lng":286.33117675781256},
+        title: "Ape Atol Teleport",
+        category: Categories.ARCEUUS_SPELLBOOK
+    },
+    // <<<<<<<<<<<<<<<<<<<<< Arceuus Spell book <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ];
 
 export const PointToPoints = [

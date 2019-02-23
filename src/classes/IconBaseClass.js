@@ -15,6 +15,8 @@ const default_size = sizeConversion[zoomLevel];
 export const Categories = {
     REGULAR_SPELLBOOK: 'regular_spellbook',
     ANCIENT_SPELLBOOK: 'ancient_spellbook',
+    LUNAR_SPELLBOOK: 'lunar_spellbook',
+    ARCEUUS_SPELLBOOK: 'arceuus_spellbook',
     AGILITY_SHORTCUT: 'agility_shortcut',
     BOATS: 'boats',
     FAIRY_RINGS: 'fairy_rings',
@@ -29,6 +31,8 @@ export const Categories = {
 export const Categories_name = {
     [Categories.REGULAR_SPELLBOOK]: 'Standard Spellbook',
     [Categories.ANCIENT_SPELLBOOK]: 'Ancient Spellbook',
+    [Categories.LUNAR_SPELLBOOK]: 'Lunar Spellbook',
+    [Categories.ARCEUUS_SPELLBOOK]: 'Arceuus Spellbook',
     [Categories.AGILITY_SHORTCUT]: 'Agility Shortcuts',
     [Categories.BOATS]: 'Ships / Boats',
     [Categories.FAIRY_RINGS]: 'Fairy Rings',
