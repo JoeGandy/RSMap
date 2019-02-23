@@ -700,6 +700,191 @@ export const Teleports = [
         category: Categories.ARCEUUS_SPELLBOOK
     },
     // <<<<<<<<<<<<<<<<<<<<< Arceuus Spell book <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    // >>>>>>>>>>>>>>>>>>>>> Jewellery >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    {
+        iconUrl: require('../../static/icons/teleport/Games_necklace.png'),
+        className: 'jewellery games_necklace ' + Categories.JEWELLERY,
+        position: {"lat":80.90587943024157,"lng":270.75805664062506},
+        title: "Games Necklance Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Games_necklace.png'),
+        className: 'jewellery games_necklace ' + Categories.JEWELLERY,
+        position: {"lat":80.67911826095326,"lng":295.68603515625006},
+        title: "Games Necklance Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Games_necklace.png'),
+        className: 'jewellery games_necklace ' + Categories.JEWELLERY,
+        position: {"lat":84.00455785504411,"lng":211.67907714843753},
+        title: "Games Necklance Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ring_of_dueling.png'),
+        className: 'jewellery ring_of_dueling ' + Categories.JEWELLERY,
+        position: {"lat":74.16558439057223,"lng":265.56152343750006},
+        title: "Ring of Dueling Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ring_of_dueling.png'),
+        className: 'jewellery ring_of_dueling ' + Categories.JEWELLERY,
+        position: {"lat":76.59090394154062,"lng":323.29467773437506},
+        title: "Ring of Dueling Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ring_of_dueling.png'),
+        className: 'jewellery ring_of_dueling ' + Categories.JEWELLERY,
+        position: {"lat":75.39500943841519,"lng":327.96386718750006},
+        title: "Ring of Dueling Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Combat_bracelet.png'),
+        className: 'jewellery combat_bracelet ' + Categories.JEWELLERY,
+        position: {"lat":80.03050836819759,"lng":305.78247070312506},
+        title: "Combat Bracelet Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Combat_bracelet.png'),
+        className: 'jewellery combat_bracelet ' + Categories.JEWELLERY,
+        position: {"lat":78.46751192571969,"lng":314.97253417968756},
+        title: "Combat Bracelet Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Combat_bracelet.png'),
+        className: 'jewellery combat_bracelet ' + Categories.JEWELLERY,
+        position: {"lat":80.6121540861832,"lng":294.40612792968756},
+        title: "Combat Bracelet Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Combat_bracelet.png'),
+        className: 'jewellery combat_bracelet ' + Categories.JEWELLERY,
+        position: {"lat":79.41623981214111,"lng":279.65698242187506},
+        title: "Combat Bracelet Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Skills_necklace.png'),
+        className: 'jewellery skills_necklace ' + Categories.JEWELLERY,
+        position: {"lat":78.78169313024124,"lng":277.08068847656256},
+        title: "Skills Necklace Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Skills_necklace.png'),
+        className: 'jewellery skills_necklace ' + Categories.JEWELLERY,
+        position: {"lat":78.09829559916763,"lng":303.93676757812506},
+        title: "Skills Necklace Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Skills_necklace.png'),
+        className: 'jewellery skills_necklace ' + Categories.JEWELLERY,
+        position: {"lat":77.480325861269,"lng":298.03710937500006},
+        title: "Skills Necklace Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Skills_necklace.png'),
+        className: 'jewellery skills_necklace ' + Categories.JEWELLERY,
+        position: {"lat":79.41220327334501,"lng":311.824951171875},
+        title: "Skills Necklace Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Skills_necklace.png'),
+        className: 'jewellery skills_necklace ' + Categories.JEWELLERY,
+        position: {"lat":80.15432156203568,"lng":214.12353515625003},
+        title: "Skills Necklace Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Amulet_of_glory.png'),
+        className: 'jewellery amulet_of_glory ' + Categories.JEWELLERY,
+        position: {"lat":75.46548375087849,"lng":321.66870117187506},
+        title: "Amulet of Glory Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Amulet_of_glory.png'),
+        className: 'jewellery amulet_of_glory ' + Categories.JEWELLERY,
+        position: {"lat":76.81703471551978,"lng":309.13330078125006},
+        title: "Amulet of Glory Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Amulet_of_glory.png'),
+        className: 'jewellery amulet_of_glory ' + Categories.JEWELLERY,
+        position: {"lat":80.12892798946548,"lng":308.0841064453125},
+        title: "Amulet of Glory Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Amulet_of_glory.png'),
+        className: 'jewellery amulet_of_glory ' + Categories.JEWELLERY,
+        position: {"lat":75.56988730054205,"lng":297.09228515625006},
+        title: "Amulet of Glory Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ring_of_wealth.png'),
+        className: 'jewellery ring_of_wealth ' + Categories.JEWELLERY,
+        position: {"lat":79.6930828778363,"lng":313.24768066406256},
+        title: "Ring of Wealth Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ring_of_wealth.png'),
+        className: 'jewellery ring_of_wealth ' + Categories.JEWELLERY,
+        position: {"lat":78.64082992043338,"lng":302.05261230468756},
+        title: "Ring of Wealth Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ring_of_wealth.png'),
+        className: 'jewellery ring_of_wealth ' + Categories.JEWELLERY,
+        position: {"lat":83.46412945073891,"lng":271.70837402343756},
+        title: "Ring of Wealth Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Slayer_ring.png'),
+        className: 'jewellery slayer_ring ' + Categories.JEWELLERY,
+        position: {"lat":80.44675403034532,"lng":330.67749023437506},
+        title: "Ring of Slayer Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Slayer_ring.png'),
+        className: 'jewellery slayer_ring ' + Categories.JEWELLERY,
+        position: {"lat":81.31661808728937,"lng":288.51196289062506},
+        title: "Ring of Slayer Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Slayer_ring.png'),
+        className: 'jewellery slayer_ring ' + Categories.JEWELLERY,
+        position: {"lat":79.20842430283616,"lng":265.37475585937506},
+        title: "Ring of Slayer Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Digsite_pendant.png'),
+        className: 'jewellery digsite_pendent ' + Categories.JEWELLERY,
+        position: {"lat":79.44646539760868,"lng":325.228271484375},
+        title: "Digsite Pendent Teleport",
+        category: Categories.JEWELLERY
+    },
+
+    // <<<<<<<<<<<<<<<<<<<<< Jewellery <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ];
 
 export const PointToPoints = [

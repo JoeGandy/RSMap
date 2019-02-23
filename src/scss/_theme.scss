@@ -13,6 +13,14 @@
   cursor: crosshair !important;
 }
 
+.jewellery{
+  background-color:#dcbf8c;
+  border-radius:50px;
+  padding:3px;
+  box-sizing: border-box;
+  border:1px solid black;
+}
+
 .leaflet-div-icon {
   background: none !important;
 }
@@ -45,7 +53,7 @@ h1 {
   .content {
     position: relative;
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     padding: 40px 0;
 
     .content_inner {
