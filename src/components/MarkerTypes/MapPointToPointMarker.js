@@ -13,6 +13,7 @@ export default class MapPointToPointMarker extends Component {
         };
 
         this.onMarkerClick = this.onMarkerClick.bind(this);
+        this.getPositions = this.getPositions.bind(this);
     }
 
 
@@ -41,6 +42,21 @@ export default class MapPointToPointMarker extends Component {
         }
     }
 
+    getPositions(){
+        if(this.props.icon.options.positions.length){
+            return this.props.icon.options.positions;
+        }
+        let results = [];
+        for (let i = 0; i < this.props.icon.options.stops.length - 1; i++) {
+            for (let j = i + 1; j < this.props.icon.options.stops.length; j++) {
+                results.push(this.props.icon.options.stops[i]);
+                results.push(this.props.icon.options.stops[j]);
+            }
+        }
+        return results;
+
+    }
+
     render() {
         return (
             <>
@@ -67,7 +83,7 @@ export default class MapPointToPointMarker extends Component {
                     <Polyline
                         weight={6}
                         color={'yellow'}
-                        positions={this.props.icon.options.positions}
+                        positions={this.getPositions()}
                         opacity={0.5}
                     /> : null}
             </>
