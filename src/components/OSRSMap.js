@@ -6,6 +6,7 @@ import MapMarkers from "./MapMarkers";
 import * as Icons from "../classes/Icons";
 import L from "leaflet";
 import FiltersBox from "./FiltersBox";
+import * as CoordinateConvertor from "../classes/CoordinateConverter";
 
 export default class OSRSMap extends Component {
 
@@ -46,7 +47,7 @@ export default class OSRSMap extends Component {
         this.setState({center: {"lat": _center.lat, "lng": _center.lng}})
     }
 
-    updateFilters(filters){
+    updateFilters(filters) {
         this.setState({filters: filters});
     }
 
@@ -60,8 +61,8 @@ export default class OSRSMap extends Component {
                         }}
                         zoom={6}
                         center={this.state.center}
-                        maxZoom={8}
-                        minZoom={4}
+                        maxZoom={9}
+                        minZoom={3}
                         onClick={this.handleClick}
                         onZoomEnd={this.handleZoomEnd}
                     >
@@ -69,8 +70,19 @@ export default class OSRSMap extends Component {
                             attribution="RSMap - Built with data from osrs.wiki"
                             url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
                         />
-                        <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} filters={this.state.filters}/>
+                        <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}
+                                    filters={this.state.filters}/>
                         {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
+
+                        {CoordinateConvertor.buildChunkGrid().map(function (chunk, i) {
+                            return <Polyline
+                                weight={1}
+                                color={'white'}
+                                positions={chunk.positions}
+                                opacity={0.5}
+                            />
+                        })}
+
                     </Map>
                     <FiltersBox updateFilters={this.updateFilters}/>
                 </>

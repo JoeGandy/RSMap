@@ -16,6 +16,7 @@
         <TileSet href="6" units-per-pixel="1.00000000000000" order="6"/>
         <TileSet href="7" units-per-pixel="0.50000000000000" order="7"/>
         <TileSet href="8" units-per-pixel="0.25000000000000" order="8"/>
+        <TileSet href="9" units-per-pixel="0.12500000000000" order="9"/>
       </TileSets>
     </TileMap>
     
