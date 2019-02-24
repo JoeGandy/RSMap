@@ -66,7 +66,7 @@ export default class OSRSMap extends Component {
                         onZoomEnd={this.handleZoomEnd}
                     >
                         <TileLayer
-                            attribution="RSMap - From OSRS Data"
+                            attribution="RSMap - Built with data from osrs.wiki"
                             url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
                         />
                         <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} filters={this.state.filters}/>
