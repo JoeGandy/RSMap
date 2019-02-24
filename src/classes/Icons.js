@@ -505,7 +505,7 @@ export const Teleports = [
     {
         iconUrl: require('../../static/icons/teleport/Ghorrock_Teleport_icon.png'),
         className: 'teleport teleport_ghorrock ' + Categories.ANCIENT_SPELLBOOK,
-        position: {"lat": 83.7896675689016, "lng": 299.09729003906256},
+        position: {"lat":83.53749710311818,"lng":300.36621093750006},
         title: "Teleport to Ghorrock ",
         category: Categories.ANCIENT_SPELLBOOK
     },
@@ -883,6 +883,243 @@ export const Teleports = [
         title: "Digsite Pendent Teleport",
         category: Categories.JEWELLERY
     },
+    {
+        iconUrl: require('../../static/icons/teleport/Digsite_pendant.png'),
+        className: 'jewellery digsite_pendent ' + Categories.JEWELLERY,
+        position: {"lat":83.5220218873171,"lng":352.74902343750006},
+        title: "Digsite Pendent Teleport",
+        description: "Works after bone voyage complete but have to use the pendent on the south strange machine within the house on the hill first",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Digsite_pendant.png'),
+        className: 'jewellery digsite_pendent ' + Categories.JEWELLERY,
+        position: {"lat":84.42998562277383,"lng":338.9666748046875},
+        title: "Digsite Pendent Teleport",
+        description: "Works after dragon slayer 2, but have to come down this dungeon manually and use pendent on the strange machine again",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Necklace_of_passage.png'),
+        className: 'jewellery necklace_of_passage ' + Categories.JEWELLERY,
+        position: {"lat":75.71969873605714,"lng":309.89135742187506},
+        title: "Necklace of Passage Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Necklace_of_passage.png'),
+        className: 'jewellery necklace_of_passage ' + Categories.JEWELLERY,
+        position: {"lat":78.2121753659723,"lng":264.76501464843756},
+        title: "Necklace of Passage Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Necklace_of_passage.png'),
+        className: 'jewellery necklace_of_passage ' + Categories.JEWELLERY,
+        position: {"lat":75.30331101068566,"lng":329.22729492187506},
+        title: "Necklace of Passage Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Burning_amulet.png'),
+        className: 'jewellery burning_amulet ' + Categories.JEWELLERY,
+        position: {"lat":81.52798885197393,"lng":317.90039062500006},
+        title: "Burning Amulet Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Burning_amulet.png'),
+        className: 'jewellery burning_amulet ' + Categories.JEWELLERY,
+        position: {"lat":81.66605710511882,"lng":305.13427734375006},
+        title: "Burning Amulet Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Burning_amulet.png'),
+        className: 'jewellery burning_amulet ' + Categories.JEWELLERY,
+        position: {"lat":83.30849930404761,"lng":304.23339843750006},
+        title: "Burning Amulet Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ectophial.png'),
+        className: 'item_icon ectophial ' + Categories.OTHER,
+        position: {"lat":80.31919594760542,"lng":345.87158203125006},
+        title: "Ectophial Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Nardah_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":70.7688246201659,"lng":330.05126953125006},
+        title: "Nardah Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Digsite_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":79.0676456861466,"lng":323.89343261718756},
+        title: "Digsite Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Elf_camp_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":76.96033358827414,"lng":249.24682617187503},
+        title: "Elf Camp Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Feldip_hills_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":70.96865539856438,"lng":272.08190917968756},
+        title: "Feldip Hills Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Lumberyard_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":79.93879762178535,"lng":322.2564697265625},
+        title: "Lumberyard Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Lunar_isle_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":83.84233150531966,"lng":242.39135742187503},
+        title: "Lunar Isles Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Mort%27ton_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":77.41346715054658,"lng":334.54467773437506},
+        title: "Mort'ton Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Pest_control_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":64.34942106230751,"lng":279.82177734375006},
+        title: "Pest Control Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Piscatoris_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":81.65809140450546,"lng":258.92578125000006},
+        title: "Picsatoris Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Tai_bwo_wannai_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":73.72967302053397,"lng":288.29772949218756},
+        title: "Tai Bwo Wannai Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Mos_le%27harmless_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":72.425585600905,"lng":348.58520507812506},
+        title: "Mos Le'Harmless Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Zul-andra_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":73.57506106401794,"lng":249.37866210937503},
+        title: "Zul-andra Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Revenant_cave_teleport.png'),
+        className: 'clue_scroll_teleports ' + Categories.OTHER,
+        position: {"lat":83.23642648170203,"lng":310.95703125000006},
+        title: "Revenant Cave Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Stony_basalt.png'),
+        className: 'troll_teleports ' + Categories.OTHER,
+        position: {"lat":82.05941121693256,"lng":291.42333984375006},
+        title: "Stoney Basalt Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Icy_basalt.png'),
+        className: 'troll_teleports ' + Categories.OTHER,
+        position: {"lat":84.0228901101526,"lng":292.20336914062506},
+        title: "Icy Basalt Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Explorer%27s_ring_2.png'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":77.42901916452809,"lng":305.91979980468756},
+        title: "Explorer's Ring 2/3/4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Karamja_gloves_3.png'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":72.40899172812027,"lng":290.90698242187506},
+        title: "Karamja Gloves 3 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Karamja_gloves_4.webp'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":72.06714729310255,"lng":293.72497558593756},
+        title: "Karamja Gloves 4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ardougne_cloak_1.png'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":76.44490733708945,"lng":276.37756347656256},
+        title: "Ardougne Cloak 1/2/3/4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Ardougne_cloak_2.webp'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":78.57681893187248,"lng":280.89843750000006},
+        title: "Ardougne Cloak 2/3/4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Desert_amulet_2.png'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":70.90586245415463,"lng":329.61181640625006},
+        title: "Desert Amulet 2/3/4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Desert_amulet_4.webp'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":74.75563516121497,"lng":323.77258300781256},
+        title: "Desert Amulet 4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Morytania_legs_3.webp'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":76.54113226390878,"lng":334.08874511718756},
+        title: "Morytania Legs 3/4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Fremennik_sea_boots_2.png'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":81.9278157639914,"lng":278.76708984375006},
+        title: "Fremennik Sea Boots 1/2/3/4 Teleport",
+        category: Categories.OTHER
+    },
+    //Pharos Sceptre
+    //Skull sceptre
+    //Xerics amulet
+    //Zeah blessing
 
     // <<<<<<<<<<<<<<<<<<<<< Jewellery <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ];
@@ -1427,7 +1664,7 @@ export const PointToManyPoints = [
             {"lat": 78.1728342204629, "lng": 315.7196044921875},
             {"lat": 79.01857364724425, "lng": 309.73205566406256},
             {"lat": 80.20584929835839, "lng": 310.96252441406256},
-            {"lat": 80.67199803126927, "lng": 309.56726074218756}
+            {"lat":82.9403268016951,"lng":311.85791015625006}
         ],
         positions: [
             {"lat": 76.65191339742755, "lng": 318.27941894531256},
@@ -1475,7 +1712,8 @@ export const PointToManyPoints = [
             {"lat": 80.56184346817072, "lng": 310.1220703125},
             {"lat": 80.58164013978059, "lng": 309.957275390625},
             {"lat": 80.61752872092254, "lng": 309.91882324218756},
-            {"lat": 80.67199803126927, "lng": 309.56726074218756},
+            {"lat":80.67911826095326,"lng":309.51782226562506},
+            {"lat":82.9403268016951,"lng":311.85791015625006}
 
 
         ],
@@ -1584,6 +1822,7 @@ export const PointToManyPoints = [
             {"lat":83.5337864118568,"lng":346.82739257812506},
             {"lat":82.61299277110686,"lng":346.95373535156256},
             {"lat":82.62146305852085,"lng":352.29858398437506},
+            {"lat":83.60454003128096,"lng":352.79296875}
         ],
         positions: [
 
