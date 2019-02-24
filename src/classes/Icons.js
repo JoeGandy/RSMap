@@ -1,4 +1,24 @@
-import {Categories, IconBaseClass} from "./IconBaseClass";
+import {IconBaseClass} from "./IconBaseClass";
+
+
+
+const Categories = {
+    REGULAR_SPELLBOOK: 'regular_spellbook',
+    ANCIENT_SPELLBOOK: 'ancient_spellbook',
+    LUNAR_SPELLBOOK: 'lunar_spellbook',
+    ARCEUUS_SPELLBOOK: 'arceuus_spellbook',
+    JEWELLERY: 'jewellery',
+    AGILITY_SHORTCUT: 'agility_shortcut',
+    BOATS: 'boats',
+    FAIRY_RINGS: 'fairy_rings',
+    SPIRIT_TREES: 'spirit_trees',
+    BALLOON_TRANSPORT: 'balloon_transport_system',
+    MAGIC_MUSHROOMS: 'magic_mushroom',
+    GNOME_GLIDERS: 'gnome_glider',
+    CARPET_RIDES: 'carpet_ride',
+    MINI_GAMES: 'mini_games',
+    OTHER: 'other'
+};
 
 let icons_dir = '../../static/icons/teleport/';
 
@@ -1834,6 +1854,32 @@ export const PointToPoints = [
         title: "Fossil Island (Mushroom forest) ↔ Lithkren",
         category: Categories.BOATS
     },
+    //>>>>>> Other point to points >>>>
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: Categories.BOATS,
+        positions: [
+            {"lat":76.28172764639328,"lng":287.90222167968756},
+            {"lat":76.05321303983135,"lng":286.00708007812506},
+            {"lat":75.18578927942626,"lng":286.05102539062506},
+            {"lat":75.11822201684028,"lng":287.03979492187506},
+            {"lat":74.99072064469621,"lng":287.69897460937506},
+            {"lat":74.81618026394284,"lng":286.64428710937506},
+            {"lat":73.65872816203942,"lng":286.84204101562506},
+            {"lat":73.06104462497655,"lng":287.88574218750006},
+            {"lat":72.80633363884402,"lng":287.92968750000006},
+            {"lat":72.3424643905499,"lng":289.12719726562506},
+            {"lat":71.85622888185527,"lng":288.94042968750006},
+            {"lat":71.35706654962706,"lng":288.95141601562506},
+            {"lat":71.335983102213,"lng":294.38964843750006},
+            {"lat":71.50400873687697,"lng":294.85107421875006},
+            {"lat":71.5457865439925,"lng":293.47778320312506},
+            {"lat":71.68784119522113,"lng":293.29101562500006},
+            {"lat":71.65329138425155,"lng":291.39038085937506}
+        ],
+        title: "Shilo Village card System",
+        category: Categories.BOATS
+    },
 
     //<<<<<< One ways >>>>>>>>>>>>>>
     {
@@ -2076,6 +2122,22 @@ export const PointToManyPoints = [
         ],
         title: "Boaty the boat",
         category: Categories.BOATS
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: Categories.OTHER,
+        stops: [
+            {"lat":77.6905283596315,"lng":273.31237792968756},
+            {"lat":83.91671171854156,"lng":312.55554199218756},
+            {"lat":79.80647104687989,"lng":308.19946289062506}
+        ],
+        positions: [
+            {"lat":77.6905283596315,"lng":273.31237792968756},
+            {"lat":83.91671171854156,"lng":312.55554199218756},
+            {"lat":79.80647104687989,"lng":308.19946289062506}
+        ],
+        title: "Wilderness / Edgeville / Ardougne Lever",
+        category: Categories.OTHER
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
