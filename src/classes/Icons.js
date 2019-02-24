@@ -788,6 +788,13 @@ export const Teleports = [
     {
         iconUrl: require('../../static/icons/teleport/Skills_necklace.png'),
         className: 'jewellery skills_necklace ' + Categories.JEWELLERY,
+        position: {"lat":82.28828054353076,"lng":186.910400390625},
+        title: "Skills Necklace Teleport",
+        category: Categories.JEWELLERY
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Skills_necklace.png'),
+        className: 'jewellery skills_necklace ' + Categories.JEWELLERY,
         position: {"lat":77.480325861269,"lng":298.03710937500006},
         title: "Skills Necklace Teleport",
         category: Categories.JEWELLERY
@@ -1116,12 +1123,342 @@ export const Teleports = [
         title: "Fremennik Sea Boots 1/2/3/4 Teleport",
         category: Categories.OTHER
     },
-    //Pharos Sceptre
-    //Skull sceptre
-    //Xerics amulet
-    //Zeah blessing
-
+    {
+        iconUrl: require('../../static/icons/teleport/Kandarin_headgear_3.png'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":79.15687689247802,"lng":284.91943359375006},
+        title: "Kandarin Headgear 3/4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Wilderness_sword_3.png'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":83.63079724346103,"lng":327.30468750000006},
+        title: "Wilderness Sword 3/4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Western_banner_3.png'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":81.8284803382328,"lng":259.05212402343756},
+        title: "Western Banner 3/4 Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Rada\'s_blessing_1.webp'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":79.58837906830985,"lng":207.10327148437503},
+        title: "Rada's Blessing 1/2/3/4",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Rada\'s_blessing_3.webp'),
+        className: 'achievement_jewelery item_icon ' + Categories.OTHER,
+        position: {"lat":82.9551640476858,"lng":191.04675292968753},
+        title: "Rada's Blessing 3/4",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Xeric\'s_talisman_(inert).webp'),
+        className: 'xerics_amulet item_icon ' + Categories.OTHER,
+        position: {"lat":80.74825879312192,"lng":187.3828125},
+        title: "Xeric's Honour",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Xeric\'s_talisman_(inert).webp'),
+        className: 'xerics_amulet item_icon ' + Categories.OTHER,
+        position: {"lat":80.13739971053121,"lng":221.48437500000003},
+        title: "Xeric's Glade",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Xeric\'s_talisman_(inert).webp'),
+        className: 'xerics_amulet item_icon ' + Categories.OTHER,
+        position: {"lat":81.82691862716233,"lng":212.56896972656253},
+        title: "Xeric's Heart",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Xeric\'s_talisman_(inert).webp'),
+        className: 'xerics_amulet item_icon ' + Categories.OTHER,
+        position: {"lat":83.11238862608707,"lng":203.77441406250003},
+        title: "Xeric's Inferno",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Xeric\'s_talisman_(inert).webp'),
+        className: 'xerics_amulet item_icon ' + Categories.OTHER,
+        position: {"lat":80.4376330387013,"lng":208.39965820312503},
+        title: "Xeric's Lookout",
+        category: Categories.OTHER
+    },
     // <<<<<<<<<<<<<<<<<<<<< Jewellery <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    // >>>>>>>>>>>>>>>>>>>>> MISC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    {
+        iconUrl: require('../../static/icons/teleport/Skull_sceptre.webp'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":79.20430943611333,"lng":307.81494140625006},
+        title: "Skull Sceptre Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Pharaoh\'s_sceptre.webp'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":70.06745743428272,"lng":317.69714355468756},
+        title: "Pharaoh's Sceptre Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Pharaoh\'s_sceptre.webp'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":67.72610818595071,"lng":321.78405761718756},
+        title: "Pharaoh's Sceptre Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Pharaoh\'s_sceptre.webp'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":68.74435062211467,"lng":325.86547851562506},
+        title: "Pharaoh's Sceptre Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Goblin_village_sphere.webp'),
+        className: Categories.OTHER,
+        position: {"lat":80.11479244077704,"lng":299.38842773437506},
+        title: "Goblin Village Sphere",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Teleport_crystal.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":75.51365583631552,"lng":258.72802734375006},
+        title: "Teleport Crystal Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Royal_seed_pod.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":80.0409639072338,"lng":267.18750000000006},
+        title: "Royal Seed Pod Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Enchanted_lyre.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":81.86587261475073,"lng":278.87695312500006},
+        title: "Enchanted Lyre Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Camulet.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":70.92023268949522,"lng":314.64843750000006},
+        title: "Camulet Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Drakan%27s_medallion.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":76.35319252705754,"lng":345.52551269531256},
+        title: "Drakan's Medallion Teleport",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Kharedst%27s_memoirs.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":81.29752279516099,"lng":217.44140625000003},
+        title: "Lunch by the lancalliums (Kharedst's memoirs)",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Kharedst%27s_memoirs.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":82.54773185359726,"lng":223.60473632812503},
+        title: "The fisher's flute (Kharedst's memoirs)",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Kharedst%27s_memoirs.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":80.96472954372805,"lng":201.96166992187503},
+        title: "History and hearsay (Kharedst's memoirs)",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Kharedst%27s_memoirs.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":82.68817947393305,"lng":206.66381835937503},
+        title: "Jewellery of jubilation (Kharedst's memoirs)",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Kharedst%27s_memoirs.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":82.56196760521456,"lng":215.37597656250003},
+        title: "A dark disposition (Kharedst's memoirs)",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":74.23886253330774,"lng":265.41320800781256},
+        title: "Mini-game Teleport",
+        description: "Castle Wars",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":80.85625646902527,"lng":271.48315429687506},
+        title: "Mini-game Teleport",
+        description: "Barbarian Assault",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":80.81513741046767,"lng":295.80688476562506},
+        title: "Mini-game Teleport",
+        description: "Burthorpe Gamesroom",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":75.39500943841519,"lng":327.05200195312506},
+        title: "Mini-game Teleport",
+        description: "Clan Wars",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":75.4585892414553,"lng":280.44799804687506},
+        title: "Mini-game Teleport",
+        description: "Fishing Trawler",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":74.64402309117955,"lng":276.42150878906256},
+        title: "Mini-game Teleport",
+        description: "Nightmare Zone",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":64.5035504066553,"lng":279.92614746093756},
+        title: "Mini-game Teleport",
+        description: "Pest Control",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":76.55774293896556,"lng":303.37646484375006},
+        title: "Mini-game Teleport",
+        description: "Rat Pits",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":77.47556185051579,"lng":334.94018554687506},
+        title: "Mini-game Teleport",
+        description: "Shades of Mort'ton",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":81.08981123884188,"lng":222.22045898437503},
+        title: "Mini-game Teleport",
+        description: "Tithe Farm",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Minigame_icon.webp'),
+        className: Categories.MINI_GAMES,
+        position: {"lat":72.91802197953525,"lng":355.8526611328125},
+        title: "Mini-game Teleport",
+        description: "Trouble Brewing",
+        category: Categories.MINI_GAMES
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Crafting_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":77.35106958476409,"lng":297.94921875000006},
+        title: "Crafting Skill Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Fishing_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":79.1496408679084,"lng":275.96008300781256},
+        title: "Fishing Skill Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Hunter_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":70.48823599130287,"lng":271.85668945312506},
+        title: "Hunter Skill Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Hunter_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":70.48823599130287,"lng":271.85668945312506},
+        title: "Hunter Skill Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Strength_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":80.60946562472725,"lng":293.66455078125006},
+        title: "Strength Skill Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Quest_point_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":78.20768577248778,"lng":284.44152832031256},
+        title: "Quest Pont Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Music_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":80.65238959048843,"lng":281.82128906250006},
+        title: "Music Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Achievement_diary_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":76.40235479492847,"lng":308.8531494140625},
+        title: "Achievement Diary Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Mythical_cape.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":69.19575089367642,"lng":266.27014160156256},
+        title: "Mythical Cape",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/teleport/Chronicle.png'),
+        className: 'item_icon ' + Categories.OTHER,
+        position: {"lat":78.5179207183434,"lng":315.31860351562506},
+        title: "Chronicle book",
+        category: Categories.OTHER
+    },
+
 ];
 
 export const PointToPoints = [
@@ -1719,6 +2056,26 @@ export const PointToManyPoints = [
         ],
         title: "River Lum Log boats",
         category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: Categories.BOATS,
+        stops: [
+            {"lat":81.58203920979138,"lng":194.82604980468753},
+            {"lat":81.6285525247791,"lng":193.17260742187503},
+            {"lat":81.79091734319461,"lng":195.80932617187503},
+            {"lat":81.2950290348757,"lng":197.2650146484375}
+        ],
+        positions: [
+            {"lat":81.58203920979138,"lng":194.82604980468753},
+            {"lat":81.6285525247791,"lng":193.17260742187503},
+            {"lat":81.58203920979138,"lng":194.82604980468753},
+            {"lat":81.79091734319461,"lng":195.80932617187503},
+            {"lat":81.58203920979138,"lng":194.82604980468753},
+            {"lat":81.2950290348757,"lng":197.2650146484375}
+        ],
+        title: "Boaty the boat",
+        category: Categories.BOATS
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
