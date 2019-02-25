@@ -29,5 +29,5 @@ export function buildChunkGrid() {
     }
 
 
-    return vertical_bars;
+    return [];//vertical_bars;
 }

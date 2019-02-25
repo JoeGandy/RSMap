@@ -1,6 +1,7 @@
 import L, {Icon} from "leaflet";
 
 const sizeConversion = {
+    9: 128,
     8: 64,
     7: 32,
     6: 16,

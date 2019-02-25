@@ -2218,6 +2218,22 @@ export const PointToManyPoints = [
     },
     {
         iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
+        className: Categories.OTHER,
+        stops: [
+            {"lat":83.49656261479785,"lng":301.09130859375006},
+            {"lat":82.93492373453886,"lng":309.39697265625006},
+            {"lat":81.8300417529174,"lng":317.37304687500006},
+            {"lat":81.37777346463594,"lng":312.71484375000006},
+            {"lat":82.41693519891204,"lng":304.69482421875},
+            {"lat":83.86291995653629,"lng":322.64648437500006}
+        ],
+        positions: [
+        ],
+        title: "Wilderness Obelisks",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../static/icons/misc/Transportation_icon.png'),
         className: Categories.BALLOON_TRANSPORT,
         stops: [
             {"lat":74.52282083394752,"lng":266.67663574218756},
