@@ -7,6 +7,9 @@ import * as Icons from "../classes/Icons";
 import L from "leaflet";
 import FiltersBox from "./FiltersBox";
 import * as CoordinateConvertor from "../classes/CoordinateConverter";
+import {rewriteIcons} from "../classes/Icons";
+import {getAllIconsFlat} from "../classes/Icons";
+import {Typeahead} from 'react-bootstrap-typeahead';
 
 export default class OSRSMap extends Component {
 
@@ -16,21 +19,30 @@ export default class OSRSMap extends Component {
             zoomLevel: 6,
             line: null,
             center: {"lat": 76.40881056467734, "lng": 317.13134765625006},
-            filters: {}
+            filters: {},
+            icons: getAllIconsFlat()
         };
+
+        console.log(this.state.icons);
 
         this.handleClick = this.handleClick.bind(this);
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
         this.centerMap = this.centerMap.bind(this);
         this.updateFilters = this.updateFilters.bind(this);
+        this.searchSelect = this.searchSelect.bind(this);
     }
 
     handleZoomEnd() {
         this.setState({zoomLevel: this.map.viewport.zoom});
     }
 
+    searchSelect(results) {
+        if (typeof (results[0]) !== "undefined")
+            this.centerMap(results[0].position);
+    }
+
     handleClick(e) {
-        console.debug(JSON.stringify(e.latlng));
+        //console.debug(JSON.stringify(e.latlng));
 
         let cloesest_icon = Icons.getClosestIcon(e.latlng.lat, e.latlng.lng);
 
@@ -85,6 +97,25 @@ export default class OSRSMap extends Component {
 
                     </Map>
                     <FiltersBox updateFilters={this.updateFilters}/>
+                    <div className="location_search_container">
+                        <label htmlFor="location_search"><h1>{this.props.title}</h1>
+                            <Typeahead
+                                name="location_search"
+                                labelKey="title"
+                                options={this.state.icons}
+                                autoFocus
+                                minLength={3}
+                                renderMenuItemChildren={(option) => (
+                                    <div>
+                                        {option.title} - {option.description}
+                                    </div>
+                                )}
+                                onChange={this.searchSelect}
+                                dropup={true}
+
+                            />
+                        </label>
+                    </div>
                 </>
             )
         } else {

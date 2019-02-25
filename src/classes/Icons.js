@@ -57,6 +57,19 @@ export function rewriteIcons() {
     return icons;
 }
 
+//Re renders the icons, almost definitely a more efficient way to be handling this, but it'll do for now
+export function getAllIconsFlat() {
+    let icons = [];
+    for (let type of types) {
+        if (typeof window !== 'undefined') {
+            for (let key in type.data) {
+                icons.push(type.data[key]);
+            }
+        }
+    }
+    return icons;
+}
+
 export function getClosestIcon(lat, lng) {
     let shortest = 30000;
     let closest = null;

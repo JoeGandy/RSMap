@@ -13,6 +13,46 @@
   cursor: crosshair !important;
 }
 
+.location_search_container{
+  position:fixed;
+  left: 0;
+  bottom:0;
+  z-index:400;
+
+  input{
+    font-family: 'RuneScape', serif;
+    font-size:1.2em;
+    border:2px groove saddlebrown;
+    margin:0 20px 20px 20px;
+    width:350px;
+    padding:5px;
+    background: #dcbf8c;
+  }
+
+  .dropdown-menu.show{
+    background: #dcbf8c;
+    margin:0px 20px ;
+    width:300px;
+    top: unset !important;
+    bottom:-58px;
+
+    li{
+      padding:2px;
+      border-bottom: 2px groove saddlebrown;
+
+      a{
+        color:black;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  .sr-only.rbt-sr-status{
+    display:none;
+  }
+}
+
 .item_icon,
 .jewellery{
   background-color:#dcbf8c;
