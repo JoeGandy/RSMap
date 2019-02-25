@@ -9,12 +9,12 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 ## About
 Built on gatsby and react  
 Planned features (goals):
-- All teleport locations
+- ~All teleport locations~
 - Clue scroll locations
 - Convert coord clues to map coordinates
 - Location searcher
 - Region highlighting?
-- Click on boat locations to see where they go
+- ~Click on boat locations to see where they go~
 - Dungeon maps
 - Quest icon to show quest with basic info
 - Stores to show what they sell w/ quanitities 
