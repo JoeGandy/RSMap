@@ -4,28 +4,6 @@ import {rewriteIcons, types} from "../classes/Icons";
 import {IconBaseClass} from "../classes/IconBaseClass";
 import MapPointToPointMarker from "./MarkerTypes/MapPointToPointMarker";
 
-//Marker types needed:
-/*
-    - Click to go to places, i.e. click boat transport to see other side
-    - Click to swap layer, to see dungeons
-    - Static broken up into categories
-        - Spell book teleports
-            - Regular
-            - Lunar
-            - Arceus
-            - Ancients
-        - Jewlery Teleports
-        - Skill Capes
-        - Fairy Rings
-        - Scrolls
-        - Tele Tabs
-        - Spirit Trees
-        - Minigame teleports
-        - Diary Gear
-        - Air Balloon
-        - Hnome glider
-   - clue scroll dig point, needs to be dynamic and move based on input, url params?
- */
 export default class MapMarkers extends Component {
     constructor(props) {
         super(props);
@@ -46,11 +24,17 @@ export default class MapMarkers extends Component {
         let filters = this.props.filters;
         return (
             <>
-                {this.state.icons.teleports.map(function (icon, i) {
+                {this.state.icons.agilty_shortcuts.map(function (icon, i) {
                     return filters[icon.options.category] ?
                         <MapMarker key={i} position={icon.options.position} icon={icon}
                                    title={icon.options.title}/>
                         : null;
+                })}
+                {this.state.icons.teleports.map(function (icon, i) {
+                    return filters[icon.options.category] ?
+                        <MapMarker key={i} position={icon.options.position} icon={icon}
+                                   title={icon.options.title}/>
+                        : null; 
                 })}
                 {this.state.icons.fairy_rings.map(function (icon, i) {
                     return filters[icon.options.category] ?
