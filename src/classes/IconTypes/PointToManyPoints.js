@@ -79,6 +79,7 @@ export const PointToManyPoints = [
 
         ],
         title: "Charter Ship",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -109,6 +110,7 @@ export const PointToManyPoints = [
             {"lat": 78.87958780617919, "lng": 203.719482421875},
         ],
         title: "Zeah Boat",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -173,6 +175,7 @@ export const PointToManyPoints = [
 
         ],
         title: "River Lum Log boats",
+        description: "",
         category: Categories.OTHER
     },
     {
@@ -193,6 +196,7 @@ export const PointToManyPoints = [
             {"lat":81.2950290348757,"lng":197.2650146484375}
         ],
         title: "Boaty the boat",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -209,6 +213,7 @@ export const PointToManyPoints = [
             {"lat":79.80647104687989,"lng":308.19946289062506}
         ],
         title: "Wilderness / Edgeville / Ardougne Lever",
+        description: "",
         category: Categories.OTHER
     },
     {
@@ -231,6 +236,7 @@ export const PointToManyPoints = [
 
         ],
         title: "Desert Magic Carpets",
+        description: "",
         category: Categories.CARPET_RIDES
     },
     {
@@ -254,6 +260,7 @@ export const PointToManyPoints = [
 
         ],
         title: "Desert Magic Carpets",
+        description: "",
         category: Categories.CARPET_RIDES
     },
     {
@@ -271,6 +278,7 @@ export const PointToManyPoints = [
         positions: [
         ],
         title: "Gnome Gliders",
+        description: "",
         category: Categories.GNOME_GLIDERS
     },
     {
@@ -286,6 +294,7 @@ export const PointToManyPoints = [
         positions: [
         ],
         title: "Spirit Trees",
+        description: "",
         category: Categories.SPIRIT_TREES
     },
     {
@@ -302,6 +311,7 @@ export const PointToManyPoints = [
         positions: [
         ],
         title: "Wilderness Obelisks",
+        description: "",
         category: Categories.OTHER
     },
     {
@@ -320,6 +330,7 @@ export const PointToManyPoints = [
 
         ],
         title: "Balloon Transport System",
+        description: "",
         category: Categories.BALLOON_TRANSPORT
     },
     {
@@ -335,6 +346,7 @@ export const PointToManyPoints = [
 
         ],
         title: "Magic mushroom teleports",
+        description: "",
         category: Categories.MAGIC_MUSHROOMS
     },
     {
@@ -360,6 +372,7 @@ export const PointToManyPoints = [
             {"lat":83.02555186844917,"lng":350.46936035156256},
         ],
         title: "Fossil Island row boats",
+        description: "",
         category: Categories.BOATS
     },
 ];

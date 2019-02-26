@@ -20,10 +20,9 @@ export default class OSRSMap extends Component {
             line: null,
             center: {"lat": 76.40881056467734, "lng": 317.13134765625006},
             filters: {},
-            icons: getAllIconsFlat()
+            icons: getAllIconsFlat(),
+            search_val: null
         };
-
-        console.log(this.state.icons);
 
         this.handleClick = this.handleClick.bind(this);
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
@@ -33,12 +32,20 @@ export default class OSRSMap extends Component {
     }
 
     handleZoomEnd() {
-        this.setState({zoomLevel: this.map.viewport.zoom});
+        if(this.map)
+            this.setState({zoomLevel: this.map.viewport.zoom});
     }
 
     searchSelect(results) {
-        if (typeof (results[0]) !== "undefined")
-            this.centerMap(results[0].position);
+        if (typeof (results[0]) !== "undefined") {
+            if(results[0].position) {
+                this.centerMap(results[0].position);
+            }else if(results[0].positions && results[0].positions.length > 0) {
+                this.centerMap(results[0].positions[0]);
+            }else{
+                this.centerMap(results[0].stops[0]);
+            }
+        }
     }
 
     handleClick(e) {
@@ -101,16 +108,18 @@ export default class OSRSMap extends Component {
                         <label htmlFor="location_search"><h1>{this.props.title}</h1>
                             <Typeahead
                                 name="location_search"
-                                labelKey="title"
+                                labelKey={"title"}
                                 options={this.state.icons}
                                 autoFocus
                                 minLength={3}
                                 renderMenuItemChildren={(option) => (
                                     <div>
-                                        {option.title} - {option.description}
+                                        {option.title} {option.description ? '- ' + option.description : null}
                                     </div>
                                 )}
+                                clearButton={true}
                                 onChange={this.searchSelect}
+                                value={this.state.search_val}
                                 dropup={true}
 
                             />

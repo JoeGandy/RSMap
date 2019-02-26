@@ -21,6 +21,7 @@ export const PointToPoints = [
             {"lat": 74.87075679591987, "lng": 294.09851074218756}
         ],
         title: "Brimhaven Grapple",
+        description: "",
         category: Categories.AGILITY_SHORTCUT
     },
     // <<<<<<<<<<<<<<<<<<<<<< Agility Shortcuts <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -41,6 +42,7 @@ export const PointToPoints = [
             {"lat": 78.03696523649174, "lng": 291.39038085937506}
         ],
         title: "Entrana ↔ Port Sarim",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -55,6 +57,7 @@ export const PointToPoints = [
             {"lat": 75.16048677152297, "lng": 299.43786621093756}
         ],
         title: "Karajama ↔ Port Sarim",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -70,6 +73,7 @@ export const PointToPoints = [
             {"lat": 64.78816837781196, "lng": 279.92065429687506}
         ],
         title: "Void Knights' Outpost ↔ Port Sarim",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -83,6 +87,7 @@ export const PointToPoints = [
             {"lat": 77.20104488844608, "lng": 280.97534179687506}
         ],
         title: "Brimhaven ↔ Ardougne",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -97,6 +102,7 @@ export const PointToPoints = [
             {"lat": 77.14372454012101, "lng": 287.83630371093756}
         ],
         title: "Witchaven ↔ Fishing Platform",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -146,6 +152,7 @@ export const PointToPoints = [
             {"lat": 83.03954523258545, "lng": 350.0628662109375}
         ],
         title: "Digsite ↔ Fossil island",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -157,6 +164,7 @@ export const PointToPoints = [
             {"lat": 75.58493740869223, "lng": 341.40014648437506}
         ],
         title: "Burgh de Rott ↔ Maeiverditch",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -171,6 +179,7 @@ export const PointToPoints = [
             {"lat": 77.26174811323173, "lng": 345.97045898437506}
         ],
         title: "Ectofuntus ↔ Slepe (below)",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -201,6 +210,7 @@ export const PointToPoints = [
             {"lat": 71.50400873687697, "lng": 347.34375000000006}
         ],
         title: "Port Phasmatys ↔ Mos Le'Harmless",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -225,6 +235,7 @@ export const PointToPoints = [
             {"lat": 84.20871395105432, "lng": 292.31872558593756}
         ],
         title: "Rellekka (east) ↔ Weiss",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -237,6 +248,7 @@ export const PointToPoints = [
             {"lat": 82.82187709826647, "lng": 264.17175292968756}
         ],
         title: "Rellekka ↔ Jatizso",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -249,6 +261,7 @@ export const PointToPoints = [
             {"lat": 82.81294844307736, "lng": 256.92077636718756}
         ],
         title: "Rellekka ↔ Neitiznot",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -260,6 +273,7 @@ export const PointToPoints = [
             {"lat": 82.63837466796491, "lng": 272.68066406250006}
         ],
         title: "Rellekka ↔ Waterbirth Island",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -274,6 +288,7 @@ export const PointToPoints = [
             {"lat": 84.63769756726754, "lng": 254.67407226562503}
         ],
         title: "Rellekka ↔ Ungael",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -287,6 +302,7 @@ export const PointToPoints = [
             {"lat": 82.93559934286549, "lng": 250.46081542968753}
         ],
         title: "Rellekka ↔ Pirates Cove",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -299,6 +315,7 @@ export const PointToPoints = [
             {"lat": 83.34552174104411, "lng": 274.64721679687506}
         ],
         title: "Rellekka ↔ Miscellania",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -314,6 +331,7 @@ export const PointToPoints = [
             {"lat": 83.73775349611977, "lng": 245.51147460937503}
         ],
         title: "Pirates Cove ↔ Lunar Isle",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -332,6 +350,7 @@ export const PointToPoints = [
 
         ],
         title: "Rimmington ↔ Corsair Cove",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -343,6 +362,7 @@ export const PointToPoints = [
 
         ],
         title: "Fishing Guild ↔ Kylie Minnow's fishing platform",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -360,6 +380,7 @@ export const PointToPoints = [
 
         ],
         title: "Eagles Peak ↔ Piscatoris Fishing Colony",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -372,6 +393,7 @@ export const PointToPoints = [
 
         ],
         title: "Fossil Island (Mushroom forest) ↔ Lithkren",
+        description: "",
         category: Categories.BOATS
     },
     //>>>>>> Other point to points >>>>
@@ -398,6 +420,7 @@ export const PointToPoints = [
             {"lat":71.65329138425155,"lng":291.39038085937506}
         ],
         title: "Shilo Village card System",
+        description: "",
         category: Categories.BOATS
     },
 
@@ -426,6 +449,7 @@ export const PointToPoints = [
             {"lat": 75.27261992123154, "lng": 281.21704101562506}
         ],
         title: "Cairn Isle (below) ➝ Port Khazard",
+        description: "",
         category: Categories.BOATS
     },
     {
@@ -443,6 +467,7 @@ export const PointToPoints = [
             {"lat": 76.61381450204217, "lng": 305.78247070312506}
         ],
         title: "Cairn Isle (below) ➝ Port Sarim",
+        description: "",
         category: Categories.BOATS
     },
     // <<<<<<<<<<<<<<<<<<<<<< Boats <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

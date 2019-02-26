@@ -124,13 +124,44 @@ h1 {
 
 .leaflet-bar a,
 .leaflet-popup-tip{
-  background: #dcbf8c !important;
   color:black;
 }
 
 .leaflet-bar a:hover{
-  background: #a08456 !important;
   color:black;
+}
+
+
+.leaflet-control-zoom {
+  box-shadow: none;
+  border:none !important;
+
+  .leaflet-control-zoom-out,
+  .leaflet-control-zoom-in {
+    background-size:contain;
+    color: transparent !important;
+    background-color: transparent !important;
+    border: none;
+    width:44px !important;
+  }
+
+  .leaflet-control-zoom-out {
+    background-image: url(../img/World_map_-_zoom_out.webp);
+
+    &:hover{
+      opacity:0.8;
+    }
+  }
+
+  .leaflet-control-zoom-in {
+    background-image: url(../img/World_map_-_zoom_in.webp);
+
+    &:hover{
+      opacity:0.8;
+      border:none;
+      background-color: transparent !important;
+    }
+  }
 }
 
 .leaflet-popup-content-wrapper{
