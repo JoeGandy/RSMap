@@ -32,8 +32,9 @@ export default class OSRSMap extends Component {
     }
 
     handleZoomEnd() {
-        if(this.map)
+        if(this.map) {
             this.setState({zoomLevel: this.map.viewport.zoom});
+        }
     }
 
     searchSelect(results) {

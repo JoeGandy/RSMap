@@ -42,7 +42,13 @@ export default class MapMarker extends Component {
                 >
                     <Popup>
                         <h4>{this.props.title}</h4>
-                        {this.props.icon.options.description ? <p>{this.props.icon.options.description}</p> : null}
+                        {this.props.icon.options.description ?
+                            <p>{this.props.icon.options.description.split("\n").map(function (item) {
+                                return <>
+                                    {item}
+                                    <br/>
+                                </>
+                            })}</p> : null}
                     </Popup>
                 </Marker>
             </>

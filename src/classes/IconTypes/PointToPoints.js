@@ -20,8 +20,56 @@ export const PointToPoints = [
             {"lat": 75.12668436992617, "lng": 294.03259277343756},
             {"lat": 74.87075679591987, "lng": 294.09851074218756}
         ],
-        title: "Brimhaven Grapple",
-        description: "",
+        title: "Aglity Shortcut",
+        description: "Karamja Grapple (53 Agility)",
+        category: Categories.AGILITY_SHORTCUT
+    },
+    {
+        iconUrl: require('../../../static/icons/misc/agility_shortcut.png'),
+        className: Categories.AGILITY_SHORTCUT,
+        positions: [
+            {"lat":80.86541767048159,"lng":210.90179443359378},
+            {"lat":80.88719344072598,"lng":210.3717041015625}
+        ],
+        title: "Agility Shortcut",
+        description: "Kourend Lake isle jump (40 Agility)",
+        category: Categories.AGILITY_SHORTCUT
+    },
+    {
+        iconUrl: require('../../../static/icons/misc/agility_shortcut.png'),
+        className: Categories.AGILITY_SHORTCUT,
+        positions: [
+            {"lat":82.73903782665921,"lng":298.64685058593756},
+            {"lat":82.65314070156226,"lng":297.65258789062506}
+        ],
+        title: "Agility Shortcut",
+        description: "Wilderness from Godwars climb (60 Agility)",
+        category: Categories.AGILITY_SHORTCUT
+    },
+    {
+        iconUrl: require('../../../static/icons/misc/agility_shortcut.png'),
+        className: Categories.AGILITY_SHORTCUT,
+        positions: [
+            {"lat":81.93012949441625,"lng":298.78417968750006},
+            {"lat":81.88838137282617,"lng":298.21289062500006},
+            {"lat":81.87597040942798,"lng":297.87780761718756},
+            {"lat":81.88217824705356,"lng":297.59216308593756},
+            {"lat":81.87519409824804,"lng":297.38891601562506},
+            {"lat":81.87519409824804,"lng":296.92199707031256}
+        ],
+        title: "Agility Shortcut",
+        description: "Trollheim Wilderness route (64 Agility)",
+        category: Categories.AGILITY_SHORTCUT
+    },
+    {
+        iconUrl: require('../../../static/icons/misc/agility_shortcut.png'),
+        className: Categories.AGILITY_SHORTCUT,
+        positions: [
+            {"lat":83.11041208728072,"lng":349.4696044921875},
+            {"lat":83.20595195951542,"lng":349.33776855468756}
+        ],
+        title: "Agility Shortcut",
+        description: "Hardwood shortcut (70 Agility)",
         category: Categories.AGILITY_SHORTCUT
     },
     // <<<<<<<<<<<<<<<<<<<<<< Agility Shortcuts <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
