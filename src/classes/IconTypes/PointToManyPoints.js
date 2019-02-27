@@ -351,6 +351,25 @@ export const PointToManyPoints = [
     },
     {
         iconUrl: require('../../../static/icons/misc/Transportation_icon.png'),
+        className: Categories.OTHER,
+        stops: [
+            {"lat":83.23707339542034,"lng":214.93103027343753},
+            {"lat":80.56994708559223,"lng":213.80493164062503},
+            {"lat":82.3188108593499,"lng":205.10375976562503},
+            {"lat":82.20379200648829,"lng":220.66314697265628},
+            {"lat":81.39628312342714,"lng":209.18792724609375},
+            {"lat":80.65729552731695,"lng":187.24548339843753}
+
+        ],
+        positions: [
+
+        ],
+        title: "Zeah Minecart system",
+        description: "",
+        category: Categories.OTHER
+    },
+    {
+        iconUrl: require('../../../static/icons/misc/Transportation_icon.png'),
         className: Categories.BOATS,
         stops: [
             {"lat":83.70109641601667,"lng":350.72204589843756},
