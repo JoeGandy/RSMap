@@ -377,6 +377,14 @@ export const AgilityShortcuts = [
         description: "Railing Squeeze (65 Agility)",
         category: Categories.AGILITY_SHORTCUT
     },
+    {
+        iconUrl: require('../../../static/icons/misc/agility_shortcut.png'),
+        className: Categories.AGILITY_SHORTCUT,
+        position: {"lat":74.9885866042988,"lng":316.24145507812506},
+        title: "Agility Shortcut",
+        description: "Lumbridge swap to desert (66 Agility)",
+        category: Categories.AGILITY_SHORTCUT
+    },
     { //FACTCHECK
         iconUrl: require('../../../static/icons/misc/agility_shortcut.png'),
         className: Categories.AGILITY_SHORTCUT,
@@ -473,4 +481,9 @@ export const AgilityShortcuts = [
         description: "Elven Overpass Advanced cliff scramble (85 Agility)",
         category: Categories.AGILITY_SHORTCUT
     },
+    //Karamja Log blanace
+    //Karajam south river stepping stones?
+    //Elven spike traps
+    //Elven poison traps
+    //Elven climb through trees
 ];
