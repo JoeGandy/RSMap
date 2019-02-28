@@ -11,6 +11,7 @@ import {rewriteIcons} from "../classes/Icons";
 import {getAllIconsFlat} from "../classes/Icons";
 import {Typeahead} from 'react-bootstrap-typeahead';
 import SearchBox from "./SearchBox";
+import DevTools from "./DevTools";
 
 export default class OSRSMap extends Component {
 
@@ -22,7 +23,8 @@ export default class OSRSMap extends Component {
             center: {"lat": 76.40881056467734, "lng": 317.13134765625006},
             filters: {},
             icons: getAllIconsFlat(),
-            search_val: null
+            search_val: null,
+            clicked_position: null
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -33,18 +35,18 @@ export default class OSRSMap extends Component {
     }
 
     handleZoomEnd() {
-        if(this.map) {
+        if (this.map) {
             this.setState({zoomLevel: this.map.viewport.zoom});
         }
     }
 
     searchSelect(results) {
         if (typeof (results[0]) !== "undefined") {
-            if(results[0].position) {
+            if (results[0].position) {
                 this.centerMap(results[0].position);
-            }else if(results[0].positions && results[0].positions.length > 0) {
+            } else if (results[0].positions && results[0].positions.length > 0) {
                 this.centerMap(results[0].positions[0]);
-            }else{
+            } else {
                 this.centerMap(results[0].stops[0]);
             }
         }
@@ -53,15 +55,17 @@ export default class OSRSMap extends Component {
     handleClick(e) {
         //console.debug(JSON.stringify(e.latlng));
 
-        let cloesest_icon = Icons.getClosestIcon(e.latlng.lat, e.latlng.lng);
+        /*let cloesest_icon = Icons.getClosestIcon(e.latlng.lat, e.latlng.lng);
 
         this.setState({
             line: [
                 e.latlng,
                 new L.latLng(cloesest_icon.position.lat, cloesest_icon.position.lng)
             ]
-        });
-        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        });*/
+
+        this.setState({clicked_position: e.latlng});
+        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
     }
 
     centerMap(_center) {
@@ -107,6 +111,7 @@ export default class OSRSMap extends Component {
                     </Map>
                     <FiltersBox updateFilters={this.updateFilters}/>
                     <SearchBox centerMap={this.centerMap}/>
+                    <DevTools clickedPos={this.state.clicked_position}/>
                 </>
             )
         } else {

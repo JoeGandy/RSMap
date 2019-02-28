@@ -51,7 +51,12 @@ export function rewriteIcons() {
         icons[type.label] = [];
         if (typeof window !== 'undefined') {
             for (let key in type.data) {
-                icons[type.label][key] = new IconBaseClass(type.data[key]);
+                if(type.label === "locations"){
+                    icons[type.label][key] = type.data[key];
+
+                }else {;
+                    icons[type.label][key] = new IconBaseClass(type.data[key]);
+                }
             }
         }
     }

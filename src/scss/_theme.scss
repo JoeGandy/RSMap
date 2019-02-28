@@ -225,3 +225,11 @@ img {
   image-rendering: optimize-contrast; /* CSS3 Proposed                  */
   -ms-interpolation-mode: nearest-neighbor; /* IE8+                           */
 }
+
+.dev_tools{
+  position:fixed;
+  right:0;
+  bottom:30px;
+  z-index:400;
+  height:400px;
+}
