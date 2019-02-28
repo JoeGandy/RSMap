@@ -4,6 +4,7 @@ import * as _FairyRings from "./IconTypes/FairyRings";
 import * as _Teleports from "./IconTypes/Teleports";
 import * as _PointToPoints from "./IconTypes/PointToPoints";
 import * as _AgilityShortcuts from "./IconTypes/AgilityShortcuts";
+import * as _Locations from "./IconTypes/Locations";
 
 const Categories = {
     REGULAR_SPELLBOOK: 'regular_spellbook',
@@ -115,6 +116,11 @@ export const types = [
     {
         label: 'fairy_rings',
         data: _FairyRings.FairyRings,
+        shown: true
+    },
+    {
+        label: 'locations',
+        data: _Locations.Locations,
         shown: true
     }
 ];

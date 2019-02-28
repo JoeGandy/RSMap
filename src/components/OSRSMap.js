@@ -10,6 +10,7 @@ import * as CoordinateConvertor from "../classes/CoordinateConverter";
 import {rewriteIcons} from "../classes/Icons";
 import {getAllIconsFlat} from "../classes/Icons";
 import {Typeahead} from 'react-bootstrap-typeahead';
+import SearchBox from "./SearchBox";
 
 export default class OSRSMap extends Component {
 
@@ -105,27 +106,7 @@ export default class OSRSMap extends Component {
 
                     </Map>
                     <FiltersBox updateFilters={this.updateFilters}/>
-                    <div className="location_search_container">
-                        <label htmlFor="location_search"><h1>{this.props.title}</h1>
-                            <Typeahead
-                                name="location_search"
-                                labelKey={"title"}
-                                options={this.state.icons}
-                                autoFocus
-                                minLength={3}
-                                renderMenuItemChildren={(option) => (
-                                    <div>
-                                        {option.title} {option.description ? '- ' + option.description : null}
-                                    </div>
-                                )}
-                                clearButton={true}
-                                onChange={this.searchSelect}
-                                value={this.state.search_val}
-                                dropup={true}
-
-                            />
-                        </label>
-                    </div>
+                    <SearchBox centerMap={this.centerMap}/>
                 </>
             )
         } else {

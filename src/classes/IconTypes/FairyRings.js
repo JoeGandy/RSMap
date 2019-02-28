@@ -1,5 +1,9 @@
 import {Categories} from "../IconBaseClass";
+/*
+    Fairy Rings
 
+    All the surface fairy rings a the moment, need to add dungeon ones once integrated
+ */
 export const FairyRings = [
     {
         iconUrl: require('../../../static/icons/misc/fairy_ring_icon.png'),

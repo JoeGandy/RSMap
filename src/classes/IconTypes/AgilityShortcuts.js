@@ -1,5 +1,12 @@
 import {Categories} from "../IconBaseClass";
+/*
+    Agility shortcuts
 
+    All these are agility shortcuts that only have one point, if agility shortcut
+    Has more than one point with a line between it, it'll be in the PointToPoint
+    IconType
+
+ */
 export const AgilityShortcuts = [
     {
         iconUrl: require('../../../static/icons/misc/agility_shortcut.png'),

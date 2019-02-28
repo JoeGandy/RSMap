@@ -13,53 +13,67 @@
   cursor: crosshair !important;
 }
 
-.location_search_container{
-  position:fixed;
+.location_search_container {
+  position: fixed;
   left: 0;
-  bottom:0;
-  z-index:400;
+  bottom: 0;
+  z-index: 400;
 
-  input{
+  input {
     font-family: 'RuneScape', serif;
-    font-size:1.2em;
-    border:2px groove saddlebrown;
-    margin:0 20px 20px 20px;
-    width:350px;
-    padding:5px;
+    font-size: 1.2em;
+    border: 2px groove saddlebrown;
+    margin: 0 20px 20px 20px;
+    width: 350px;
+    padding: 5px;
     background: #dcbf8c;
   }
 
-  .dropdown-menu.show{
-    background: #dcbf8c;
-    margin:0px 20px ;
-    width:300px;
-    top: unset !important;
-    bottom:-58px;
+  .sr-only.rbt-sr-status {
+    display: none;
+  }
 
-    li{
-      padding:2px;
-      border-bottom: 2px groove saddlebrown;
+  .rbt-menu.dropdown-menu.show {
+    margin: 0px 25px;
+    background-image: url(../img/backdrop_745.gif);
+    background-position: top center;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    width:354px !important;
 
-      a{
-        color:black;
-        text-decoration: none;
+    li {
+      padding: 5px 10px;
+      border-top: 2px groove saddlebrown;
+      border-left: 2px groove saddlebrown;
+      border-right: 2px groove saddlebrown;
+    }
+  }
+
+  .rbt-aux{
+    position: absolute;
+    right: -1px;
+    bottom: 22px;
+
+    button{
+      background-color: saddlebrown;
+      border: none;
+      color: white;
+      height: 30px;
+
+      .sr-only{
+        display:none;
       }
     }
-
-  }
-
-  .sr-only.rbt-sr-status{
-    display:none;
   }
 }
 
 .item_icon,
-.jewellery{
-  background-color:#dcbf8c;
-  border-radius:50px;
-  padding:3px;
+.jewellery {
+  background-color: #dcbf8c;
+  border-radius: 50px;
+  padding: 3px;
   box-sizing: border-box;
-  border:1px solid black;
+  border: 1px solid black;
 }
 
 .leaflet-div-icon {
@@ -81,7 +95,7 @@
 
 
 h1 {
-  font-size:1.4em;
+  font-size: 1.4em;
 }
 
 .panel {
@@ -123,58 +137,58 @@ h1 {
 }
 
 .leaflet-bar a,
-.leaflet-popup-tip{
-  color:black;
+.leaflet-popup-tip {
+  color: black;
 }
 
-.leaflet-bar a:hover{
-  color:black;
+.leaflet-bar a:hover {
+  color: black;
 }
 
 
 .leaflet-control-zoom {
   box-shadow: none;
-  border:none !important;
+  border: none !important;
 
   .leaflet-control-zoom-out,
   .leaflet-control-zoom-in {
-    background-size:contain;
+    background-size: contain;
     color: transparent !important;
     background-color: transparent !important;
     border: none;
-    width:44px !important;
+    width: 44px !important;
   }
 
   .leaflet-control-zoom-out {
     background-image: url(../img/World_map_-_zoom_out.webp);
 
-    &:hover{
-      opacity:0.8;
+    &:hover {
+      opacity: 0.8;
     }
   }
 
   .leaflet-control-zoom-in {
     background-image: url(../img/World_map_-_zoom_in.webp);
 
-    &:hover{
-      opacity:0.8;
-      border:none;
+    &:hover {
+      opacity: 0.8;
+      border: none;
       background-color: transparent !important;
     }
   }
 }
 
-.leaflet-popup-content-wrapper{
+.leaflet-popup-content-wrapper {
   background: transparent url(../img/backdrop_745.gif) !important;
-  background-size:100% !important;
-  box-shadow:none !important;
-  border-radius:0 !important;
-  padding:20px 0 !important;
-  margin-bottom:20px !important;
+  background-size: 100% !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 20px 0 !important;
+  margin-bottom: 20px !important;
   font-family: 'RuneScape', serif;
-  font-size:1.3em;
-  min-width:200px !important;
-  text-align:center !important;
+  font-size: 1.3em;
+  min-width: 200px !important;
+  text-align: center !important;
 
 
   &:after,
@@ -197,12 +211,12 @@ h1 {
   }
 }
 
-img{
-  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-  image-rendering: -moz-crisp-edges;          /* Firefox                        */
-  image-rendering: -o-crisp-edges;            /* Opera                          */
+img {
+  image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges; /* Firefox                        */
+  image-rendering: -o-crisp-edges; /* Opera                          */
   image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
   image-rendering: pixelated; /* Chrome */
-  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+  image-rendering: optimize-contrast; /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor; /* IE8+                           */
 }

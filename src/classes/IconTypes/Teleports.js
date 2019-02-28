@@ -1,5 +1,10 @@
 import {Categories} from "../IconBaseClass";
+/*
+    Teleports
 
+    Basic one point teleports that appear as markers wit any icon
+
+ */
 export const Teleports = [
     // >>>>>>>>>>>>>>>>>>>>> Standard Spell book >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     {

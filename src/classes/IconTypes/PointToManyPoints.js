@@ -1,5 +1,11 @@
 import {Categories} from "../IconBaseClass";
+/*
+    PointToManyPoints
 
+    These are methods of travel that have more than one stopping place, this made displaying
+    Stuff like charter ships much more appealing
+
+ */
 export const PointToManyPoints = [
     {
         iconUrl: require('../../../static/icons/misc/Transportation_icon.png'),

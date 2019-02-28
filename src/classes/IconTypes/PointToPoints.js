@@ -1,5 +1,12 @@
 import {Categories} from "../IconBaseClass";
 
+/*
+    PointToPoints
+
+    The base for of routing used for making routes that just have one start
+    and one end.
+
+ */
 export const PointToPoints = [
     // >>>>>>>>>>>>>>>>>>>>> Agility Shortcuts >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     {
