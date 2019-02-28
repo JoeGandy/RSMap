@@ -12,7 +12,7 @@ Planned features (goals):
 - ~All teleport locations~
 - Clue scroll locations
 - Convert coord clues to map coordinates
-- Location searcher
+- ~Location searcher~
 - Region highlighting?
 - ~Click on boat locations to see where they go~
 - Dungeon maps
