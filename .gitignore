@@ -79,3 +79,6 @@ yarn-error.log
 
 #Ignoring public while in development
 /public
+
+
+/static/map/dungeons/generated/*
