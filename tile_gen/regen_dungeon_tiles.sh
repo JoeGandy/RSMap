@@ -5,7 +5,7 @@ for filename in ../static/map/dungeons/originals/*/*.png ; do
 
         filename=$(echo $original_filename | sed -e "s/\.\.\/static\/map\/dungeons\/originals\/.*\///")
 	mkdir -p ../static/map/dungeons/generated/$filename
-	./gdal2tiles-leaflet/gdal2tiles.py -l -p raster -z 1-5 -w none $original_filename.jpg ../static/map/dungeons/generated/$filename
+	./gdal2tiles-leaflet/gdal2tiles.py -l -p raster -z 0-3 -w none $original_filename.jpg ../static/map/dungeons/generated/$filename
 	echo $filename
 done
 

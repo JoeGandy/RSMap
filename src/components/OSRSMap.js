@@ -22,9 +22,10 @@ export default class OSRSMap extends Component {
             line: null,
             center: {"lat": 76.40881056467734, "lng": 317.13134765625006},
             filters: {},
-            icons: getAllIconsFlat(),
+            icons: typeof window !== 'undefined' ? getAllIconsFlat() : [],
             search_val: null,
-            clicked_position: null
+            clicked_position: null,
+            layer: 'surface'
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -80,35 +81,55 @@ export default class OSRSMap extends Component {
         if (typeof window !== 'undefined') {
             return (
                 <>
-                    <Map
-                        ref={(ref) => {
-                            this.map = ref;
-                        }}
-                        zoom={6}
-                        center={this.state.center}
-                        maxZoom={9}
-                        minZoom={3}
-                        onClick={this.handleClick}
-                        onZoomEnd={this.handleZoomEnd}
-                    >
-                        <TileLayer
-                            attribution="RSMap - Built with data from osrs.wiki"
-                            url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
-                        />
-                        <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}
-                                    filters={this.state.filters}/>
-                        {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
-
-                        {CoordinateConvertor.buildChunkGrid().map(function (chunk, i) {
-                            return <Polyline
-                                weight={1}
-                                color={'white'}
-                                positions={chunk.positions}
-                                opacity={0.5}
+                    {this.state.layer === "surface" ?
+                        <Map
+                            ref={(ref) => {
+                                this.map = ref;
+                            }}
+                            zoom={6}
+                            center={this.state.center}
+                            maxZoom={9}
+                            minZoom={3}
+                            onClick={this.handleClick}
+                            onZoomEnd={this.handleZoomEnd}
+                        >
+                            <TileLayer
+                                attribution="RSMap - Built with data from osrs.wiki"
+                                url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
                             />
-                        })}
+                            <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}
+                                        filters={this.state.filters}/>
+                            {this.state.line ?
+                                <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
 
-                    </Map>
+                            {CoordinateConvertor.buildChunkGrid().map(function (chunk, i) {
+                                return <Polyline
+                                    weight={1}
+                                    color={'white'}
+                                    positions={chunk.positions}
+                                    opacity={0.5}
+                                />
+                            })}
+                        </Map>
+                        :
+                        <Map
+                            ref={(ref) => {
+                                this.map = ref;
+                            }}
+                            zoom={2}
+                            center={this.state.center}
+                            maxZoom={3}
+                            minZoom={0}
+                            onClick={this.handleClick}
+                            onZoomEnd={this.handleZoomEnd}
+                        >
+                            <TileLayer
+                                attribution="RSMap - Built with data from osrs.wiki"
+                                url={withPrefix("/map/dungeons/generated/keldagrim/{z}/{x}/{y}.png")}
+                                noWrap={true}
+                            />
+                        </Map>
+                    }
                     <FiltersBox updateFilters={this.updateFilters}/>
                     <SearchBox centerMap={this.centerMap}/>
                     <DevTools clickedPos={this.state.clicked_position}/>

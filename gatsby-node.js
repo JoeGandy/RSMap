@@ -15,6 +15,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
                         test: /IconBaseClass/,
                         use: loaders.null(),
                     },
+                    {
+                        test: /Icons/,
+                        use: loaders.null(),
+                    },
                 ],
             },
         })
