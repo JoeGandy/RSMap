@@ -42,7 +42,6 @@ export default class Layer extends Component {
 
     handleZoomEnd() {
         if (this.map) {
-            console.log(this.map.viewport.zoom);
             this.setState({zoomLevel: this.map.viewport.zoom});
         }
     }

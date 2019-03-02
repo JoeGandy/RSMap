@@ -39,9 +39,9 @@ export default class MapMarkers extends Component {
                     return <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange}/>
                 }) : null}
 
-                {this.props.layer !== "surface" ? this.state.dungeons.map(function (dungeon, i) {
-                    return <SurfaceLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange}/>
-                }) : null}
+                {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ?
+                    <SurfaceLink dungeon={this.state.current_dungeon_layer} handleLayerChange={handleLayerChange}/>
+                 : null}
 
                 {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ? this.state.current_dungeon_layer.map_labels.map(function (label, i) {
                     return <TextPath
@@ -59,8 +59,6 @@ export default class MapMarkers extends Component {
                             'font-size': label.fontSize ? label.fontSize : 35
                         }}
                     />
-
-
                 }) : null}
 
                 {this.state.icons.agility_shortcuts.map(function (icon, i) {

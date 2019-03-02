@@ -65,11 +65,12 @@ export default class DevTools extends Component {
 
                             let label_text = prompt("Enter Label text");
 
-                            example_label.positions = pending_positions;
-                            example_label.text = label_text;
+                            let created_label = {...example_label};
+                            created_label.positions = pending_positions;
+                            created_label.text = label_text;
 
                             let built_labels = this.state.built_locations;
-                            built_labels.push(example_label);
+                            built_labels.push(created_label);
                             this.setState({built_labels: built_labels});
 
                             console.clear();
