@@ -29,7 +29,7 @@ export default class MapMarker extends Component {
         return (
             <>
                 <Marker
-                    position={this.state.position}
+                    position={this.props.icon.options.position}
                     icon={this.state.icon}
                     onMouseOver={(e) => {
                         e.target.openPopup();

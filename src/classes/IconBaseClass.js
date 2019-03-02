@@ -1,13 +1,26 @@
 import L, {Icon} from "leaflet";
 
-const sizeConversion = {
+
+
+const sizeConversionSurface = {
     9: 128,
     8: 64,
     7: 32,
     6: 16,
     5: 16,
-    4: 16
+    4: 16,
+    3: 16,
+    2: 16,
+    1: 16
 };
+
+const sizeConversionDungeon = {
+    5: 128,
+    4: 64,
+    3: 32,
+};
+
+const sizeConversion = {...sizeConversionSurface};
 
 let zoomLevel = 6;
 
@@ -66,11 +79,13 @@ export class IconBaseClass extends Icon {
             ...IconBaseClass.defaults,
             ...props
         });
+
     }
 
-    static setZoomLevel(_zoomLevel) {
+    static setZoomLevel(_zoomLevel, dungeon) {
         zoomLevel = _zoomLevel;
-        let size_for_zoom = sizeConversion[zoomLevel];
+        let _sizeConversion = dungeon ? {...sizeConversionDungeon} : {...sizeConversionSurface};
+        let size_for_zoom = _sizeConversion[zoomLevel];
         IconBaseClass.defaults.iconSize = new L.Point(size_for_zoom, size_for_zoom);
         IconBaseClass.defaults.iconAnchor = new L.Point(size_for_zoom / 2, size_for_zoom / 2);
         IconBaseClass.defaults.popupAnchor = new L.Point(0, -(size_for_zoom / 2));

@@ -81,7 +81,7 @@ export const types = [
         shown: true
     },
     {
-        label: 'agilty_shortcuts',
+        label: 'agility_shortcuts',
         data: _AgilityShortcuts.AgilityShortcuts,
         shown: true
     },

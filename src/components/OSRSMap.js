@@ -37,7 +37,8 @@ export default class OSRSMap extends Component {
         }
     }
 
-    handleLayerChange(layer){
+    handleLayerChange(layer, new_center){
+        this.setState({center: new_center});
         this.setState({layer: layer});
     }
 
@@ -80,7 +81,8 @@ export default class OSRSMap extends Component {
     render() {
         if (typeof window !== 'undefined') {
             return (
-                <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer} center={{"lat": 76.40881056467734, "lng": 317.13134765625006}} icons={this.state.icons} dungeons={this.state.dungeons}/>
+                <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
+                       center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
             )
         } else {
             return <div>Page is loading...</div>

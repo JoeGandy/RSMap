@@ -5,8 +5,7 @@ import MapMarkers from "./MapMarkers";
 import FiltersBox from "./FiltersBox";
 import SearchBox from "./SearchBox";
 import DevTools from "./DevTools";
-import {IconBaseClass} from "../classes/IconBaseClass";
-import {rewriteIcons} from "../classes/Icons";
+import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
 
 export default class Layer extends Component {
 
@@ -54,11 +53,14 @@ export default class Layer extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
-            console.log("Layer changed from: " + prevProps.layer + ", To: " + this.props.layer);
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer})
             this.setState({zoomLevel: this.props.layer === "surface" ? 6 : 2});
             this.setState({maxZoom: this.props.layer === "surface" ? 9 : 3});
             this.setState({minZoom: this.props.layer === "surface" ? 3 : 0});
+            this.map.leafletElement.setMinZoom(this.props.layer === "surface" ? 3 : 3);
+            this.map.leafletElement.setMaxZoom(this.props.layer === "surface" ? 9 : 5);
+            this.setState({icons: getDungeonIcons(this.props.layer)});
+            this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer))
         }
     }
 
@@ -88,14 +90,18 @@ export default class Layer extends Component {
                     minZoom={this.state.minZoom}
                     onClick={this.handleClick}
                     onZoomEnd={this.handleZoomEnd}
+                    keyboardPanDelta={600}
                 >
                     <TileLayer
                         attribution="RSMap - All content/assets belong to jagex - Marker data from osrs.wiki"
                         url={withPrefix(this.state.layer_url + "/{z}/{x}/{y}.png")}
                         noWrap={this.props.layer !== "surface"}
+                        keepBuffer={1}
+                        updateWhenZooming={false}
+                        updateInterval={200}
                     />
                     <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}
-                                handleLayerChange={this.props.handleLayerChange}
+                                handleLayerChange={this.props.handleLayerChange} layer={this.props.layer}
                                 filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}/>
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                 </Map>

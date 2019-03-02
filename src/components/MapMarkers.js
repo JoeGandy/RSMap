@@ -4,6 +4,8 @@ import {rewriteIcons, types} from "../classes/Icons";
 import {IconBaseClass} from "../classes/IconBaseClass";
 import MapPointToPointMarker from "./MarkerTypes/MapPointToPointMarker";
 import LayerLink from "./MarkerTypes/LayerLink";
+import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
+import SurfaceLink from "./MarkerTypes/SurfaceLink";
 
 export default class MapMarkers extends Component {
     constructor(props) {
@@ -16,8 +18,9 @@ export default class MapMarkers extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props !== prevProps) {
-            IconBaseClass.setZoomLevel(this.props.zoomLevel);
-            this.setState({icons: rewriteIcons()});
+            IconBaseClass.setZoomLevel(this.props.zoomLevel, !(this.props.layer === "surface"));
+            this.setState({icons: this.props.layer === "surface" ? rewriteIcons() : getDungeonIcons(this.props.layer)});
+            //this.props.centerMap(this.props.layer === "surface" ? {"lat": 76.40881056467734, "lng": 317.13134765625006} : getDungeonCenter(this.props.layer))
         }
     }
 
@@ -25,12 +28,18 @@ export default class MapMarkers extends Component {
         let centerMap = this.props.centerMap;
         let filters = this.props.filters;
         let handleLayerChange = this.props.handleLayerChange;
+
         return (
             <>
-                {this.state.dungeons.map(function (dungeon, i) {
+                {this.props.layer === "surface" ? this.state.dungeons.map(function (dungeon, i) {
                     return <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange}/>
-                })}
-                {this.state.icons.agilty_shortcuts.map(function (icon, i) {
+                }) : null}
+
+                {this.state.layer !== "surface" ? this.state.dungeons.map(function (dungeon, i) {
+                    return <SurfaceLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange}/>
+                }) : null}
+
+                {this.state.icons.agility_shortcuts.map(function (icon, i) {
                     return filters[icon.options.category] ?
                         <MapMarker key={i} position={icon.options.position} icon={icon}
                                    title={icon.options.title}/>
