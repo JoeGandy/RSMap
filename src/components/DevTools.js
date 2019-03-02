@@ -3,6 +3,16 @@ import 'leaflet/dist/leaflet.css';
 import {rewriteIcons} from "../classes/Icons";
 import {Typeahead} from 'react-bootstrap-typeahead';
 
+
+let example_label = {
+    positions: [
+        {"lat": 66.99884379185184, "lng": 227.46093750000003},
+        {"lat": 56.75272287205736, "lng": 288.28125000000006}
+    ],
+    text: "Black Demons",
+    fontSize: 30,
+};
+
 export default class DevTools extends Component {
 
     constructor(props) {
@@ -12,10 +22,13 @@ export default class DevTools extends Component {
             action_in_progress: false,
             action_message: true,
             action: null,
-            built_locations: []
+            built_locations: [],
+            built_labels: [],
         };
 
-        this.promptUserForClick = this.promptUserForClick.bind(this);
+        this.startNewLocation = this.startNewLocation.bind(this);
+        this.startNewLabel = this.startNewLabel.bind(this);
+        this.cancelDevtools = this.cancelDevtools.bind(this);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -33,28 +46,81 @@ export default class DevTools extends Component {
                         built_locations.push(new_object);
                         this.setState({built_locations: built_locations});
                         console.clear();
-                        console.log(JSON.stringify(built_locations,null, 4));
+                        console.log(JSON.stringify(built_locations, null, 4));
 
 
+                        break;
+                    case 'new_label':
+                        console.log(this.state.pending_positions);
+                        if (this.state.pending_positions.length === 0) {
+                            let pending_positions = [...this.state.pending_positions];
+                            pending_positions.push(this.props.clickedPos);
+                            this.setState({pending_positions: pending_positions})
+                            console.log(1);
+
+                        } else if (this.state.pending_positions.length === 1) {
+                            console.log(2);
+                            let pending_positions = [...this.state.pending_positions];
+                            pending_positions.push(this.props.clickedPos);
+
+                            let label_text = prompt("Enter Label text");
+
+                            example_label.positions = pending_positions;
+                            example_label.text = label_text;
+
+                            let built_labels = this.state.built_locations;
+                            built_labels.push(example_label);
+                            this.setState({built_labels: built_labels});
+
+                            console.clear();
+                            console.log(JSON.stringify(built_labels, null, 4));
+
+                            this.setState({pending_positions: []});
+                        }
                         break;
                 }
             }
         }
     }
 
-    promptUserForClick() {
+    startNewLocation() {
         this.setState({action_in_progress: true});
         this.setState({action_message: "Please click on the screen to set a new location"})
         this.setState({action: 'new_location'})
     }
 
+    startNewLabel() {
+        this.setState({action_in_progress: true});
+        this.setState({action_message: "Please click on the in two locations to make the label"})
+        this.setState({action: 'new_label'});
+        this.setState({pending_positions: []});
+    }
+
+    cancelDevtools(){
+        this.setState({action_in_progress: false});
+        this.setState({action_message: "."});
+        this.setState({action: null});
+        this.setState({pending_positions: []});
+
+    }
     render() {
         if (typeof window !== 'undefined') {
             return (
                 <div className="dev_tools">
                     {this.state.action_in_progress ? <b>{this.state.action_message}</b> : null}
-                    <button disabled={this.state.action_in_progress} onClick={this.promptUserForClick}>Generate
+                    <br/>
+                    <button disabled={this.state.action_in_progress} onClick={this.startNewLocation}>Generate
                         Location
+                    </button>
+                    <br/>
+                    <button disabled={this.state.action_in_progress} onClick={this.startNewLabel}>Generate
+                        Label
+                    </button>
+                    <br/>
+                    <br/>
+
+                    <button disabled={!this.state.action_in_progress} onClick={this.cancelDevtools}>Cancel
+                        DevTools
                     </button>
                 </div>
             )

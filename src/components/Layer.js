@@ -7,6 +7,13 @@ import SearchBox from "./SearchBox";
 import DevTools from "./DevTools";
 import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
 
+
+const dungeonMaxZoom = 4;
+const dungeonMinZoom = 3;
+
+const surfaceMaxZoom = 9;
+const surfaceMinZoom = 3;
+
 export default class Layer extends Component {
 
     constructor(props) {
@@ -21,8 +28,8 @@ export default class Layer extends Component {
             layer: this.props.layer,
             layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer + "/",
             zoomLevel: this.props.layer === "surface" ? 6 : 2,
-            maxZoom: this.props.layer === "surface" ? 9 : 3,
-            minZoom: this.props.layer === "surface" ? 3 : 0,
+            maxZoom: this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom,
+            minZoom: this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom,
             center: this.props.center,
         };
 
@@ -35,6 +42,7 @@ export default class Layer extends Component {
 
     handleZoomEnd() {
         if (this.map) {
+            console.log(this.map.viewport.zoom);
             this.setState({zoomLevel: this.map.viewport.zoom});
         }
     }
@@ -55,10 +63,10 @@ export default class Layer extends Component {
         if (this.props.layer !== prevProps.layer) {
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer})
             this.setState({zoomLevel: this.props.layer === "surface" ? 6 : 2});
-            this.setState({maxZoom: this.props.layer === "surface" ? 9 : 3});
-            this.setState({minZoom: this.props.layer === "surface" ? 3 : 0});
-            this.map.leafletElement.setMinZoom(this.props.layer === "surface" ? 3 : 3);
-            this.map.leafletElement.setMaxZoom(this.props.layer === "surface" ? 9 : 5);
+            this.setState({minZoom: this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom});
+            this.setState({maxZoom: this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom});
+            this.map.leafletElement.setMinZoom(this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom);
+            this.map.leafletElement.setMaxZoom(this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom);
             this.setState({icons: getDungeonIcons(this.props.layer)});
             this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer))
         }
