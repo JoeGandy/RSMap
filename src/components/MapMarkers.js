@@ -3,12 +3,14 @@ import MapMarker from "./MarkerTypes/MapMarker";
 import {rewriteIcons, types} from "../classes/Icons";
 import {IconBaseClass} from "../classes/IconBaseClass";
 import MapPointToPointMarker from "./MarkerTypes/MapPointToPointMarker";
+import LayerLink from "./MarkerTypes/LayerLink";
 
 export default class MapMarkers extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            icons: rewriteIcons()
+            icons: this.props.icons,
+            dungeons: this.props.dungeons
         };
     }
 
@@ -22,8 +24,12 @@ export default class MapMarkers extends Component {
     render() {
         let centerMap = this.props.centerMap;
         let filters = this.props.filters;
+        let handleLayerChange = this.props.handleLayerChange;
         return (
             <>
+                {this.state.dungeons.map(function (dungeon, i) {
+                    return <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange}/>
+                })}
                 {this.state.icons.agilty_shortcuts.map(function (icon, i) {
                     return filters[icon.options.category] ?
                         <MapMarker key={i} position={icon.options.position} icon={icon}

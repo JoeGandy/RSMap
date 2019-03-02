@@ -1,17 +1,10 @@
 import React, {Component} from 'react'
-import {withPrefix} from 'gatsby';
 import 'leaflet/dist/leaflet.css';
-import {Map, Pane, Rectangle, TileLayer, Polyline} from "react-leaflet";
-import MapMarkers from "./MapMarkers";
-import * as Icons from "../classes/Icons";
-import L from "leaflet";
-import FiltersBox from "./FiltersBox";
-import * as CoordinateConvertor from "../classes/CoordinateConverter";
 import {rewriteIcons} from "../classes/Icons";
 import {getAllIconsFlat} from "../classes/Icons";
-import {Typeahead} from 'react-bootstrap-typeahead';
-import SearchBox from "./SearchBox";
-import DevTools from "./DevTools";
+import Layer from "./Layer";
+import {Dungeons} from "../classes/Dungeons";
+
 
 export default class OSRSMap extends Component {
 
@@ -22,7 +15,9 @@ export default class OSRSMap extends Component {
             line: null,
             center: {"lat": 76.40881056467734, "lng": 317.13134765625006},
             filters: {},
-            icons: typeof window !== 'undefined' ? getAllIconsFlat() : [],
+            icons_flat: typeof window !== 'undefined' ? getAllIconsFlat() : [],
+            icons: typeof window !== 'undefined' ? rewriteIcons() : [],
+            dungeons: Dungeons,
             search_val: null,
             clicked_position: null,
             layer: 'surface'
@@ -33,12 +28,17 @@ export default class OSRSMap extends Component {
         this.centerMap = this.centerMap.bind(this);
         this.updateFilters = this.updateFilters.bind(this);
         this.searchSelect = this.searchSelect.bind(this);
+        this.handleLayerChange = this.handleLayerChange.bind(this);
     }
 
     handleZoomEnd() {
         if (this.map) {
             this.setState({zoomLevel: this.map.viewport.zoom});
         }
+    }
+
+    handleLayerChange(layer){
+        this.setState({layer: layer});
     }
 
     searchSelect(results) {
@@ -80,60 +80,7 @@ export default class OSRSMap extends Component {
     render() {
         if (typeof window !== 'undefined') {
             return (
-                <>
-                    {this.state.layer === "surface" ?
-                        <Map
-                            ref={(ref) => {
-                                this.map = ref;
-                            }}
-                            zoom={6}
-                            center={this.state.center}
-                            maxZoom={9}
-                            minZoom={3}
-                            onClick={this.handleClick}
-                            onZoomEnd={this.handleZoomEnd}
-                        >
-                            <TileLayer
-                                attribution="RSMap - Built with data from osrs.wiki"
-                                url={withPrefix("/map/generated/{z}/{x}/{y}.png")}
-                            />
-                            <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}
-                                        filters={this.state.filters}/>
-                            {this.state.line ?
-                                <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
-
-                            {CoordinateConvertor.buildChunkGrid().map(function (chunk, i) {
-                                return <Polyline
-                                    weight={1}
-                                    color={'white'}
-                                    positions={chunk.positions}
-                                    opacity={0.5}
-                                />
-                            })}
-                        </Map>
-                        :
-                        <Map
-                            ref={(ref) => {
-                                this.map = ref;
-                            }}
-                            zoom={2}
-                            center={this.state.center}
-                            maxZoom={3}
-                            minZoom={0}
-                            onClick={this.handleClick}
-                            onZoomEnd={this.handleZoomEnd}
-                        >
-                            <TileLayer
-                                attribution="RSMap - Built with data from osrs.wiki"
-                                url={withPrefix("/map/dungeons/generated/keldagrim/{z}/{x}/{y}.png")}
-                                noWrap={true}
-                            />
-                        </Map>
-                    }
-                    <FiltersBox updateFilters={this.updateFilters}/>
-                    <SearchBox centerMap={this.centerMap}/>
-                    <DevTools clickedPos={this.state.clicked_position}/>
-                </>
+                <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer} center={{"lat": 76.40881056467734, "lng": 317.13134765625006}} icons={this.state.icons} dungeons={this.state.dungeons}/>
             )
         } else {
             return <div>Page is loading...</div>

@@ -18,7 +18,7 @@ export default class MapMarker extends Component {
 
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props !== prevProps) {
+        if (this.props !== prevProps && this.props.icon ) {
             this.setState({icon: this.props.icon});
         }
     }

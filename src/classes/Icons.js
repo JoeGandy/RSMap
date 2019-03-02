@@ -6,26 +6,6 @@ import * as _PointToPoints from "./IconTypes/PointToPoints";
 import * as _AgilityShortcuts from "./IconTypes/AgilityShortcuts";
 import * as _Locations from "./IconTypes/Locations";
 
-const Categories = {
-    REGULAR_SPELLBOOK: 'regular_spellbook',
-    ANCIENT_SPELLBOOK: 'ancient_spellbook',
-    LUNAR_SPELLBOOK: 'lunar_spellbook',
-    ARCEUUS_SPELLBOOK: 'arceuus_spellbook',
-    JEWELLERY: 'jewellery',
-    AGILITY_SHORTCUT: 'agility_shortcut',
-    BOATS: 'boats',
-    FAIRY_RINGS: 'fairy_rings',
-    SPIRIT_TREES: 'spirit_trees',
-    BALLOON_TRANSPORT: 'balloon_transport_system',
-    MAGIC_MUSHROOMS: 'magic_mushroom',
-    GNOME_GLIDERS: 'gnome_glider',
-    CARPET_RIDES: 'carpet_ride',
-    MINI_GAMES: 'mini_games',
-    OTHER: 'other'
-};
-
-let icons_dir = '../../static/icons/teleport/';
-
 function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
     let R = 6371; // Radius of the earth in km
     let dLat = deg2rad(lat2 - lat1);  // deg2rad below
@@ -51,10 +31,7 @@ export function rewriteIcons() {
         icons[type.label] = [];
         if (typeof window !== 'undefined') {
             for (let key in type.data) {
-                if(type.label === "locations"){
-                    icons[type.label][key] = type.data[key];
-
-                }else {;
+                if(type.label !== "locations"){
                     icons[type.label][key] = new IconBaseClass(type.data[key]);
                 }
             }
