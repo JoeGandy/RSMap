@@ -1,18 +1,21 @@
 import React, {Component} from 'react'
 import MapMarker from "./MarkerTypes/MapMarker";
+import {Map, Marker, Tooltip, Popup} from "react-leaflet";
 import {rewriteIcons, types} from "../classes/Icons";
 import {IconBaseClass} from "../classes/IconBaseClass";
 import MapPointToPointMarker from "./MarkerTypes/MapPointToPointMarker";
 import LayerLink from "./MarkerTypes/LayerLink";
-import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
+import {getDungeonCenter, getDungeonIcons, getDungeonLayer} from "../classes/Dungeons";
 import SurfaceLink from "./MarkerTypes/SurfaceLink";
+import TextPath from "react-leaflet-textpath";
 
 export default class MapMarkers extends Component {
     constructor(props) {
         super(props);
         this.state = {
             icons: this.props.icons,
-            dungeons: this.props.dungeons
+            dungeons: this.props.dungeons,
+            current_dungeon_layer: null
         };
     }
 
@@ -20,6 +23,7 @@ export default class MapMarkers extends Component {
         if (this.props !== prevProps) {
             IconBaseClass.setZoomLevel(this.props.zoomLevel, !(this.props.layer === "surface"));
             this.setState({icons: this.props.layer === "surface" ? rewriteIcons() : getDungeonIcons(this.props.layer)});
+            this.setState({current_dungeon_layer: this.props.layer === "surface" ? null : getDungeonLayer(this.props.layer)})
             //this.props.centerMap(this.props.layer === "surface" ? {"lat": 76.40881056467734, "lng": 317.13134765625006} : getDungeonCenter(this.props.layer))
         }
     }
@@ -35,8 +39,28 @@ export default class MapMarkers extends Component {
                     return <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange}/>
                 }) : null}
 
-                {this.state.layer !== "surface" ? this.state.dungeons.map(function (dungeon, i) {
+                {this.props.layer !== "surface" ? this.state.dungeons.map(function (dungeon, i) {
                     return <SurfaceLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange}/>
+                }) : null}
+
+                {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ? this.state.current_dungeon_layer.map_labels.map(function (label, i) {
+                    return <TextPath
+                        key={i}
+                        positions={label.positions}
+                        text={label.text}
+                        center
+                        below
+                        offset={10}
+                        stroke={false}
+                        attributes={{
+                            'fill': 'yellow',
+                            'font-family': "'RuneScape', serif",
+                            'stroke': 'black',
+                            'font-size': label.fontSize ? label.fontSize : 35
+                        }}
+                    />
+
+
                 }) : null}
 
                 {this.state.icons.agility_shortcuts.map(function (icon, i) {
@@ -49,7 +73,7 @@ export default class MapMarkers extends Component {
                     return filters[icon.options.category] ?
                         <MapMarker key={i} position={icon.options.position} icon={icon}
                                    title={icon.options.title}/>
-                        : null; 
+                        : null;
                 })}
                 {this.state.icons.fairy_rings.map(function (icon, i) {
                     return filters[icon.options.category] ?
