@@ -8,7 +8,7 @@ import DevTools from "./DevTools";
 import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
 
 
-const dungeonMaxZoom = 4;
+const dungeonMaxZoom = 5;
 const dungeonMinZoom = 3;
 
 const surfaceMaxZoom = 9;

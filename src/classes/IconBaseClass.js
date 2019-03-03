@@ -15,9 +15,9 @@ const sizeConversionSurface = {
 };
 
 const sizeConversionDungeon = {
-    5: 128,
-    4: 64,
-    3: 32,
+    5: 64,
+    4: 32,
+    3: 16,
 };
 
 const sizeConversion = {...sizeConversionSurface};
