@@ -39,19 +39,613 @@ export function getDungeonCenter(dungeon_name) {
 }
 
 export const Dungeons = [
-    //Dorgeshuun Mine
-    //Tears of guthix cavern
+    {
+        machine_name: 'paterdomus_template_basement',
+        full_name: 'Paterdomus Template Basement',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":21.453068633086783,"lng":333.63281250000006},
+        exits: [
+            {
+                label: 'To Paterdomus Temple',
+                position: {"lat":32.175612478499346,"lng":321.15234375},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.17074580045627,"lng":329.02954101562506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Morytania',
+                position: {"lat":19.518375478601566,"lng":345.45410156250006},
+                target_layer: "surface",
+                target_layer_position: {"lat":79.92823592380245,"lng":330.16113281250006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'tutorial_island_cave',
+        full_name: 'Tutorial Island Cave',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 23.32208001137844, "lng": 332.57812500000006},
+        exits: [
+            {
+                label: 'To Quest Tutorial',
+                position: {"lat": 30.56226095049944, "lng": 327.70019531250006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 74.71224441731964, "lng": 308.13903808593756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Friends Tutorial',
+                position: {"lat": 34.08906131584996, "lng": 345.01464843750006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 74.83487278379204, "lng": 309.64965820312506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'kbd_lair',
+        full_name: 'King Black Dragon Lair',
+        icon: require('../../static/icons/misc/Transportation_icon.png'),
+        center_pos: {"lat": 17.18277905643184, "lng": 338.203125},
+        exits: [
+            {
+                label: 'KBD Lair',
+                position: {"lat": 14.774882506516272, "lng": 333.94042968750006},
+                target_layer: "lava_maze_dungeon",
+                target_layer_position: {"lat": 13.15437605541853, "lng": 354.814453125},
+                icon: require('../../static/icons/misc/Transportation_icon.png')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'lava_maze_dungeon',
+        full_name: 'Lava Maze Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 17.18277905643184, "lng": 338.203125},
+        exits: [
+            {
+                label: 'Center of Lava Dragon Maze',
+                position: {"lat": 10.833305983642491, "lng": 318.25195312500006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 83.4199002425892, "lng": 306.8893432617188},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'West of Lava Dragon Maze',
+                position: {"lat": 14.689881366618774, "lng": 351.6064453125},
+                target_layer: "surface",
+                target_layer_position: {"lat": 83.36744691299643, "lng": 303.45886230468756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "positions": [
+                    {
+                        "lat": 21.207458730482653,
+                        "lng": 333.369140625
+                    },
+                    {
+                        "lat": 31.728167146023935,
+                        "lng": 350.85937500000006
+                    }
+                ],
+                "text": "Black Dragons",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 9.882275493429953,
+                        "lng": 315.87890625000006
+                    },
+                    {
+                        "lat": 8.059229627200192,
+                        "lng": 335.830078125
+                    }
+                ],
+                "text": "Greater Demons",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 19.228176737766262,
+                        "lng": 347.16796875000006
+                    },
+                    {
+                        "lat": 10.31491928581316,
+                        "lng": 367.294921875
+                    }
+                ],
+                "text": "Poison Spiders",
+                "fontSize": 30
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'rev_caves',
+        full_name: 'Revenant Caves',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 31.203404950917395, "lng": 340.13671875},
+        exits: [
+            {
+                label: 'To Level 40 wilderness',
+                position: {"lat": 66.58321725728176, "lng": 363.33984375000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 83.23642648170203, "lng": 310.57250976562506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Level 17 wilderness',
+                position: {"lat": -33.28461996888768, "lng": 330.29296875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 81.71290123447507, "lng": 307.28210449218756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "positions": [
+                    {
+                        "lat": -26.273714024406416,
+                        "lng": 329.23828125000006
+                    },
+                    {
+                        "lat": -19.642587534013032,
+                        "lng": 339.08203125000006
+                    }
+                ],
+                "text": "Hellhounds",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": -19.145168196205297,
+                        "lng": 346.11328125000006
+                    },
+                    {
+                        "lat": -29.07537517955836,
+                        "lng": 358.06640625000006
+                    }
+                ],
+                "text": "Green Dragons",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": -6.839169626342808,
+                        "lng": 338.203125
+                    },
+                    {
+                        "lat": -6.839169626342808,
+                        "lng": 353.14453125000006
+                    }
+                ],
+                "text": "Green Dragons",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 17.811456088564483,
+                        "lng": 340.3125
+                    },
+                    {
+                        "lat": 15.284185114076445,
+                        "lng": 361.05468750000006
+                    }
+                ],
+                "text": "Greater Demons",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 4.214943141390651,
+                        "lng": 297.77343750000006
+                    },
+                    {
+                        "lat": 9.44906182688142,
+                        "lng": 318.33984375000006
+                    }
+                ],
+                "text": "Lesser Demons",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 32.10118973232094,
+                        "lng": 307.61718750000006
+                    },
+                    {
+                        "lat": 30.600093873550072,
+                        "lng": 327.83203125000006
+                    }
+                ],
+                "text": "Black Demons",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 38.685509760012025,
+                        "lng": 331.34765625000006
+                    },
+                    {
+                        "lat": 37.71859032558816,
+                        "lng": 348.75000000000006
+                    }
+                ],
+                "text": "Ice Giants",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 49.724479188712984,
+                        "lng": 307.08984375000006
+                    },
+                    {
+                        "lat": 54.16243396806781,
+                        "lng": 329.58984375000006
+                    }
+                ],
+                "text": "Ankou",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 55.07836723201515,
+                        "lng": 350.15625
+                    },
+                    {
+                        "lat": 56.36525013685609,
+                        "lng": 368.61328125000006
+                    }
+                ],
+                "text": "Black Dragons",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 47.15984001304432,
+                        "lng": 354.37500000000006
+                    },
+                    {
+                        "lat": 29.075375179558346,
+                        "lng": 371.60156250000006
+                    }
+                ],
+                "text": "Revenants",
+                "fontSize": 30
+            }
+        ],
+        icons: {
+            agility_shortcuts: [
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat": 58.19387126497797, "lng": 321.064453125},
+                    title: "Agility Shortcut",
+                    description: "Jump (75 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat": 52.61639023304539, "lng": 335.87402343750006},
+                    title: "Agility Shortcut",
+                    description: "Jump (75 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat": 19.559790136497412, "lng": 334.46777343750006},
+                    title: "Agility Shortcut",
+                    description: "Jump (75 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat": -14.392118083661728, "lng": 349.18945312500006},
+                    title: "Agility Shortcut",
+                    description: "Jump (65 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat": 25.363882272740256, "lng": 363.29589843750006},
+                    title: "Agility Shortcut",
+                    description: "Jump (89 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+            ]
+        }
+    },
+    {
+        machine_name: 'goblin_cooks_room',
+        full_name: 'Goblin Cook\'s Basement',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 24.80668135385199, "lng": 337.50000000000006},
+        exits: [
+            {
+                label: 'To Goblin Village',
+                position: {"lat": 28.07198030177986, "lng": 338.07128906250006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 80.17590209883195, "lng": 299.80041503906256},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'falador_mole_cave',
+        full_name: 'Falador Mole Cave',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 27.605670826465445, "lng": 332.66601562500006},
+        exits: [
+            {
+                label: 'To Falador South',
+                position: {"lat": -9.275622176792098, "lng": 329.41406250000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 78.59638534707328, "lng": 302.20092773437506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Falador Park',
+                position: {"lat": 53.74871079689897, "lng": 328.27148437500006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 78.59638534707328, "lng": 302.20092773437506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'lumbridge_basement',
+        full_name: 'Lumbridge Basement',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 27.605670826465445, "lng": 332.66601562500006},
+        exits: [
+            {
+                label: 'To Lumbridge Castle',
+                position: {"lat": 25.403584973186703, "lng": 329.58984375000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 76.33892882834353, "lng": 316.1123657226563},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'essence_mine',
+        full_name: 'Essence Mine',
+        icon: require('../../static/icons/misc/Transportation_icon.png'),
+        center_pos: {"lat": 25.005972656239187, "lng": 332.75390625000006},
+        exits: [
+            {
+                label: 'Back out the way you came in',
+                position: {"lat": 38.47939467327645, "lng": 348.53027343750006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 78.89335256331809, "lng": 319.1143798828125},
+                icon: require('../../static/icons/misc/Transportation_icon.png')
+            },
+            {
+                label: 'Back out the way you came in',
+                position: {"lat": 14.179186142354181, "lng": 349.27734375000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 78.89335256331809, "lng": 319.1143798828125},
+                icon: require('../../static/icons/misc/Transportation_icon.png')
+            },
+            {
+                label: 'Back out the way you came in',
+                position: {"lat": 12.811801316582619, "lng": 318.20800781250006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 78.89335256331809, "lng": 319.1143798828125},
+                icon: require('../../static/icons/misc/Transportation_icon.png')
+            },
+            {
+                label: 'Back out the way you came in',
+                position: {"lat": 36.8092847020594, "lng": 314.78027343750006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 78.89335256331809, "lng": 319.1143798828125},
+                icon: require('../../static/icons/misc/Transportation_icon.png')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'wizards_tower_basement',
+        full_name: 'Wizards Tower Basement',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 24.367113562651276, "lng": 332.13867187500006},
+        exits: [
+            {
+                label: 'To Wizards Tower',
+                position: {"lat": 30.41078179084589, "lng": 328.18359375000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 75.44479062156888, "lng": 309.1937255859375},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Essence Mine',
+                position: {"lat": 27.916766641249065, "lng": 330.24902343750006},
+                target_layer: "essence_mine",
+                target_layer_position: {"lat": 78.89335256331809, "lng": 319.1143798828125},
+                icon: require('../../static/icons/misc/Transportation_icon.png')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'asgarnian_ice_dungeon',
+        full_name: 'Asgarnian Ice Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 23.28171917560003, "lng": 332.1826171875},
+        exits: [
+            {
+                label: 'To Mudskipper Point',
+                position: {"lat": 7.928674801364048, "lng": 317.68066406250006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 75.24326541978712, "lng": 302.86010742187506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "positions": [
+                    {
+                        "lat": 5.965753671065536,
+                        "lng": 305.41992187500006
+                    },
+                    {
+                        "lat": 6.577303118123887,
+                        "lng": 315.43945312500006
+                    }
+                ],
+                "text": "Muggers",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 26.352497858154024,
+                        "lng": 300.93750000000006
+                    },
+                    {
+                        "lat": 27.059125784374068,
+                        "lng": 313.41796875000006
+                    }
+                ],
+                "text": "Pirates",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 27.371767300523047,
+                        "lng": 318.69140625
+                    },
+                    {
+                        "lat": 29.916852233070173,
+                        "lng": 332.92968750000006
+                    }
+                ],
+                "text": "Hobgoblins",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 29.99300228455108,
+                        "lng": 342.15820312500006
+                    },
+                    {
+                        "lat": 30.44867367928756,
+                        "lng": 353.67187500000006
+                    }
+                ],
+                "text": "Ice Warriors",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 26.27371402440643,
+                        "lng": 341.63085937500006
+                    },
+                    {
+                        "lat": 26.352497858154024,
+                        "lng": 359.12109375000006
+                    }
+                ],
+                "text": "Ice Giants",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 4.8282597468669755,
+                        "lng": 331.87500000000006
+                    },
+                    {
+                        "lat": 4.302591077119676,
+                        "lng": 350.244140625
+                    }
+                ],
+                "text": "Skeletal Wyverns",
+                "fontSize": 30
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'draynor_manor_crypt',
+        full_name: 'Draynor Manor Crypt',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 23.28171917560003, "lng": 332.1826171875},
+        exits: [
+            {
+                label: 'To Draynor Manor',
+                position: {"lat": 20.138470312451155, "lng": 332.53417968750006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 78.3471918724007, "lng": 309.91333007812506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'draynor_manor_dungeon',
+        full_name: 'Draynor Manor Basement',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 22.350075806124867, "lng": 334.77539062500006},
+        exits: [
+            {
+                label: 'To Draynor Manor',
+                position: {"lat": 21.53484700204879, "lng": 343.82812500000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 78.4102651631265, "lng": 308.39721679687506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
     {
         machine_name: 'lumbridge_swamp_cave',
         full_name: 'Lumbridge Swamp Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.958044673317843,"lng":335.08300781250006},
+        center_pos: {"lat": 25.958044673317843, "lng": 335.08300781250006},
         exits: [
             {
                 label: 'To Lumbridge Swamp',
-                position: {"lat":27.371767300523047,"lng":312.80273437500006},
+                position: {"lat": 27.371767300523047, "lng": 312.80273437500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":75.60611830430058,"lng":313.48388671875006},
+                target_layer_position: {"lat": 75.60611830430058, "lng": 313.48388671875006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -91,18 +685,18 @@ export const Dungeons = [
         machine_name: 'stronghold_of_security_sepulchre_of_death',
         full_name: 'Stronghold of Security Layer (Pit of Pestilence)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.958044673317843,"lng":335.08300781250006},
+        center_pos: {"lat": 25.958044673317843, "lng": 335.08300781250006},
         exits: [
             {
                 label: 'To Pit of Pestilence',
-                position: {"lat":39.50404070558415,"lng":315.70312500000006},
+                position: {"lat": 39.50404070558415, "lng": 315.70312500000006},
                 target_layer: "stronghold_of_security_pit_of_pestilence",
                 target_layer_position: {"lat": 79.15377632309713, "lng": 307.67211914062506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Barbarian Village',
-                position: {"lat":24.766784522874453,"lng":344.26757812500006},
+                position: {"lat": 24.766784522874453, "lng": 344.26757812500006},
                 target_layer: "surface",
                 target_layer_position: {"lat": 79.15377632309713, "lng": 307.67211914062506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
@@ -115,25 +709,25 @@ export const Dungeons = [
         machine_name: 'stronghold_of_security_pit_of_pestilence',
         full_name: 'Stronghold of Security Layer (Pit of Pestilence)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.958044673317843,"lng":335.08300781250006},
+        center_pos: {"lat": 25.958044673317843, "lng": 335.08300781250006},
         exits: [
             {
                 label: 'To Catacomb of Famine',
-                position: {"lat":6.053161295714067,"lng":320.09765625000006},
+                position: {"lat": 6.053161295714067, "lng": 320.09765625000006},
                 target_layer: "stronghold_of_security_catacomb_of_famine",
                 target_layer_position: {"lat": 79.15377632309713, "lng": 307.67211914062506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Sepulchre of Death',
-                position: {"lat":27.994401411046148,"lng":337.41210937500006},
+                position: {"lat": 27.994401411046148, "lng": 337.41210937500006},
                 target_layer: "stronghold_of_security_sepulchre_of_death",
                 target_layer_position: {"lat": 79.15377632309713, "lng": 307.67211914062506},
                 icon: require('../../static/icons/misc/Dungeon_icon.webp')
             },
             {
                 label: 'To Barbarian Village',
-                position: {"lat":23.966175871265044,"lng":338.99414062500006},
+                position: {"lat": 23.966175871265044, "lng": 338.99414062500006},
                 target_layer: "surface",
                 target_layer_position: {"lat": 79.15377632309713, "lng": 307.67211914062506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
@@ -146,7 +740,7 @@ export const Dungeons = [
         machine_name: 'stronghold_of_security_catacomb_of_famine',
         full_name: 'Stronghold of Security Layer (Catacomb of Famine)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.16517336866393,"lng":337.67578125},
+        center_pos: {"lat": 25.16517336866393, "lng": 337.67578125},
         exits: [
             {
                 label: 'To Vault of War',
@@ -157,14 +751,14 @@ export const Dungeons = [
             },
             {
                 label: 'To Pit of Pestilence',
-                position: {"lat":26.745610382199022,"lng":341.45507812500006},
+                position: {"lat": 26.745610382199022, "lng": 341.45507812500006},
                 target_layer: "stronghold_of_security_pit_of_pestilence",
                 target_layer_position: {"lat": 79.15377632309713, "lng": 307.67211914062506},
                 icon: require('../../static/icons/misc/Dungeon_icon.webp')
             },
             {
                 label: 'To Barbarian Village',
-                position: {"lat":21.453068633086783,"lng":335.21484375000006},
+                position: {"lat": 21.453068633086783, "lng": 335.21484375000006},
                 target_layer: "surface",
                 target_layer_position: {"lat": 79.15377632309713, "lng": 307.67211914062506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
@@ -195,7 +789,7 @@ export const Dungeons = [
             },
             {
                 label: 'To Barbarian Village',
-                position: {"lat":31.50362930577303,"lng":352.353515625},
+                position: {"lat": 31.50362930577303, "lng": 352.353515625},
                 target_layer: "surface",
                 target_layer_position: {"lat": 79.15377632309713, "lng": 307.67211914062506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')

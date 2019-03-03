@@ -27,7 +27,7 @@ export default class Layer extends Component {
             clicked_position: null,
             layer: this.props.layer,
             layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer + "/",
-            zoomLevel: this.props.layer === "surface" ? 6 : 2,
+            zoomLevel: this.props.layer === "surface" ? 6 : 3,
             maxZoom: this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom,
             minZoom: this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom,
             center: this.props.center,
@@ -61,14 +61,14 @@ export default class Layer extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer})
-            this.setState({zoomLevel: this.props.layer === "surface" ? 6 : 2});
+            this.setState({zoomLevel: this.props.layer === "surface" ? 6 : 3});
             this.setState({minZoom: this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom});
             this.setState({maxZoom: this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom});
             this.map.leafletElement.setMinZoom(this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom);
             this.map.leafletElement.setMaxZoom(this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom);
             this.setState({icons: getDungeonIcons(this.props.layer)});
             this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer));
-            setTimeout(function(handleZoomEnd) {
+            setTimeout(function (handleZoomEnd) {
                 handleZoomEnd();
             }, 1000, this.handleZoomEnd);
         }
@@ -115,9 +115,13 @@ export default class Layer extends Component {
                                 filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}/>
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                 </Map>
-                <FiltersBox updateFilters={this.updateFilters}/>
-                <SearchBox centerMap={this.centerMap}/>
-                <DevTools clickedPos={this.state.clicked_position}/>
+                {this.props.layer === "surface" ?
+                    <>
+                        <FiltersBox updateFilters={this.updateFilters}/>
+                        <SearchBox centerMap={this.centerMap}/>
+                        <DevTools clickedPos={this.state.clicked_position}/>
+                    </>
+                    : null}
             </>
         )
     }
