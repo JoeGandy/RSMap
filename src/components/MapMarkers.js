@@ -32,12 +32,13 @@ export default class MapMarkers extends Component {
         let centerMap = this.props.centerMap;
         let filters = this.props.filters;
         let handleLayerChange = this.props.handleLayerChange;
+        let layer = this.props.layer;
 
         return (
             <>
-                {this.props.layer === "surface" ? this.state.dungeons.map(function (dungeon, i) {
-                    return <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange}/>
-                }) : null}
+                {this.state.dungeons.map(function (dungeon, i) {
+                    return <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
+                })}
 
                 {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ?
                     <SurfaceLink dungeon={this.state.current_dungeon_layer} handleLayerChange={handleLayerChange}/>
@@ -53,6 +54,7 @@ export default class MapMarkers extends Component {
                         offset={10}
                         stroke={false}
                         attributes={{
+                            'opacity': 1,
                             'fill': 'yellow',
                             'font-family': "'RuneScape', serif",
                             'stroke': 'black',

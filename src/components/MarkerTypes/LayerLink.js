@@ -31,31 +31,33 @@ export default class MapMarker extends Component {
         return (
             <>
                 {props.dungeon.exits.map(function (exit, i) {
-                    return <Marker
-                        key={i}
-                        position={exit.target_layer_position}
-                        icon={new IconBaseClass({
-                            iconUrl: props.dungeon.icon
-                        })}
-                        onMouseOver={(e) => {
-                            e.target.openPopup();
-                        }}
-                        onMouseOut={(e) => {
-                            e.target.closePopup();
-                        }}
-                        onClick={() => onLayerLinkClick(props.dungeon.machine_name)}
-                    >
-                        <Popup>
-                            <h4>{props.dungeon.full_name}</h4>
-                            {props.dungeon.description ?
-                                <div><br/>{props.dungeon.description.split("\n").map(function (item, i) {
-                                    return <div key={i}>
-                                        {item}
-                                        <br/>
-                                    </div>
-                                })}</div> : null}
-                        </Popup>
-                    </Marker>
+                    if(exit.target_layer === props.layer) {
+                        return <Marker
+                            key={i}
+                            position={exit.target_layer_position}
+                            icon={new IconBaseClass({
+                                iconUrl: props.dungeon.icon
+                            })}
+                            onMouseOver={(e) => {
+                                e.target.openPopup();
+                            }}
+                            onMouseOut={(e) => {
+                                e.target.closePopup();
+                            }}
+                            onClick={() => onLayerLinkClick(props.dungeon.machine_name)}
+                        >
+                            <Popup>
+                                <h4>{props.dungeon.full_name}</h4>
+                                {props.dungeon.description ?
+                                    <div><br/>{props.dungeon.description.split("\n").map(function (item, i) {
+                                        return <div key={i}>
+                                            {item}
+                                            <br/>
+                                        </div>
+                                    })}</div> : null}
+                            </Popup>
+                        </Marker>
+                    }
                 })}
             </>
         )

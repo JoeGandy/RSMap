@@ -67,7 +67,10 @@ export default class Layer extends Component {
             this.map.leafletElement.setMinZoom(this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom);
             this.map.leafletElement.setMaxZoom(this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom);
             this.setState({icons: getDungeonIcons(this.props.layer)});
-            this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer))
+            this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer));
+            setTimeout(function(handleZoomEnd) {
+                handleZoomEnd();
+            }, 1000, this.handleZoomEnd);
         }
     }
 
