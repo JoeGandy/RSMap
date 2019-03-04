@@ -24,10 +24,13 @@ export default class DevTools extends Component {
             action: null,
             built_locations: [],
             built_labels: [],
+            region_points: [],
         };
 
         this.startNewLocation = this.startNewLocation.bind(this);
         this.startNewLabel = this.startNewLabel.bind(this);
+        this.startNewRegion = this.startNewRegion.bind(this);
+        this.endNewRegion = this.endNewRegion.bind(this);
         this.cancelDevtools = this.cancelDevtools.bind(this);
     }
 
@@ -79,9 +82,36 @@ export default class DevTools extends Component {
                             this.setState({pending_positions: []});
                         }
                         break;
+                    case 'new_region':
+                        let region_points = [...this.state.region_points];
+                        region_points.push(this.props.clickedPos);
+                        this.setState({region_points: region_points})
+                        break;
                 }
             }
         }
+    }
+
+    endNewRegion(){
+        console.clear();
+        let label_text = prompt("Enter Region Name");
+        let obj = {
+            label: label_text,
+            points: this.state.region_points
+        };
+        console.log(JSON.stringify(obj, null, 4));
+
+        this.setState({action_in_progress: true});
+        this.setState({action_message: null});
+        this.setState({action: null});
+        this.setState({region_points: []});
+
+    }
+
+    startNewRegion() {
+        this.setState({action_in_progress: true});
+        this.setState({action_message: "Please click around the border to build a new region"})
+        this.setState({action: 'new_region'})
     }
 
     startNewLocation() {
@@ -97,13 +127,14 @@ export default class DevTools extends Component {
         this.setState({pending_positions: []});
     }
 
-    cancelDevtools(){
+    cancelDevtools() {
         this.setState({action_in_progress: false});
         this.setState({action_message: "."});
         this.setState({action: null});
         this.setState({pending_positions: []});
 
     }
+
     render() {
         if (typeof window !== 'undefined') {
             return (
@@ -117,6 +148,14 @@ export default class DevTools extends Component {
                     <button disabled={this.state.action_in_progress} onClick={this.startNewLabel}>Generate
                         Label
                     </button>
+                    <br/>
+                    <button disabled={this.state.action_in_progress} onClick={this.startNewRegion}>Generate
+                        Region
+                    </button>
+                    {this.state.action_in_progress && this.state.action === "new_region" ?
+                        <button disabled={!this.state.action_in_progress} onClick={this.endNewRegion}>End
+                            Region
+                        </button> : null}
                     <br/>
                     <br/>
 

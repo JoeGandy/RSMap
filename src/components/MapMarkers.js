@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import MapMarker from "./MarkerTypes/MapMarker";
-import {Map, Marker, Tooltip, Popup} from "react-leaflet";
+import {Map, Marker, Tooltip, Popup, Polygon} from "react-leaflet";
 import {rewriteIcons, types} from "../classes/Icons";
 import {IconBaseClass} from "../classes/IconBaseClass";
 import MapPointToPointMarker from "./MarkerTypes/MapPointToPointMarker";
@@ -15,6 +15,7 @@ export default class MapMarkers extends Component {
         this.state = {
             icons: this.props.icons,
             dungeons: this.props.dungeons,
+            regions: this.props.regions,
             current_dungeon_layer: null
         };
     }
@@ -33,9 +34,18 @@ export default class MapMarkers extends Component {
         let filters = this.props.filters;
         let handleLayerChange = this.props.handleLayerChange;
         let layer = this.props.layer;
+        let regions = this.state.regions;
 
+        console.log(regions);
         return (
             <>
+                {this.state.regions.map(function (region, i) {
+                    return <Polygon
+                        key={i}
+                        ref={region.text}
+                        positions={region.points}
+                    />
+                })}
                 {this.state.dungeons.map(function (dungeon, i) {
                     return <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
                 })}

@@ -110,7 +110,7 @@ export default class Layer extends Component {
                         updateWhenZooming={false}
                         updateInterval={200}
                     />
-                    <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap}
+                    <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} regions={this.props.regions}
                                 handleLayerChange={this.props.handleLayerChange} layer={this.props.layer}
                                 filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}/>
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}

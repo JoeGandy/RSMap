@@ -4,6 +4,7 @@ import {rewriteIcons} from "../classes/Icons";
 import {getAllIconsFlat} from "../classes/Icons";
 import Layer from "./Layer";
 import {Dungeons} from "../classes/Dungeons";
+import {Regions} from "../classes/Regions";
 
 
 export default class OSRSMap extends Component {
@@ -18,6 +19,7 @@ export default class OSRSMap extends Component {
             icons_flat: typeof window !== 'undefined' ? getAllIconsFlat() : [],
             icons: typeof window !== 'undefined' ? rewriteIcons() : [],
             dungeons: Dungeons,
+            regions: Regions,
             search_val: null,
             clicked_position: null,
             layer: 'surface'
@@ -81,7 +83,7 @@ export default class OSRSMap extends Component {
     render() {
         if (typeof window !== 'undefined') {
             return (
-                <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
+                <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer} regions={this.state.regions}
                        center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
             )
         } else {
