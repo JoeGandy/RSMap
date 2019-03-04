@@ -119,9 +119,9 @@ export default class Layer extends Component {
                     <>
                         <FiltersBox updateFilters={this.updateFilters}/>
                         <SearchBox centerMap={this.centerMap}/>
-                        <DevTools clickedPos={this.state.clicked_position}/>
                     </>
                     : null}
+                <DevTools clickedPos={this.state.clicked_position}/>
             </>
         )
     }

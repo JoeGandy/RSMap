@@ -20,3 +20,15 @@ Planned features (goals):
 - Stores to show what they sell w/ quanitities 
 - ~Agility short cuts to show where they go and level needed~
 - Farm patch info
+
+### Dungeons that need map clean up
+This is a todo for me (This is removing extra areas from around dungeon maps)
+- Witchaven dungeon level 2
+- Entrana dungeon
+- Karamja volcano
+- Stronghold Slayer Cave
+
+
+### Dungeons i need to get
+- Goblin cave (the one i have isn't right, woops)
+- Second layer of ancient caverns

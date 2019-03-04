@@ -34,9 +34,7 @@ export default class MapMarkers extends Component {
         let filters = this.props.filters;
         let handleLayerChange = this.props.handleLayerChange;
         let layer = this.props.layer;
-        let regions = this.state.regions;
 
-        console.log(regions);
         return (
             <>
                 {this.state.regions.map(function (region, i) {
@@ -68,7 +66,7 @@ export default class MapMarkers extends Component {
                             'fill': 'yellow',
                             'font-family': "'RuneScape', serif",
                             'stroke': 'black',
-                            'font-size': label.fontSize ? label.fontSize : 35
+                            'font-size': label.fontSize ? label.fontSize : 25
                         }}
                     />
                 }) : null}

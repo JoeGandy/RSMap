@@ -1,5 +1,5 @@
 export const Regions = [
-    {
+    /*{
         "label": "Wilderness",
         "points": [
             {
@@ -23,5 +23,5 @@ export const Regions = [
                 "lng": 325.89843750000006
             }
         ]
-    }
+    }*/
 ];
