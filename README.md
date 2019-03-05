@@ -27,8 +27,31 @@ This is a todo for me (This is removing extra areas from around dungeon maps)
 - Entrana dungeon
 - Karamja volcano
 - Stronghold Slayer Cave
-
+- Kalphite Cave
+- Wateerfall Dungeon
 
 ### Dungeons i need to get
 - Goblin cave (the one i have isn't right, woops)
 - Second layer of ancient caverns
+- Elemental workshop middle layer
+- Dungeon under morytania swamp
+- Underground pass final room upper
+- Slepe dungeon and underground area
+- Kalphite Lair
+- Jogre Dungeon
+- Mogre camp
+- Eages' Peak Duungeon
+- Underground Pass
+- Sophanem Dungeon
+- Water Ravine Dungeon
+- Enakhra's Temple
+- Chambers of Xeric
+- Karuulm Slayer Dungeon
+- Lizardman Caves
+- Lizardman Temple
+- Quidamortem Cave
+
+### Agility Shortcuts that need mapping
+- Double check troll stronghold shortcuts
+- Double check Arandar Shorcuts
+- Log balance over Karamja river, what level?

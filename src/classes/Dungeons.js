@@ -83,36 +83,653 @@ export const Dungeons = [
         ],
         map_labels: [],
         icons: {}
-
-
     },
 
      */
     {
+        machine_name: 'kraken_cave',
+        full_name: 'Kraken Cove',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To South West of Fishing Colony',
+                position: {"lat":35.9602229692967,"lng":327.65625000000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":81.28587917894365,"lng":254.74548339843753},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "positions": [
+                    {
+                        "lat": 13.66733825965496,
+                        "lng": 315.52734375000006
+                    },
+                    {
+                        "lat": 6.053161295714067,
+                        "lng": 329.67773437500006
+                    }
+                ],
+                "text": "Waterfiends",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 36.10237644873644,
+                        "lng": 321.59179687500006
+                    },
+                    {
+                        "lat": 24.04646399966658,
+                        "lng": 328.71093750000006
+                    }
+                ],
+                "text": "Cave Krakens",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 18.396230138028827,
+                        "lng": 338.55468750000006
+                    },
+                    {
+                        "lat": 16.88865978738161,
+                        "lng": 353.67187500000006
+                    }
+                ],
+                "text": "Cave Krakens",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 37.85750715625203,
+                        "lng": 332.49023437500006
+                    },
+                    {
+                        "lat": 37.57941251343841,
+                        "lng": 347.25585937500006
+                    }
+                ],
+                "text": "Kraken Boss",
+                "fontSize": 30
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'white_wolf_mountain_caves',
+        full_name: 'White Wolf Mountain Caves',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To West Dungeon Entrance',
+                position: {"lat":7.972197714386879,"lng":310.78125000000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.21612275604421,"lng":290.65979003906256},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Middle Dungeon Entrance',
+                position: {"lat":12.168225677390119,"lng":326.64550781250006},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.28264059618424,"lng":292.2555541992188},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To East Dungeon Entrance',
+                position: {"lat":14.349547837185375,"lng":336.53320312500006},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.31734832164365,"lng":292.9202270507813},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'rashiliyias_tomb',
+        full_name: 'Rashiliyias Tomb',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To East of Karamja River',
+                position: {"lat":39.095962936305476,"lng":345.673828125},
+                target_layer: "surface",
+                target_layer_position: {"lat":74.16408546675687,"lng":296.77368164062506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'viyeldi_caves',
+        full_name: 'Viyeldi Caves (Second Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To Viyeldi Caves (First Level)',
+                position: {"lat":30.600093873550072,"lng":318.25195312500006},
+                target_layer: "viyeldi_caves_2",
+                target_layer_position: {"lat":35.460669951495305,"lng":318.42773437500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'viyeldi_caves_2',
+        full_name: 'Viyeldi Caves (First Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To West Kharazi Jungle',
+                position: {"lat":41.77131167976407,"lng":326.33789062500006},
+                target_layer: "surface",
+                target_layer_position: {"lat":71.17712280564923,"lng":287.97363281250006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'ah_za_rhoon_2',
+        full_name: 'Ah Za Rhoon (Second Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":19.145168196205297,"lng":335.03906250000006},
+        exits: [
+            {
+                label: 'To Ah Za Rhoon (First Level)',
+                position: {"lat":5.528510525692801,"lng":317.10937500000006},
+                target_layer: "ah_za_rhoon_1",
+                target_layer_position: {"lat":23.483400654325642,"lng":316.49414062500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'ah_za_rhoon_1',
+        full_name: 'Ah Za Rhoon (First Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":21.779905342529645,"lng":332.92968750000006},
+        exits: [
+            {
+                label: 'To East Karamja',
+                position: {"lat":40.713955826286046,"lng":324.66796875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":72.4388497835536,"lng":297.23510742187506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'pollvinch_fire_dungeon',
+        full_name: 'Pollnivneach Smoke Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To West of Pollnivneach',
+                position: {"lat":27.293689224852407,"lng":292.76367187500006},
+                target_layer: "surface",
+                target_layer_position: {"lat":71.73266202440855,"lng":322.767333984375},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "positions": [
+                    {
+                        "lat": 23.483400654325642,
+                        "lng": 365.185546875
+                    },
+                    {
+                        "lat": 26.667095801104814,
+                        "lng": 377.2265625
+                    }
+                ],
+                "text": "Fareed",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 35.60371874069731,
+                        "lng": 304.1015625
+                    },
+                    {
+                        "lat": 39.977120098439634,
+                        "lng": 315.17578125000006
+                    }
+                ],
+                "text": "Dust Devils",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 24.04646399966658,
+                        "lng": 319.21875000000006
+                    },
+                    {
+                        "lat": 20.138470312451155,
+                        "lng": 328.09570312500006
+                    }
+                ],
+                "text": "Fire Giants",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 19.80805412808859,
+                        "lng": 317.37304687500006
+                    },
+                    {
+                        "lat": 10.919617760254697,
+                        "lng": 325.54687500000006
+                    }
+                ],
+                "text": "Burnt Chest",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 27.605670826465445,
+                        "lng": 337.32421875000006
+                    },
+                    {
+                        "lat": 27.605670826465445,
+                        "lng": 349.54101562500006
+                    }
+                ],
+                "text": "Pyrefiends",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 6.926426847059551,
+                        "lng": 290.83007812500006
+                    },
+                    {
+                        "lat": 15.538375926292062,
+                        "lng": 302.60742187500006
+                    }
+                ],
+                "text": "Dust Devils",
+                "fontSize": 30
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'kalphite_cave',
+        full_name: 'Kalphite Cave',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To East of Shanty Pass',
+                position: {"lat":15.623036831528264,"lng":329.94140625000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":74.76429887097669,"lng":323.43200683593756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "positions": [
+                    {
+                        "lat": 40.245991504199026,
+                        "lng": 325.63476562500006
+                    },
+                    {
+                        "lat": 31.052933985705163,
+                        "lng": 338.02734375
+                    }
+                ],
+                "text": "Soilders",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 19.559790136497412,
+                        "lng": 335.56640625000006
+                    },
+                    {
+                        "lat": 19.476950206488414,
+                        "lng": 349.45312500000006
+                    }
+                ],
+                "text": "Workers",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 2.3723687086440504,
+                        "lng": 335.30273437500006
+                    },
+                    {
+                        "lat": 13.581920900545857,
+                        "lng": 352.705078125
+                    }
+                ],
+                "text": "Soldiers",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 8.407168163601076,
+                        "lng": 302.16796875000006
+                    },
+                    {
+                        "lat": 5.090944175033399,
+                        "lng": 317.81250000000006
+                    }
+                ],
+                "text": "Guardians",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 27.761329874505233,
+                        "lng": 304.98046875000006
+                    },
+                    {
+                        "lat": 28.304380682962783,
+                        "lng": 318.42773437500006
+                    }
+                ],
+                "text": "Workers",
+                "fontSize": 30
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'mosleharmless_dungeon',
+        full_name: 'Mos Le\'Harmless Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":28.07198030177986,"lng":327.12890625000006},
+        exits: [
+            {
+                label: 'To Mos Le\'Harmless Beach',
+                position: {"lat":2.1088986592431382,"lng":308.67187500000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":71.95858391176317,"lng":351.64489746093756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Mos Le\'Harmless West Island',
+                position: {"lat":53.9560855309879,"lng":355.60546875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":73.68806787884861,"lng":356.06140136718756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Mos Le\'Harmless East Island',
+                position: {"lat":53.82659674299413,"lng":366.0205078125},
+                target_layer: "surface",
+                target_layer_position: {"lat":73.68883928422404,"lng":357.05566406250006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'abandoned_mine_6',
+        full_name: 'Abandoned Mine (Sixth Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        exits: [
+            {
+                label: 'To Abandoned Mine (Fifth Level)',
+                position: {"lat":28.767659105691255,"lng":317.28515625000006},
+                target_layer: "abandoned_mine_5",
+                target_layer_position: {"lat":19.394067895396613,"lng":314.91210937500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Abandoned Mine (Fifth Level)',
+                position: {"lat":29.15216128331894,"lng":351.56250000000006},
+                target_layer: "abandoned_mine_5",
+                target_layer_position: {"lat":18.396230138028827,"lng":353.58398437500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'abandoned_mine_5',
+        full_name: 'Abandoned Mine (Fifth Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        exits: [
+            {
+                label: 'To Abandoned Mine (Fourth Level)',
+                position: {"lat":30.90222470517144,"lng":336.62109375000006},
+                target_layer: "abandoned_mine_4",
+                target_layer_position: {"lat":13.239945499286312,"lng":349.98046875},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'abandoned_mine_4',
+        full_name: 'Abandoned Mine (Fourth Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        exits: [
+            {
+                label: 'To Abandoned Mine (Third Level)',
+                position: {"lat":42.032974332441405,"lng":327.48046875000006},
+                target_layer: "abandoned_mine_3",
+                target_layer_position: {"lat":41.705728515237524,"lng":327.04101562500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Abandoned Mine (Third Level)',
+                position: {"lat":35.460669951495305,"lng":343.125},
+                target_layer: "abandoned_mine_3",
+                target_layer_position: {"lat":35.60371874069731,"lng":342.861328125},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Abandoned Mine (Third Level)',
+                position: {"lat":15.199386048560008,"lng":317.54882812500006},
+                target_layer: "abandoned_mine_3",
+                target_layer_position: {"lat":15.284185114076445,"lng":317.46093750000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Abandoned Mine (Third Level)',
+                position: {"lat":8.233237111274565,"lng":337.587890625},
+                target_layer: "abandoned_mine_3",
+                target_layer_position: {"lat":8.407168163601076,"lng":337.67578125},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'abandoned_mine_3',
+        full_name: 'Abandoned Mine (Third Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        exits: [
+            {
+                label: 'To Abandoned Mine (Second Level)',
+                position: {"lat":39.36827914916014,"lng":343.47656250000006},
+                target_layer: "abandoned_mine_2",
+                target_layer_position: {"lat":39.095962936305476,"lng":343.38867187500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Abandoned Mine (Second Level)',
+                position: {"lat":19.559790136497412,"lng":344.17968750000006},
+                target_layer: "abandoned_mine_2",
+                target_layer_position: {"lat":19.89072302399691,"lng":344.00390625000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'abandoned_mine_2',
+        full_name: 'Abandoned Mine (Second Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        exits: [
+            {
+                label: 'To Abandoned Mine (First Level)',
+                position: {"lat":26.155437968713574,"lng":326.51367187500006},
+                target_layer: "abandoned_mine_1",
+                target_layer_position: {"lat":20.715015145512098,"lng":332.49023437500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Abandoned Mine (First Level)',
+                position: {"lat":20.96143961409684,"lng":332.92968750000006},
+                target_layer: "abandoned_mine_1",
+                target_layer_position: {"lat":15.453680224345835,"lng":338.73046875000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'abandoned_mine_1',
+        full_name: 'Abandoned Mine (First Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        exits: [
+            {
+                label: 'To Main Exit',
+                position: {"lat":23.725011735951796,"lng":348.26660156250006},
+                target_layer: "surface",
+                target_layer_position: {"lat":76.55646590946766,"lng":331.336669921875},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'experiment_cave',
+        full_name: 'Experiment Cave',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 25.522614647623293, "lng": 335.25878906250006},
+        exits: [
+            {
+                label: 'To East of Fenkenstrain\'s Castle',
+                position: {"lat": 8.407168163601076, "lng": 375.29296875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 80.42393537272979, "lng": 340.46630859375006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Mausoleum',
+                position: {"lat": 36.31512514748051, "lng": 323.26171875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 80.91629229384844, "lng": 335.64331054687506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+
+
+    },
+    {
+        machine_name: 'underground_pass_first_big_room',
+        full_name: 'Underground Pass',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 25.522614647623293, "lng": 335.25878906250006},
+        exits: [
+            {
+                label: 'To West Ardougne',
+                position: {"lat": 56.41390137600676, "lng": 378.76464843750006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 77.7454489790814, "lng": 265.33081054687506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+
+
+    },
+    {
+        machine_name: 'elemental_workshop',
+        full_name: 'Elemental Workshop',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 25.522614647623293, "lng": 335.25878906250006},
+        exits: [
+            {
+                label: 'To Seers Village',
+                position: {"lat": 24.607069137709708, "lng": 330.64453125000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 80.07131834076769, "lng": 283.29895019531256},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+
+
+    },
+    {
         machine_name: 'under_ice_mountain',
         full_name: 'Under whitewolf mountain',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.522614647623293,"lng":335.25878906250006},
+        center_pos: {"lat": 25.522614647623293, "lng": 335.25878906250006},
         exits: [
             {
                 label: 'To East Side of White Wolf Mountain',
-                position: {"lat":30.334953881988564,"lng":353.9794921875},
+                position: {"lat": 30.334953881988564, "lng": 353.9794921875},
                 target_layer: "surface",
-                target_layer_position: {"lat":79.87284820752161,"lng":294.24133300781256},
+                target_layer_position: {"lat": 79.87284820752161, "lng": 294.24133300781256},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To West Side of White Wolf Mountain',
-                position: {"lat":32.39851580247402,"lng":314.64843750000006},
+                position: {"lat": 32.39851580247402, "lng": 314.64843750000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":79.91958637365005,"lng":290.46203613281256},
+                target_layer_position: {"lat": 79.91958637365005, "lng": 290.46203613281256},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Keldagrim',
-                position: {"lat":24.16680208530324,"lng":353.40820312500006},
+                position: {"lat": 24.16680208530324, "lng": 353.40820312500006},
                 target_layer: "keldagrim",
-                target_layer_position: {"lat":21.53484700204879,"lng":354.90234375},
+                target_layer_position: {"lat": 21.53484700204879, "lng": 354.90234375},
                 icon: require('../../static/icons/misc/Transportation_icon.png')
             },
         ],
@@ -125,21 +742,21 @@ export const Dungeons = [
         machine_name: 'keldagrim',
         full_name: 'Keldagrim',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.522614647623293,"lng":335.25878906250006},
+        center_pos: {"lat": 25.522614647623293, "lng": 335.25878906250006},
         exits: [
             {
                 label: 'To Keldagrim Cave',
-                position: {"lat":-10.487811882056683,"lng":303.31054687500006},
+                position: {"lat": -10.487811882056683, "lng": 303.31054687500006},
                 target_layer: "keldagrim_cave",
-                target_layer_position: {"lat":34.994003757575776,"lng":331.65527343750006},
+                target_layer_position: {"lat": 34.994003757575776, "lng": 331.65527343750006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             //
             {
                 label: 'To Varrock',
-                position: {"lat":27.332735136859146,"lng":378.01757812500006},
+                position: {"lat": 27.332735136859146, "lng": 378.01757812500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.15056363665231,"lng":311.561279296875},
+                target_layer_position: {"lat": 80.15056363665231, "lng": 311.561279296875},
                 icon: require('../../static/icons/misc/Transportation_icon.png')
             },
         ],
@@ -152,13 +769,13 @@ export const Dungeons = [
         machine_name: 'keldagrim_cave',
         full_name: 'Keldagrim Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.522614647623293,"lng":335.25878906250006},
+        center_pos: {"lat": 25.522614647623293, "lng": 335.25878906250006},
         exits: [
             {
                 label: 'To Rellekka Area',
-                position: {"lat":36.98500309285596,"lng":325.89843750000006},
+                position: {"lat": 36.98500309285596, "lng": 325.89843750000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.24578007692925,"lng":284.60083007812506},
+                target_layer_position: {"lat": 82.24578007692925, "lng": 284.60083007812506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -171,13 +788,13 @@ export const Dungeons = [
         machine_name: 'penguin_base',
         full_name: 'Penguin Base',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos:{"lat":23.160563309048314,"lng":334.33593750000006},
+        center_pos: {"lat": 23.160563309048314, "lng": 334.33593750000006},
         exits: [
             {
                 label: 'To Iceberg',
-                position: {"lat":5.528510525692801,"lng":335.47851562500006},
+                position: {"lat": 5.528510525692801, "lng": 335.47851562500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":84.50360797553859,"lng":278.83300781250006},
+                target_layer_position: {"lat": 84.50360797553859, "lng": 278.83300781250006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -190,13 +807,13 @@ export const Dungeons = [
         machine_name: 'smoke_devil_dungeon',
         full_name: 'Smoke Devil Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.64152637306577,"lng":337.8515625},
+        center_pos: {"lat": 25.64152637306577, "lng": 337.8515625},
         exits: [
             {
                 label: 'To South of Castlewars',
-                position: {"lat":8.494104537551882,"lng":348.31054687500006},
+                position: {"lat": 8.494104537551882, "lng": 348.31054687500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":73.6710879786998,"lng":263.5757446289063},
+                target_layer_position: {"lat": 73.6710879786998, "lng": 263.5757446289063},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
