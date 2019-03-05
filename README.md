@@ -37,8 +37,9 @@ This is a todo for me (This is removing extra areas from around dungeon maps)
 - Second layer of ancient caverns
 - Elemental workshop middle layer
 - Dungeon under morytania swamp
-- Underground pass final room upper
+- Underground pass
 - Slepe dungeon and underground area
+- Fremmnik Slayer Dungeon
 - Kalphite Lair
 - Jogre Dungeon
 - Mogre camp
@@ -52,6 +53,17 @@ This is a todo for me (This is removing extra areas from around dungeon maps)
 - Lizardman Caves
 - Lizardman Temple
 - Quidamortem Cave
+- Dorgeshkhaan (Level two)
+- Dorgesh-Kaan South Dungeon
+- Tolna's rift
+- Barrows?
+- Slayer Tower Basement
+- Ape atol dungeon
+- Godwars dungeon
+- Lunar Isle Mine
+- Waterbirth dungeon 
+- Wyvern Cave
+
 
 ### Agility Shortcuts that need mapping
 - Double check troll stronghold shortcuts

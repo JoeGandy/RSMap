@@ -34,6 +34,15 @@ export function getDungeonLayer(dungeon_name) {
     }
 }
 
+export function getAllDungeonNames(){
+    console.clear();
+    let string = "";
+    for (let dungeon of Dungeons) {
+        string += "\n" + dungeon.machine_name;
+    }
+    console.log(string);
+}
+
 
 export function getDungeonCenter(dungeon_name) {
     for (let dungeon of Dungeons) {
@@ -86,6 +95,205 @@ export const Dungeons = [
     },
 
      */
+    {
+        machine_name: 'temple_of_marimbo',
+        full_name: 'Temple of Marimbo Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":25.403584973186703,"lng":334.86328125000006},
+        exits: [
+            {
+                label: 'To Temple of Marimbo',
+                position: {"lat":35.81781315869664,"lng":350.94726562500006},
+                target_layer: "surface",
+                target_layer_position: {"lat":67.70110969585656,"lng":289.64355468750006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'miscellania_and_etceteria_dungeon',
+        full_name: 'Miscellania & Etceteria Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":25.403584973186703,"lng":334.86328125000006},
+        exits: [
+            {
+                label: 'To Miscellania',
+                position: {"lat":8.146242825034385,"lng":298.38867187500006},
+                target_layer: "surface",
+                target_layer_position: {"lat":83.34488515397247,"lng":269.97802734375006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Etceteria',
+                position: {"lat":18.8543103618898,"lng":376.39160156250006},
+                target_layer: "surface",
+                target_layer_position: {"lat":83.48846937837685,"lng":277.29492187500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'jatizo_mine',
+        full_name: 'Jatizso Mines',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":25.403584973186703,"lng":334.86328125000006},
+        exits: [
+            {
+                label: 'To Jatizso',
+                position: {"lat":12.039320557540572,"lng":338.73046875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":82.98340359715496,"lng":261.11755371093756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'evil_chickens_lair',
+        full_name: 'Evil Chickens Lair',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos:{"lat":5.00339434502215,"lng":331.69921875000006},
+        exits: [
+            {
+                label: 'To Zanaris',
+                position: {"lat":5.00339434502215,"lng":331.69921875000006},
+                target_layer: "zanaris",
+                target_layer_position: {"lat":54.316523240258284,"lng":342.81738281250006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'wilderness_godwars',
+        full_name: 'Wilderness Godwars Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To North of Bandit Camp',
+                position: {"lat":39.774769485295465,"lng":346.28906250000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":82.4747070273022,"lng":303.45336914062506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "positions": [
+                    {
+                        "lat": 38.47939467327645,
+                        "lng": 332.84179687500006
+                    },
+                    {
+                        "lat": 30.751277776257812,
+                        "lng": 353.40820312500006
+                    }
+                ],
+                "text": "Still need to map this bit",
+                "fontSize": 30
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'wilderness_agility_course_dungeon',
+        full_name: 'Wilderness Agility Course Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To Wilderness Agility Course',
+                position: {"lat":32.0639555946604,"lng":337.763671875},
+                target_layer: "surface",
+                target_layer_position: {"lat":84.18149028723424,"lng":302.66784667968756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'tunnel_of_chaos',
+        full_name: 'Tunnel of Chaos',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To East of Varrock',
+                position: {"lat":7.536764322084078,"lng":342.20214843750006},
+                target_layer: "surface",
+                target_layer_position: {"lat":79.73819567893061,"lng":321.09741210937506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'dorgesh-kaan',
+        full_name: 'Dorgeshkhaan',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To Dorgeshkhaan Mine',
+                position: {"lat":57.70414723434193,"lng":353.67187500000006},
+                target_layer: "dorgeshkaan_mine",
+                target_layer_position: {"lat":3.601142320158735,"lng":337.939453125},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'dorgeshkaan_mine',
+        full_name: 'Dorgeshkhaan Mine',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To Lumbridge Basement',
+                position: {"lat":12.340001834116316,"lng":331.52343750000006},
+                target_layer: "lumbridge_basement",
+                target_layer_position: {"lat":23.725011735951796,"lng":344.35546875000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'digsite_dungeon',
+        full_name: 'Digsite Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        exits: [
+            {
+                label: 'To Digsite North-east Winch',
+                position: {"lat":20.3034175184893,"lng":323.39355468750006},
+                target_layer: "surface",
+                target_layer_position: {"lat":79.24333815227048,"lng":326.75537109375},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Digsite West Winch',
+                position: {"lat":26.86328062676624,"lng":335.08300781250006},
+                target_layer: "surface",
+                target_layer_position: {"lat":79.11338911989017,"lng":325.63476562500006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
     {
         machine_name: 'kraken_cave',
         full_name: 'Kraken Cove',
@@ -1290,7 +1498,7 @@ export const Dungeons = [
     },
     {
         machine_name: 'grand_tree_mines',
-        full_name: 'Goblin Cave',
+        full_name: 'Grand Tree Mines',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
         center_pos: {"lat": 25.64152637306577, "lng": 333.369140625},
         exits: [
@@ -2804,7 +3012,13 @@ export const Dungeons = [
                 "lng": 313.48388671875006
             },
             icon: require('../../static/icons/misc/Map_link_icon.webp')
-        },],
+        },{
+            label: 'To Lumbridge Basement',
+            position: {"lat":43.32517767999296,"lng":350.85937500000006},
+            target_layer: "lumbridge_basement",
+            target_layer_position: {"lat":14.944784875088372,"lng":339.87304687500006},
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        }],
         map_labels: [{
             "positions": [{
                 "lat": 12.12526421833159,

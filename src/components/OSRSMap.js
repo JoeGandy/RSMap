@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import {rewriteIcons} from "../classes/Icons";
 import {getAllIconsFlat} from "../classes/Icons";
 import Layer from "./Layer";
-import {Dungeons} from "../classes/Dungeons";
+import {Dungeons, getAllDungeonNames} from "../classes/Dungeons";
 import {Regions} from "../classes/Regions";
 
 
@@ -25,7 +25,7 @@ export default class OSRSMap extends Component {
             layer: 'surface'
         };
 
-        //console.log(this.state.dungeons);
+        console.log(getAllDungeonNames());
         this.handleClick = this.handleClick.bind(this);
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
         this.centerMap = this.centerMap.bind(this);
