@@ -8,18 +8,20 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 
 ## About
 Built on gatsby and react  
-Planned features (goals):
+Planned features (To do before even releasing):
 - ~All teleport locations~
-- Clue scroll locations
-- Convert coord clues to map coordinates
-- ~Location searcher~
-- Region highlighting?
 - ~Click on boat locations to see where they go~
+- ~Location searcher~
+- ~Agility short cuts to show where they go and level needed~
+- Convert coord clues to map coordinates
+- Region highlighting (Area locked ironmen, multi combat)
 - Dungeon maps
 - Quest icon to show quest with basic info
-- Stores to show what they sell w/ quanitities 
-- ~Agility short cuts to show where they go and level needed~
+
+Goal features
 - Farm patch info
+- Stores to show what they sell w/ quanitities 
+- Clue scroll locations
 
 ### Dungeons that need map clean up
 This is a todo for me (This is removing extra areas from around dungeon maps)
