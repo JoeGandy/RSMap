@@ -8,11 +8,11 @@ import DevTools from "./DevTools";
 import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
 
 
-const dungeonMaxZoom = 5;
-const dungeonMinZoom = 3;
+const dungeonMaxZoom = 4;
+const dungeonMinZoom = 1;
 
 const surfaceMaxZoom = 9;
-const surfaceMinZoom = 3;
+const surfaceMinZoom = 1;
 
 export default class Layer extends Component {
 
@@ -76,6 +76,7 @@ export default class Layer extends Component {
 
     handleClick(e) {
         console.debug(JSON.stringify(e.latlng));
+        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
         this.setState({clicked_position: e.latlng});
     }
 
@@ -115,6 +116,9 @@ export default class Layer extends Component {
                                 filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}/>
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                 </Map>
+                {this.props.layer !== "surface" ?
+                    <button className="back_to_surface_button">Back to surface</button>
+                : null}
                 {this.props.layer === "surface" ?
                     <>
                         <FiltersBox updateFilters={this.updateFilters}/>

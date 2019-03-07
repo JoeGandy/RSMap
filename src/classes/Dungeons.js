@@ -34,7 +34,7 @@ export function getDungeonLayer(dungeon_name) {
     }
 }
 
-export function getAllDungeonNames(){
+export function getAllDungeonNames() {
     console.clear();
     let string = "";
     for (let dungeon of Dungeons) {
@@ -99,13 +99,13 @@ export const Dungeons = [
         machine_name: 'temple_of_marimbo',
         full_name: 'Temple of Marimbo Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.403584973186703,"lng":334.86328125000006},
+        center_pos: {"lat": 25.403584973186703, "lng": 334.86328125000006},
         exits: [
             {
                 label: 'To Temple of Marimbo',
-                position: {"lat":35.81781315869664,"lng":350.94726562500006},
+                position: {"lat": 35.81781315869664, "lng": 350.94726562500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":67.70110969585656,"lng":289.64355468750006},
+                target_layer_position: {"lat": 67.70110969585656, "lng": 289.64355468750006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -116,20 +116,20 @@ export const Dungeons = [
         machine_name: 'miscellania_and_etceteria_dungeon',
         full_name: 'Miscellania & Etceteria Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.403584973186703,"lng":334.86328125000006},
+        center_pos: {"lat": 25.403584973186703, "lng": 334.86328125000006},
         exits: [
             {
                 label: 'To Miscellania',
-                position: {"lat":8.146242825034385,"lng":298.38867187500006},
+                position: {"lat": 8.146242825034385, "lng": 298.38867187500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":83.34488515397247,"lng":269.97802734375006},
+                target_layer_position: {"lat": 83.34488515397247, "lng": 269.97802734375006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Etceteria',
-                position: {"lat":18.8543103618898,"lng":376.39160156250006},
+                position: {"lat": 18.8543103618898, "lng": 376.39160156250006},
                 target_layer: "surface",
-                target_layer_position: {"lat":83.48846937837685,"lng":277.29492187500006},
+                target_layer_position: {"lat": 83.48846937837685, "lng": 277.29492187500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -140,13 +140,13 @@ export const Dungeons = [
         machine_name: 'jatizo_mine',
         full_name: 'Jatizso Mines',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":25.403584973186703,"lng":334.86328125000006},
+        center_pos: {"lat": 25.403584973186703, "lng": 334.86328125000006},
         exits: [
             {
                 label: 'To Jatizso',
-                position: {"lat":12.039320557540572,"lng":338.73046875000006},
+                position: {"lat": 12.039320557540572, "lng": 338.73046875000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.98340359715496,"lng":261.11755371093756},
+                target_layer_position: {"lat": 82.98340359715496, "lng": 261.11755371093756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -157,13 +157,13 @@ export const Dungeons = [
         machine_name: 'evil_chickens_lair',
         full_name: 'Evil Chickens Lair',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos:{"lat":5.00339434502215,"lng":331.69921875000006},
+        center_pos: {"lat": 5.00339434502215, "lng": 331.69921875000006},
         exits: [
             {
                 label: 'To Zanaris',
-                position: {"lat":5.00339434502215,"lng":331.69921875000006},
+                position: {"lat": 5.00339434502215, "lng": 331.69921875000006},
                 target_layer: "zanaris",
-                target_layer_position: {"lat":54.316523240258284,"lng":342.81738281250006},
+                target_layer_position: {"lat": 54.316523240258284, "lng": 342.81738281250006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -174,13 +174,13 @@ export const Dungeons = [
         machine_name: 'wilderness_godwars',
         full_name: 'Wilderness Godwars Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To North of Bandit Camp',
-                position: {"lat":39.774769485295465,"lng":346.28906250000006},
+                position: {"lat": 39.774769485295465, "lng": 346.28906250000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.4747070273022,"lng":303.45336914062506},
+                target_layer_position: {"lat": 82.4747070273022, "lng": 303.45336914062506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -206,13 +206,13 @@ export const Dungeons = [
         machine_name: 'wilderness_agility_course_dungeon',
         full_name: 'Wilderness Agility Course Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To Wilderness Agility Course',
-                position: {"lat":32.0639555946604,"lng":337.763671875},
+                position: {"lat": 32.0639555946604, "lng": 337.763671875},
                 target_layer: "surface",
-                target_layer_position: {"lat":84.18149028723424,"lng":302.66784667968756},
+                target_layer_position: {"lat": 84.18149028723424, "lng": 302.66784667968756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -223,13 +223,13 @@ export const Dungeons = [
         machine_name: 'tunnel_of_chaos',
         full_name: 'Tunnel of Chaos',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To East of Varrock',
-                position: {"lat":7.536764322084078,"lng":342.20214843750006},
+                position: {"lat": 7.536764322084078, "lng": 342.20214843750006},
                 target_layer: "surface",
-                target_layer_position: {"lat":79.73819567893061,"lng":321.09741210937506},
+                target_layer_position: {"lat": 79.73819567893061, "lng": 321.09741210937506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -240,13 +240,13 @@ export const Dungeons = [
         machine_name: 'dorgesh-kaan',
         full_name: 'Dorgeshkhaan',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To Dorgeshkhaan Mine',
-                position: {"lat":57.70414723434193,"lng":353.67187500000006},
+                position: {"lat": 57.70414723434193, "lng": 353.67187500000006},
                 target_layer: "dorgeshkaan_mine",
-                target_layer_position: {"lat":3.601142320158735,"lng":337.939453125},
+                target_layer_position: {"lat": 3.601142320158735, "lng": 337.939453125},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -257,13 +257,13 @@ export const Dungeons = [
         machine_name: 'dorgeshkaan_mine',
         full_name: 'Dorgeshkhaan Mine',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To Lumbridge Basement',
-                position: {"lat":12.340001834116316,"lng":331.52343750000006},
+                position: {"lat": 12.340001834116316, "lng": 331.52343750000006},
                 target_layer: "lumbridge_basement",
-                target_layer_position: {"lat":23.725011735951796,"lng":344.35546875000006},
+                target_layer_position: {"lat": 23.725011735951796, "lng": 344.35546875000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -274,20 +274,20 @@ export const Dungeons = [
         machine_name: 'digsite_dungeon',
         full_name: 'Digsite Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To Digsite North-east Winch',
-                position: {"lat":20.3034175184893,"lng":323.39355468750006},
+                position: {"lat": 20.3034175184893, "lng": 323.39355468750006},
                 target_layer: "surface",
-                target_layer_position: {"lat":79.24333815227048,"lng":326.75537109375},
+                target_layer_position: {"lat": 79.24333815227048, "lng": 326.75537109375},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Digsite West Winch',
-                position: {"lat":26.86328062676624,"lng":335.08300781250006},
+                position: {"lat": 26.86328062676624, "lng": 335.08300781250006},
                 target_layer: "surface",
-                target_layer_position: {"lat":79.11338911989017,"lng":325.63476562500006},
+                target_layer_position: {"lat": 79.11338911989017, "lng": 325.63476562500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -298,13 +298,13 @@ export const Dungeons = [
         machine_name: 'kraken_cave',
         full_name: 'Kraken Cove',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To South West of Fishing Colony',
-                position: {"lat":35.9602229692967,"lng":327.65625000000006},
+                position: {"lat": 35.9602229692967, "lng": 327.65625000000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":81.28587917894365,"lng":254.74548339843753},
+                target_layer_position: {"lat": 81.28587917894365, "lng": 254.74548339843753},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -372,27 +372,27 @@ export const Dungeons = [
         machine_name: 'white_wolf_mountain_caves',
         full_name: 'White Wolf Mountain Caves',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To West Dungeon Entrance',
-                position: {"lat":7.972197714386879,"lng":310.78125000000006},
+                position: {"lat": 7.972197714386879, "lng": 310.78125000000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.21612275604421,"lng":290.65979003906256},
+                target_layer_position: {"lat": 80.21612275604421, "lng": 290.65979003906256},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Middle Dungeon Entrance',
-                position: {"lat":12.168225677390119,"lng":326.64550781250006},
+                position: {"lat": 12.168225677390119, "lng": 326.64550781250006},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.28264059618424,"lng":292.2555541992188},
+                target_layer_position: {"lat": 80.28264059618424, "lng": 292.2555541992188},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To East Dungeon Entrance',
-                position: {"lat":14.349547837185375,"lng":336.53320312500006},
+                position: {"lat": 14.349547837185375, "lng": 336.53320312500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.31734832164365,"lng":292.9202270507813},
+                target_layer_position: {"lat": 80.31734832164365, "lng": 292.9202270507813},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -403,13 +403,13 @@ export const Dungeons = [
         machine_name: 'rashiliyias_tomb',
         full_name: 'Rashiliyias Tomb',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To East of Karamja River',
-                position: {"lat":39.095962936305476,"lng":345.673828125},
+                position: {"lat": 39.095962936305476, "lng": 345.673828125},
                 target_layer: "surface",
-                target_layer_position: {"lat":74.16408546675687,"lng":296.77368164062506},
+                target_layer_position: {"lat": 74.16408546675687, "lng": 296.77368164062506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -420,13 +420,13 @@ export const Dungeons = [
         machine_name: 'viyeldi_caves',
         full_name: 'Viyeldi Caves (Second Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To Viyeldi Caves (First Level)',
-                position: {"lat":30.600093873550072,"lng":318.25195312500006},
+                position: {"lat": 30.600093873550072, "lng": 318.25195312500006},
                 target_layer: "viyeldi_caves_2",
-                target_layer_position: {"lat":35.460669951495305,"lng":318.42773437500006},
+                target_layer_position: {"lat": 35.460669951495305, "lng": 318.42773437500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -437,13 +437,13 @@ export const Dungeons = [
         machine_name: 'viyeldi_caves_2',
         full_name: 'Viyeldi Caves (First Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To West Kharazi Jungle',
-                position: {"lat":41.77131167976407,"lng":326.33789062500006},
+                position: {"lat": 41.77131167976407, "lng": 326.33789062500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":71.17712280564923,"lng":287.97363281250006},
+                target_layer_position: {"lat": 71.17712280564923, "lng": 287.97363281250006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -454,13 +454,13 @@ export const Dungeons = [
         machine_name: 'ah_za_rhoon_2',
         full_name: 'Ah Za Rhoon (Second Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":19.145168196205297,"lng":335.03906250000006},
+        center_pos: {"lat": 19.145168196205297, "lng": 335.03906250000006},
         exits: [
             {
                 label: 'To Ah Za Rhoon (First Level)',
-                position: {"lat":5.528510525692801,"lng":317.10937500000006},
+                position: {"lat": 5.528510525692801, "lng": 317.10937500000006},
                 target_layer: "ah_za_rhoon_1",
-                target_layer_position: {"lat":23.483400654325642,"lng":316.49414062500006},
+                target_layer_position: {"lat": 23.483400654325642, "lng": 316.49414062500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -471,13 +471,13 @@ export const Dungeons = [
         machine_name: 'ah_za_rhoon_1',
         full_name: 'Ah Za Rhoon (First Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":21.779905342529645,"lng":332.92968750000006},
+        center_pos: {"lat": 21.779905342529645, "lng": 332.92968750000006},
         exits: [
             {
                 label: 'To East Karamja',
-                position: {"lat":40.713955826286046,"lng":324.66796875000006},
+                position: {"lat": 40.713955826286046, "lng": 324.66796875000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":72.4388497835536,"lng":297.23510742187506},
+                target_layer_position: {"lat": 72.4388497835536, "lng": 297.23510742187506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -488,13 +488,13 @@ export const Dungeons = [
         machine_name: 'pollvinch_fire_dungeon',
         full_name: 'Pollnivneach Smoke Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To West of Pollnivneach',
-                position: {"lat":27.293689224852407,"lng":292.76367187500006},
+                position: {"lat": 27.293689224852407, "lng": 292.76367187500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":71.73266202440855,"lng":322.767333984375},
+                target_layer_position: {"lat": 71.73266202440855, "lng": 322.767333984375},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -590,13 +590,13 @@ export const Dungeons = [
         machine_name: 'kalphite_cave',
         full_name: 'Kalphite Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":20.3034175184893,"lng":333.98437500000006},
+        center_pos: {"lat": 20.3034175184893, "lng": 333.98437500000006},
         exits: [
             {
                 label: 'To East of Shanty Pass',
-                position: {"lat":15.623036831528264,"lng":329.94140625000006},
+                position: {"lat": 15.623036831528264, "lng": 329.94140625000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":74.76429887097669,"lng":323.43200683593756},
+                target_layer_position: {"lat": 74.76429887097669, "lng": 323.43200683593756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -678,27 +678,27 @@ export const Dungeons = [
         machine_name: 'mosleharmless_dungeon',
         full_name: 'Mos Le\'Harmless Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":28.07198030177986,"lng":327.12890625000006},
+        center_pos: {"lat": 28.07198030177986, "lng": 327.12890625000006},
         exits: [
             {
                 label: 'To Mos Le\'Harmless Beach',
-                position: {"lat":2.1088986592431382,"lng":308.67187500000006},
+                position: {"lat": 2.1088986592431382, "lng": 308.67187500000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":71.95858391176317,"lng":351.64489746093756},
+                target_layer_position: {"lat": 71.95858391176317, "lng": 351.64489746093756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Mos Le\'Harmless West Island',
-                position: {"lat":53.9560855309879,"lng":355.60546875000006},
+                position: {"lat": 53.9560855309879, "lng": 355.60546875000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":73.68806787884861,"lng":356.06140136718756},
+                target_layer_position: {"lat": 73.68806787884861, "lng": 356.06140136718756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Mos Le\'Harmless East Island',
-                position: {"lat":53.82659674299413,"lng":366.0205078125},
+                position: {"lat": 53.82659674299413, "lng": 366.0205078125},
                 target_layer: "surface",
-                target_layer_position: {"lat":73.68883928422404,"lng":357.05566406250006},
+                target_layer_position: {"lat": 73.68883928422404, "lng": 357.05566406250006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -709,20 +709,20 @@ export const Dungeons = [
         machine_name: 'abandoned_mine_6',
         full_name: 'Abandoned Mine (Sixth Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        center_pos: {"lat": 22.674847351188536, "lng": 337.23632812500006},
         exits: [
             {
                 label: 'To Abandoned Mine (Fifth Level)',
-                position: {"lat":28.767659105691255,"lng":317.28515625000006},
+                position: {"lat": 28.767659105691255, "lng": 317.28515625000006},
                 target_layer: "abandoned_mine_5",
-                target_layer_position: {"lat":19.394067895396613,"lng":314.91210937500006},
+                target_layer_position: {"lat": 19.394067895396613, "lng": 314.91210937500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Abandoned Mine (Fifth Level)',
-                position: {"lat":29.15216128331894,"lng":351.56250000000006},
+                position: {"lat": 29.15216128331894, "lng": 351.56250000000006},
                 target_layer: "abandoned_mine_5",
-                target_layer_position: {"lat":18.396230138028827,"lng":353.58398437500006},
+                target_layer_position: {"lat": 18.396230138028827, "lng": 353.58398437500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -733,13 +733,13 @@ export const Dungeons = [
         machine_name: 'abandoned_mine_5',
         full_name: 'Abandoned Mine (Fifth Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        center_pos: {"lat": 22.674847351188536, "lng": 337.23632812500006},
         exits: [
             {
                 label: 'To Abandoned Mine (Fourth Level)',
-                position: {"lat":30.90222470517144,"lng":336.62109375000006},
+                position: {"lat": 30.90222470517144, "lng": 336.62109375000006},
                 target_layer: "abandoned_mine_4",
-                target_layer_position: {"lat":13.239945499286312,"lng":349.98046875},
+                target_layer_position: {"lat": 13.239945499286312, "lng": 349.98046875},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -750,34 +750,34 @@ export const Dungeons = [
         machine_name: 'abandoned_mine_4',
         full_name: 'Abandoned Mine (Fourth Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        center_pos: {"lat": 22.674847351188536, "lng": 337.23632812500006},
         exits: [
             {
                 label: 'To Abandoned Mine (Third Level)',
-                position: {"lat":42.032974332441405,"lng":327.48046875000006},
+                position: {"lat": 42.032974332441405, "lng": 327.48046875000006},
                 target_layer: "abandoned_mine_3",
-                target_layer_position: {"lat":41.705728515237524,"lng":327.04101562500006},
+                target_layer_position: {"lat": 41.705728515237524, "lng": 327.04101562500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Abandoned Mine (Third Level)',
-                position: {"lat":35.460669951495305,"lng":343.125},
+                position: {"lat": 35.460669951495305, "lng": 343.125},
                 target_layer: "abandoned_mine_3",
-                target_layer_position: {"lat":35.60371874069731,"lng":342.861328125},
+                target_layer_position: {"lat": 35.60371874069731, "lng": 342.861328125},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Abandoned Mine (Third Level)',
-                position: {"lat":15.199386048560008,"lng":317.54882812500006},
+                position: {"lat": 15.199386048560008, "lng": 317.54882812500006},
                 target_layer: "abandoned_mine_3",
-                target_layer_position: {"lat":15.284185114076445,"lng":317.46093750000006},
+                target_layer_position: {"lat": 15.284185114076445, "lng": 317.46093750000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Abandoned Mine (Third Level)',
-                position: {"lat":8.233237111274565,"lng":337.587890625},
+                position: {"lat": 8.233237111274565, "lng": 337.587890625},
                 target_layer: "abandoned_mine_3",
-                target_layer_position: {"lat":8.407168163601076,"lng":337.67578125},
+                target_layer_position: {"lat": 8.407168163601076, "lng": 337.67578125},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -788,20 +788,20 @@ export const Dungeons = [
         machine_name: 'abandoned_mine_3',
         full_name: 'Abandoned Mine (Third Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        center_pos: {"lat": 22.674847351188536, "lng": 337.23632812500006},
         exits: [
             {
                 label: 'To Abandoned Mine (Second Level)',
-                position: {"lat":39.36827914916014,"lng":343.47656250000006},
+                position: {"lat": 39.36827914916014, "lng": 343.47656250000006},
                 target_layer: "abandoned_mine_2",
-                target_layer_position: {"lat":39.095962936305476,"lng":343.38867187500006},
+                target_layer_position: {"lat": 39.095962936305476, "lng": 343.38867187500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Abandoned Mine (Second Level)',
-                position: {"lat":19.559790136497412,"lng":344.17968750000006},
+                position: {"lat": 19.559790136497412, "lng": 344.17968750000006},
                 target_layer: "abandoned_mine_2",
-                target_layer_position: {"lat":19.89072302399691,"lng":344.00390625000006},
+                target_layer_position: {"lat": 19.89072302399691, "lng": 344.00390625000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -812,20 +812,20 @@ export const Dungeons = [
         machine_name: 'abandoned_mine_2',
         full_name: 'Abandoned Mine (Second Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        center_pos: {"lat": 22.674847351188536, "lng": 337.23632812500006},
         exits: [
             {
                 label: 'To Abandoned Mine (First Level)',
-                position: {"lat":26.155437968713574,"lng":326.51367187500006},
+                position: {"lat": 26.155437968713574, "lng": 326.51367187500006},
                 target_layer: "abandoned_mine_1",
-                target_layer_position: {"lat":20.715015145512098,"lng":332.49023437500006},
+                target_layer_position: {"lat": 20.715015145512098, "lng": 332.49023437500006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Abandoned Mine (First Level)',
-                position: {"lat":20.96143961409684,"lng":332.92968750000006},
+                position: {"lat": 20.96143961409684, "lng": 332.92968750000006},
                 target_layer: "abandoned_mine_1",
-                target_layer_position: {"lat":15.453680224345835,"lng":338.73046875000006},
+                target_layer_position: {"lat": 15.453680224345835, "lng": 338.73046875000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -836,13 +836,13 @@ export const Dungeons = [
         machine_name: 'abandoned_mine_1',
         full_name: 'Abandoned Mine (First Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":22.674847351188536,"lng":337.23632812500006},
+        center_pos: {"lat": 22.674847351188536, "lng": 337.23632812500006},
         exits: [
             {
                 label: 'To Main Exit',
-                position: {"lat":23.725011735951796,"lng":348.26660156250006},
+                position: {"lat": 23.725011735951796, "lng": 348.26660156250006},
                 target_layer: "surface",
-                target_layer_position: {"lat":76.55646590946766,"lng":331.336669921875},
+                target_layer_position: {"lat": 76.55646590946766, "lng": 331.336669921875},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -2711,20 +2711,15 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'falador_mole_cave',
         full_name: 'Falador Mole Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 27.605670826465445,
-            "lng": 332.66601562500006
-        },
+        center_pos: {"lat":13.239945499286312,"lng":356.48437500000006},
         exits: [{
             label: 'To Falador South',
-            position: {
-                "lat": -9.275622176792098,
-                "lng": 329.41406250000006
-            },
+            position: {"lat":-52.26815737376817,"lng":346.11328125000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 78.59638534707328,
@@ -2733,10 +2728,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Falador Park',
-            position: {
-                "lat": 53.74871079689897,
-                "lng": 328.27148437500006
-            },
+            position: {"lat":62.34960927573042,"lng":344.70703125000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 78.59638534707328,
@@ -2746,20 +2738,15 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'lumbridge_basement',
         full_name: 'Lumbridge Basement',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 27.605670826465445,
-            "lng": 332.66601562500006
-        },
+        center_pos: {"lat":9.96885060854611,"lng":352.79296875},
         exits: [{
             label: 'To Lumbridge Castle',
-            position: {
-                "lat": 25.403584973186703,
-                "lng": 329.58984375000006
-            },
+            position: {"lat":4.740675384778373,"lng":346.99218750000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 76.33892882834353,
@@ -2769,7 +2756,8 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'essence_mine',
         full_name: 'Essence Mine',
         icon: require('../../static/icons/misc/Transportation_icon.png'),
@@ -2779,10 +2767,7 @@ export const Dungeons = [
         },
         exits: [{
             label: 'Back out the way you came in',
-            position: {
-                "lat": 38.47939467327645,
-                "lng": 348.53027343750006
-            },
+            position: {"lat":29.6880527498568,"lng":317.63671875000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 78.89335256331809,
@@ -2791,10 +2776,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Transportation_icon.png')
         }, {
             label: 'Back out the way you came in',
-            position: {
-                "lat": 14.179186142354181,
-                "lng": 349.27734375000006
-            },
+            position: {"lat":33.284619968887675,"lng":385.31250000000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 78.89335256331809,
@@ -2803,10 +2785,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Transportation_icon.png')
         }, {
             label: 'Back out the way you came in',
-            position: {
-                "lat": 12.811801316582619,
-                "lng": 318.20800781250006
-            },
+            position: {"lat":-18.979025953255267,"lng":386.71875},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 78.89335256331809,
@@ -2815,10 +2794,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Transportation_icon.png')
         }, {
             label: 'Back out the way you came in',
-            position: {
-                "lat": 36.8092847020594,
-                "lng": 314.78027343750006
-            },
+            position: {"lat":-21.616579336740603,"lng":324.84375000000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 78.89335256331809,
@@ -2828,20 +2804,15 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'wizards_tower_basement',
         full_name: 'Wizards Tower Basement',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 24.367113562651276,
-            "lng": 332.13867187500006
-        },
+        center_pos: {"lat":3.601142320158735,"lng":350.244140625},
         exits: [{
             label: 'To Wizards Tower',
-            position: {
-                "lat": 30.41078179084589,
-                "lng": 328.18359375000006
-            },
+            position: {"lat":15.876809064146771,"lng":344.44335937500006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 75.44479062156888,
@@ -2850,10 +2821,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Essence Mine',
-            position: {
-                "lat": 27.916766641249065,
-                "lng": 330.24902343750006
-            },
+            position: {"lat":9.882275493429953,"lng":348.83789062500006},
             target_layer: "essence_mine",
             target_layer_position: {
                 "lat": 78.89335256331809,
@@ -2863,20 +2831,15 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'asgarnian_ice_dungeon',
         full_name: 'Asgarnian Ice Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 23.28171917560003,
-            "lng": 332.1826171875
-        },
+        center_pos: {"lat":-13.581920900545844,"lng":366.85546875000006},
         exits: [{
             label: 'To Mudskipper Point',
-            position: {
-                "lat": 7.928674801364048,
-                "lng": 317.68066406250006
-            },
+            position: {"lat":-30.29701788337204,"lng":322.73437500000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 75.24326541978712,
@@ -2884,82 +2847,17 @@ export const Dungeons = [
             },
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         },],
-        map_labels: [{
-            "positions": [{
-                "lat": 5.965753671065536,
-                "lng": 305.41992187500006
-            }, {
-                "lat": 6.577303118123887,
-                "lng": 315.43945312500006
-            }],
-            "text": "Muggers",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 26.352497858154024,
-                "lng": 300.93750000000006
-            }, {
-                "lat": 27.059125784374068,
-                "lng": 313.41796875000006
-            }],
-            "text": "Pirates",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 27.371767300523047,
-                "lng": 318.69140625
-            }, {
-                "lat": 29.916852233070173,
-                "lng": 332.92968750000006
-            }],
-            "text": "Hobgoblins",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 29.99300228455108,
-                "lng": 342.15820312500006
-            }, {
-                "lat": 30.44867367928756,
-                "lng": 353.67187500000006
-            }],
-            "text": "Ice Warriors",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 26.27371402440643,
-                "lng": 341.63085937500006
-            }, {
-                "lat": 26.352497858154024,
-                "lng": 359.12109375000006
-            }],
-            "text": "Ice Giants",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 4.8282597468669755,
-                "lng": 331.87500000000006
-            }, {
-                "lat": 4.302591077119676,
-                "lng": 350.244140625
-            }],
-            "text": "Skeletal Wyverns",
-            "fontSize": 30
-        }],
+        map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'draynor_manor_crypt',
         full_name: 'Draynor Manor Crypt',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 23.28171917560003,
-            "lng": 332.1826171875
-        },
+        center_pos: {"lat":-0.17578097424708533,"lng":353.67187500000006},
         exits: [{
             label: 'To Draynor Manor',
-            position: {
-                "lat": 20.138470312451155,
-                "lng": 332.53417968750006
-            },
+            position: {"lat":-6.315298538330033,"lng":352.96875},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 78.3471918724007,
@@ -2969,20 +2867,15 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'draynor_manor_dungeon',
         full_name: 'Draynor Manor Basement',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 22.350075806124867,
-            "lng": 334.77539062500006
-        },
+        center_pos: {"lat":-4.039617826768424,"lng":361.40625000000006},
         exits: [{
             label: 'To Draynor Manor',
-            position: {
-                "lat": 21.53484700204879,
-                "lng": 343.82812500000006
-            },
+            position: {"lat":-3.864254615721396,"lng":373.00781250000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 78.4102651631265,
@@ -2992,69 +2885,39 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'lumbridge_swamp_cave',
         full_name: 'Lumbridge Swamp Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 25.958044673317843,
-            "lng": 335.08300781250006
-        },
+        center_pos: {"lat":7.18810087117902,"lng":360.87890625000006},
         exits: [{
             label: 'To Lumbridge Swamp',
-            position: {
-                "lat": 27.371767300523047,
-                "lng": 312.80273437500006
-            },
+            position: {"lat":9.96885060854611,"lng":313.9453125},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 75.60611830430058,
                 "lng": 313.48388671875006
             },
             icon: require('../../static/icons/misc/Map_link_icon.webp')
-        },{
+        }, {
             label: 'To Lumbridge Basement',
-            position: {"lat":43.32517767999296,"lng":350.85937500000006},
+            position: {"lat":43.96119063892027,"lng":389.53125},
             target_layer: "lumbridge_basement",
-            target_layer_position: {"lat":14.944784875088372,"lng":339.87304687500006},
+            target_layer_position: {"lat":-16.63619187839765,"lng":367.91015625000006},
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }],
-        map_labels: [{
-            "positions": [{
-                "lat": 12.12526421833159,
-                "lng": 348.57421875000006
-            }, {
-                "lat": 11.86735091145932,
-                "lng": 360.87890625000006
-            }],
-            "text": "Giant Frog",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 37.57941251343841,
-                "lng": 348.134765625
-            }, {
-                "lat": 27.21555620902969,
-                "lng": 352.96875
-            }],
-            "text": "Rockslug",
-            "fontSize": 30
-        }],
+        map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'stronghold_of_security_sepulchre_of_death',
         full_name: 'Stronghold of Security Layer (Pit of Pestilence)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 25.958044673317843,
-            "lng": 335.08300781250006
-        },
+        center_pos: {"lat":3.337953961416485,"lng":362.63671875},
         exits: [{
             label: 'To Pit of Pestilence',
-            position: {
-                "lat": 39.50404070558415,
-                "lng": 315.70312500000006
-            },
+            position: {"lat":35.746512259918504,"lng":320.27343750000006},
             target_layer: "stronghold_of_security_pit_of_pestilence",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3063,10 +2926,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Barbarian Village',
-            position: {
-                "lat": 24.766784522874453,
-                "lng": 344.26757812500006
-            },
+            position: {"lat":3.162455530237848,"lng":376.875},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3076,20 +2936,15 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'stronghold_of_security_pit_of_pestilence',
         full_name: 'Stronghold of Security Layer (Pit of Pestilence)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 25.958044673317843,
-            "lng": 335.08300781250006
-        },
+        center_pos: {"lat":4.915832801313164,"lng":357.890625},
         exits: [{
             label: 'To Catacomb of Famine',
-            position: {
-                "lat": 6.053161295714067,
-                "lng": 320.09765625000006
-            },
+            position: {"lat":-33.7243396617476,"lng":328.00781250000006},
             target_layer: "stronghold_of_security_catacomb_of_famine",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3098,10 +2953,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Sepulchre of Death',
-            position: {
-                "lat": 27.994401411046148,
-                "lng": 337.41210937500006
-            },
+            position: {"lat":1.2303741774326145,"lng":365.62500000000006},
             target_layer: "stronghold_of_security_sepulchre_of_death",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3110,10 +2962,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Dungeon_icon.webp')
         }, {
             label: 'To Barbarian Village',
-            position: {
-                "lat": 23.966175871265044,
-                "lng": 338.99414062500006
-            },
+            position: {"lat":10.14193168613103,"lng":363.33984375000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3123,32 +2972,21 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'stronghold_of_security_catacomb_of_famine',
         full_name: 'Stronghold of Security Layer (Catacomb of Famine)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 25.16517336866393,
-            "lng": 337.67578125
-        },
+        center_pos: {"lat":3.6888551431470478,"lng":363.51562500000006},
         exits: [{
             label: 'To Vault of War',
-            position: {
-                "lat": 42.35854391749705,
-                "lng": 353.23242187500006
-            },
+            position: {"lat":41.50857729743935,"lng":393.22265625000006},
             target_layer: "stronghold_of_security_vault_of_war",
-            target_layer_position: {
-                "lat": 79.15377632309713,
-                "lng": 307.67211914062506
-            },
+            target_layer_position: {"lat":12.55456352859367,"lng":376.875},
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Pit of Pestilence',
-            position: {
-                "lat": 26.745610382199022,
-                "lng": 341.45507812500006
-            },
+            position: {"lat":7.36246686553575,"lng":370.1953125},
             target_layer: "stronghold_of_security_pit_of_pestilence",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3157,10 +2995,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Dungeon_icon.webp')
         }, {
             label: 'To Barbarian Village',
-            position: {
-                "lat": 21.453068633086783,
-                "lng": 335.21484375000006
-            },
+            position: {"lat":-3.513421045640032,"lng":359.29687500000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3170,20 +3005,15 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'stronghold_of_security_vault_of_war',
         full_name: 'Stronghold of Security Layer (Vault of War)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 25.958044673317843,
-            "lng": 331.52343750000006
-        },
+        center_pos: {"lat":4.214943141390651,"lng":352.44140625},
         exits: [{
             label: 'To Barbarian Village',
-            position: {
-                "lat": 41.57436130598913,
-                "lng": 313.9453125
-            },
+            position: {"lat":39.63953756436671,"lng":316.75781250000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3192,22 +3022,13 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Catacomb of Famine',
-            position: {
-                "lat": 29.22889003019423,
-                "lng": 344.17968750000006
-            },
+            position: {"lat":12.55456352859367,"lng":376.875},
             target_layer: "stronghold_of_security_catacomb_of_famine",
-            target_layer_position: {
-                "lat": 79.15377632309713,
-                "lng": 307.67211914062506
-            },
+            target_layer_position: {"lat":41.77131167976407,"lng":393.75000000000006},
             icon: require('../../static/icons/misc/Dungeon_icon.webp')
         }, {
             label: 'To Barbarian Village',
-            position: {
-                "lat": 31.50362930577303,
-                "lng": 352.353515625
-            },
+            position: {"lat":18.312810846425457,"lng":392.69531250000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 79.15377632309713,
@@ -3217,7 +3038,8 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'misthalin_mystery',
         full_name: 'Misthalin Mystery Manor',
         icon: require('../../static/icons/misc/Transportation_icon.png'),
@@ -3227,10 +3049,7 @@ export const Dungeons = [
         },
         exits: [{
             label: 'To Lumbridge Swamp',
-            position: {
-                "lat": 10.919617760254697,
-                "lng": 325.89843750000006
-            },
+            position: {"lat":-26.902476886279807,"lng":340.83984375},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 75.09139350771163,
@@ -3240,7 +3059,8 @@ export const Dungeons = [
         },],
         map_labels: [],
         icons: {}
-    }, {
+    },
+    {
         machine_name: 'zanaris',
         full_name: 'Zanaris',
         icon: require('../../static/icons/misc/Map_link_icon.webp'),
@@ -3261,83 +3081,38 @@ export const Dungeons = [
             },
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         },],
-        map_labels: [{
-            "positions": [{
-                "lat": 9.96885060854611,
-                "lng": 278.61328125000006
-            }, {
-                "lat": 5.090944175033399,
-                "lng": 298.65234375000006
-            }],
-            "text": "Tangle feet",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 3.162455530237848,
-                "lng": 307.96875000000006
-            }, {
-                "lat": -5.266007882805498,
-                "lng": 320.62500000000006
-            }],
-            "text": "Cosmic Altar",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 38.41055825094609,
-                "lng": 356.48437500000006
-            }, {
-                "lat": 44.213709909702054,
-                "lng": 370.1953125
-            }],
-            "text": "Market",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 34.88593094075317,
-                "lng": 333.10546875000006
-            }, {
-                "lat": 29.38217507514529,
-                "lng": 344.35546875000006
-            }],
-            "text": "Throne Room",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 59.17592824927138,
-                "lng": 337.14843750000006
-            }, {
-                "lat": 58.63121664342478,
-                "lng": 350.5078125
-            }],
-            "text": "Shrine",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 46.195042108660154,
-                "lng": 317.98828125000006
-            }, {
-                "lat": 43.068887774169625,
-                "lng": 333.10546875000006
-            }],
-            "text": "Puro-puro",
-            "fontSize": 30
-        }],
-        icons: {}
-    }, {
+        map_labels: [],
+        icons: {
+            agility_shortcuts: [
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":-13.923403897723347,"lng":300.93750000000006},
+                    title: "Agility Shortcut",
+                    description: "Wall Squeeze (46 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":-16.46769474828897,"lng":313.41796875000006},
+                    title: "Agility Shortcut",
+                    description: "Wall Squeeze (66 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+            ]
+
+        }
+    },
+    {
         machine_name: 'edgeville_dungeon_and_varrock_sewers',
         full_name: 'Edgeville dungeon and Varrock sewers',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
         icon_scale: 1.2,
-        center_pos: {
-            "lat": 45.706179285330855,
-            "lng": 332.05078125000006
-        },
+        center_pos: {"lat": 2.4601811810210052, "lng": 335.39062500000006},
         exits: [{
             label: 'To Edgeville',
-            position: {
-                "lat": 6.664607562172573,
-                "lng": 278.87695312500006
-            },
+            position: {"lat": -33.57801474614399, "lng": 245.74218750000003},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 79.74553248351053,
@@ -3346,10 +3121,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Varrock East',
-            position: {
-                "lat": -0.3515602939922709,
-                "lng": 377.05078125
-            },
+            position: {"lat": -43.96119063892026, "lng": 442.44140625000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 79.61613848377318,
@@ -3358,10 +3130,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Varrock Bear Cage',
-            position: {
-                "lat": 30.524413269923986,
-                "lng": 372.65625000000006
-            },
+            position: {"lat": 15.961329081596647, "lng": 432.77343750000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 80.14915404852314,
@@ -3370,10 +3139,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To hut west of Varrock',
-            position: {
-                "lat": -5.00339434502215,
-                "lng": 291.97265625000006
-            },
+            position: {"lat": -49.38237278700955, "lng": 272.98828125000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 79.5446087817067,
@@ -3382,291 +3148,11 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Air Obelisk',
-            position: {
-                "lat": 61.73152565113397,
-                "lng": 272.72460937500006
-            },
+            position: {"lat": 73.27735320192473, "lng": 233.26171875000003},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 80.87718298659169,
                 "lng": 308.13354492187506
-            },
-            icon: require('../../static/icons/misc/Map_link_icon.webp')
-        },],
-        map_labels: [{
-            "positions": [{
-                "lat": 69.90011762668541,
-                "lng": 283.35937500000006
-            }, {
-                "lat": 67.60922060496382,
-                "lng": 311.83593750000006
-            }],
-            "text": "Earth Warriors",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 58.263287052486035,
-                "lng": 266.13281250000006
-            }, {
-                "lat": 58.63121664342478,
-                "lng": 280.89843750000006
-            }],
-            "text": "Black Demons",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 55.3791104480105,
-                "lng": 263.67187500000006
-            }, {
-                "lat": 54.16243396806781,
-                "lng": 281.07421875000006
-            }],
-            "text": "Poison Spiders",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 50.401515322782366,
-                "lng": 263.84765625000006
-            }, {
-                "lat": 47.040182144806664,
-                "lng": 278.26171875000006
-            }],
-            "text": "Chronozon",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 57.610107020683905,
-                "lng": 289.33593750000006
-            }, {
-                "lat": 55.47885346331036,
-                "lng": 304.1015625
-            }],
-            "text": "Red spiders",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 45.336701909968134,
-                "lng": 294.43359375000006
-            }, {
-                "lat": 44.84029065139799,
-                "lng": 310.78125000000006
-            }],
-            "text": "Thugs",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 24.84656534821976,
-                "lng": 288.80859375000006
-            }, {
-                "lat": 24.5271348225978,
-                "lng": 302.34375000000006
-            }],
-            "text": "Skeletons",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 21.94304553343818,
-                "lng": 286.87500000000006
-            }, {
-                "lat": 21.12549763660629,
-                "lng": 301.640625
-            }],
-            "text": "Zombies",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 3.337953961416485,
-                "lng": 287.05078125000006
-            }, {
-                "lat": 3.162455530237848,
-                "lng": 302.34375000000006
-            }],
-            "text": "Hobgoblins",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": -13.752724664396988,
-                "lng": 277.20703125000006
-            }, {
-                "lat": -16.13026201203474,
-                "lng": 301.46484375
-            }],
-            "text": "Hill Giants",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 34.74161249883172,
-                "lng": 317.37304687500006
-            }, {
-                "lat": 27.839076094777816,
-                "lng": 327.21679687500006
-            }],
-            "text": "Moss Giants",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 14.774882506516272,
-                "lng": 323.17382812500006
-            }, {
-                "lat": 16.3833911236084,
-                "lng": 336.35742187500006
-            }],
-            "text": "Moss Giants",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 20.632784250388028,
-                "lng": 332.05078125000006
-            }, {
-                "lat": 18.312810846425457,
-                "lng": 347.783203125
-            }],
-            "text": "Red Spiders",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 5.266007882805498,
-                "lng": 372.216796875
-            }, {
-                "lat": 6.227933930268672,
-                "lng": 389.267578125
-            }],
-            "text": "Rats",
-            "fontSize": 30
-        }],
-        icons: {
-            agility_shortcuts: [{
-                iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
-                className: Categories.AGILITY_SHORTCUT,
-                position: {
-                    "lat": 30.90222470517144,
-                    "lng": 318.29589843750006
-                },
-                title: "Agility Shortcut",
-                description: "Pipe Squeeze (51 Agility)",
-                category: Categories.AGILITY_SHORTCUT
-            },]
-        }
-    }, {
-        machine_name: 'dwarven_mine',
-        full_name: 'Dwarven Mine',
-        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 31.27855085894653,
-            "lng": 342.42187500000006
-        },
-        exits: [{
-            label: 'To Dwarven Mine Entrance',
-            position: {
-                "lat": 61.438767493682825,
-                "lng": 330.99609375
-            },
-            target_layer: "surface",
-            target_layer_position: {
-                "lat": 79.52265545122708,
-                "lng": 303.53027343750006
-            },
-            icon: require('../../static/icons/misc/Map_link_icon.webp')
-        }, {
-            label: 'To Falador Entrance',
-            position: {
-                "lat": 25.3241665257384,
-                "lng": 359.56054687500006
-            },
-            target_layer: "surface",
-            target_layer_position: {
-                "lat": 78.60724128404506,
-                "lng": 306.221923828125
-            },
-            icon: require('../../static/icons/misc/Map_link_icon.webp')
-        }, {
-            label: 'To Mining Guild Entrance',
-            position: {
-                "lat": 0.17578097424708533,
-                "lng": 330.64453125000006
-            },
-            target_layer: "surface",
-            target_layer_position: {
-                "lat": 78.10339245316887,
-                "lng": 303.58795166015625
-            },
-            icon: require('../../static/icons/misc/Map_link_icon.webp')
-        }],
-        map_labels: [{
-            "positions": [{
-                "lat": -13.581920900545844,
-                "lng": 330.11718750000006
-            }, {
-                "lat": 5.61598581915534,
-                "lng": 353.67187500000006
-            }],
-            "text": "Mining Guild",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 27.52775820686191,
-                "lng": 343.65234375000006
-            }, {
-                "lat": 27.994401411046148,
-                "lng": 356.30859375000006
-            }],
-            "text": "Scorpions",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 48.80686346108519,
-                "lng": 288.10546875000006
-            }, {
-                "lat": 42.293564192170095,
-                "lng": 306.73828125000006
-            }],
-            "text": "Hammerspikes' Hangout",
-            "fontSize": 30
-        }],
-        icons: {
-            agility_shortcuts: [{
-                iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
-                className: Categories.AGILITY_SHORTCUT,
-                position: {
-                    "lat": 42.68243539838623,
-                    "lng": 342.20214843750006
-                },
-                title: "Agility Shortcut",
-                description: "Wall Crevice (42 Agility)",
-                category: Categories.AGILITY_SHORTCUT
-            },]
-        }
-    }, {
-        machine_name: 'motherlode_mine',
-        full_name: 'Motherlode Mine',
-        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        icon_scale: 1.2,
-        center_pos: {
-            "lat": 26.745610382199022,
-            "lng": 334.86328125000006
-        },
-        exits: [{
-            label: 'To Dwarven Mine',
-            position: {
-                "lat": 42.22851735620852,
-                "lng": 323.26171875000006
-            },
-            target_layer: "dwarven_mine",
-            target_layer_position: {
-                "lat": 17.476432197195518,
-                "lng": 359.736328125
-            },
-            icon: require('../../static/icons/misc/Map_link_icon.webp')
-        }, {
-            label: 'To Dwarven Mine (Mining Guild)',
-            position: {
-                "lat": 33.797408767572485,
-                "lng": 315.43945312500006
-            },
-            target_layer: "dwarven_mine",
-            target_layer_position: {
-                "lat": 3.6888551431470478,
-                "lng": 356.96777343750006
             },
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         },],
@@ -3675,26 +3161,97 @@ export const Dungeons = [
             agility_shortcuts: [{
                 iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                 className: Categories.AGILITY_SHORTCUT,
-                position: {
-                    "lat": 29.075375179558346,
-                    "lng": 345.01464843750006
-                },
+                position: {"lat": 16.720385051694, "lng": 324.84375000000006},
+                title: "Agility Shortcut",
+                description: "Pipe Squeeze (51 Agility)",
+                category: Categories.AGILITY_SHORTCUT
+            },]
+        }
+    },
+    {
+        machine_name: 'dwarven_mine',
+        full_name: 'Dwarven Mine',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 25.64152637306577, "lng": 357.890625},
+        exits: [{
+            label: 'To Dwarven Mine Entrance',
+            position: {"lat": 72.91963546581484, "lng": 350.15625},
+            target_layer: "surface",
+            target_layer_position: {
+                "lat": 79.52265545122708,
+                "lng": 303.53027343750006
+            },
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        }, {
+            label: 'To Falador Entrance',
+            position: {"lat": 4.5654735507102915, "lng": 406.05468750000006},
+            target_layer: "surface",
+            target_layer_position: {
+                "lat": 78.60724128404506,
+                "lng": 306.221923828125
+            },
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        }, {
+            label: 'To Mining Guild Entrance',
+            position: {"lat": -43.06888777416962, "lng": 350.15625},
+            target_layer: "surface",
+            target_layer_position: {
+                "lat": 78.10339245316887,
+                "lng": 303.58795166015625
+            },
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        }],
+        map_labels: [],
+        icons: {
+            agility_shortcuts: [{
+                iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                className: Categories.AGILITY_SHORTCUT,
+                position: {"lat": 42.09822241118974, "lng": 372.65625000000006},
+                title: "Agility Shortcut",
+                description: "Wall Crevice (42 Agility)",
+                category: Categories.AGILITY_SHORTCUT
+            },]
+        }
+    },
+    {
+        machine_name: 'motherlode_mine',
+        full_name: 'Motherlode Mine',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        icon_scale: 1.2,
+        center_pos: {"lat": 7.885147283424331, "lng": 362.8125},
+        exits: [{
+            label: 'To Dwarven Mine',
+            position: {"lat": 40.713955826286046, "lng": 334.51171875000006},
+            target_layer: "dwarven_mine",
+            target_layer_position: {"lat": -12.46876014482322, "lng": 407.63671875000006},
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        }, {
+            label: 'To Dwarven Mine (Mining Guild)',
+            position: {"lat": 23.885837699862005, "lng": 318.8671875},
+            target_layer: "dwarven_mine",
+            target_layer_position: {"lat": -37.718590325588146, "lng": 402.01171875000006},
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        },],
+        map_labels: [],
+        icons: {
+            agility_shortcuts: [{
+                iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                className: Categories.AGILITY_SHORTCUT,
+                position: {"lat": 12.640338306846802, "lng": 378.28125000000006},
                 title: "Agility Shortcut",
                 description: "Wall shortcut (54 Agility)\nRequires Falador Medium Diary",
                 category: Categories.AGILITY_SHORTCUT
             }, {
                 iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                 className: Categories.AGILITY_SHORTCUT,
-                position: {
-                    "lat": 29.726222319395504,
-                    "lng": 349.2333984375
-                },
+                position: {"lat": 14.093957177836224, "lng": 386.71875},
                 title: "Agility Shortcut",
                 description: "Wall shortcut (54 Agility)\nRequires Falador Medium Diary",
                 category: Categories.AGILITY_SHORTCUT
             },]
         }
-    }, {
+    },
+    {
         machine_name: 'taverly_dungeon',
         full_name: 'Taverly Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
@@ -3705,10 +3262,7 @@ export const Dungeons = [
         exits: [
             {
                 label: 'To Taverly',
-                position: {
-                    "lat": 45.920587344733654,
-                    "lng": 331.43554687500006
-                },
+                position: {"lat": 49.15296965617042, "lng": 351.38671875000006},
                 target_layer: "surface",
                 target_layer_position: {
                     "lat": 78.86527580679268,
@@ -3718,191 +3272,54 @@ export const Dungeons = [
             },
             {
                 label: 'To Water Obelisk',
-                position: {"lat": 57.51582286553883, "lng": 302.16796875000006},
+                position: {"lat": 68.07330474079025, "lng": 292.14843750000006},
                 target_layer: "surface",
                 target_layer_position: {"lat": 79.20430943611333, "lng": 291.92321777343756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [{
-            "positions": [{
-                "lat": 44.465151013519645,
-                "lng": 292.32421875000006
-            }, {
-                "lat": 35.746512259918504,
-                "lng": 320.80078125000006
-            }],
-            "text": "Black Demons",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 49.03786794532644,
-                "lng": 341.01562500000006
-            }, {
-                "lat": 40.84706035607122,
-                "lng": 360
-            }],
-            "text": "Blue Dragons",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 21.12549763660629,
-                "lng": 351.21093750000006
-            }, {
-                "lat": 34.30714385628804,
-                "lng": 363.51562500000006
-            }],
-            "text": "Chaos Dwarves",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 44.84029065139799,
-                "lng": 380.21484375000006
-            }, {
-                "lat": 32.39851580247402,
-                "lng": 390.41015625000006
-            }],
-            "text": "Magic Axes",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 12.382928338487396,
-                "lng": 352.79296875
-            }, {
-                "lat": 28.14950321154457,
-                "lng": 373.35937500000006
-            }],
-            "text": "Poisonous Scorpions",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 9.795677582829743,
-                "lng": 339.08203125000006
-            }, {
-                "lat": 3.6888551431470478,
-                "lng": 356.13281250000006
-            }],
-            "text": "Hill Giants",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": -7.536764322084078,
-                "lng": 335.91796875
-            }, {
-                "lat": -30.29701788337204,
-                "lng": 357.71484375
-            }],
-            "text": "Black Knights' Base",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 54.470037612805754,
-                "lng": 301.640625
-            }, {
-                "lat": 50.17689812200107,
-                "lng": 326.60156250000006
-            }],
-            "text": "Poison Spiders",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 48.922499263758255,
-                "lng": 280.89843750000006
-            }, {
-                "lat": 54.67383096593114,
-                "lng": 300.76171875000006
-            }],
-            "text": "Monks of Zamorak",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 58.44773280389084,
-                "lng": 291.79687500000006
-            }, {
-                "lat": 59.085738569819505,
-                "lng": 307.96875000000006
-            }],
-            "text": "Black Dragons",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 61.01572481397616,
-                "lng": 309.72656250000006
-            }, {
-                "lat": 66.23145747862573,
-                "lng": 320.44921875000006
-            }],
-            "text": "Hell Hounds",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 68.26938680456567,
-                "lng": 358.85742187500006
-            }, {
-                "lat": 63.704722429433225,
-                "lng": 374.23828125000006
-            }],
-            "text": "Chaos Druids",
-            "fontSize": 30
-        }],
+        map_labels: [],
         icons: {
             agility_shortcuts: [{
                 iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                 className: Categories.AGILITY_SHORTCUT,
-                position: {
-                    "lat": 53.46189043285914,
-                    "lng": 327.4365234375
-                },
+                position: {"lat": 61.64816245852389, "lng": 343.125},
                 title: "Agility Shortcut",
                 description: "Jump floor trap (80 Agility)",
                 category: Categories.AGILITY_SHORTCUT
             }, {
                 iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                 className: Categories.AGILITY_SHORTCUT,
-                position: {
-                    "lat": 57.444949435839845,
-                    "lng": 334.42382812500006
-                },
+                position: {"lat": 49.89463439573421, "lng": 355.69335937500006},
                 title: "Agility Shortcut",
                 description: "Pipe Squeeze (70 Agility)",
                 category: Categories.AGILITY_SHORTCUT
             }, {
                 iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                 className: Categories.AGILITY_SHORTCUT,
-                position: {
-                    "lat": 46.73986059969267,
-                    "lng": 333.76464843750006
-                },
+                position: {"lat": 67.676084581981, "lng": 357.275390625},
                 title: "Agility Shortcut",
                 description: "Pipe Squeeze (70 Agility)",
                 category: Categories.AGILITY_SHORTCUT
             }, {
                 iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                 className: Categories.AGILITY_SHORTCUT,
-                position: {
-                    "lat": 52.61639023304539,
-                    "lng": 368.21777343750006
-                },
+                position: {"lat": 60.28340847828245, "lng": 424.42382812500006},
                 title: "Agility Shortcut",
                 description: "Fence Squeeze (63 Agility)",
                 category: Categories.AGILITY_SHORTCUT
             },]
         }
-    }, {
+    },
+    {
         machine_name: 'draynor_sewer',
         full_name: 'Draynor Sewer',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
         icon_scale: 1.2,
-        center_pos: {
-            "lat": 45.706179285330855,
-            "lng": 332.05078125000006
-        },
+        center_pos: {"lat":-2.811371193331128,"lng":364.39453125000006},
         exits: [{
             label: 'To North of Draynor Market',
-            position: {
-                "lat": 25.24469595130604,
-                "lng": 320.62500000000006
-            },
+            position: {"lat": 4.12728532324537, "lng": 329.06250000000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 77.157162522661,
@@ -3911,10 +3328,7 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         }, {
             label: 'To Outside of Jail',
-            position: {
-                "lat": 5.878332109674327,
-                "lng": 344.44335937500006
-            },
+            position: {"lat": -33.797408767572485, "lng": 376.69921875000006},
             target_layer: "surface",
             target_layer_position: {
                 "lat": 76.73913726028553,
@@ -3922,37 +3336,36 @@ export const Dungeons = [
             },
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         },],
-        map_labels: [{
-            "positions": [{
-                "lat": 6.577303118123887,
-                "lng": 341.71875000000006
-            }, {
-                "lat": 14.26438308756265,
-                "lng": 351.38671875000006
-            }],
-            "text": "Zombies",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 26.82407078047018,
-                "lng": 331.34765625000006
-            }, {
-                "lat": 23.725011735951796,
-                "lng": 349.98046875
-            }],
-            "text": "Skeletons",
-            "fontSize": 30
-        }, {
-            "positions": [{
-                "lat": 23.40276490540795,
-                "lng": 321.15234375
-            }, {
-                "lat": 28.38173504322311,
-                "lng": 331.34765625000006
-            }],
-            "text": "Zombies",
-            "fontSize": 30
-        }],
+        map_labels: [
+            {
+                "positions": [
+                    {
+                        "lat": 4.302591077119676,
+                        "lng": 333.80859375000006
+                    },
+                    {
+                        "lat": 5.266007882805498,
+                        "lng": 363.42773437500006
+                    }
+                ],
+                "text": "Zombies",
+                "fontSize": 30
+            },
+            {
+                "positions": [
+                    {
+                        "lat": 8.928487062665504,
+                        "lng": 371.86523437500006
+                    },
+                    {
+                        "lat": -13.581920900545844,
+                        "lng": 395.06835937500006
+                    }
+                ],
+                "text": "Skeletons",
+                "fontSize": 30
+            }
+        ],
         icons: {
             agility_shortcuts: []
         }

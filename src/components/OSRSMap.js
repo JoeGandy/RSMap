@@ -70,7 +70,7 @@ export default class OSRSMap extends Component {
         });*/
 
         this.setState({clicked_position: e.latlng});
-        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
     }
 
     centerMap(_center) {

@@ -14,3 +14,22 @@ html, body, #___gatsby, #___gatsby > div, #___gatsby > div {
     cursor:default !important;
   }
 }
+
+.back_to_surface_button{
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  margin:auto;
+  z-index:400;
+  display:flex;
+  width:200px;
+  justify-content: center;
+}
+
+button{
+  background-color:saddlebrown;
+  color:white;
+  border:5px groove sienna;
+
+}
