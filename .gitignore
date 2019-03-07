@@ -82,3 +82,4 @@ yarn-error.log
 
 
 /static/map/dungeons/generated/*
+/static/map/generated
