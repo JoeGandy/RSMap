@@ -43,6 +43,7 @@ export const Categories = {
     GNOME_GLIDERS: 'gnome_glider',
     CARPET_RIDES: 'carpet_ride',
     MINI_GAMES: 'mini_games',
+    DUNGEONS: 'dungeons',
     OTHER: 'other'
 };
 
@@ -61,7 +62,8 @@ export const Categories_name = {
     [Categories.GNOME_GLIDERS]: 'Gnome Gliders',
     [Categories.CARPET_RIDES]: 'Carpet Rides',
     [Categories.MINI_GAMES]: 'Mini-Game Teleports',
-    [Categories.OTHER]: 'Other',
+    [Categories.DUNGEONS]: 'Dungeons',
+    [Categories.OTHER]: 'Other'
 
 };
 

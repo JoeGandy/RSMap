@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import MapMarker from "./MarkerTypes/MapMarker";
 import {Map, Marker, Tooltip, Popup, Polygon} from "react-leaflet";
 import {rewriteIcons, types} from "../classes/Icons";
-import {IconBaseClass} from "../classes/IconBaseClass";
+import {Categories, IconBaseClass} from "../classes/IconBaseClass";
 import MapPointToPointMarker from "./MarkerTypes/MapPointToPointMarker";
 import LayerLink from "./MarkerTypes/LayerLink";
 import {getDungeonCenter, getDungeonIcons, getDungeonLayer} from "../classes/Dungeons";
@@ -35,6 +35,7 @@ export default class MapMarkers extends Component {
         let handleLayerChange = this.props.handleLayerChange;
         let layer = this.props.layer;
 
+
         return (
             <>
                 {this.state.regions.map(function (region, i) {
@@ -45,7 +46,7 @@ export default class MapMarkers extends Component {
                     />
                 })}
                 {this.state.dungeons.map(function (dungeon, i) {
-                    return <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
+                    return layer === "surface" && !filters[Categories.DUNGEONS] ? null : <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
                 })}
 
                 {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ?

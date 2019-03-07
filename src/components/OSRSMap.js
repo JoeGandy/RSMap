@@ -25,7 +25,6 @@ export default class OSRSMap extends Component {
             layer: 'surface'
         };
 
-        console.log(getAllDungeonNames());
         this.handleClick = this.handleClick.bind(this);
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
         this.centerMap = this.centerMap.bind(this);

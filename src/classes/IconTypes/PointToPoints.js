@@ -86,6 +86,21 @@ export const PointToPoints = [
         iconUrl: require('../../../static/icons/misc/Transportation_icon.png'),
         className: Categories.BOATS,
         positions: [
+            {"lat":73.5812728874721,"lng":250.66406250000003},
+            {"lat":73.72813393215525,"lng":250.88378906250003},
+            {"lat":73.7911205362116,"lng":251.33972167968753},
+            {"lat":73.78038354714062,"lng":252.97119140625003},
+            {"lat":73.7542791793749,"lng":253.71276855468753},
+            {"lat":73.76656867641162,"lng":254.14123535156253}
+        ],
+        title: "Zeah Sacrafice Boat",
+        description: "",
+        category: Categories.BOATS
+    },
+    {
+        iconUrl: require('../../../static/icons/misc/Transportation_icon.png'),
+        className: Categories.BOATS,
+        positions: [
             {"lat":78.64840091582138,"lng":335.22583007812506},
             {"lat":78.58388840017818,"lng":335.3329467773438},
             {"lat":78.58714977549788,"lng":335.83282470703125},

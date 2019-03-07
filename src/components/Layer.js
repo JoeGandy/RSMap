@@ -38,6 +38,7 @@ export default class Layer extends Component {
         this.centerMap = this.centerMap.bind(this);
         this.updateFilters = this.updateFilters.bind(this);
         this.searchSelect = this.searchSelect.bind(this);
+        this.backToSurface = this.backToSurface.bind(this);
     }
 
     handleZoomEnd() {
@@ -74,9 +75,13 @@ export default class Layer extends Component {
         }
     }
 
+    backToSurface(){
+        this.props.handleLayerChange('surface', {"lat":76.3518964311259,"lng":316.64794921875006});
+    }
+
     handleClick(e) {
         console.debug(JSON.stringify(e.latlng));
-        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
         this.setState({clicked_position: e.latlng});
     }
 
@@ -106,8 +111,7 @@ export default class Layer extends Component {
                     <TileLayer
                         attribution="RSMap - All content/assets belong to jagex - Marker data from osrs.wiki"
                         url={withPrefix(this.state.layer_url + "/{z}/{x}/{y}.png")}
-                        noWrap={this.props.layer !== "surface"}
-                        keepBuffer={1}
+                        keepBuffer={15}
                         updateWhenZooming={false}
                         updateInterval={200}
                     />
@@ -117,7 +121,7 @@ export default class Layer extends Component {
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                 </Map>
                 {this.props.layer !== "surface" ?
-                    <button className="back_to_surface_button">Back to surface</button>
+                    <button className="back_to_surface_button" onClick={this.backToSurface}>Back to surface</button>
                 : null}
                 {this.props.layer === "surface" ?
                     <>
@@ -125,8 +129,8 @@ export default class Layer extends Component {
                         <SearchBox centerMap={this.centerMap}/>
                     </>
                     : null}
-                <DevTools clickedPos={this.state.clicked_position}/>
             </>
         )
+        //DevTools clickedPos={this.state.clicked_position}/>
     }
 }
