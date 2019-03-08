@@ -13,9 +13,9 @@ Planned features (To do before even releasing):
 - ~Click on boat locations to see where they go~
 - ~Location searcher~
 - ~Agility short cuts to show where they go and level needed~
+- ~Dungeon maps (Pending last few)~
 - Convert coord clues to map coordinates
 - Region highlighting (Area locked ironmen, multi combat)
-- ~Dungeon maps~
 - Quest icon to show quest with basic info
 
 Goal features
@@ -23,16 +23,20 @@ Goal features
 - Stores to show what they sell w/ quanitities 
 - Clue scroll locations
 
-### Dungeons that need map clean up
-This is a todo for me (This is removing extra areas from around dungeon maps)
-- Witchaven dungeon level 2
-- Entrana dungeon
-- Karamja volcano
-- Stronghold Slayer Cave
-- Kalphite Cave
-- Wateerfall Dungeon
+### Dungeons to map
+- Brine rat dungeon
+- Burthorpe Games room
+- Crash site caves (mm2)
+- Deep wildy dungeon
+- Enchanted Forest
+- Rogues Den
+- Gariels tomb
+- Waterbirth dungeon
+- Under heros guild
+- Quest cave under gnome stronhold (no idea of name)
 
 ### Agility Shortcuts that need mapping
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
 - Log balance over Karamja river, what level?
+
