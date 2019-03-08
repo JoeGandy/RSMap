@@ -451,7 +451,7 @@ export const Dungeons = [
         machine_name: 'fremennik_slayer_dungeon',
         full_name: 'Fremennik Slayer Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat": -6.140554782450295, "lng": 357.01171875000006},
+        center_pos: {"lat":-1.4061088354351594,"lng":356.30859375000006},
         exits: [
             {
                 label: 'To Golden Apple Tree',

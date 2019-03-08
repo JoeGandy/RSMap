@@ -14,6 +14,8 @@ const dungeonMinZoom = 1;
 const surfaceMaxZoom = 9;
 const surfaceMinZoom = 1;
 
+const map_address = "http://tiles.rsmap.uk/public";
+
 export default class Layer extends Component {
 
     constructor(props) {
@@ -61,17 +63,14 @@ export default class Layer extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
-            this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer})
             this.setState({zoomLevel: this.props.layer === "surface" ? 6 : 3});
+            this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer})
             this.setState({minZoom: this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom});
             this.setState({maxZoom: this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom});
             this.map.leafletElement.setMinZoom(this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom);
             this.map.leafletElement.setMaxZoom(this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom);
             this.setState({icons: getDungeonIcons(this.props.layer)});
             this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer));
-            setTimeout(function (handleZoomEnd) {
-                handleZoomEnd();
-            }, 1000, this.handleZoomEnd);
         }
     }
 
@@ -110,7 +109,7 @@ export default class Layer extends Component {
                 >
                     <TileLayer
                         attribution="RSMap - All content/assets belong to jagex - Marker data from osrs.wiki"
-                        url={withPrefix(this.state.layer_url + "/{z}/{x}/{y}.png")}
+                        url={map_address + this.state.layer_url + "/{z}/{x}/{y}.png"}
                         keepBuffer={15}
                         updateWhenZooming={false}
                         updateInterval={200}
@@ -121,7 +120,7 @@ export default class Layer extends Component {
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                 </Map>
                 {this.props.layer !== "surface" ?
-                    <button className="back_to_surface_button" onClick={this.backToSurface}>Back to surface</button>
+                    <button className="back_to_surface_button main_button" onClick={this.backToSurface}>Back to surface</button>
                 : null}
                 {this.props.layer === "surface" ?
                     <>

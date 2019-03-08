@@ -33,6 +33,7 @@ export default class SearchBox extends Component {
                 <div className="location_search_container">
                     <label htmlFor="location_search"><h1>{this.props.title}</h1>
                         <Typeahead
+                            id="location_search"
                             name="location_search"
                             labelKey={"title"}
                             options={this.state.icons}
