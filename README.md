@@ -15,7 +15,7 @@ Planned features (To do before even releasing):
 - ~Agility short cuts to show where they go and level needed~
 - Convert coord clues to map coordinates
 - Region highlighting (Area locked ironmen, multi combat)
-- Dungeon maps
+- ~Dungeon maps~
 - Quest icon to show quest with basic info
 
 Goal features
