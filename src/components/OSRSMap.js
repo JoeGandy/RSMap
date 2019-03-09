@@ -6,7 +6,6 @@ import Layer from "./Layer";
 import {Dungeons, getAllDungeonNames} from "../classes/Dungeons";
 import {Regions} from "../classes/Regions";
 
-
 export default class OSRSMap extends Component {
 
     constructor(props) {

@@ -5,12 +5,9 @@ import {Typeahead} from 'react-bootstrap-typeahead';
 
 
 let example_label = {
-    positions: [
-        {"lat": 66.99884379185184, "lng": 227.46093750000003},
-        {"lat": 56.75272287205736, "lng": 288.28125000000006}
-    ],
-    text: "Black Demons",
-    fontSize: 30,
+    position: {},
+    title: "Black Demons",
+    description: null
 };
 
 export default class DevTools extends Component {
@@ -54,33 +51,17 @@ export default class DevTools extends Component {
 
                         break;
                     case 'new_label':
-                        console.log(this.state.pending_positions);
-                        if (this.state.pending_positions.length === 0) {
-                            let pending_positions = [...this.state.pending_positions];
-                            pending_positions.push(this.props.clickedPos);
-                            this.setState({pending_positions: pending_positions})
-                            console.log(1);
+                        let label_name = prompt("Enter a name for this label: ");
 
-                        } else if (this.state.pending_positions.length === 1) {
-                            console.log(2);
-                            let pending_positions = [...this.state.pending_positions];
-                            pending_positions.push(this.props.clickedPos);
+                        let new_label_object = {...example_label};
+                        new_label_object.title = label_name;
+                        new_label_object.position = this.props.clickedPos;
 
-                            let label_text = prompt("Enter Label text");
-
-                            let created_label = {...example_label};
-                            created_label.positions = pending_positions;
-                            created_label.text = label_text;
-
-                            let built_labels = this.state.built_locations;
-                            built_labels.push(created_label);
-                            this.setState({built_labels: built_labels});
-
-                            console.clear();
-                            console.log(JSON.stringify(built_labels, null, 4));
-
-                            this.setState({pending_positions: []});
-                        }
+                        let built_labels = this.state.built_labels;
+                        built_labels.push(new_label_object);
+                        this.setState({built_labels: built_labels});
+                        console.clear();
+                        console.log(JSON.stringify(built_labels, null, 4));
                         break;
                     case 'new_region':
                         let region_points = [...this.state.region_points];

@@ -18,22 +18,16 @@ Planned features (To do before even releasing):
 - Region highlighting (Area locked ironmen, multi combat)
 - Quest icon to show quest with basic info
 
+Issues to fix before going live
+- Going in dungeons above a certain Y axis pans to above the dungeon
+- Waterbirth dungeon
+- Quest cave under gnome stronhold (no idea of name)
+- Other godwars layers
+
 Goal features
 - Farm patch info
 - Stores to show what they sell w/ quanitities 
 - Clue scroll locations
-
-### Dungeons to map
-- Brine rat dungeon
-- Burthorpe Games room
-- Crash site caves (mm2)
-- Deep wildy dungeon
-- Enchanted Forest
-- Rogues Den
-- Gariels tomb
-- Waterbirth dungeon
-- Under heros guild
-- Quest cave under gnome stronhold (no idea of name)
 
 ### Agility Shortcuts that need mapping
 - Double check troll stronghold shortcuts

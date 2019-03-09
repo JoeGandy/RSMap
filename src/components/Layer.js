@@ -128,8 +128,9 @@ export default class Layer extends Component {
                         <SearchBox centerMap={this.centerMap}/>
                     </>
                     : null}
+                    <DevTools clickedPos={this.state.clicked_position}/>
             </>
         )
-        //DevTools clickedPos={this.state.clicked_position}/>
+        //
     }
 }

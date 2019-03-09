@@ -75,6 +75,289 @@ export function getDungeonCenter(dungeon_name) {
  */
 
 export const Dungeons = [
+
+    {
+        machine_name: 'under_heros_guild',
+        full_name: 'Heros\'s Guild Basement',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":11.523087506868514,"lng":364.39453125000006},
+        exits: [
+            {
+                label: 'To Hero\'s Guild',
+                position: {"lat":19.476950206488414,"lng":328.53515625},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.18246078688743,"lng":295.21362304687506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 1.4061088354351594,
+                    "lng": 364.5703125
+                },
+                "title": "Fountain of Heros",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 20.138470312451155,
+                    "lng": 353.49609375000006
+                },
+                "title": "Blue Dragon",
+                "description": null
+            }
+        ],
+        icons: {
+            agility_shortcuts: [
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":11.350796722383672,"lng":338.81835937500006},
+                    title: "Agility Shortcut",
+                    description: "Squeeze (67 Agility)\nHard Falador Diary Required",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":2.8113711933311403,"lng":359.912109375},
+                    title: "Agility Shortcut",
+                    description: "Squeeze (67 Agility)\nHard Falador Diary Required",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+            ]
+        }
+    },
+    {
+        machine_name: 'waterfall_quest_grave_cave',
+        full_name: 'Glarials Grave',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":17.811456088564483,"lng":368.87695312500006},
+        exits: [
+            {
+                label: 'To Kandarin',
+                position: {"lat":20.797201434307,"lng":385.48828125000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":79.45048902237734,"lng":273.22998046875006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 22.755920681486405,
+                    "lng": 345.93750000000006
+                },
+                "title": "Glarial's Necklace",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -19.642587534013032,
+                    "lng": 365.97656250000006
+                },
+                "title": "Glarial's Urn",
+                "description": null
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'rogues_den_1',
+        full_name: 'Rogues Den',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":-61.43876749368282,"lng":416.25},
+        exits: [
+            {
+                label: 'To Burthorpe',
+                position: {"lat":-52.26815737376817,"lng":431.19140625},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.50764272721774,"lng":296.40563964843756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'deep_wilderness_dungeon',
+        full_name: 'Deep wilderness Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":1.6696855009865839,"lng":355.4296875},
+        exits: [
+            {
+                label: 'To Level 51 Wilderness',
+                position: {"lat":-4.214943141390639,"lng":362.197265625},
+                target_layer: "surface",
+                target_layer_position: {"lat":83.9143827432742,"lng":305.30456542968756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 28.14950321154457,
+                    "lng": 372.48046875
+                },
+                "title": "Fire Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -9.44906182688142,
+                    "lng": 364.74609375
+                },
+                "title": "Hill giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -22.105998799750566,
+                    "lng": 334.68750000000006
+                },
+                "title": "Chaos Dwarves",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 4.5654735507102915,
+                    "lng": 327.48046875000006
+                },
+                "title": "Shadow Spiders",
+                "description": null
+            }
+        ],
+        icons: {
+            agility_shortcuts: [
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":2.986927393334876,"lng":365.53710937500006},
+                    title: "Agility Shortcut",
+                    description: "Squeeze (46 Agility)\nMedium Wilderness Diary Required",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":14.00869637063467,"lng":368.34960937500006},
+                    title: "Agility Shortcut",
+                    description: "Squeeze (46 Agility)\nMedium Wilderness Diary Required",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+            ]
+        }
+    },
+    {
+        machine_name: 'crashsite_cavern_mm2',
+        full_name: 'Crash Site Cavern',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos:  {"lat":2.986927393334876,"lng":367.03125},
+        exits: [
+            {
+                label: 'To Crash Site',
+                position: {"lat":-21.453068633086772,"lng":380.21484375000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.66309016264354,"lng":266.62719726562506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -12.382928338487396,
+                    "lng": 340.13671875
+                },
+                "title": "Demonic<br>Gorrilas",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 0,
+                    "lng": 379.86328125
+                },
+                "title": "Tortured Gorillas",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 23.40276490540795,
+                    "lng": 398.14453125000006
+                },
+                "title": "Demonic Gorillas",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 21.94304553343818,
+                    "lng": 322.73437500000006
+                },
+                "title": "Demonic Gorillas",
+                "description": null
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'burthorpe_games',
+        full_name: 'Burthorpe Games Room',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos:  {"lat":3.8642546157214084,"lng":355.60546875000006},
+        exits: [
+            {
+                label: 'To Burthorpe',
+                position: {"lat":-29.993002284551064,"lng":356.48437500000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.85276409179798,"lng":295.68054199218756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'brine_rat_cave',
+        full_name: 'Brine Rat Cave',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos:  {"lat":7.710991655433217,"lng":355.4296875},
+        exits: [
+            {
+                label: 'To Outisde Keldagrim Entrance',
+                position: {"lat":-22.268764039073968,"lng":313.41796875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":82.40532803026989,"lng":285.67199707031256},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -9.275622176792098,
+                    "lng": 336.79687500000006
+                },
+                "title": "Brine<br>Rats",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 40.17887331434698,
+                    "lng": 363.69140625000006
+                },
+                "title": "Slippery Walkway",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 21.779905342529645,
+                    "lng": 383.37890625000006
+                },
+                "title": "Ulfrics<br>Chest",
+                "description": null
+            }
+        ],
+        icons: {}
+    },
     {
         machine_name: 'wyvern_cave_0',
         full_name: 'Northern Wyvern Cave',
@@ -140,7 +423,32 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 59.445075099047166,
+                    "lng": 341.54296875000006
+                },
+                "title": "Bandos",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -8.581021215641842,
+                    "lng": 288.45703125000006
+                },
+                "title": "Armadyl",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 23.07973176244989,
+                    "lng": 422.05078125000006
+                },
+                "title": "Zamorak",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -157,7 +465,16 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 39.50404070558415,
+                    "lng": 427.67578125000006
+                },
+                "title": "Zooknock",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -174,7 +491,40 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 23.725011735951796,
+                    "lng": 335.21484375000006
+                },
+                "title": "Nechryaels",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -11.178401873711772,
+                    "lng": 372.65625000000006
+                },
+                "title": "Gargoyles",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 22.43134015636062,
+                    "lng": 373.53515625000006
+                },
+                "title": "Banshees",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -16.804541076383455,
+                    "lng": 336.44531250000006
+                },
+                "title": "Bloodvelds",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {

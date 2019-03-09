@@ -14,7 +14,7 @@
 
 
   &:focus{
-    outline: thin dotted;
+    outline: none;
   }
 }
 
@@ -177,5 +177,36 @@ img {
 
   &:hover{
     filter: brightness(90%);
+  }
+}
+
+.map-label{
+  text-align:center;
+  margin-left:-50%;
+  width:300px !important;
+  height:300px !important;
+  align-content: center;
+  justify-content: center;
+  display: flex !important;
+  flex-direction: column;
+  pointer-events: none;
+  z-index: 400 !important;
+
+  & > p{
+    font-family: 'RuneScape', serif;
+    color:yellow;
+    text-shadow: 1px 1px black;
+    line-height:25px;
+
+  }
+
+  & > p.title{
+    font-size:2.5em;
+
+  }
+
+  & > p.description{
+    font-size:1.5em;
+
   }
 }

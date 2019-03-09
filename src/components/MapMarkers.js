@@ -8,6 +8,7 @@ import LayerLink from "./MarkerTypes/LayerLink";
 import {getDungeonCenter, getDungeonIcons, getDungeonLayer} from "../classes/Dungeons";
 import SurfaceLink from "./MarkerTypes/SurfaceLink";
 import TextPath from "react-leaflet-textpath";
+import LabelMarker from "./MarkerTypes/LabelMarker";
 
 export default class MapMarkers extends Component {
     constructor(props) {
@@ -38,6 +39,11 @@ export default class MapMarkers extends Component {
 
         return (
             <>
+
+                {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ? this.state.current_dungeon_layer.map_labels.map(function (label, i) {
+                    return <LabelMarker key={i} title={label.title} description={label.description} position={label.position} />
+                }) : null}
+
                 {this.state.regions.map(function (region, i) {
                     return <Polygon
                         key={i}
@@ -46,31 +52,13 @@ export default class MapMarkers extends Component {
                     />
                 })}
                 {this.state.dungeons.map(function (dungeon, i) {
-                    return layer === "surface" && !filters[Categories.DUNGEONS] ? null : <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
+                    return layer === "surface" && !filters[Categories.DUNGEONS] ? null :
+                        <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
                 })}
 
                 {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ?
                     <SurfaceLink dungeon={this.state.current_dungeon_layer} handleLayerChange={handleLayerChange}/>
-                 : null}
-
-                {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ? this.state.current_dungeon_layer.map_labels.map(function (label, i) {
-                    return <TextPath
-                        key={i}
-                        positions={label.positions}
-                        text={label.text}
-                        center
-                        below
-                        offset={10}
-                        stroke={false}
-                        attributes={{
-                            'opacity': 1,
-                            'fill': 'yellow',
-                            'font-family': "'RuneScape', serif",
-                            'stroke': 'black',
-                            'font-size': label.fontSize ? label.fontSize : 25
-                        }}
-                    />
-                }) : null}
+                    : null}
 
                 {this.state.icons.agility_shortcuts.map(function (icon, i) {
                     return filters[icon.options.category] ?
