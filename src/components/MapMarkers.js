@@ -9,6 +9,7 @@ import {getDungeonCenter, getDungeonIcons, getDungeonLayer} from "../classes/Dun
 import SurfaceLink from "./MarkerTypes/SurfaceLink";
 import TextPath from "react-leaflet-textpath";
 import LabelMarker from "./MarkerTypes/LabelMarker";
+import QuestMarker from "./MarkerTypes/QuestMarker";
 
 export default class MapMarkers extends Component {
     constructor(props) {
@@ -50,6 +51,7 @@ export default class MapMarkers extends Component {
                         positions={region.points}
                     />
                 })}
+
                 {this.state.dungeons.map(function (dungeon, i) {
                     return layer === "surface" && !filters[Categories.DUNGEONS] ? null :
                         <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
@@ -78,6 +80,14 @@ export default class MapMarkers extends Component {
                         :
                         null;
                 })}
+
+                {this.state.icons.quests.map(function (icon, i) {
+                    return filters[icon.options.category] ?
+                        <QuestMarker key={i} options={icon.options} icon={icon}/>
+                        :
+                        null;
+                })}
+
                 {this.state.icons.point_to_points.map(function (icon, i) {
                     return filters[icon.options.category] ?
                         <div key={i}>

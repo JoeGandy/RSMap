@@ -44,6 +44,7 @@ export const Categories = {
     CARPET_RIDES: 'carpet_ride',
     MINI_GAMES: 'mini_games',
     DUNGEONS: 'dungeons',
+    QUESTS: 'quests',
     OTHER: 'other'
 };
 
@@ -63,6 +64,7 @@ export const Categories_name = {
     [Categories.CARPET_RIDES]: 'Carpet Rides',
     [Categories.MINI_GAMES]: 'Mini-Game Teleports',
     [Categories.DUNGEONS]: 'Dungeons',
+    [Categories.QUESTS]: 'Quests',
     [Categories.OTHER]: 'Other'
 
 };

@@ -81,7 +81,7 @@ export default class Layer extends Component {
     }
 
     handleClick(e) {
-        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
         this.setState({clicked_position: e.latlng});
     }
 

@@ -8,7 +8,8 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 
 ## About
 Built on gatsby and react  
-Planned features (To do before even releasing):
+
+#### Planned features (To do before even releasing):
 - ~All teleport locations~
 - ~Click on boat locations to see where they go~
 - ~Location searcher~
@@ -22,21 +23,19 @@ Planned features (To do before even releasing):
 - Convert coord clues to map coordinates
 - Region highlighting (Area locked ironmen, multi combat)
 
-Issues to fix before going live
-- Going in dungeons above a certain Y axis pans to above the dungeon
+#### Issues to fix before going live
+- ~Going in dungeons above a certain Y axis pans to above the dungeon~
 - Waterbirth dungeon
 - Quest cave under gnome stronhold (no idea of name)
 - Other godwars layers
-- emember filters on refresh (inside deungons)
-- Remember position on refresh (inside dungeons)
-
-Goal features
-- Farm patch info
-- Stores to show what they sell w/ quanitities 
-- Clue scroll locations
-
-### Agility Shortcuts that need mapping
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
 - Log balance over Karamja river, what level?
 
+#### Goal features
+- Farm patch info
+- Stores to show what they sell w/ quanitities 
+- Clue scroll locations
+- Remember filters on refresh (inside deungons)
+- Remember position on refresh (inside dungeons)
+- Show quickest route through dungeons

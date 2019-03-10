@@ -5,6 +5,7 @@ import * as _Teleports from "./IconTypes/Teleports";
 import * as _PointToPoints from "./IconTypes/PointToPoints";
 import * as _AgilityShortcuts from "./IconTypes/AgilityShortcuts";
 import * as _Locations from "./IconTypes/Locations";
+import * as _Quests from "./IconTypes/Quests";
 
 function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
     let R = 6371; // Radius of the earth in km
@@ -104,5 +105,11 @@ export const types = [
         label: 'locations',
         data: _Locations.Locations,
         shown: true
+    },
+    {
+        label: 'quests',
+        data: _Quests.Quests,
+        shown: true
+
     }
 ];

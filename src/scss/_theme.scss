@@ -13,7 +13,7 @@
   cursor: crosshair !important;
 
 
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
@@ -36,7 +36,8 @@
 
     cursor: text !important;
 
-    &:focus{}
+    &:focus {
+    }
   }
 
   .sr-only.rbt-sr-status {
@@ -46,7 +47,7 @@
   .rbt-menu.dropdown-menu.show {
     margin: 0px 25px;
     background: #41382e;
-    width:354px !important;
+    width: 354px !important;
 
     li {
       padding: 5px 10px;
@@ -54,26 +55,26 @@
       border-left: 2px groove #413d38;
       border-right: 2px groove #413d38;
 
-      a{
+      a {
         color: #7e7e7d;
         text-decoration: none;
       }
     }
   }
 
-  .rbt-aux{
+  .rbt-aux {
     position: absolute;
     right: -1px;
     bottom: 22px;
 
-    button{
+    button {
       background-color: #312d29;
       border: none;
       color: white;
       height: 30px;
 
-      .sr-only{
-        display:none;
+      .sr-only {
+        display: none;
       }
     }
   }
@@ -144,12 +145,12 @@ img:not(.text_icon):not(.jewellery):not(.item_icon) {
   -ms-interpolation-mode: nearest-neighbor; /* IE8+                           */
 }
 
-.dev_tools{
-  position:fixed;
-  right:0;
-  bottom:30px;
-  z-index:400;
-  height:400px;
+.dev_tools {
+  position: fixed;
+  right: 0;
+  bottom: 30px;
+  z-index: 400;
+  height: 400px;
 
   & > b {
     color: $text-color;
@@ -166,52 +167,53 @@ img:not(.text_icon):not(.jewellery):not(.item_icon) {
   }
 }
 
-.controls_button{
-  position:fixed;
-  bottom:60px;
-  left:80px;
-  z-index:400;
-  border:none;
+.controls_button {
+  position: fixed;
+  bottom: 60px;
+  left: 80px;
+  z-index: 400;
+  border: none;
   background: url('../../static/ui/blank_button_small.png');
-  background-size:100% 100%;
-  width:calc(35px * 1.5);
-  height:calc(29px * 1.5);
+  background-size: 100% 100%;
+  width: calc(35px * 1.5);
+  height: calc(29px * 1.5);
   font-family: 'RuneScape', serif;
-  color:$text-color;
+  color: $text-color;
   text-shadow: $text-shadow;
 
-  &:hover{
+  &:hover {
     filter: brightness(70%);
   }
 }
+
 @for $i from 0 to 15 {
   .controls_button:nth-of-type(#{$i + 1}) {
-    $offset:  + ' !important';
-    left:140px + (($i - 2) * 60px);
+    $offset: + ' !important';
+    left: 140px + (($i - 2) * 60px);
   }
 }
 
-.toggle_filters{
-  position:fixed;
-  bottom:60px;
-  left:20px;
-  z-index:400;
-  border:none;
+.toggle_filters {
+  position: fixed;
+  bottom: 60px;
+  left: 20px;
+  z-index: 400;
+  border: none;
   background: url('../../static/ui/toggle_filters_button.webp');
-  background-size:100% 100%;
-  width:calc(35px * 1.5);
-  height:calc(29px * 1.5);
+  background-size: 100% 100%;
+  width: calc(35px * 1.5);
+  height: calc(29px * 1.5);
 
-  &:hover{
+  &:hover {
     filter: brightness(70%);
   }
 }
 
-.map-label{
-  text-align:center;
-  margin-left:-50%;
-  width:300px !important;
-  height:300px !important;
+.map-label {
+  text-align: center;
+  margin-left: -50%;
+  width: 300px !important;
+  height: 300px !important;
   align-content: center;
   justify-content: center;
   display: flex !important;
@@ -219,27 +221,59 @@ img:not(.text_icon):not(.jewellery):not(.item_icon) {
   pointer-events: none;
   z-index: 400 !important;
 
-  & > p{
+  & > p {
     font-family: 'RuneScape', serif;
-    color:$text-color;
+    color: $text-color;
     text-shadow: $text-shadow;
-    line-height:25px;
+    line-height: 25px;
 
   }
 
-  & > p.title{
-    font-size:2.5em;
+  & > p.title {
+    font-size: 2.5em;
 
   }
 
-  & > p.description{
-    font-size:1.5em;
+  & > p.description {
+    font-size: 1.5em;
 
   }
 }
 
-.text_icon{
-  max-width:1em;
-  max-height:1em;
+.text_icon {
+  max-width: 1em;
+  max-height: 1em;
 
+}
+
+.quest_popup {
+
+  .leaflet-popup-content {
+    width: 238px !important;
+  }
+
+  h4 {
+    color: $text-color;
+    text-shadow: $text-shadow;
+    font-size: 1.4em;
+  }
+
+  table {
+    margin: 20px;
+    width: 200px;
+
+    thead {
+      border-bottom: 1px solid grey;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    tbody {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+  }
+
+  i{
+    font-style:italic;
+  }
 }
