@@ -10,8 +10,9 @@ export default class OSRSMap extends Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
-            center: {"lat": 76.40881056467734, "lng": 317.13134765625006},
+            center: this.restoreCenter({"lat": 76.40881056467734, "lng": 317.13134765625006}),
             filters: {},
             icons_flat: typeof window !== 'undefined' ? getAllIconsFlat() : [],
             icons: typeof window !== 'undefined' ? rewriteIcons() : [],
@@ -19,7 +20,7 @@ export default class OSRSMap extends Component {
             regions: Regions,
             search_val: null,
             clicked_position: null,
-            layer: 'surface'
+            layer: this.restoreLayer("surface")
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -28,6 +29,14 @@ export default class OSRSMap extends Component {
         this.updateFilters = this.updateFilters.bind(this);
         this.searchSelect = this.searchSelect.bind(this);
         this.handleLayerChange = this.handleLayerChange.bind(this);
+    }
+
+    restoreLayer(default_layer) {
+        return localStorage.getItem('layer') !== null ? localStorage.getItem('layer') : default_layer;
+    }
+
+    restoreCenter(default_center) {
+        return localStorage.getItem('center') !== null ? JSON.parse(localStorage.getItem('center')) : default_center;
     }
 
     handleZoomEnd() {
@@ -81,14 +90,14 @@ export default class OSRSMap extends Component {
         if (typeof window !== 'undefined') {
             if(this.state.layer === "surface") {
                 return (
-                    <Layer handleLayerChange={this.handleLayerChange} layer={'surface'}
-                           regions={this.state.regions} surface={true} minZoom={1} maxZoom={9} defaultZoom={6}
+                    <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
+                           regions={this.state.regions} surface={true} minZoom={2} maxZoom={9} defaultZoom={6}
                            center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
                 )
             }else{
                 return (
                     <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
-                           regions={this.state.regions} surface={false} minZoom={1} maxZoom={4} defaultZoom={3}
+                           regions={this.state.regions} surface={false} minZoom={1} maxZoom={4} defaultZoom={6}
                            center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
                 )
             }

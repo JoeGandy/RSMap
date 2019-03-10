@@ -14,6 +14,7 @@ export default class Layer extends Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
             line: null,
             filters: {},
@@ -24,7 +25,7 @@ export default class Layer extends Component {
             layer: this.props.layer,
             layer_url: this.props.surface ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer + "/",
             zoomLevel: this.props.defaultZoom,
-            center: this.props.center,
+            center: this.props.center
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -33,6 +34,7 @@ export default class Layer extends Component {
         this.updateFilters = this.updateFilters.bind(this);
         this.searchSelect = this.searchSelect.bind(this);
         this.backToSurface = this.backToSurface.bind(this);
+        this.onViewportChanged = this.onViewportChanged.bind(this);
     }
 
     handleZoomEnd() {
@@ -43,13 +45,18 @@ export default class Layer extends Component {
 
     searchSelect(results) {
         if (typeof (results[0]) !== "undefined") {
+            let target_position = null;
+
             if (results[0].position) {
-                this.centerMap(results[0].position);
+                target_position = results[0].position;
             } else if (results[0].positions && results[0].positions.length > 0) {
-                this.centerMap(results[0].positions[0]);
+                target_position = results[0].positions[0];
             } else {
-                this.centerMap(results[0].stops[0]);
+                target_position = results[0].stops[0];
             }
+
+            this.centerMap(target_position);
+            localStorage.setItem('center', JSON.stringify(target_position));
         }
     }
 
@@ -80,6 +87,14 @@ export default class Layer extends Component {
         this.setState({filters: filters});
     }
 
+    onViewportChanged(viewport) {
+        //Only do this on surface for now, there is an issue with the zoom level changes when saving dungeon spots
+        if (this.props.layer === 'surface') {
+            localStorage.setItem('center', JSON.stringify(viewport.center));
+            localStorage.setItem('layer', this.props.layer);
+        }
+    }
+
     render() {
         return (
             <>
@@ -93,6 +108,7 @@ export default class Layer extends Component {
                     minZoom={this.props.minZoom}
                     onClick={this.handleClick}
                     onZoomEnd={this.handleZoomEnd}
+                    onViewportChanged={this.onViewportChanged}
                     keyboardPanDelta={600}
                 >
                     <TileLayer
