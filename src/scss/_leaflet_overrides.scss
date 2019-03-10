@@ -88,3 +88,7 @@
      bottom: -6px;
  }
 }
+
+img.leaflet-marker-icon {
+  z-index: 999 !important;
+}

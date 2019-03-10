@@ -80,13 +80,13 @@ export const Dungeons = [
         machine_name: 'under_heros_guild',
         full_name: 'Heros\'s Guild Basement',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":11.523087506868514,"lng":364.39453125000006},
+        center_pos: {"lat": 11.523087506868514, "lng": 364.39453125000006},
         exits: [
             {
                 label: 'To Hero\'s Guild',
-                position: {"lat":19.476950206488414,"lng":328.53515625},
+                position: {"lat": 19.476950206488414, "lng": 328.53515625},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.18246078688743,"lng":295.21362304687506},
+                target_layer_position: {"lat": 80.18246078688743, "lng": 295.21362304687506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -113,7 +113,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":11.350796722383672,"lng":338.81835937500006},
+                    position: {"lat": 11.350796722383672, "lng": 338.81835937500006},
                     title: "Agility Shortcut",
                     description: "Squeeze (67 Agility)\nHard Falador Diary Required",
                     category: Categories.AGILITY_SHORTCUT
@@ -121,7 +121,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":2.8113711933311403,"lng":359.912109375},
+                    position: {"lat": 2.8113711933311403, "lng": 359.912109375},
                     title: "Agility Shortcut",
                     description: "Squeeze (67 Agility)\nHard Falador Diary Required",
                     category: Categories.AGILITY_SHORTCUT
@@ -133,13 +133,13 @@ export const Dungeons = [
         machine_name: 'waterfall_quest_grave_cave',
         full_name: 'Glarials Grave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":17.811456088564483,"lng":368.87695312500006},
+        center_pos: {"lat": 17.811456088564483, "lng": 368.87695312500006},
         exits: [
             {
                 label: 'To Kandarin',
-                position: {"lat":20.797201434307,"lng":385.48828125000006},
+                position: {"lat": 20.797201434307, "lng": 385.48828125000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":79.45048902237734,"lng":273.22998046875006},
+                target_layer_position: {"lat": 79.45048902237734, "lng": 273.22998046875006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -167,13 +167,13 @@ export const Dungeons = [
         machine_name: 'rogues_den_1',
         full_name: 'Rogues Den',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":-61.43876749368282,"lng":416.25},
+        center_pos: {"lat": -61.43876749368282, "lng": 416.25},
         exits: [
             {
                 label: 'To Burthorpe',
-                position: {"lat":-52.26815737376817,"lng":431.19140625},
+                position: {"lat": -52.26815737376817, "lng": 431.19140625},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.50764272721774,"lng":296.40563964843756},
+                target_layer_position: {"lat": 80.50764272721774, "lng": 296.40563964843756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -184,13 +184,13 @@ export const Dungeons = [
         machine_name: 'deep_wilderness_dungeon',
         full_name: 'Deep wilderness Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":1.6696855009865839,"lng":355.4296875},
+        center_pos: {"lat": 1.6696855009865839, "lng": 355.4296875},
         exits: [
             {
                 label: 'To Level 51 Wilderness',
-                position: {"lat":-4.214943141390639,"lng":362.197265625},
+                position: {"lat": -4.214943141390639, "lng": 362.197265625},
                 target_layer: "surface",
-                target_layer_position: {"lat":83.9143827432742,"lng":305.30456542968756},
+                target_layer_position: {"lat": 83.9143827432742, "lng": 305.30456542968756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -233,7 +233,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":2.986927393334876,"lng":365.53710937500006},
+                    position: {"lat": 2.986927393334876, "lng": 365.53710937500006},
                     title: "Agility Shortcut",
                     description: "Squeeze (46 Agility)\nMedium Wilderness Diary Required",
                     category: Categories.AGILITY_SHORTCUT
@@ -241,7 +241,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":14.00869637063467,"lng":368.34960937500006},
+                    position: {"lat": 14.00869637063467, "lng": 368.34960937500006},
                     title: "Agility Shortcut",
                     description: "Squeeze (46 Agility)\nMedium Wilderness Diary Required",
                     category: Categories.AGILITY_SHORTCUT
@@ -253,13 +253,13 @@ export const Dungeons = [
         machine_name: 'crashsite_cavern_mm2',
         full_name: 'Crash Site Cavern',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos:  {"lat":2.986927393334876,"lng":367.03125},
+        center_pos: {"lat": 2.986927393334876, "lng": 367.03125},
         exits: [
             {
                 label: 'To Crash Site',
-                position: {"lat":-21.453068633086772,"lng":380.21484375000006},
+                position: {"lat": -21.453068633086772, "lng": 380.21484375000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.66309016264354,"lng":266.62719726562506},
+                target_layer_position: {"lat": 80.66309016264354, "lng": 266.62719726562506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -303,13 +303,13 @@ export const Dungeons = [
         machine_name: 'burthorpe_games',
         full_name: 'Burthorpe Games Room',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos:  {"lat":3.8642546157214084,"lng":355.60546875000006},
+        center_pos: {"lat": 3.8642546157214084, "lng": 355.60546875000006},
         exits: [
             {
                 label: 'To Burthorpe',
-                position: {"lat":-29.993002284551064,"lng":356.48437500000006},
+                position: {"lat": -29.993002284551064, "lng": 356.48437500000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.85276409179798,"lng":295.68054199218756},
+                target_layer_position: {"lat": 80.85276409179798, "lng": 295.68054199218756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -320,13 +320,13 @@ export const Dungeons = [
         machine_name: 'brine_rat_cave',
         full_name: 'Brine Rat Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos:  {"lat":7.710991655433217,"lng":355.4296875},
+        center_pos: {"lat": 7.710991655433217, "lng": 355.4296875},
         exits: [
             {
                 label: 'To Outisde Keldagrim Entrance',
-                position: {"lat":-22.268764039073968,"lng":313.41796875000006},
+                position: {"lat": -22.268764039073968, "lng": 313.41796875000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.40532803026989,"lng":285.67199707031256},
+                target_layer_position: {"lat": 82.40532803026989, "lng": 285.67199707031256},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -362,13 +362,13 @@ export const Dungeons = [
         machine_name: 'wyvern_cave_0',
         full_name: 'Northern Wyvern Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos:  {"lat":3.337953961416485,"lng":354.55078125000006},
+        center_pos: {"lat": 3.337953961416485, "lng": 354.55078125000006},
         exits: [
             {
                 label: 'To South of Museum Camp',
-                position: {"lat":30.751277776257812,"lng":327.04101562500006},
+                position: {"lat": 30.751277776257812, "lng": 327.04101562500006},
                 target_layer: "surface",
-                target_layer_position: {"lat":83.40572190675073,"lng":347.03613281250006},
+                target_layer_position: {"lat": 83.40572190675073, "lng": 347.03613281250006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -379,13 +379,13 @@ export const Dungeons = [
         machine_name: 'wyvern_cave_1',
         full_name: 'Southern Wyvern Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos:  {"lat":7.536764322084078,"lng":350.595703125},
+        center_pos: {"lat": 7.536764322084078, "lng": 350.595703125},
         exits: [
             {
                 label: 'To South of Museum Camp',
-                position: {"lat":23.644524198573688,"lng":333.98437500000006},
+                position: {"lat": 23.644524198573688, "lng": 333.98437500000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.81226116602144,"lng":351.5130615234375},
+                target_layer_position: {"lat": 82.81226116602144, "lng": 351.5130615234375},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -396,13 +396,13 @@ export const Dungeons = [
         machine_name: 'lunar_isle_cave',
         full_name: 'Lunar Isle Mine',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":-5.703447982149503,"lng":370.89843750000006},
+        center_pos: {"lat": -3.864254615721396, "lng": 368.08593750000006},
         exits: [
             {
                 label: 'To Lunar Isle (North)',
-                position: {"lat":17.22475820662464,"lng":359.82421875},
+                position: {"lat": 17.22475820662464, "lng": 359.82421875},
                 target_layer: "surface",
-                target_layer_position: {"lat":84.05256097843038,"lng":245.78063964843753},
+                target_layer_position: {"lat": 84.05256097843038, "lng": 245.78063964843753},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -413,13 +413,13 @@ export const Dungeons = [
         machine_name: 'god_wars_2',
         full_name: 'God Wars Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":3.5134210456400448,"lng":359.12109375000006},
+        center_pos: {"lat": 3.5134210456400448, "lng": 359.12109375000006},
         exits: [
             {
                 label: 'To Trollheim',
-                position: {"lat":3.5134210456400448,"lng":359.12109375000006},
+                position: {"lat": 3.5134210456400448, "lng": 359.12109375000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.53525334884758,"lng":296.93847656250006},
+                target_layer_position: {"lat": 82.53525334884758, "lng": 296.93847656250006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -455,13 +455,13 @@ export const Dungeons = [
         machine_name: 'ape_atol_dungeon',
         full_name: 'Ape Atol Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":1.4061088354351594,"lng":360.87890625000006},
+        center_pos: {"lat": 1.4061088354351594, "lng": 360.87890625000006},
         exits: [
             {
                 label: 'To Ape Atol',
-                position: {"lat":-18.646245142670608,"lng":367.20703125},
+                position: {"lat": -18.646245142670608, "lng": 367.20703125},
                 target_layer: "surface",
-                target_layer_position: {"lat":65.55845978217837,"lng":286.71020507812506},
+                target_layer_position: {"lat": 65.55845978217837, "lng": 286.71020507812506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -481,13 +481,13 @@ export const Dungeons = [
         machine_name: 'slayer_tower_basement',
         full_name: 'Slayer Tower Basement',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":4.390228926463396,"lng":355.78125000000006},
+        center_pos: {"lat": 4.390228926463396, "lng": 355.78125000000006},
         exits: [
             {
                 label: 'To Slayer Tower',
-                position: {"lat":4.390228926463396,"lng":355.78125000000006},
+                position: {"lat": 4.390228926463396, "lng": 355.78125000000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.49222985736196,"lng":329.83154296875006},
+                target_layer_position: {"lat": 80.49222985736196, "lng": 329.83154296875006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -531,13 +531,13 @@ export const Dungeons = [
         machine_name: 'tolnas_rift',
         full_name: 'Tolna\'s Rift',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":2.8113711933311403,"lng":358.24218750000006},
+        center_pos: {"lat": 2.8113711933311403, "lng": 358.24218750000006},
         exits: [
             {
                 label: 'To East of Varrock',
-                position: {"lat":2.8113711933311403,"lng":358.24218750000006},
+                position: {"lat": 2.8113711933311403, "lng": 358.24218750000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":79.52065743513272,"lng":322.71240234375006},
+                target_layer_position: {"lat": 79.52065743513272, "lng": 322.71240234375006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -548,13 +548,13 @@ export const Dungeons = [
         machine_name: 'quidamortem_cave',
         full_name: 'Quidamortem Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":8.407168163601076,"lng":352.26562500000006},
+        center_pos: {"lat": 8.407168163601076, "lng": 352.26562500000006},
         exits: [
             {
                 label: 'To West of Mount Quidamortem',
-                position: {"lat":31.653381399664,"lng":334.68750000000006},
+                position: {"lat": 31.653381399664, "lng": 334.68750000000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.74825879312192,"lng":184.60327148437503},
+                target_layer_position: {"lat": 80.74825879312192, "lng": 184.60327148437503},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -565,34 +565,34 @@ export const Dungeons = [
         machine_name: 'lizard_man_temple_0',
         full_name: 'Lizardman Temple',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":1.9332268264771233,"lng":353.32031250000006},
+        center_pos: {"lat": 1.9332268264771233, "lng": 353.32031250000006},
         exits: [
             {
                 label: 'To Molch',
-                position: {"lat":13.581920900545857,"lng":357.1875},
+                position: {"lat": 13.581920900545857, "lng": 357.1875},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.00458612683333,"lng":191.06323242187503},
+                target_layer_position: {"lat": 82.00458612683333, "lng": 191.06323242187503},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Molch',
-                position: {"lat":-10.141931686131018,"lng":382.85156250000006},
+                position: {"lat": -10.141931686131018, "lng": 382.85156250000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":81.84486042070492,"lng":192.24426269531253},
+                target_layer_position: {"lat": 81.84486042070492, "lng": 192.24426269531253},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Molch',
-                position: {"lat":-17.978733095556155,"lng":360.52734375000006},
+                position: {"lat": -17.978733095556155, "lng": 360.52734375000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":81.79013295997048,"lng":191.18957519531253},
+                target_layer_position: {"lat": 81.79013295997048, "lng": 191.18957519531253},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Molch',
-                position: {"lat":-25.16517336866393,"lng":329.41406250000006},
+                position: {"lat": -25.16517336866393, "lng": 329.41406250000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":81.73188157750073,"lng":189.73937988281253},
+                target_layer_position: {"lat": 81.73188157750073, "lng": 189.73937988281253},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -603,13 +603,13 @@ export const Dungeons = [
         machine_name: 'lizard_caves',
         full_name: 'Lizardman Caves',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":4.390228926463396,"lng":351.91406250000006},
+        center_pos: {"lat": 4.390228926463396, "lng": 351.91406250000006},
         exits: [
             {
                 label: 'To Lizardman Settlement',
-                position: {"lat":22.755920681486405,"lng":347.6953125},
+                position: {"lat": 22.755920681486405, "lng": 347.6953125},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.90761572909896,"lng":190.7391357421875},
+                target_layer_position: {"lat": 80.90761572909896, "lng": 190.7391357421875},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -620,51 +620,150 @@ export const Dungeons = [
         machine_name: 'karuulm_slayer_dungeon_2',
         full_name: 'Karuulm Slayer Dungeon (Upper Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":-14.774882506516272,"lng":363.86718750000006},
+        center_pos: {"lat": -14.774882506516272, "lng": 363.86718750000006},
         exits: [
             {
                 label: 'To Karuulm Slayer Dungeon (Middle Level)',
-                position: {"lat":-32.69486597787506,"lng":363.33984375000006},
+                position: {"lat": -32.69486597787506, "lng": 363.33984375000006},
                 target_layer: "karuulm_slayer_dungeon_1",
-                target_layer_position: {"lat":-33.137551192346145,"lng":362.28515625},
+                target_layer_position: {"lat": -33.137551192346145, "lng": 362.28515625},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -6.664607562172573,
+                    "lng": 309.90234375000006
+                },
+                "title": "Fire<br>Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -15.114552871944102,
+                    "lng": 400.95703125000006
+                },
+                "title": "Hellhounds",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
         machine_name: 'karuulm_slayer_dungeon_1',
         full_name: 'Karuulm Slayer Dungeon (Middle Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":-13.410994034321702,"lng":365.62500000000006},
+        center_pos: {"lat": -13.410994034321702, "lng": 365.62500000000006},
         exits: [
             {
                 label: 'To Karuulm Slayer Dungeon (Lower Level)',
-                position: {"lat":-10.31491928581316,"lng":386.54296875000006},
+                position: {"lat": -10.31491928581316, "lng": 386.54296875000006},
                 target_layer: "karuulm_slayer_dungeon_0",
-                target_layer_position: {"lat":-10.141931686131018,"lng":382.85156250000006},
+                target_layer_position: {"lat": -10.141931686131018, "lng": 382.85156250000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 37.71859032558816,
+                    "lng": 355.95703125000006
+                },
+                "title": "Drakes",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 35.60371874069731,
+                    "lng": 405.17578125000006
+                },
+                "title": "Drakes<br>Task Only",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -39.90973623453719,
+                    "lng": 386.36718750000006
+                },
+                "title": "Sulphur<br>Lizards",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -9.275622176792098,
+                    "lng": 309.72656250000006
+                },
+                "title": "Greater<br>Demons",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
         machine_name: 'karuulm_slayer_dungeon_0',
         full_name: 'Karuulm Slayer Dungeon (Lower Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":-6.489983332670651,"lng":361.93359375000006},
+        center_pos: {"lat": -6.489983332670651, "lng": 361.93359375000006},
         exits: [
             {
                 label: 'To Mount Karuulm',
-                position: {"lat":-34.30714385628803,"lng":357.1875},
+                position: {"lat": -34.30714385628803, "lng": 357.1875},
                 target_layer: "surface",
-                target_layer_position: {"lat":83.0412092472449,"lng":190.8599853515625},
+                target_layer_position: {"lat": 83.0412092472449, "lng": 190.8599853515625},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 61.270232790000634,
+                    "lng": 432.77343750000006
+                },
+                "title": "Alchemical<br>Hydra",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 60.23981116999893,
+                    "lng": 356.48437500000006
+                },
+                "title": "Hydra Task Only",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 35.17380831799959,
+                    "lng": 352.6171875
+                },
+                "title": "Hydras",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -9.79567758282973,
+                    "lng": 355.78125000000006
+                },
+                "title": "Tasakaal",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -33.137551192346145,
+                    "lng": 300.23437500000006
+                },
+                "title": "Wyverns",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -61.10078883158897,
+                    "lng": 285.46875000000006
+                },
+                "title": "Wyverns<br>Task Only",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -749,7 +848,16 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 8.233237111274565,
+                    "lng": 351.38671875000006
+                },
+                "title": "Jogres",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -766,7 +874,16 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 0.7031073524364909,
+                    "lng": 343.125
+                },
+                "title": "Queen's Chamber",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -783,7 +900,32 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -10.31491928581316,
+                    "lng": 323.78906250000006
+                },
+                "title": "Guardians",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -1.0546279422758742,
+                    "lng": 386.89453125
+                },
+                "title": "Guardians",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 37.16031654673677,
+                    "lng": 380.21484375000006
+                },
+                "title": "Workers",
+                "description": null
+            }
+        ],
         icons: {
             agility_shortcuts: [
                 {
@@ -801,7 +943,7 @@ export const Dungeons = [
         machine_name: 'fremennik_slayer_dungeon',
         full_name: 'Fremennik Slayer Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":-1.4061088354351594,"lng":356.30859375000006},
+        center_pos: {"lat": -1.4061088354351594, "lng": 356.30859375000006},
         exits: [
             {
                 label: 'To Golden Apple Tree',
@@ -811,7 +953,72 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -22.268764039073968,
+                    "lng": 406.05468750000006
+                },
+                "title": "Cave Crawlers",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 6.664607562172573,
+                    "lng": 422.22656250000006
+                },
+                "title": "Rock Slugs",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 29.53522956294847,
+                    "lng": 410.27343750000006
+                },
+                "title": "Cockatrice",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -10.487811882056683,
+                    "lng": 367.734375
+                },
+                "title": "Pyrefiends",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -3.864254615721396,
+                    "lng": 341.36718750000006
+                },
+                "title": "Basilisks",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 20.96143961409684,
+                    "lng": 288.98437500000006
+                },
+                "title": "Jellies",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -11.867350911459308,
+                    "lng": 313.59375000000006
+                },
+                "title": "Turoth",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -19.31114335506464,
+                    "lng": 281.60156250000006
+                },
+                "title": "Kurask",
+                "description": null
+            }
+        ],
         icons: {
             agility_shortcuts: [
                 {
@@ -864,7 +1071,48 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -53.12040528310657,
+                    "lng": 324.14062500000006
+                },
+                "title": "Dwarves",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -54.77534585936448,
+                    "lng": 388.12500000000006
+                },
+                "title": "Iban's<br>Tomb",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 3.8642546157214084,
+                    "lng": 350.5078125
+                },
+                "title": "Souless",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 55.7765730186677,
+                    "lng": 378.28125000000006
+                },
+                "title": "Blessed<br>Spiders",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 64.62387720204691,
+                    "lng": 386.36718750000006
+                },
+                "title": "Kalrag",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -905,7 +1153,32 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 35.02999636902566,
+                    "lng": 321.50390625000006
+                },
+                "title": "Well",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 37.30027528134433,
+                    "lng": 390.93750000000006
+                },
+                "title": "Sir Carl<br>Sir Harry<br>Sir Jerro",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 19.145168196205297,
+                    "lng": 353.67187500000006
+                },
+                "title": "Zombies",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -922,7 +1195,48 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -20.632784250388028,
+                    "lng": 359.82421875
+                },
+                "title": "Skeletons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -3.688855143147035,
+                    "lng": 325.19531250000006
+                },
+                "title": "50 Thieving<br>Shortcut",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 16.46769474828897,
+                    "lng": 342.94921875
+                },
+                "title": "Agility Maze",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 30.600093873550072,
+                    "lng": 319.92187500000006
+                },
+                "title": "Narrow<br>Ledge",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 40.979898069620155,
+                    "lng": 346.64062500000006
+                },
+                "title": "Dig Patch",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -939,7 +1253,88 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 0.3515602939922709,
+                    "lng": 284.94140625000006
+                },
+                "title": "Ogres",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -5.44102230371796,
+                    "lng": 303.22265625000006
+                },
+                "title": "Blessed<br>Spiders",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -10.660607953624762,
+                    "lng": 355.078125
+                },
+                "title": "Wall Traps",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -1.9332268264771106,
+                    "lng": 376.52343750000006
+                },
+                "title": "Furnace",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -7.885147283424331,
+                    "lng": 397.08984375000006
+                },
+                "title": "Grid<br>Puzzle",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 20.632784250388028,
+                    "lng": 388.12500000000006
+                },
+                "title": "Rope Swing",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 21.289374355860424,
+                    "lng": 413.08593750000006
+                },
+                "title": "Giant Bats",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 13.239945499286312,
+                    "lng": 350.85937500000006
+                },
+                "title": "Blessed<br>Spiders",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 39.774769485295465,
+                    "lng": 348.22265625000006
+                },
+                "title": "Goblins",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 38.685509760012025,
+                    "lng": 375.46875000000006
+                },
+                "title": "Koftik",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -970,7 +1365,32 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 20.96143961409684,
+                    "lng": 355.25390625
+                },
+                "title": "Secret Wall",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 24.367113562651276,
+                    "lng": 396.03515625000006
+                },
+                "title": "Hideout",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -7.362466865535738,
+                    "lng": 370.37109375000006
+                },
+                "title": "Poison<br>Spider",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -987,7 +1407,32 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 37.43997405227057,
+                    "lng": 320.62500000000006
+                },
+                "title": "Crate<br>Room",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 40.713955826286046,
+                    "lng": 343.82812500000006
+                },
+                "title": "Goblin<br>Temple",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 22.917922936146045,
+                    "lng": 392.34375000000006
+                },
+                "title": "Slagilith and<br>Bouncer",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1028,7 +1473,48 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 40.17887331434698,
+                    "lng": 328.00781250000006
+                },
+                "title": "Rope Swing",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 26.115985925333536,
+                    "lng": 333.28125000000006
+                },
+                "title": "Plank to avoid damage",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 33.7243396617476,
+                    "lng": 388.82812500000006
+                },
+                "title": "Sea Snake Hatchling",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 11.523087506868514,
+                    "lng": 406.05468750000006
+                },
+                "title": "Sea<br>Snake<br>Young",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 23.241346102386135,
+                    "lng": 435.58593750000006
+                },
+                "title": "Giant<br>Sea Snake",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1045,7 +1531,24 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 22.43134015636062,
+                    "lng": 333.98437500000006
+                },
+                "title": "Ice Trolls",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 24.686952411999155,
+                    "lng": 380.21484375000006
+                },
+                "title": "Ice Trolls",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1062,7 +1565,24 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 28.459033019728068,
+                    "lng": 351.73828125000006
+                },
+                "title": "Evil Chicken's Nest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -14.774882506516272,
+                    "lng": 348.92578125000006
+                },
+                "title": "Black<br>Dragons",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1079,7 +1599,40 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -22.105998799750566,
+                    "lng": 378.80859375000006
+                },
+                "title": "Bandos",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -19.31114335506464,
+                    "lng": 339.78515625000006
+                },
+                "title": "Saradormin",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 5.965753671065536,
+                    "lng": 364.74609375
+                },
+                "title": "Zamorak",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 26.745610382199022,
+                    "lng": 330.99609375
+                },
+                "title": "Armadyl",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1124,83 +1677,108 @@ export const Dungeons = [
         exits: [
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":58.53959476664049,"lng":357.36328125},
+                position: {"lat": 58.53959476664049, "lng": 357.36328125},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":57.326521225217064,"lng":356.48437500000006},
+                target_layer_position: {"lat": 57.326521225217064, "lng": 356.48437500000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":46.437856895024204,"lng":369.31640625000006},
+                position: {"lat": 46.437856895024204, "lng": 369.31640625000006},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":45.706179285330855,"lng":368.43750000000006},
+                target_layer_position: {"lat": 45.706179285330855, "lng": 368.43750000000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":24.5271348225978,"lng":332.05078125000006},
+                position: {"lat": 24.5271348225978, "lng": 332.05078125000006},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":24.686952411999155,"lng":331.69921875000006},
+                target_layer_position: {"lat": 24.686952411999155, "lng": 331.69921875000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":-3.162455530237848,"lng":374.58984375},
+                position: {"lat": -3.162455530237848, "lng": 374.58984375},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":-3.864254615721396,"lng":373.18359375000006},
+                target_layer_position: {"lat": -3.864254615721396, "lng": 373.18359375000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":-5.9657536710655235,"lng":331.17187500000006},
+                position: {"lat": -5.9657536710655235, "lng": 331.17187500000006},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":-5.44102230371796,"lng":331.52343750000006},
+                target_layer_position: {"lat": -5.44102230371796, "lng": 331.52343750000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":-11.350796722383672,"lng":370.01953125},
+                position: {"lat": -11.350796722383672, "lng": 370.01953125},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":-13.068776734357694,"lng":368.96484375000006},
+                target_layer_position: {"lat": -13.068776734357694, "lng": 368.96484375000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":-21.12549763660628,"lng":342.59765625},
+                position: {"lat": -21.12549763660628, "lng": 342.59765625},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":-21.616579336740603,"lng":342.94921875},
+                target_layer_position: {"lat": -21.616579336740603, "lng": 342.94921875},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":-23.40276490540795,"lng":361.75781250000006},
+                position: {"lat": -23.40276490540795, "lng": 361.75781250000006},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":-24.206889622398023,"lng":361.75781250000006},
+                target_layer_position: {"lat": -24.206889622398023, "lng": 361.75781250000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":-36.738884124394296,"lng":347.51953125},
+                position: {"lat": -36.738884124394296, "lng": 347.51953125},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":-37.020098201368114,"lng":347.87109375},
+                target_layer_position: {"lat": -37.020098201368114, "lng": 347.87109375},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":-45.460130637921,"lng":359.6484375},
+                position: {"lat": -45.460130637921, "lng": 359.6484375},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":-46.195042108660154,"lng":359.47265625000006},
+                target_layer_position: {"lat": -46.195042108660154, "lng": 359.47265625000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Dorgeshkhaan',
-                position: {"lat":-58.44773280389084,"lng":360.70312500000006},
+                position: {"lat": -58.44773280389084, "lng": 360.70312500000006},
                 target_layer: "dorgesh-kaan",
-                target_layer_position: {"lat":-58.63121664342478,"lng":360.87890625000006},
+                target_layer_position: {"lat": -58.63121664342478, "lng": 360.87890625000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 64.32087157990325,
+                    "lng": 348.92578125000006
+                },
+                "title": "Council<br>Chamber",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 63.23362741232569,
+                    "lng": 380.74218750000006
+                },
+                "title": "Ur-tag",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 38.685509760012025,
+                    "lng": 389.1796875
+                },
+                "title": "Nursery",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1217,7 +1795,72 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 64.01449619484472,
+                    "lng": 331.87500000000006
+                },
+                "title": "Oldak's<br>Teleportation<br>Laboratory",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 47.754097979680026,
+                    "lng": 343.82812500000006
+                },
+                "title": "Ur-sek &<br>Ur-taal",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 44.59046718130883,
+                    "lng": 392.69531250000006
+                },
+                "title": "Tegdak",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 31.353636941500987,
+                    "lng": 359.6484375
+                },
+                "title": "Ur-vass",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 12.211180191503997,
+                    "lng": 352.96875
+                },
+                "title": "Market",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 11.178401873711785,
+                    "lng": 323.08593750000006
+                },
+                "title": "Bone<br>Collector",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -7.710991655433217,
+                    "lng": 315.70312500000006
+                },
+                "title": "Ur-meg",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -45.82879925192133,
+                    "lng": 345.93750000000006
+                },
+                "title": "Wire<br>Machine",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1258,14 +1901,39 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 0,
+                    "lng": 333.28125000000006
+                },
+                "title": "Doug Deeping",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 16.97274101999902,
+                    "lng": 352.08984375000006
+                },
+                "title": "Arcenia<br>Root",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -12.382928338487396,
+                    "lng": 367.03125
+                },
+                "title": "Skeletons",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
         machine_name: 'kraken_cave',
         full_name: 'Kraken Cove',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":0.3515602939922709,"lng":356.83593750000006},
+        center_pos: {"lat": 0.3515602939922709, "lng": 356.83593750000006},
         exits: [
             {
                 label: 'To South West of Fishing Colony',
@@ -1275,7 +1943,40 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -8.754794702435618,
+                    "lng": 354.55078125000006
+                },
+                "title": "Cave<br>Kraken",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -28.76765910569124,
+                    "lng": 330.82031250000006
+                },
+                "title": "Waterfiends",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -32.546813173515154,
+                    "lng": 373.18359375000006
+                },
+                "title": "Waterfiends",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 33.43144133557529,
+                    "lng": 367.3828125
+                },
+                "title": "Kraken<br>Boss",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1306,7 +2007,16 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 29.22889003019423,
+                    "lng": 370.01953125
+                },
+                "title": "Ice Queen",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1340,7 +2050,40 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 20.632784250388028,
+                    "lng": 368.08593750000006
+                },
+                "title": "Mossy<br>Rock",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 37.71859032558816,
+                    "lng": 392.69531250000006
+                },
+                "title": "Furnace",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -15.623036831528252,
+                    "lng": 387.59765625000006
+                },
+                "title": "Shimmering<br>Field",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -28.92163128242129,
+                    "lng": 374.4140625
+                },
+                "title": "Lesser Demons",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1357,7 +2100,56 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 39.774769485295465,
+                    "lng": 374.58984375
+                },
+                "title": "Bookcase",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 30.90222470517144,
+                    "lng": 397.61718750000006
+                },
+                "title": "Old<br>Gate",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -20.96143961409684,
+                    "lng": 367.03125
+                },
+                "title": "Jagged<br>Wall",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -4.740675384778361,
+                    "lng": 347.51953125
+                },
+                "title": "Marked<br>Wall",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 8.059229627200192,
+                    "lng": 321.15234375
+                },
+                "title": "Old Gate",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 30.600093873550072,
+                    "lng": 317.63671875000006
+                },
+                "title": "Winch",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1408,7 +2200,64 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 32.694865977875075,
+                    "lng": 304.27734375000006
+                },
+                "title": "Dust Devils",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -2.284550660236957,
+                    "lng": 334.33593750000006
+                },
+                "title": "Burnt<br>Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 7.885147283424331,
+                    "lng": 428.20312500000006
+                },
+                "title": "Fareed",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -22.59372606392931,
+                    "lng": 286.87500000000006
+                },
+                "title": "Dust Devils",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 20.138470312451155,
+                    "lng": 378.45703125000006
+                },
+                "title": "Pyrefiends",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -18.81271785640776,
+                    "lng": 381.26953125000006
+                },
+                "title": "Pyrefiends",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -20.138470312451155,
+                    "lng": 332.75390625000006
+                },
+                "title": "Fire<br>Giants",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1425,7 +2274,48 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 28.92163128242129,
+                    "lng": 352.26562500000006
+                },
+                "title": "Soldiers",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 13.581920900545857,
+                    "lng": 305.85937500000006
+                },
+                "title": "Workers",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -8.059229627200192,
+                    "lng": 375.11718750000006
+                },
+                "title": "Workers",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -34.88593094075316,
+                    "lng": 300.23437500000006
+                },
+                "title": "Guardians",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -36.879620605026766,
+                    "lng": 370.89843750000006
+                },
+                "title": "Soldiers",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1456,7 +2346,32 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 44.08758502824518,
+                    "lng": 378.98437500000006
+                },
+                "title": "Cave Horrors",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 59.712097173322924,
+                    "lng": 323.43750000000006
+                },
+                "title": "Cave Horrors",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 27.371767300523047,
+                    "lng": 305.85937500000006
+                },
+                "title": "Cave Horrors",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1643,7 +2558,40 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 29.84064389983441,
+                    "lng": 325.54687500000006
+                },
+                "title": "Earth<br>Elementals",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 32.10118973232094,
+                    "lng": 355.95703125000006
+                },
+                "title": "Water<br>Elementals",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 10.833305983642491,
+                    "lng": 380.21484375000006
+                },
+                "title": "Air<br>Elementals",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -12.554563528593656,
+                    "lng": 352.6171875
+                },
+                "title": "Fire<br>Elementals",
+                "description": null
+            }
+        ],
         icons: {}
 
 
@@ -1679,7 +2627,16 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 13.410994034321702,
+                    "lng": 360.52734375000006
+                },
+                "title": "Mind<br>Room",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1794,7 +2751,24 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 18.812717856407776,
+                    "lng": 325.89843750000006
+                },
+                "title": "Thermonuclear<br>Smoke Devil",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 3.6888551431470478,
+                    "lng": 380.91796875000006
+                },
+                "title": "Smoke Devils",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1818,7 +2792,48 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 10.833305983642491,
+                    "lng": 313.41796875000006
+                },
+                "title": "Sinister<br>Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 35.746512259918504,
+                    "lng": 330.99609375
+                },
+                "title": "Bats",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -1.7575368113083125,
+                    "lng": 346.11328125000006
+                },
+                "title": "Chaos Druid Warriors",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -20.138470312451155,
+                    "lng": 386.89453125
+                },
+                "title": "Chaos<br>Druids",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -6.489983332670651,
+                    "lng": 326.07421875
+                },
+                "title": "Altar (trap)",
+                "description": null
+            }
+        ],
         icons: {
             agility_shortcuts: [
                 {
@@ -1869,7 +2884,88 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 25.48295117535531,
+                    "lng": 344.88281250000006
+                },
+                "title": "Golbin<br>Kitchen",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 34.88593094075317,
+                    "lng": 321.328125
+                },
+                "title": "Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 40.84706035607122,
+                    "lng": 352.79296875
+                },
+                "title": "Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 14.093957177836224,
+                    "lng": 374.765625
+                },
+                "title": "Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 8.407168163601076,
+                    "lng": 383.02734375000006
+                },
+                "title": "Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 2.1088986592431382,
+                    "lng": 389.35546875
+                },
+                "title": "Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -8.928487062665504,
+                    "lng": 389.00390625000006
+                },
+                "title": "Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -17.978733095556155,
+                    "lng": 376.69921875000006
+                },
+                "title": "Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -18.312810846425442,
+                    "lng": 341.36718750000006
+                },
+                "title": "Chest",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 0.8788717828324276,
+                    "lng": 320.62500000000006
+                },
+                "title": "Chest",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1924,7 +3020,32 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -23.725011735951796,
+                    "lng": 384.96093750000006
+                },
+                "title": "Altar",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -13.410994034321702,
+                    "lng": 316.05468750000006
+                },
+                "title": "Lizards",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -28.92163128242129,
+                    "lng": 328.18359375000006
+                },
+                "title": "Zamorak Fighters",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1941,7 +3062,64 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 33.87041555094183,
+                    "lng": 351.03515625000006
+                },
+                "title": "Bloodvelds",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 38.272688535980976,
+                    "lng": 396.73828125
+                },
+                "title": "Bloodvelds",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 5.61598581915534,
+                    "lng": 394.27734375
+                },
+                "title": "Ankou",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -19.642587534013032,
+                    "lng": 366.85546875000006
+                },
+                "title": "Aberrant Spectres",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -23.079731762449878,
+                    "lng": 325.54687500000006
+                },
+                "title": "Hellhounds",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -4.039617826768424,
+                    "lng": 306.91406250000006
+                },
+                "title": "Hellhounds",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -27.839076094777816,
+                    "lng": 287.57812500000006
+                },
+                "title": "Fire Giants",
+                "description": null
+            }
+        ],
         icons: {
             agility_shortcuts: [
                 {
@@ -1969,7 +3147,82 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 39.36827914916014,
+                    "lng": 329.94140625000006
+                },
+                "title": "Chalice<br>of Eternity",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 4.5654735507102915,
+                    "lng": 329.76562500000006
+                },
+                "title": "Fire<br>Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 14.093957177836224,
+                    "lng": 347.6953125
+                },
+                "title": "Fire<br>Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -1.9332268264771106,
+                    "lng": 363.16406250000006
+                },
+                "title": "Key",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -14.434680215297268,
+                    "lng": 343.30078125
+                },
+                "title": "Shadow<br>Spiders",
+                "description": null
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'ancient_cavern_1',
+        full_name: 'Ancient Caverns (Upper)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 4.5654735507102915, "lng": 366.15234375000006},
+        exits: [
+            {
+                label: 'To Ancient Cavers (Lower)',
+                position: {"lat":35.60371874069731,"lng":382.67578125000006},
+                target_layer: "ancient_caverns",
+                target_layer_position: {"lat":5.090944175033399,"lng":382.50000000000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 29.38217507514529,
+                    "lng": 364.04296875000006
+                },
+                "title": "Mithril Dragons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -37.020098201368114,
+                    "lng": 342.42187500000006
+                },
+                "title": "Ancient<br>Forge",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {
@@ -1986,7 +3239,24 @@ export const Dungeons = [
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
-        map_labels: [],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 20.96143961409684,
+                    "lng": 338.55468750000006
+                },
+                "title": "Waterfiends",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -10.833305983642491,
+                    "lng": 371.60156250000006
+                },
+                "title": "Brutal green<br>Dragons",
+                "description": null
+            }
+        ],
         icons: {}
     },
     {

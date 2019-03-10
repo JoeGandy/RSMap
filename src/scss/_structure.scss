@@ -25,6 +25,10 @@ html, body, #___gatsby, #___gatsby > div, #___gatsby > div {
   display:flex;
   width:200px;
   justify-content: center;
+
+  &:hover{
+    filter: brightness(90%);
+  }
 }
 
 .main_button{
@@ -40,5 +44,9 @@ html, body, #___gatsby, #___gatsby > div, #___gatsby > div {
   white-space: nowrap;
   color:yellow;
   text-shadow: 1px 1px black;
+
+  &:hover{
+    filter: brightness(90%);
+  }
 
 }

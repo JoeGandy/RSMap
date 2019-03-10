@@ -17,6 +17,7 @@ Planned features (To do before even releasing):
 - Convert coord clues to map coordinates
 - Region highlighting (Area locked ironmen, multi combat)
 - Quest icon to show quest with basic info
+- Monster Locator
 
 Issues to fix before going live
 - Going in dungeons above a certain Y axis pans to above the dungeon

@@ -113,6 +113,8 @@ export default class DevTools extends Component {
         this.setState({action_message: "."});
         this.setState({action: null});
         this.setState({pending_positions: []});
+        this.setState({region_points: []});
+        this.setState({built_labels: []});
 
     }
 
