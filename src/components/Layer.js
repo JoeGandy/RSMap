@@ -7,6 +7,8 @@ import SearchBox from "./SearchBox";
 import DevTools from "./DevTools";
 import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
 import * as L from "leaflet";
+import OSRSMap from "./OSRSMap";
+import Controls from "./Controls";
 
 
 const map_address = "http://tiles.rsmap.uk/public";
@@ -29,6 +31,8 @@ export default class Layer extends Component {
             center: this.props.center
         };
 
+        this.map = {};
+
         this.handleClick = this.handleClick.bind(this);
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
         this.centerMap = this.centerMap.bind(this);
@@ -39,8 +43,9 @@ export default class Layer extends Component {
     }
 
     handleZoomEnd() {
-        if (this.map) {
-            this.setState({zoomLevel: this.map.viewport.zoom});
+        if (this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon']) {
+            console.log(this.map);
+            this.setState({zoomLevel: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].viewport.zoom});
         }
     }
 
@@ -71,12 +76,11 @@ export default class Layer extends Component {
     }
 
     backToSurface() {
-        let center = this.props.getLastCenter(this.props.center);
+        let center = OSRSMap.getLatestCenter(this.props.center);
         this.props.handleLayerChange('surface', new L.latLng(center[0], center[1]));
     }
 
     handleClick(e) {
-        console.debug(JSON.stringify(e.latlng));
         //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
         this.setState({clicked_position: e.latlng});
     }
@@ -93,6 +97,7 @@ export default class Layer extends Component {
         //Only do this on surface for now, there is an issue with the zoom level changes when saving dungeon spots
         if (this.props.layer === 'surface') {
             localStorage.setItem('center', JSON.stringify(viewport.center));
+            localStorage.setItem('zoom', JSON.stringify(viewport.zoom));
             localStorage.setItem('layer', this.props.layer);
         }
     }
@@ -102,7 +107,7 @@ export default class Layer extends Component {
             <>
                 <Map
                     ref={(ref) => {
-                        this.map = ref;
+                        this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'] = ref;
                     }}
                     zoom={this.state.zoomLevel}
                     center={this.state.center}
@@ -135,9 +140,10 @@ export default class Layer extends Component {
                         <SearchBox centerMap={this.centerMap}/>
                     </>
                     : null}
-                <DevTools clickedPos={this.state.clicked_position}/>
+                <Controls />
             </>
         )
-        //
+        // <DevTools clickedPos={this.state.clicked_position}/>
+
     }
 }

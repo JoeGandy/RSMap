@@ -34,7 +34,7 @@
     "prismic-javascript": "^2.0.1",
     "prismic-reactjs": "^0.3.2",
     "prop-types": "^15.7.2",
-    "query-string": "^6.2.0",
+    "query-string": "^6.3.0",
     "react": "^16.8.0",
     "react-bootstrap-typeahead": "^3.3.5",
     "react-dom": "^16.8.0",
@@ -44,7 +44,8 @@
     "react-leaflet-div-icon": "^1.1.0",
     "react-leaflet-markercluster": "^1.1.8",
     "react-leaflet-textpath": "^1.0.3",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "react-tooltip-lite": "^1.9.1"
   },
   "repository": {
     "type": "git",

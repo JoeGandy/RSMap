@@ -15,7 +15,7 @@ Planned features (To do before even releasing):
 - ~Agility short cuts to show where they go and level needed~
 - ~Dungeon maps (Pending last few)~
 - ~Remember position on refresh~
-- Share current position on map
+- ~Share current position on map~
 - Remember filters on refresh
 - Monster Locator
 - Convert coord clues to map coordinates

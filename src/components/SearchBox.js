@@ -35,8 +35,11 @@ export default class SearchBox extends Component {
     }
 
     renderOption(option){
+        let icon_url =  option.iconUrl ? option.iconUrl : require('../../static/icons/misc/location.png');
+        let description = option.description ? '- ' + option.description : null;
+
         return <div>
-            <img src={option.iconUrl ? option.iconUrl : require('../../static/icons/misc/location.png')} className={"text_icon"}/>&nbsp; {option.title} {option.description ? '- ' + option.description : null}
+            <img src={icon_url} className={"text_icon"}/>&nbsp; {option.title} {description}
         </div>
     }
 

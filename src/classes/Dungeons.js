@@ -2712,6 +2712,13 @@ export const Dungeons = [
                 target_layer_position: {"lat": 82.24578007692925, "lng": 284.60083007812506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
+            {
+                label: 'To Troll Montains',
+                position: {"lat":-7.01366792756663,"lng":377.75390625000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":82.29270201244428,"lng":288.88549804687506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
         ],
         map_labels: [],
         icons: {}
