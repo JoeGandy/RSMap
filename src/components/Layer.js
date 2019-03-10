@@ -44,7 +44,6 @@ export default class Layer extends Component {
 
     handleZoomEnd() {
         if (this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon']) {
-            console.log(this.map);
             this.setState({zoomLevel: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].viewport.zoom});
         }
     }

@@ -46,7 +46,7 @@ export default class QuestMarker extends Component {
                     }}
                 >
                     <Popup className={"quest_popup"}>
-                        <h4>{this.props.options.title}</h4>
+                        <h4><img src={this.props.options.iconUrl}/> {this.props.options.title} <img src={this.props.options.iconUrl}/></h4>
                         <table>
                             <thead>
                             <tr>
@@ -63,14 +63,6 @@ export default class QuestMarker extends Component {
                             </tr>
                             </tbody>
                         </table>
-                        {this.props.options.items_required.length > 0 ? <>
-                            <h4>Items Needed:</h4>
-                            <ul>
-                                {this.props.options.items_required.map(function (item, i) {
-                                    return <li key={i}>{item.amount} x {item.name}</li>
-                                })}
-                            </ul>
-                        </> : <><h4>Items Needed:</h4><ul><li>None</li></ul></>}
                         {this.props.options.quests_required.length > 0 ? <>
                             <h4>Quests Required:</h4>
                             <ul>
@@ -83,7 +75,7 @@ export default class QuestMarker extends Component {
                             <h4>Skills Required:</h4>
                             <ul>
                                 {this.props.options.skills_required.map(function (skill, i) {
-                                    return <li key={i}>{skill.level} {skill.name}</li>
+                                    return <li key={i}>{skill.level} {skill.name} {skill.optional ? "(Optional)" : null}</li>
                                 })}
                             </ul>
                         </> : <><h4>Skills Required:</h4><ul><li>None</li></ul></>}

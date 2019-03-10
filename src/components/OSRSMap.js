@@ -71,6 +71,7 @@ export default class OSRSMap extends Component {
             defaultZoom: OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM)
         };
 
+
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
         this.handleLayerChange = this.handleLayerChange.bind(this);
     }

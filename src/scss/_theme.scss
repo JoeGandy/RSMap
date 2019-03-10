@@ -136,7 +136,7 @@ h1 {
   }
 }
 
-img:not(.text_icon):not(.jewellery):not(.item_icon) {
+img:not(.text_icon):not(.jewellery):not(.item_icon):not(.skill_icon) {
   image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
   image-rendering: -moz-crisp-edges; /* Firefox                        */
   image-rendering: -o-crisp-edges; /* Opera                          */
@@ -247,6 +247,11 @@ img:not(.text_icon):not(.jewellery):not(.item_icon) {
 }
 
 .quest_popup {
+
+  .skill_icon{
+    max-width:16px;
+    height:auto;
+  }
 
   .leaflet-popup-content {
     width: 238px !important;
