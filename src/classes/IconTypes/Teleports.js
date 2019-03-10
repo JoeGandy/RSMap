@@ -430,7 +430,7 @@ export const Teleports = [
         position: {"lat":80.90587943024157,"lng":270.75805664062506},
         title: "Games Necklance Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Barbarian Assult",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Games_necklace.png'),
@@ -438,7 +438,7 @@ export const Teleports = [
         position: {"lat":80.67911826095326,"lng":295.68603515625006},
         title: "Games Necklance Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Burthorpe Games Room",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Games_necklace.png'),
@@ -446,7 +446,7 @@ export const Teleports = [
         position: {"lat":84.00455785504411,"lng":211.67907714843753},
         title: "Games Necklance Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Wintertodt",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Ring_of_dueling.png'),
@@ -454,7 +454,7 @@ export const Teleports = [
         position: {"lat":74.16558439057223,"lng":265.56152343750006},
         title: "Ring of Dueling Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Castle Wars",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Ring_of_dueling.png'),
@@ -462,7 +462,7 @@ export const Teleports = [
         position: {"lat":76.59090394154062,"lng":323.29467773437506},
         title: "Ring of Dueling Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Duel Arena",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Ring_of_dueling.png'),
@@ -470,7 +470,7 @@ export const Teleports = [
         position: {"lat":75.39500943841519,"lng":327.96386718750006},
         title: "Ring of Dueling Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Clan Wars",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Combat_bracelet.png'),
@@ -478,7 +478,7 @@ export const Teleports = [
         position: {"lat":80.03050836819759,"lng":305.78247070312506},
         title: "Combat Bracelet Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Monastery",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Combat_bracelet.png'),
@@ -486,7 +486,7 @@ export const Teleports = [
         position: {"lat":78.46751192571969,"lng":314.97253417968756},
         title: "Combat Bracelet Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Champions Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Combat_bracelet.png'),
@@ -494,7 +494,7 @@ export const Teleports = [
         position: {"lat":80.6121540861832,"lng":294.40612792968756},
         title: "Combat Bracelet Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Warriors Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Combat_bracelet.png'),
@@ -502,7 +502,7 @@ export const Teleports = [
         position: {"lat":79.41623981214111,"lng":279.65698242187506},
         title: "Combat Bracelet Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Ranging Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Skills_necklace.png'),
@@ -510,7 +510,7 @@ export const Teleports = [
         position: {"lat":78.78169313024124,"lng":277.08068847656256},
         title: "Skills Necklace Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Fishing Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Skills_necklace.png'),
@@ -518,7 +518,7 @@ export const Teleports = [
         position: {"lat":78.09829559916763,"lng":303.93676757812506},
         title: "Skills Necklace Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Mining Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Skills_necklace.png'),
@@ -526,7 +526,7 @@ export const Teleports = [
         position: {"lat":82.28828054353076,"lng":186.910400390625},
         title: "Skills Necklace Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Farming Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Skills_necklace.png'),
@@ -534,7 +534,7 @@ export const Teleports = [
         position: {"lat":77.480325861269,"lng":298.03710937500006},
         title: "Skills Necklace Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Crafting Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Skills_necklace.png'),
@@ -542,7 +542,7 @@ export const Teleports = [
         position: {"lat":79.41220327334501,"lng":311.824951171875},
         title: "Skills Necklace Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Cooks Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Skills_necklace.png'),
@@ -550,7 +550,7 @@ export const Teleports = [
         position: {"lat":80.15432156203568,"lng":214.12353515625003},
         title: "Skills Necklace Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Woodcutting Guild",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Amulet_of_glory.png'),
@@ -558,7 +558,7 @@ export const Teleports = [
         position: {"lat":75.46548375087849,"lng":321.66870117187506},
         title: "Amulet of Glory Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Al Kharid Palace",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Amulet_of_glory.png'),
@@ -566,7 +566,7 @@ export const Teleports = [
         position: {"lat":76.81703471551978,"lng":309.13330078125006},
         title: "Amulet of Glory Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Draynor Village",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Amulet_of_glory.png'),
@@ -574,7 +574,7 @@ export const Teleports = [
         position: {"lat":80.12892798946548,"lng":308.0841064453125},
         title: "Amulet of Glory Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Edgeville",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Amulet_of_glory.png'),
@@ -582,7 +582,7 @@ export const Teleports = [
         position: {"lat":75.56988730054205,"lng":297.09228515625006},
         title: "Amulet of Glory Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Musa Point",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Ring_of_wealth.png'),
@@ -590,7 +590,7 @@ export const Teleports = [
         position: {"lat":79.6930828778363,"lng":313.24768066406256},
         title: "Ring of Wealth Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Grand Exchange",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Ring_of_wealth.png'),
@@ -598,7 +598,7 @@ export const Teleports = [
         position: {"lat":78.64082992043338,"lng":302.05261230468756},
         title: "Ring of Wealth Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Falador Park",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Ring_of_wealth.png'),
@@ -606,7 +606,7 @@ export const Teleports = [
         position: {"lat":83.46412945073891,"lng":271.70837402343756},
         title: "Ring of Wealth Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Miscellania",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Slayer_ring.png'),
@@ -614,7 +614,7 @@ export const Teleports = [
         position: {"lat":80.44675403034532,"lng":330.67749023437506},
         title: "Ring of Slayer Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Slayer Tower",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Slayer_ring.png'),
@@ -622,7 +622,7 @@ export const Teleports = [
         position: {"lat":81.31661808728937,"lng":288.51196289062506},
         title: "Ring of Slayer Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Fremennik Slayer Dungeon",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Slayer_ring.png'),
@@ -630,7 +630,7 @@ export const Teleports = [
         position: {"lat":79.20842430283616,"lng":265.37475585937506},
         title: "Ring of Slayer Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Strongold Slayer Cave",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Digsite_pendant.png'),
@@ -638,14 +638,14 @@ export const Teleports = [
         position: {"lat":79.44646539760868,"lng":325.228271484375},
         title: "Digsite Pendent Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Digsite",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Digsite_pendant.png'),
         className: 'jewellery digsite_pendent ' + Categories.JEWELLERY,
         position: {"lat":83.5220218873171,"lng":352.74902343750006},
         title: "Digsite Pendent Teleport",
-        description: "Works after bone voyage complete but have to use the pendent on the south strange machine within the house on the hill first",
+        description: "House on the hill\nWorks after bone voyage complete but have to use the pendent on the south strange machine within the house on the hill first",
         category: Categories.JEWELLERY
     },
     {
@@ -653,7 +653,7 @@ export const Teleports = [
         className: 'jewellery digsite_pendent ' + Categories.JEWELLERY,
         position: {"lat":84.42998562277383,"lng":338.9666748046875},
         title: "Digsite Pendent Teleport",
-        description: "Works after dragon slayer 2, but have to come down this dungeon manually and use pendent on the strange machine again",
+        description: "Lithkren\nWorks after dragon slayer 2, but have to come down this dungeon manually and use pendent on the strange machine again",
         category: Categories.JEWELLERY
     },
     {
@@ -662,7 +662,7 @@ export const Teleports = [
         position: {"lat":75.71969873605714,"lng":309.89135742187506},
         title: "Necklace of Passage Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Wizards' Tower",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Necklace_of_passage.png'),
@@ -670,7 +670,7 @@ export const Teleports = [
         position: {"lat":78.2121753659723,"lng":264.76501464843756},
         title: "Necklace of Passage Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Outpost",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Necklace_of_passage.png'),
@@ -678,7 +678,7 @@ export const Teleports = [
         position: {"lat":75.30331101068566,"lng":329.22729492187506},
         title: "Necklace of Passage Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "East Kharidian Desert",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Burning_amulet.png'),
@@ -686,7 +686,7 @@ export const Teleports = [
         position: {"lat":81.52798885197393,"lng":317.90039062500006},
         title: "Burning Amulet Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Chaos Temple",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Burning_amulet.png'),
@@ -694,7 +694,7 @@ export const Teleports = [
         position: {"lat":81.66605710511882,"lng":305.13427734375006},
         title: "Burning Amulet Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Bandit Camp",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Burning_amulet.png'),
@@ -702,7 +702,7 @@ export const Teleports = [
         position: {"lat":83.30849930404761,"lng":304.23339843750006},
         title: "Burning Amulet Teleport",
         category: Categories.JEWELLERY,
-        description: "",
+        description: "Lava Maze",
     },
     {
         iconUrl: require('../../../static/icons/teleport/Ectophial.png'),

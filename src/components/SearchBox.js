@@ -16,15 +16,28 @@ export default class SearchBox extends Component {
     }
 
     searchSelect(results) {
+
         if (typeof (results[0]) !== "undefined") {
+            console.log(results[0]);
+            let target_position = null;
+
             if (results[0].position) {
-                this.props.centerMap(results[0].position);
+                target_position = results[0].position;
             } else if (results[0].positions && results[0].positions.length > 0) {
-                this.props.centerMap(results[0].positions[0]);
+                target_position = results[0].positions[0];
             } else {
-                this.props.centerMap(results[0].stops[0]);
+                target_position = results[0].stops[0];
             }
+
+            this.props.centerMap(target_position);
+            localStorage.setItem('center', JSON.stringify(target_position));
         }
+    }
+
+    renderOption(option){
+        return <div>
+            <img src={option.iconUrl ? option.iconUrl : require('../../static/icons/misc/location.png')} className={"text_icon"}/>&nbsp; {option.title} {option.description ? '- ' + option.description : null}
+        </div>
     }
 
     render() {
@@ -39,11 +52,7 @@ export default class SearchBox extends Component {
                             options={this.state.icons}
                             autoFocus
                             minLength={1}
-                            renderMenuItemChildren={(option) => (
-                                <div>
-                                    {option.title} {option.description ? '- ' + option.description : null}
-                                </div>
-                            )}
+                            renderMenuItemChildren={this.renderOption}
                             clearButton={true}
                             onChange={this.searchSelect}
                             value={this.state.search_val}

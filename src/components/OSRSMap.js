@@ -27,7 +27,6 @@ export default class OSRSMap extends Component {
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
         this.centerMap = this.centerMap.bind(this);
         this.updateFilters = this.updateFilters.bind(this);
-        this.searchSelect = this.searchSelect.bind(this);
         this.handleLayerChange = this.handleLayerChange.bind(this);
     }
 
@@ -48,18 +47,6 @@ export default class OSRSMap extends Component {
     handleLayerChange(layer, new_center){
         this.setState({center: new_center});
         this.setState({layer: layer});
-    }
-
-    searchSelect(results) {
-        if (typeof (results[0]) !== "undefined") {
-            if (results[0].position) {
-                this.centerMap(results[0].position);
-            } else if (results[0].positions && results[0].positions.length > 0) {
-                this.centerMap(results[0].positions[0]);
-            } else {
-                this.centerMap(results[0].stops[0]);
-            }
-        }
     }
 
     handleClick(e) {

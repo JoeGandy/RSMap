@@ -14,10 +14,13 @@ Planned features (To do before even releasing):
 - ~Location searcher~
 - ~Agility short cuts to show where they go and level needed~
 - ~Dungeon maps (Pending last few)~
+- ~Remember position on refresh~
+- Share current position on map
+- Remember filters on refresh
+- Monster Locator
 - Convert coord clues to map coordinates
 - Region highlighting (Area locked ironmen, multi combat)
 - Quest icon to show quest with basic info
-- Monster Locator
 
 Issues to fix before going live
 - Going in dungeons above a certain Y axis pans to above the dungeon
