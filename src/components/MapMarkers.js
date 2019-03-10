@@ -39,7 +39,6 @@ export default class MapMarkers extends Component {
 
         return (
             <>
-
                 {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ? this.state.current_dungeon_layer.map_labels.map(function (label, i) {
                     return <LabelMarker key={i} title={label.title} description={label.description} position={label.position} />
                 }) : null}
