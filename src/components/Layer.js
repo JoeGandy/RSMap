@@ -6,6 +6,7 @@ import FiltersBox from "./FiltersBox";
 import SearchBox from "./SearchBox";
 import DevTools from "./DevTools";
 import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
+import * as L from "leaflet";
 
 
 const map_address = "http://tiles.rsmap.uk/public";
@@ -70,7 +71,8 @@ export default class Layer extends Component {
     }
 
     backToSurface() {
-        this.props.handleLayerChange('surface', {"lat": 76.3518964311259, "lng": 316.64794921875006});
+        let center = this.props.getLastCenter(this.props.center);
+        this.props.handleLayerChange('surface', new L.latLng(center[0], center[1]));
     }
 
     handleClick(e) {
