@@ -8,12 +8,6 @@ import DevTools from "./DevTools";
 import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
 
 
-const dungeonMaxZoom = 4;
-const dungeonMinZoom = 1;
-
-const surfaceMaxZoom = 9;
-const surfaceMinZoom = 1;
-
 const map_address = "http://tiles.rsmap.uk/public";
 
 export default class Layer extends Component {
@@ -28,10 +22,8 @@ export default class Layer extends Component {
             search_val: null,
             clicked_position: null,
             layer: this.props.layer,
-            layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer + "/",
-            zoomLevel: this.props.layer === "surface" ? 6 : 3,
-            maxZoom: this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom,
-            minZoom: this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom,
+            layer_url: this.props.surface ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer + "/",
+            zoomLevel: this.props.defaultZoom,
             center: this.props.center,
         };
 
@@ -64,18 +56,14 @@ export default class Layer extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
             this.setState({zoomLevel: this.props.layer === "surface" ? 6 : 3});
-            this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer})
-            this.setState({minZoom: this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom});
-            this.setState({maxZoom: this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom});
-            this.map.leafletElement.setMinZoom(this.props.layer === "surface" ? surfaceMinZoom : dungeonMinZoom);
-            this.map.leafletElement.setMaxZoom(this.props.layer === "surface" ? surfaceMaxZoom : dungeonMaxZoom);
+            this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer});
             this.setState({icons: getDungeonIcons(this.props.layer)});
             this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer));
         }
     }
 
-    backToSurface(){
-        this.props.handleLayerChange('surface', {"lat":76.3518964311259,"lng":316.64794921875006});
+    backToSurface() {
+        this.props.handleLayerChange('surface', {"lat": 76.3518964311259, "lng": 316.64794921875006});
     }
 
     handleClick(e) {
@@ -101,8 +89,8 @@ export default class Layer extends Component {
                     }}
                     zoom={this.state.zoomLevel}
                     center={this.state.center}
-                    maxZoom={this.state.maxZoom}
-                    minZoom={this.state.minZoom}
+                    maxZoom={this.props.maxZoom}
+                    minZoom={this.props.minZoom}
                     onClick={this.handleClick}
                     onZoomEnd={this.handleZoomEnd}
                     keyboardPanDelta={600}
@@ -120,15 +108,16 @@ export default class Layer extends Component {
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                 </Map>
                 {this.props.layer !== "surface" ?
-                    <button className="back_to_surface_button main_button" onClick={this.backToSurface}>Back to surface</button>
-                : null}
+                    <button className="back_to_surface_button main_button" onClick={this.backToSurface}>Back to
+                        surface</button>
+                    : null}
                 {this.props.layer === "surface" ?
                     <>
                         <FiltersBox updateFilters={this.updateFilters}/>
                         <SearchBox centerMap={this.centerMap}/>
                     </>
                     : null}
-                    <DevTools clickedPos={this.state.clicked_position}/>
+                <DevTools clickedPos={this.state.clicked_position}/>
             </>
         )
         //

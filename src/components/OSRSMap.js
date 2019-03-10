@@ -11,8 +11,6 @@ export default class OSRSMap extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            zoomLevel: 6,
-            line: null,
             center: {"lat": 76.40881056467734, "lng": 317.13134765625006},
             filters: {},
             icons_flat: typeof window !== 'undefined' ? getAllIconsFlat() : [],
@@ -81,10 +79,19 @@ export default class OSRSMap extends Component {
 
     render() {
         if (typeof window !== 'undefined') {
-            return (
-                <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer} regions={this.state.regions}
-                       center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
-            )
+            if(this.state.layer === "surface") {
+                return (
+                    <Layer handleLayerChange={this.handleLayerChange} layer={'surface'}
+                           regions={this.state.regions} surface={true} minZoom={1} maxZoom={9} defaultZoom={6}
+                           center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
+                )
+            }else{
+                return (
+                    <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
+                           regions={this.state.regions} surface={false} minZoom={1} maxZoom={4} defaultZoom={3}
+                           center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
+                )
+            }
         } else {
             return <div>Page is loading...</div>
         }
