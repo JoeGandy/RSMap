@@ -1,4 +1,5 @@
 import L, {Icon} from "leaflet";
+import OSRSMap from "../components/OSRSMap";
 
 
 

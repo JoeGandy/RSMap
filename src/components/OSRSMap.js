@@ -6,6 +6,7 @@ import Layer from "./Layer";
 import {Dungeons, getAllDungeonNames} from "../classes/Dungeons";
 import {Regions} from "../classes/Regions";
 import * as qs from 'query-string';
+import {IconBaseClass} from "../classes/IconBaseClass";
 
 const DEFAULT_CENTER = {"lat": 76.40881056467734, "lng": 317.13134765625006};
 const DEFAULT_ZOOM = 6;
@@ -70,6 +71,8 @@ export default class OSRSMap extends Component {
             layer: OSRSMap.getLatestLayer(OSRSMap.DEFAULT_LAYER),
             defaultZoom: OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM)
         };
+
+        IconBaseClass.setZoomLevel(this.state.defaultZoom);
 
 
         this.handleZoomEnd = this.handleZoomEnd.bind(this);

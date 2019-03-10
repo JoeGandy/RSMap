@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Marker, Popup} from "react-leaflet";
 
+const AMOUNT_IN_LIST = 4;
+
 export default class QuestMarker extends Component {
     constructor(props) {
         super(props);
@@ -46,7 +48,8 @@ export default class QuestMarker extends Component {
                     }}
                 >
                     <Popup className={"quest_popup"}>
-                        <h4><img src={this.props.options.iconUrl}/> {this.props.options.title} <img src={this.props.options.iconUrl}/></h4>
+                        <h4><img src={this.props.options.iconUrl}/> {this.props.options.title} <img
+                            src={this.props.options.iconUrl}/></h4>
                         <table>
                             <thead>
                             <tr>
@@ -67,18 +70,39 @@ export default class QuestMarker extends Component {
                             <h4>Quests Required:</h4>
                             <ul>
                                 {this.props.options.quests_required.map(function (quest, i) {
-                                    return <li key={i}>{quest}</li>
+                                    if (i < AMOUNT_IN_LIST) {
+                                        return <li key={i}>{quest}</li>
+                                    } else if (i === AMOUNT_IN_LIST) {
+                                        return <li key={i} className="end_of_list">Too many quests, see full guide</li>
+                                    } else {
+                                        return null;
+                                    }
                                 })}
                             </ul>
-                        </> : <><h4>Quests Required:</h4><ul><li>None</li></ul></>}
+                        </> : <><h4>Quests Required:</h4>
+                            <ul>
+                                <li>None</li>
+                            </ul>
+                        </>}
                         {this.props.options.skills_required.length > 0 ? <>
                             <h4>Skills Required:</h4>
                             <ul>
                                 {this.props.options.skills_required.map(function (skill, i) {
-                                    return <li key={i}>{skill.level} {skill.name} {skill.optional ? "(Optional)" : null}</li>
+                                    if (i < AMOUNT_IN_LIST) {
+                                        return <li
+                                            key={i}>{skill.level} {skill.name} {skill.optional ? "(Optional)" : null}</li>
+                                    } else if (i === AMOUNT_IN_LIST) {
+                                        return <li key={i} className="end_of_list">Too many skills, see full guide</li>
+                                    } else {
+                                        return null;
+                                    }
                                 })}
                             </ul>
-                        </> : <><h4>Skills Required:</h4><ul><li>None</li></ul></>}
+                        </> : <><h4>Skills Required:</h4>
+                            <ul>
+                                <li>None</li>
+                            </ul>
+                        </>}
                         <br/>
                         <i>Click icon for the full guide on osrs.wiki</i>
                     </Popup>
