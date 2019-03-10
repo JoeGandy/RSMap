@@ -3,6 +3,10 @@ import {rewriteIcons} from "../classes/Icons";
 import {Categories, Categories_name} from "../classes/IconBaseClass";
 
 export default class FiltersBox extends Component {
+    isTrue(value){
+        return value === true;
+    }
+
     constructor(props) {
         super(props);
 
@@ -13,8 +17,12 @@ export default class FiltersBox extends Component {
             show_side_bar: true,
         };
 
-        for (let key in Categories) {
-            this.state.filters[Categories[key]] = true;
+        if(localStorage.getItem('filters') !== "undefined" && localStorage.getItem('filters') !== null){
+            this.state.filters = JSON.parse(localStorage.getItem('filters'));
+        }else {
+            for (let key in Categories) {
+                this.state.filters[Categories[key]] = true;
+            }
         }
 
         this.props.updateFilters(this.state.filters);
@@ -39,6 +47,7 @@ export default class FiltersBox extends Component {
         filters[filter] = !filters[filter];
         this.setState({filters: filters});
 
+        localStorage.setItem('filters', JSON.stringify(filters));
         this.updateFilters()
     }
 
@@ -50,6 +59,7 @@ export default class FiltersBox extends Component {
         this.setState({filters: filters});
         this.setState({toggle_all: !this.state.toggle_all});
 
+        localStorage.setItem('filters', JSON.stringify(filters));
         this.updateFilters()
     }
 

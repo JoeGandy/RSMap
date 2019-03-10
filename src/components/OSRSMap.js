@@ -61,7 +61,6 @@ export default class OSRSMap extends Component {
 
         this.state = {
             center: OSRSMap.getLatestCenter(OSRSMap.DEFAULT_CENTER),
-            filters: {},
             icons_flat: typeof window !== 'undefined' ? getAllIconsFlat() : [],
             icons: typeof window !== 'undefined' ? rewriteIcons() : [],
             dungeons: Dungeons,
@@ -73,8 +72,6 @@ export default class OSRSMap extends Component {
         };
 
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
-        this.centerMap = this.centerMap.bind(this);
-        this.updateFilters = this.updateFilters.bind(this);
         this.handleLayerChange = this.handleLayerChange.bind(this);
     }
 
@@ -87,14 +84,6 @@ export default class OSRSMap extends Component {
     handleLayerChange(layer, new_center){
         this.setState({center: new_center});
         this.setState({layer: layer});
-    }
-
-    centerMap(_center) {
-        this.setState({center: {"lat": _center.lat, "lng": _center.lng}})
-    }
-
-    updateFilters(filters) {
-        this.setState({filters: filters});
     }
 
     render() {

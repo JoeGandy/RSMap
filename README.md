@@ -16,17 +16,19 @@ Planned features (To do before even releasing):
 - ~Dungeon maps (Pending last few)~
 - ~Remember position on refresh~
 - ~Share current position on map~
-- Remember filters on refresh
+- ~Remember filters on refresh~
+- Quest icon to show quest with basic info
 - Monster Locator
 - Convert coord clues to map coordinates
 - Region highlighting (Area locked ironmen, multi combat)
-- Quest icon to show quest with basic info
 
 Issues to fix before going live
 - Going in dungeons above a certain Y axis pans to above the dungeon
 - Waterbirth dungeon
 - Quest cave under gnome stronhold (no idea of name)
 - Other godwars layers
+- emember filters on refresh (inside deungons)
+- Remember position on refresh (inside dungeons)
 
 Goal features
 - Farm patch info
