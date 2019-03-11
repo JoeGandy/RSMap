@@ -31,6 +31,7 @@ Built on gatsby and react
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
 - Log balance over Karamja river, what level?
+- Kourend Slayer dungeon
 
 #### Goal features
 - Farm patch info
