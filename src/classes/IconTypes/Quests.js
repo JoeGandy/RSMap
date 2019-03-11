@@ -33,30 +33,519 @@ function questSkill(level, skill_name, optional) {
  */
 export const Quests = [
     {
-        title: "Mourning's Ends Part I",
+        title: "Lunar Diplomacy",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
         className: Categories.QUESTS,
-        position: {"lat":76.45520341078418,"lng":253.75122070312503},
-        difficulty: "Master",
+        position: {"lat":82.03166478362911,"lng":277.28393554687506},
+        difficulty: "Experienced",
         length: "Long",
         quest_points: 2,
         quests_required: [
-            "Roving Elves",
-            "Regicide",
-            "Underground Pass",
-            "Biohazard",
-            "Plague City",
-            "Waterfall Quest",
-            "Big Chompy Bird Hunting (Required to start quest)",
-            "Sheep Herder"
+            "The Fremennik Trials",
+            "Lost City",
+            "Rune Mysteries",
+            "Shilo Village",
+            "Jungle Potion",
+            "Druidic Ritual"
         ],
         skills_required: [
-            questSkill(60, "Ranged"),
-            questSkill(50, "Thieving"),
+            questSkill(61, "Crafting"),
+            questSkill(40, "Defence"),
+            questSkill(49, "Firemaking"),
+            questSkill(65, "Magic"),
+            questSkill(60, "Mining"),
+            questSkill(55, "Woodcutting"),
+
         ],
-        full_guide: "https://oldschool.runescape.wiki/w/Mourning%27s_Ends_Part_I",
+        full_guide: "https://oldschool.runescape.wiki/w/Lunar_Diplomacy",
         category: Categories.QUESTS
     },
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "Fairytale II - Cure a Queen",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":76.93179678875354,"lng":307.1914672851563},
+        difficulty: "Experienced",
+        length: "Short",
+        quest_points: 2,
+        quests_required: [
+            "Fairytale I - Growing Pains",
+            "Lost City",
+            "Nature Spirit",
+            "The Restless Ghost",
+            "Priest in Peril"
+        ],
+        skills_required: [
+            questSkill(40, "Thieving"),
+            questSkill(49, "Farming"),
+            questSkill(57, "Herblore")
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Fairytale_II_-_Cure_a_Queen",
+        category: Categories.QUESTS
+    },
+    */
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "Death to the Dorgeshuun",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":83.42021497175465,"lng":269.48913574218756},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "The Lost Tribe",
+            "Goblin Diplomacy",
+            "Rune Mysteries"
+        ],
+        skills_required: [
+            questSkill(23, "Agility"),
+            questSkill(23, "Thieving")
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Death_to_the_Dorgeshuun",
+        category: Categories.QUESTS
+    },
+    */
+    {
+        title: "Royal Trouble",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":83.42021497175465,"lng":269.48913574218756},
+        difficulty: "Experienced",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Throne of Miscellania"
+        ],
+        skills_required: [
+            questSkill(40, "Agility"),
+            questSkill(40, "Slayer")
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Royal_Trouble",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Swan Song",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":81.68673259714264,"lng":259.2251586914063},
+        difficulty: "Master",
+        length: "Medium",
+        quest_points: 2,
+        quests_required: [
+            "One Small Favour",
+            "Rune Mysteries",
+            "Shilo Village",
+            "Jungle Potion",
+            "Druidic Ritual",
+            "Garden of Tranquillity",
+            "Creature of Fenkenstrain",
+            "Priest in Peril",
+            "The Restless Ghost"
+        ],
+        skills_required: [
+            questSkill(100, "Quest Points"),
+            questSkill(66, "Magic"),
+            questSkill(62, "Cooking"),
+            questSkill(62, "Fishing"),
+            questSkill(45, "Smithiung"),
+            questSkill(42, "Firemaking"),
+            questSkill(40, "Crafting")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Swan_Song",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Rag and Bone Man II",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":80.15619999232506,"lng":326.3461303710938},
+        difficulty: "Intermediate",
+        length: "Long",
+        quest_points: 1,
+        quests_required: [
+            "Rag and Bone Man",
+            "Zogre Flesh Eaters (Partial)",
+            "The Fremennik Trials or Horror from the Deep",
+            "Creature of Fenkenstrain (Partial)",
+            "Skippy and the Mogres"
+        ],
+        skills_required: [
+            questSkill(40, "Slayer"),
+            questSkill(20, "Defence")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Rag_and_Bone_Man_II",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Rag and Bone Man",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":80.15009379613414,"lng":326.0604858398438},
+        difficulty: "Novice",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Rag_and_Bone_Man",
+        category: Categories.QUESTS
+    },
+    {
+        title: "A Soul's Bane",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":79.57049498764282,"lng":322.63549804687506},
+        difficulty: "Novice",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/A_Soul%27s_Bane",
+        category: Categories.QUESTS
+    },
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "In Aid of the Myreque",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":76.95289511468847,"lng":307.47985839843756},
+        difficulty: "Intermediate",
+        length: "Long",
+        quest_points: 2,
+        quests_required: [
+            "In Search of the Myreque",
+            "Nature Spirit",
+            "Priest in Peril",
+            "The Restless Ghost"
+
+        ],
+        skills_required: [
+            questSkill(25, "Crafting"),
+            questSkill(15, "Mining"),
+            questSkill(7, "Magic")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/In_Aid_of_the_Myreque",
+        category: Categories.QUESTS
+    },
+    */
+    {
+        title: "Fairytale I - Growing Pains",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":76.95289511468847,"lng":307.47985839843756},
+        difficulty: "Experienced",
+        length: "Long",
+        quest_points: 2,
+        quests_required: [
+            "Lost City",
+            "Nature Spirit",
+            "The Restless Ghost",
+            "Priest in Peril",
+            "Jungle Potion (If asked to obtain Proboscis)"
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Fairytale_I_-_Growing_Pains",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Cabin Fever",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":80.05994617616484,"lng":346.82189941406256},
+        difficulty: "Experienced",
+        length: "Medium",
+        quest_points: 2,
+        quests_required: [
+            "Pirate's Treasure",
+            "Rum Deal",
+            "Zogre Flesh Eaters",
+            "Big Chompy Bird Hunting",
+            "Jungle Potion",
+            "Druidic Ritual",
+            "Priest in Peril"
+        ],
+        skills_required: [
+            questSkill(42, "Agility"),
+            questSkill(45, "Crafting"),
+            questSkill(50, "Smithing"),
+            questSkill(40, "Ranged")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Cabin_Fever",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Enakhra's Lament",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":70.97671433689949,"lng":314.91760253906256},
+        difficulty: "Experienced",
+        length: "Medium",
+        quest_points: 2,
+        quests_required: [
+        ],
+        skills_required: [
+            questSkill(50, "Crafting"),
+            questSkill(45, "Firemaking"),
+            questSkill(43, "Prayer"),
+            questSkill(39, "Magic"),
+            questSkill(45, "Mining", true)
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Enakhra%27s_Lament",
+        category: Categories.QUESTS
+    },
+    {
+        title: "The Hand in the Sand",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":74.39920828363479,"lng":272.86743164062506},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+        ],
+        skills_required: [
+            questSkill(17, "Thieving"),
+            questSkill(49, "Crafting")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/The_Hand_in_the_Sand",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Devious Minds",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":80.01432843179823,"lng":329.0982055664063},
+        difficulty: "Experienced",
+        length: "Short",
+        quest_points: 1,
+        quests_required: [
+            "Wanted!",
+            "Recruitment Drive",
+            "Black Knight's Fortress",
+            "Druidic Ritual",
+            "Rune Mysteries",
+            "The Lost Tribe",
+            "Goblin Diplomacy",
+            "Rune Mysteries",
+            "Priest in Peril",
+            "Troll Stronghold",
+            "Death Plateau",
+            "Doric's Quest",
+            "Enter the Abyss",
+            "Rune Mysteries"
+        ],
+        skills_required: [
+            questSkill(65, "Smithing"),
+            questSkill(50, "Runecraft"),
+            questSkill(50, "Fletching")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Devious_Minds",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Spirits of the Elid",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":70.65087086708871,"lng":331.4712524414063},
+        difficulty: "Intermediate",
+        length: "Short",
+        quest_points: 2,
+        quests_required: [
+        ],
+        skills_required: [
+            questSkill(33, "Magic"),
+            questSkill(37, "Ranged"),
+            questSkill(37, "Mining"),
+            questSkill(37, "Thieving")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Spirits_of_the_Elid",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Ratcatchers",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":78.99238292112126,"lng":312.42919921875006},
+        difficulty: "Intermediate",
+        length: "Long",
+        quest_points: 2,
+        quests_required: [
+            "Icthlarin's Little Helper",
+            "Gertrude's Cat"
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Ratcatchers",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Making History",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":78.19982492727081,"lng":265.1577758789063},
+        difficulty: "Intermediate",
+        length: "Long",
+        quest_points: 3,
+        quests_required: [
+            "Priest in Peril",
+            "The Restless Ghost"
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Making_History",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Shadow of the Storm",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":75.39362425281163,"lng":320.1937866210938},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "The Golem",
+            "Demon Slayer"
+        ],
+        skills_required: [
+            questSkill(30, "Crafting")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Shadow_of_the_Storm",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Rum Deal",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":80.49449801002746,"lng":347.1487426757813},
+        difficulty: "Experienced",
+        length: "Medium",
+        quest_points: 2,
+        quests_required: [
+            "Zogre Flesh Eaters",
+            "Big Chompy Bird Hunting",
+            "Jungle Potion",
+            "Druidic Ritual",
+            "Priest in Peril"
+        ],
+        skills_required: [
+            questSkill(42, "Crafting"),
+            questSkill(50, "Fishing"),
+            questSkill(40, "Farming"),
+            questSkill(47, "Prayer"),
+            questSkill(42, "Slayer")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Rum_Deal",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Mourning's Ends Part II",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":75.60953172351894,"lng":259.68383789062506},
+        difficulty: "Master",
+        length: "Very Long",
+        quest_points: 2,
+        quests_required: [
+            "Mourning's End Part I"
+        ],
+        skills_required: [
+            questSkill(43, "Prayer", true),
+            questSkill(60, "Agility", true)
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Mourning%27s_Ends_Part_II",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Wanted!",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":78.60072894622596,"lng":301.8795776367188},
+        difficulty: "Intermediate",
+        length: "Long",
+        quest_points: 1,
+        quests_required: [
+            "Recruitment Drive",
+            "Rune Mysteries",
+            "The Lost Tribe",
+            "Priest in Peril"
+        ],
+        skills_required: [
+            questSkill(32, "Quest Points")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Wanted!",
+        category: Categories.QUESTS
+    },
+    {
+        title: "A Tail of Two Cats",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":80.72969420311631,"lng":296.92199707031256},
+        difficulty: "Intermediate",
+        length: "Long",
+        quest_points: 2,
+        quests_required: [
+            "Icthelarin's Little Helper",
+            "Gertrude's Cat"
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/A_Tail_of_Two_Cats",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Garden of Tranquillity",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":79.84043999322822,"lng":317.35656738281256},
+        difficulty: "Intermediate",
+        length: "Very Long",
+        quest_points: 2,
+        quests_required: [
+            "Creature of Fenkenstrain",
+            "Priest in Peril",
+            "The Restless Ghost"
+        ],
+        skills_required: [
+            questSkill(25, "Farming")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Garden_of_Tranquillity",
+        category: Categories.QUESTS
+    },
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "Forgettable Tale...",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":76.45520341078418,"lng":253.75122070312503},
+        difficulty: "Intermediate",
+        length: "Long",
+        quest_points: 2,
+        quests_required: [
+            "The Giant Dwarf",
+            "Fishing Contest"
+        ],
+        skills_required: [
+            questSkill(22, "Cooking"),
+            questSkill(17, "Farming"),
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Forgettable_Tale...",
+        category: Categories.QUESTS
+    },
+    */
     {
         title: "Mourning's Ends Part I",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
