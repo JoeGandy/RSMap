@@ -33,6 +33,507 @@ function questSkill(level, skill_name, optional) {
  */
 export const Quests = [
     {
+        title: "The Queen of Thieves",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.83833178988445,"lng":222.95654296875003},
+        difficulty: "Novice",
+        length: "Short",
+        quest_points: 1,
+        quests_required: [
+            "Client of Kourend"
+        ],
+        skills_required: [
+            questSkill(20, "Thieving")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Bone_Voyage",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Bone Voyage",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":79.52265545122708,"lng":319.48242187500006},
+        difficulty: "Intermediate",
+        length: "Short",
+        quest_points: 1,
+        quests_required: [
+            "The Dig Site",
+            "Druidic Ritual"
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Bone_Voyage",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Client of Kourend",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.03166478362911,"lng":224.81323242187503},
+        difficulty: "Novice",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Client_of_Kourend",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Monkey Madness II",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":80.0798390107744,"lng":267.48413085937506},
+        difficulty: "Grandmaster",
+        length: "Very Long",
+        quest_points: 4,
+        quests_required: [
+            "Enlightened Journeyed",
+            "The Eyes of Glouphrie",
+            "The Grand Tree",
+            "Recipe for Disaster",
+            "Monkey Madness I",
+            "The Grand Tree",
+            "Tree Gnome Village",
+            "Troll Stronghold",
+            "Death Plateau",
+            "Watchtower"
+        ],
+        skills_required: [
+            questSkill(60, "Slayer"),
+            questSkill(70, "Crafting"),
+            questSkill(60, "Hunter"),
+            questSkill(55, "Agility"),
+            questSkill(55, "Thieving")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Monkey_Madness_II",
+        category: Categories.QUESTS
+    },
+    {
+        title: "King's Ransom",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":80.69867112777253,"lng":285.33691406250006},
+        difficulty: "Experienced",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Black Knights' Fortress",
+            "Holy Grail",
+            "Merlin's Crystal",
+            "Murder Mystery",
+            "One Small Favour",
+            "Rune Mysteries",
+            "Shilo Village",
+            "Jungle Potion",
+            "Druidic Ritual"
+        ],
+        skills_required: [
+            questSkill(45, "Maigc"),
+            questSkill(65, "Defence")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/King%27s_Ransom",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Grim Tales",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":79.57049498764282,"lng":295.15869140625006},
+        difficulty: "Master",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Witch's House"
+        ],
+        skills_required: [
+            questSkill(45, "Farming"),
+            questSkill(52, "Herblore"),
+            questSkill(58, "Thieving"),
+            questSkill(59, "Agility"),
+            questSkill(71, "Woodcutting")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Grim_Tales",
+        category: Categories.QUESTS
+    },
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "Dream Mentor",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.38861177489242,"lng":284.13391113281256},
+        difficulty: "Master",
+        length: "Short",
+        quest_points: 2,
+        quests_required: [
+            "Lunar Diplomacy",
+            "The Fremennik Trials",
+            "Lost City",
+            "Rune Mysteries",
+            "Shilo Villagev
+            "Jungle Potion",
+            "Druidic Ritual",
+            "Eadgar's Ruse",
+            "Troll Stronghold",
+            "Death Plateau",
+            "Druidic Ritual"
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Dream_Mentor",
+        category: Categories.QUESTS
+    },
+    */
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "Another Slice of H.A.M.",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.38861177489242,"lng":284.13391113281256},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Death to the Dorgeshuun",
+            "The Lost Tribe",
+            "Goblin Diplomacy",
+            "Rune Mysteries",
+            "The Giant Dwarf",
+            "The Dig Site",
+            "Druidic Ritual"
+        ],
+        skills_required: [
+            questSkill(15, "Attack"),
+            questSkill(25, "Prayer")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Another_Slice_of_H.A.M.",
+        category: Categories.QUESTS
+    },
+    */
+    {
+        title: "Olaf's Quest",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.38861177489242,"lng":284.13391113281256},
+        difficulty: "Intermediate",
+        length: "Short",
+        quest_points: 1,
+        quests_required: [
+            "The Fremennik Trials"
+        ],
+        skills_required: [
+            questSkill(40, "Firemarking"),
+            questSkill(50, "Woodcutting")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Olaf%27s_Quest",
+        category: Categories.QUESTS
+    },
+    {
+        title: "What Lies Below",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":78.02215406784093,"lng":319.87243652343756},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Rune Mysteries"
+        ],
+        skills_required: [
+            questSkill(35, "Runecraft"),
+            questSkill(42, "Mining")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/What_Lies_Below",
+        category: Categories.QUESTS
+    },
+    {
+        title: "The Great Brain Robbery",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":71.7550326863815,"lng":347.29431152343756},
+        difficulty: "Experienced",
+        length: "Medium",
+        quest_points: 2,
+        quests_required: [
+            "Creature of Fenkenstrain",
+            "Cabin Fever",
+            "Pirate's Treasure",
+            "Priest in Peril",
+            "Rum Deal",
+            "Zogre Flesh Eaters",
+            "Big Chompy Bird Hunting",
+            "Jungle Potion",
+            "Druidic Ritual"
+        ],
+        skills_required: [
+            questSkill(16, "Crafting"),
+            questSkill(30, "Construction"),
+            questSkill(50, "Prayer")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/The_Great_Brain_Robbery",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Tower of Life",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":76.34411731923645,"lng":278.67370605468756},
+        difficulty: "Novice",
+        length: "Medium",
+        quest_points: 2,
+        quests_required: [
+        ],
+        skills_required: [
+            questSkill(10, "Construction")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Tower_of_Life",
+        category: Categories.QUESTS
+    },
+    {
+        title: "The Fremennik Isles",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.23057151010607,"lng":278.99780273437506},
+        difficulty: "Experienced",
+        length: "Long",
+        quest_points: 1,
+        quests_required: [
+            "The Fremennik Trials"
+        ],
+        skills_required: [
+            questSkill(20, "Construction"),
+            questSkill(40, "Agility"),
+            questSkill(56, "Woodcutting"),
+            questSkill(46, "Crafting")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/The_Fremennik_Isles",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Cold War",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":77.05665531264218,"lng":275.57006835937506},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+        ],
+        skills_required: [
+            questSkill(10, "Hunter"),
+            questSkill(30, "Agility"),
+            questSkill(30, "Crafting"),
+            questSkill(34, "Construction"),
+            questSkill(15, "Thieving")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Cold_War",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Contact!",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":67.32504200372699,"lng":320.85571289062506},
+        difficulty: "Master",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Prince Ali Rescue",
+            "Icthlarin's Little Helper",
+            "Gertrude's Cat"
+        ],
+        skills_required: [
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Contact!",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Animal Magnetism",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":78.38596108518769,"lng":308.594970703125},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "The Restless Ghost",
+            "Ernest the Chicken",
+            "Priest in Peril"
+        ],
+        skills_required: [
+            questSkill(18, "Slayer"),
+            questSkill(19, "Crafting"),
+            questSkill(30, "Ranged"),
+            questSkill(35, "Woodcutting"),
+            questSkill(31, "Prayer", true)
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Animal_Magnetism",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Eagles' Peak",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":77.04188223336718,"lng":276.36108398437506},
+        difficulty: "Novice",
+        length: "Medium",
+        quest_points: 2,
+        quests_required: [
+        ],
+        skills_required: [
+            questSkill(27, "Hunter")
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Eagles%27_Peak",
+        category: Categories.QUESTS
+    },
+    {
+        title: "Enlightened Journey",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":78.33387021211455,"lng":289.80834960937506},
+        difficulty: "Intermediate",
+        length: "Short",
+        quest_points: 1,
+        quests_required: [
+        ],
+        skills_required: [
+            questSkill(20, "Quest Points"),
+            questSkill(20, "Firemaking"),
+            questSkill(30, "Farming"),
+            questSkill(36, "Crafting")
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Enlightened_Journey",
+        category: Categories.QUESTS
+    },
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "My Arm's Big Adventure",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.03166478362911,"lng":277.28393554687506},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Eadgar's Ruse",
+            "Troll Stronghold",
+            "Death Plateau",
+            "The Feud",
+            "Jungle Potion",
+            "Druidic Ritual"
+        ],
+        skills_required: [
+            questSkill(10, "Woodcutting"),
+            questSkill(29, "Farming")
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/My_Arm%27s_Big_Adventure",
+        category: Categories.QUESTS
+    },
+    */
+    {
+        title: "Elemental Workshop II",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":78.07788665318229,"lng":326.03027343750006},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Elemental Workshop I"
+        ],
+        skills_required: [
+            questSkill(20, "Magic"),
+            questSkill(30, "Smithing")
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Elemental_Workshop_II",
+        category: Categories.QUESTS
+    },
+    {
+        title: "The Slug Menace",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":78.53649499073829,"lng":301.85485839843756},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 1,
+        quests_required: [
+            "Wanted!",
+            "Slug Menace"
+        ],
+        skills_required: [
+            questSkill(30, "Crafting"),
+            questSkill(30, "Runecraft"),
+            questSkill(30, "Slayer"),
+            questSkill(30, "Thieving")
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/The_Slug_Menace",
+        category: Categories.QUESTS
+    },
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "Darkness of Hallowvale",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.03166478362911,"lng":277.28393554687506},
+        difficulty: "Intermediate",
+        length: "Very Long",
+        quest_points: 2,
+        quests_required: [
+            "In Aid of the Myreque",
+            "In Search of the Myreque",
+            "Nature Spirit",
+            "Priest in Peril",
+            "The Restless Ghost"
+        ],
+        skills_required: [
+            questSkill(5, "Construction"),
+            questSkill(20, "Mining"),
+            questSkill(22, "Thieving"),
+            questSkill(26, "Agility"),
+            questSkill(32, "Crafting"),
+            questSkill(33, "Magic"),
+            questSkill(33, "Strength"),
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/Darkness_of_Hallowvale",
+        category: Categories.QUESTS
+    },
+    */
+    /*
+        TODO this is underrground start, figure a way to map it
+    {
+        title: "The Eyes of Glouphrie",
+        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
+        className: Categories.QUESTS,
+        position: {"lat":82.03166478362911,"lng":277.28393554687506},
+        difficulty: "Intermediate",
+        length: "Medium",
+        quest_points: 2,
+        quests_required: [
+            "The Grand Tree"
+        ],
+        skills_required: [
+            questSkill(5, "Construction"),
+            questSkill(46, "Magic"),
+            questSkill(45, "Woodcutting", true),
+            questSkill(50, "Firemaking", true)
+
+        ],
+        full_guide: "https://oldschool.runescape.wiki/w/The_Eyes_of_Glouphrie",
+        category: Categories.QUESTS
+    },
+    */
+    {
         title: "Lunar Diplomacy",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
         className: Categories.QUESTS,
@@ -1286,7 +1787,7 @@ export const Quests = [
         title: "Murder Mystery",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
         className: Categories.QUESTS,
-        position: {"lat":80.69867112777253,"lng":285.32043457031256},
+        position: {"lat":80.78351802154495,"lng":285.27099609375006},
         difficulty: "Novice",
         length: "Short",
         quest_points: 3,

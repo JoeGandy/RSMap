@@ -31,6 +31,8 @@ Built on gatsby and react
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
 - Log balance over Karamja river, what level?
+- Rum deal island
+- Troll Stronghold
 - Kourend Slayer dungeon
 
 #### Goal features
