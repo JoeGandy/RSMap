@@ -1,7 +1,7 @@
 import {Categories} from "../IconBaseClass";
 
 
-function questSkill(level, skill_name, optional) {
+export function questSkill(level, skill_name, optional) {
     optional = optional === undefined ? false : optional;
     return {
         level: level,
@@ -330,62 +330,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/Grim_Tales",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Dream Mentor",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":82.38861177489242,"lng":284.13391113281256},
-        difficulty: "Master",
-        length: "Short",
-        quest_points: 2,
-        quests_required: [
-            "Lunar Diplomacy",
-            "The Fremennik Trials",
-            "Lost City",
-            "Rune Mysteries",
-            "Shilo Villagev
-            "Jungle Potion",
-            "Druidic Ritual",
-            "Eadgar's Ruse",
-            "Troll Stronghold",
-            "Death Plateau",
-            "Druidic Ritual"
-        ],
-        skills_required: [
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Dream_Mentor",
-        category: Categories.QUESTS
-    },
-    */
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Another Slice of H.A.M.",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":82.38861177489242,"lng":284.13391113281256},
-        difficulty: "Intermediate",
-        length: "Medium",
-        quest_points: 1,
-        quests_required: [
-            "Death to the Dorgeshuun",
-            "The Lost Tribe",
-            "Goblin Diplomacy",
-            "Rune Mysteries",
-            "The Giant Dwarf",
-            "The Dig Site",
-            "Druidic Ritual"
-        ],
-        skills_required: [
-            questSkill(15, "Attack"),
-            questSkill(25, "Prayer")
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Another_Slice_of_H.A.M.",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "Olaf's Quest",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
@@ -648,37 +592,6 @@ export const Quests = [
     /*
         TODO this is underrground start, figure a way to map it
     {
-        title: "Darkness of Hallowvale",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":82.03166478362911,"lng":277.28393554687506},
-        difficulty: "Intermediate",
-        length: "Very Long",
-        quest_points: 2,
-        quests_required: [
-            "In Aid of the Myreque",
-            "In Search of the Myreque",
-            "Nature Spirit",
-            "Priest in Peril",
-            "The Restless Ghost"
-        ],
-        skills_required: [
-            questSkill(5, "Construction"),
-            questSkill(20, "Mining"),
-            questSkill(22, "Thieving"),
-            questSkill(26, "Agility"),
-            questSkill(32, "Crafting"),
-            questSkill(33, "Magic"),
-            questSkill(33, "Strength"),
-
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Darkness_of_Hallowvale",
-        category: Categories.QUESTS
-    },
-    */
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
         title: "The Eyes of Glouphrie",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
         className: Categories.QUESTS,
@@ -728,13 +641,11 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/Lunar_Diplomacy",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
     {
         title: "Fairytale II - Cure a Queen",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
         className: Categories.QUESTS,
-        position: {"lat":76.93179678875354,"lng":307.1914672851563},
+        position: {"lat":76.92682760674583,"lng":307.21618652343756},
         difficulty: "Experienced",
         length: "Short",
         quest_points: 2,
@@ -754,31 +665,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/Fairytale_II_-_Cure_a_Queen",
         category: Categories.QUESTS
     },
-    */
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Death to the Dorgeshuun",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":83.42021497175465,"lng":269.48913574218756},
-        difficulty: "Intermediate",
-        length: "Medium",
-        quest_points: 1,
-        quests_required: [
-            "The Lost Tribe",
-            "Goblin Diplomacy",
-            "Rune Mysteries"
-        ],
-        skills_required: [
-            questSkill(23, "Agility"),
-            questSkill(23, "Thieving")
-
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Death_to_the_Dorgeshuun",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "Royal Trouble",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
@@ -1181,28 +1067,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/Garden_of_Tranquillity",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Forgettable Tale...",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":76.45520341078418,"lng":253.75122070312503},
-        difficulty: "Intermediate",
-        length: "Long",
-        quest_points: 2,
-        quests_required: [
-            "The Giant Dwarf",
-            "Fishing Contest"
-        ],
-        skills_required: [
-            questSkill(22, "Cooking"),
-            questSkill(17, "Farming"),
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Forgettable_Tale...",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "Mourning's Ends Part I",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
@@ -1246,29 +1110,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/Recruitment_Drive",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "The Giant Dwarf",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":69.25031156402504,"lng":323.1024169921875},
-        difficulty: "Intermediate",
-        length: "Medium",
-        quest_points: 2,
-        quests_required: [
-            "The Knight's Sword"
-        ],
-        skills_required: [
-            questSkill(12, "Crafting"),
-            questSkill(16, "Firemaking"),
-            questSkill(33, "Magic"),
-            questSkill(14, "Thieving")
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/The_Giant_Dwarf",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "The Lost Tribe",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
@@ -1406,29 +1247,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/The_Feud",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Between a Rock...",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":81.87519409824804,"lng":289.8770141601563},
-        difficulty: "Experienced",
-        length: "Long",
-        quest_points: 2,
-        quests_required: [
-            "Dwarf Cannon",
-            "Fishing Contest"
-        ],
-        skills_required: [
-            questSkill(30, "Defence"),
-            questSkill(40, "Mining"),
-            questSkill(50, "Smithing")
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Between_a_Rock...",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "Mountain Daughter",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
@@ -1788,26 +1606,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/Death_Plateau",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Nature Spirit",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":79.79479870063878,"lng":316.83471679687506},
-        difficulty: "Novice",
-        length: "Medium",
-        quest_points: 2,
-        quests_required: [
-            "Priest in Peril",
-            "The Restless Ghost"
-        ],
-        skills_required: [
-            questSkill(18, "Crafting")
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Nature_Spirit",
-        category: Categories.QUESTS
-    },*/
     {
         title: "Priest in Peril",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),

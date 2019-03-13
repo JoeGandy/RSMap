@@ -7,6 +7,7 @@ import {
 } from "./Icons";
 import TextPath from "../components/MapMarkers";
 import React from "react";
+import {questSkill} from "./IconTypes/Quests";
 
 
 export function getDungeonIcons(dungeon_name) {
@@ -407,7 +408,36 @@ export const Dungeons = [
             },
         ],
         map_labels: [],
-        icons: {}
+        icons: {
+            quests: [
+                {
+                    title: "Dream Mentor",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":6.970049417296232,"lng":369.66796875},
+                    difficulty: "Master",
+                    length: "Short",
+                    quest_points: 2,
+                    quests_required: [
+                        "Lunar Diplomacy",
+                        "The Fremennik Trials",
+                        "Lost City",
+                        "Rune Mysteries",
+                        "Shilo Village",
+                        "Jungle Potion",
+                        "Druidic Ritual",
+                        "Eadgar's Ruse",
+                        "Troll Stronghold",
+                        "Death Plateau",
+                        "Druidic Ritual"
+                    ],
+                    skills_required: [
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Dream_Mentor",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
     },
     {
         machine_name: 'god_wars_2',
@@ -1391,7 +1421,38 @@ export const Dungeons = [
                 "description": null
             }
         ],
-        icons: {}
+        icons: {
+            quests: [
+                {
+                    title: "Darkness of Hallowvale",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":27.68352808378776,"lng":394.1015625},
+                    difficulty: "Intermediate",
+                    length: "Very Long",
+                    quest_points: 2,
+                    quests_required: [
+                        "In Aid of the Myreque",
+                        "In Search of the Myreque",
+                        "Nature Spirit",
+                        "Priest in Peril",
+                        "The Restless Ghost"
+                    ],
+                    skills_required: [
+                        questSkill(5, "Construction"),
+                        questSkill(20, "Mining"),
+                        questSkill(22, "Thieving"),
+                        questSkill(26, "Agility"),
+                        questSkill(32, "Crafting"),
+                        questSkill(33, "Magic"),
+                        questSkill(33, "Strength"),
+
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Darkness_of_Hallowvale",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
     },
     {
         machine_name: 'goblin_cave',
@@ -1779,7 +1840,34 @@ export const Dungeons = [
                 "description": null
             }
         ],
-        icons: {}
+        icons: {
+            quests: [
+                {
+                    title: "Another Slice of H.A.M.",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":60.994423108456154,"lng":379.55566406250006},
+                    difficulty: "Intermediate",
+                    length: "Medium",
+                    quest_points: 1,
+                    quests_required: [
+                        "Death to the Dorgeshuun",
+                        "The Lost Tribe",
+                        "Goblin Diplomacy",
+                        "Rune Mysteries",
+                        "The Giant Dwarf",
+                        "The Dig Site",
+                        "Druidic Ritual"
+                    ],
+                    skills_required: [
+                        questSkill(15, "Attack"),
+                        questSkill(25, "Prayer")
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Another_Slice_of_H.A.M.",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
     },
     {
         machine_name: 'dorgesh-kaan',
@@ -2695,7 +2783,69 @@ export const Dungeons = [
             },
         ],
         map_labels: [],
-        icons: {}
+        icons: {
+            quests: [
+                {
+                    title: "Between a Rock...",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":-6.926426847059551,"lng":278.17382812500006},
+                    difficulty: "Experienced",
+                    length: "Long",
+                    quest_points: 2,
+                    quests_required: [
+                        "Dwarf Cannon",
+                        "Fishing Contest"
+                    ],
+                    skills_required: [
+                        questSkill(30, "Defence"),
+                        questSkill(40, "Mining"),
+                        questSkill(50, "Smithing")
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Between_a_Rock...",
+                    category: Categories.QUESTS
+                },
+                {
+                    title: "The Giant Dwarf",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":-52.37559917665911,"lng":303.57421875000006},
+                    difficulty: "Intermediate",
+                    length: "Medium",
+                    quest_points: 2,
+                    quests_required: [
+                        "The Knight's Sword"
+                    ],
+                    skills_required: [
+                        questSkill(12, "Crafting"),
+                        questSkill(16, "Firemaking"),
+                        questSkill(33, "Magic"),
+                        questSkill(14, "Thieving")
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/The_Giant_Dwarf",
+                    category: Categories.QUESTS
+                },
+                {
+                    title: "Forgettable Tale...",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":50.84757295365389,"lng":282.56835937500006},
+                    difficulty: "Intermediate",
+                    length: "Long",
+                    quest_points: 2,
+                    quests_required: [
+                        "The Giant Dwarf",
+                        "Fishing Contest"
+                    ],
+                    skills_required: [
+                        questSkill(22, "Cooking"),
+                        questSkill(17, "Farming"),
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Forgettable_Tale...",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
 
 
     },
@@ -4098,7 +4248,28 @@ export const Dungeons = [
                 "description": null
             }
         ],
-        icons: {}
+        icons: {
+            quests: [
+                {
+                    title: "Nature Spirit",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":1.5818302639606454,"lng":379.6875},
+                    difficulty: "Novice",
+                    length: "Medium",
+                    quest_points: 2,
+                    quests_required: [
+                        "Priest in Peril",
+                        "The Restless Ghost"
+                    ],
+                    skills_required: [
+                        questSkill(18, "Crafting")
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Nature_Spirit",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
     },
     {
         machine_name: 'tutorial_island_cave',
@@ -4410,7 +4581,31 @@ export const Dungeons = [
             icon: require('../../static/icons/misc/Map_link_icon.webp')
         },],
         map_labels: [],
-        icons: {}
+        icons: {
+            quests: [
+                {
+                    title: "Death to the Dorgeshuun",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":1.3182430568620136,"lng":366.76757812500006},
+                    difficulty: "Intermediate",
+                    length: "Medium",
+                    quest_points: 1,
+                    quests_required: [
+                        "The Lost Tribe",
+                        "Goblin Diplomacy",
+                        "Rune Mysteries"
+                    ],
+                    skills_required: [
+                        questSkill(23, "Agility"),
+                        questSkill(23, "Thieving")
+
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Death_to_the_Dorgeshuun",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
     },
     {
         machine_name: 'essence_mine',
