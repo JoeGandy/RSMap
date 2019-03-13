@@ -18,7 +18,7 @@ Built on gatsby and react
 - ~Remember position on refresh~
 - ~Share current position on map~
 - ~Remember filters on refresh~
-- Quest icon to show quest with basic info
+- ~Quest icon to show quest with basic info~
 - Monster Locator
 - Convert coord clues to map coordinates
 - Region highlighting (Area locked ironmen, multi combat)
@@ -31,8 +31,8 @@ Built on gatsby and react
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
 - Log balance over Karamja river, what level?
-- Rum deal island
-- Troll Stronghold
+- ~Rum deal island~
+- ~Troll Stronghold~
 - Kourend Slayer dungeon
 
 #### Goal features

@@ -76,7 +76,184 @@ export function getDungeonCenter(dungeon_name) {
  */
 
 export const Dungeons = [
+    {
+        machine_name: 'braindeath_island',
+        full_name: 'Brain Death Island',
+        icon: require('../../static/icons/misc/Transportation_icon.png'),
+        center_pos: {"lat":7.710991655433217,"lng":330.29296875000006},
+        exits: [
+            {
+                label: 'To North of Ectofuntus',
+                position: {"lat":0.3515602939922709,"lng":382.32421875},
+                target_layer: "surface",
+                target_layer_position: {"lat":80.52438742758532,"lng":347.2833251953125},
+                icon: require('../../static/icons/misc/Transportation_icon.png')
+            }
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'troll_stronghold_0',
+        full_name: 'Troll Stronghold Lower',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":7.710991655433217,"lng":330.29296875000006},
+        exits: [
+            {
+                label: 'To Trollheim',
+                position: {"lat":-37.30027528134431,"lng":299.88281250000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":81.63814406346873,"lng":290.93444824218756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Troll Stronghold Middle',
+                position: {"lat":38.134556577054134,"lng":340.13671875},
+                target_layer: "troll_stronghold_1",
+                target_layer_position: {"lat":40.04443758460859,"lng":341.36718750000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Troll Stronghold Middle',
+                position: {"lat":-19.476950206488414,"lng":340.3125},
+                target_layer: "troll_stronghold_1",
+                target_layer_position: {"lat":-20.3034175184893,"lng":340.6640625},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'troll_stronghold_1',
+        full_name: 'Troll Stronghold Middle',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":7.710991655433217,"lng":330.29296875000006},
+        exits: [
+            {
+                label: 'To Troll Stronghold Upper',
+                position: {"lat":39.774769485295465,"lng":325.89843750000006},
+                target_layer: "troll_stronghold_2",
+                target_layer_position: {"lat":40.04443758460859,"lng":328.00781250000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Troll Stronghold Upper',
+                position: {"lat":-34.161818161230386,"lng":327.48046875000006},
+                target_layer: "troll_stronghold_2",
+                target_layer_position: {"lat":-34.016241889667015,"lng":328.00781250000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {
+            quests: [
 
+                {
+                    title: "Troll Romance",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":-16.425547506916725,"lng":305.1123046875},
+                    difficulty: "Experienced",
+                    length: "Medium",
+                    quest_points: 2,
+                    quests_required: [
+                        "Troll Stronghold",
+                        "Death Plateau"
+                    ],
+                    skills_required: [
+                        questSkill(28, "Agility")
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Troll_Romance",
+                    category: Categories.QUESTS
+                },
+                {
+                    title: "My Arm's Big Adventure",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":-22.91792293614603,"lng":324.66796875000006},
+                    difficulty: "Intermediate",
+                    length: "Medium",
+                    quest_points: 1,
+                    quests_required: [
+                        "Eadgar's Ruse",
+                        "Troll Stronghold",
+                        "Death Plateau",
+                        "The Feud",
+                        "Jungle Potion",
+                        "Druidic Ritual"
+                    ],
+                    skills_required: [
+                        questSkill(10, "Woodcutting"),
+                        questSkill(29, "Farming")
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/My_Arm%27s_Big_Adventure",
+                    category: Categories.QUESTS
+                },
+                {
+                    title: "Making Friends with My Arm",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat":-28.14950321154457,"lng":330.29296875000006},
+                    difficulty: "Master",
+                    length: "Medium",
+                    quest_points: 2,
+                    quests_required: [
+                        "My Arm's Big Adventure",
+                        "Eadgar's Ruse",
+                        "Troll Stronghold",
+                        "Death Plateau",
+                        "Druidic Ritual",
+                        "The Feud",
+                        "Jungle Potion",
+                        "Druidic Ritual",
+                        "Swan Song",
+                        "One Small Favour",
+                        "Rune Mysteries",
+                        "Shilo Village",
+                        "Garden of Tranquillity",
+                        "Creature of Fenkenstrain",
+                        "Priest in Peril",
+                        "The Restless Ghost",
+                        "Cold War",
+                        "Romeo & Juliet"
+                    ],
+                    skills_required: [
+                        questSkill(66, "Firemaking"),
+                        questSkill(72, "Mining"),
+                        questSkill(35, "Construction"),
+                        questSkill(68, "Agility"),
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Making_Friends_with_My_Arm",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
+    },
+    {
+        machine_name: 'troll_stronghold_2',
+        full_name: 'Troll Stronghold Upper',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":7.710991655433217,"lng":330.29296875000006},
+        exits: [
+            {
+                label: 'To Trollheim',
+                position: {"lat":18.97902595325528,"lng":319.92187500000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":82.04041718857093,"lng":291.72546386718756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Trollheim',
+                position: {"lat":-0.17578097424708533,"lng":310.60546875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":81.92009856891885,"lng":291.21459960937506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
     {
         machine_name: 'under_heros_guild',
         full_name: 'Heros\'s Guild Basement',

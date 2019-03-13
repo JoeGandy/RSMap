@@ -46,46 +46,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/The_Forsaken_Tower",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Making Friends with My Arm",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":82.38861177489242,"lng":284.13391113281256},
-        difficulty: "Master",
-        length: "Medium",
-        quest_points: 2,
-        quests_required: [
-            "My Arm's Big Adventure",
-            "Eadgar's Ruse",
-            "Troll Stronghold",
-            "Death Plateau",
-            "Druidic Ritual",
-            "The Feud",
-            "Jungle Potion",
-            "Druidic Ritual",
-            "Swan Song",
-            "One Small Favour",
-            "Rune Mysteries",
-            "Shilo Village",
-            "Garden of Tranquillity",
-            "Creature of Fenkenstrain",
-            "Priest in Peril",
-            "The Restless Ghost",
-            "Cold War",
-            "Romeo & Juliet"
-        ],
-        skills_required: [
-            questSkill(66, "Firemaking"),
-            questSkill(72, "Mining"),
-            questSkill(35, "Construction"),
-            questSkill(68, "Agility"),
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Making_Friends_with_My_Arm",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "A Taste of Hope",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
@@ -522,32 +482,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/Enlightened_Journey",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "My Arm's Big Adventure",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":82.03166478362911,"lng":277.28393554687506},
-        difficulty: "Intermediate",
-        length: "Medium",
-        quest_points: 1,
-        quests_required: [
-            "Eadgar's Ruse",
-            "Troll Stronghold",
-            "Death Plateau",
-            "The Feud",
-            "Jungle Potion",
-            "Druidic Ritual"
-        ],
-        skills_required: [
-            questSkill(10, "Woodcutting"),
-            questSkill(29, "Farming")
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/My_Arm%27s_Big_Adventure",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "Elemental Workshop II",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
@@ -1384,27 +1318,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/In_Search_of_the_Myreque",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Troll Romance",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":76.95289511468847,"lng":331.60034179687506},
-        difficulty: "Experienced",
-        length: "Medium",
-        quest_points: 2,
-        quests_required: [
-            "Troll Stronghold",
-            "Death Plateau"
-        ],
-        skills_required: [
-            questSkill(28, "Agility")
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Troll_Romance",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "Haunted Mine",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
