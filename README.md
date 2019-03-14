@@ -25,22 +25,23 @@ Built on gatsby and react
 
 #### Issues to fix before going live
 - ~Going in dungeons above a certain Y axis pans to above the dungeon~
+- ~Rum deal island~
+- ~Troll Stronghold~
+- ~Chasm of fire~
+- ~Kourend Slayer dungeon~
 - Waterbirth dungeon
-- Quest cave under gnome stronhold (no idea of name)
+- Quest cave under gnome stronghold (no idea of name)
 - Other godwars layers
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
 - Log balance over Karamja river, what level?
-- ~Rum deal island~
-- ~Troll Stronghold~
-- ~Chasm of fire~
+- Remember if toggle list is turned off
 - Shazian Crypts
-- ~Kourend Slayer dungeon~
+- Remember position on refresh (inside dungeons)
 
 #### Goal features
 - Farm patch info
-- Stores to show what they sell w/ quanitities 
+- Stores to show what they sell w/ quantities 
 - Clue scroll locations
-- Remember filters on refresh (inside deungons)
-- Remember position on refresh (inside dungeons)
 - Show quickest route through dungeons
+- Allow Drawingon the map
