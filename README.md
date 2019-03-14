@@ -33,7 +33,9 @@ Built on gatsby and react
 - Log balance over Karamja river, what level?
 - ~Rum deal island~
 - ~Troll Stronghold~
-- Kourend Slayer dungeon
+- ~Chasm of fire~
+- Shazian Crypts
+- ~Kourend Slayer dungeon~
 
 #### Goal features
 - Farm patch info

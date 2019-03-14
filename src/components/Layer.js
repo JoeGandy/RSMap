@@ -80,7 +80,7 @@ export default class Layer extends Component {
     }
 
     handleClick(e) {
-        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
         this.setState({clicked_position: e.latlng});
     }
 
@@ -140,9 +140,9 @@ export default class Layer extends Component {
                     </>
                     : null}
                 <Controls />
+                <DevTools clickedPos={this.state.clicked_position}/>
             </>
         )
-        // <DevTools clickedPos={this.state.clicked_position}/>
 
     }
 }

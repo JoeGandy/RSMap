@@ -77,16 +77,501 @@ export function getDungeonCenter(dungeon_name) {
 
 export const Dungeons = [
     {
+        machine_name: 'chasam_of_fire_1',
+        full_name: 'Chasm of Fire (Bottom Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":4.390228926463396,"lng":356.66015625000006},
+        exits: [
+            {
+                label: 'To Chasm of Fire (Second Level)',
+                position: {"lat":24.5271348225978,"lng":383.55468750000006},
+                target_layer: "chasam_of_fire_2",
+                target_layer_position: {"lat":26.43122806450644,"lng":382.85156250000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Chasm of Fire (Second Level)',
+                position: {"lat":-2.6357885741666065,"lng":382.67578125000006},
+                target_layer: "chasam_of_fire_2",
+                target_layer_position: {"lat":-1.2303741774326018,"lng":381.97265625},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 19.476950206488414,
+                    "lng": 352.08984375000006
+                },
+                "title": "Black Demons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -10.833305983642491,
+                    "lng": 351.56250000000006
+                },
+                "title": "Black Demons",
+                "description": null
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'chasam_of_fire_2',
+        full_name: 'Chasm of Fire (Second Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":4.390228926463396,"lng":356.66015625000006},
+        exits: [
+            {
+                label: 'To Chasm of Fire (First Level)',
+                position: {"lat":23.725011735951796,"lng":353.32031250000006},
+                target_layer: "chasam_of_fire_3",
+                target_layer_position: {"lat":24.206889622398023,"lng":352.79296875},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Chasm of Fire (First Level)',
+                position: {"lat":-13.2399454992863,"lng":373.00781250000006},
+                target_layer: "chasam_of_fire_3",
+                target_layer_position: {"lat":-11.5230875068685,"lng":374.06250000000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 11.523087506868514,
+                    "lng": 344.35546875000006
+                },
+                "title": "Greater<br>Demons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 11.86735091145932,
+                    "lng": 371.42578125000006
+                },
+                "title": "Greater<br>Demons",
+                "description": null
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'chasam_of_fire_3',
+        full_name: 'Chasm of Fire (First Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":4.390228926463396,"lng":356.66015625000006},
+        exits: [
+            {
+                label: 'To Shayzien House',
+                position: {"lat":1.9332268264771233,"lng":349.98046875},
+                target_layer: "surface",
+                target_layer_position: {"lat":81.85654050886374,"lng":199.03930664062503},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 9.44906182688142,
+                    "lng": 356.48437500000006
+                },
+                "title": "Lesser Demons",
+                "description": null
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'kourend_slayer_cave',
+        full_name: 'Kourend Slayer Cave',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 13.752724664396988, "lng": 346.81640625000006},
+        exits: [
+            {
+                label: 'To Kourend Castle',
+                position: {"lat": 20.138470312451155, "lng": 349.10156250000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 81.88217824705356, "lng": 212.49206542968753},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Shayzien',
+                position: {"lat": -57.891497352710324, "lng": 326.42578125000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 81.69824102870392, "lng": 201.52496337890628},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Hosidius',
+                position: {"lat": -52.48278022207821, "lng": 432.94921875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 80.81776749991873, "lng": 214.44488525390625},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Lovakengj',
+                position: {"lat": 67.13582938531948, "lng": 279.49218750000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 82.91394796146943, "lng": 207.66357421875},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Arceuus',
+                position: {"lat": 67.16995497083367, "lng": 424.24804687500006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 83.49096067249315, "lng": 216.41693115234378},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 63.860035895395306,
+                    "lng": 276.15234375000006
+                },
+                "title": "Black<br>Dragons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 49.15296965617042,
+                    "lng": 277.38281250000006
+                },
+                "title": "Red<br>Dragons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 48.3416461723746,
+                    "lng": 300.93750000000006
+                },
+                "title": "Blue<br>Dragons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 35.889050079360935,
+                    "lng": 319.04296875000006
+                },
+                "title": "Hellhounds",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 14.944784875088372,
+                    "lng": 310.42968750000006
+                },
+                "title": "Skeletons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -17.14079039331665,
+                    "lng": 344.70703125000006
+                },
+                "title": "Ghosts",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 24.84656534821976,
+                    "lng": 265.07812500000006
+                },
+                "title": "Steel<br>Dragons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 34.161818161230386,
+                    "lng": 296.71875000000006
+                },
+                "title": "Fire<br>Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 19.973348786110613,
+                    "lng": 281.07421875000006
+                },
+                "title": "Dark<br>Beasts",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 3.6888551431470478,
+                    "lng": 261.56250000000006
+                },
+                "title": "Shades",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -34.016241889667015,
+                    "lng": 274.92187500000006
+                },
+                "title": "Spectres",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -50.84757295365388,
+                    "lng": 276.85546875000006
+                },
+                "title": "Banshees",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -53.01478324585922,
+                    "lng": 296.19140625000006
+                },
+                "title": "Ankou",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -4.039617826768424,
+                    "lng": 309.55078125000006
+                },
+                "title": "Animated<br>Axes",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -16.804541076383455,
+                    "lng": 283.53515625000006
+                },
+                "title": "Bloodvelds",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -32.842673631954305,
+                    "lng": 297.42187500000006
+                },
+                "title": "Hill Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -38.27268853598096,
+                    "lng": 338.55468750000006
+                },
+                "title": "Moss Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -26.74561038219901,
+                    "lng": 325.37109375000006
+                },
+                "title": "Cyclopes &<br>Axes",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 0.7031073524364909,
+                    "lng": 327.30468750000006
+                },
+                "title": "Hill<br>Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 62.34960927573042,
+                    "lng": 320.97656250000006
+                },
+                "title": "Bronze & Iron<br>Dragons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 61.10078883158897,
+                    "lng": 358.41796875000006
+                },
+                "title": "Abyssal<br>Demons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 66.08936427047088,
+                    "lng": 396.9140625
+                },
+                "title": "Greater Demons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 52.26815737376817,
+                    "lng": 396.9140625
+                },
+                "title": "Nechryael",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 47.040182144806664,
+                    "lng": 366.32812500000006
+                },
+                "title": "Bloodvelds",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 44.08758502824518,
+                    "lng": 341.71875000000006
+                },
+                "title": "Hill<br>Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 56.9449741808516,
+                    "lng": 426.09375
+                },
+                "title": "Black<br>Demons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 39.36827914916014,
+                    "lng": 419.58984375000006
+                },
+                "title": "Lesser Demons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 33.137551192346145,
+                    "lng": 384.96093750000006
+                },
+                "title": "Ghosts",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 14.604847155053898,
+                    "lng": 377.92968750000006
+                },
+                "title": "Moss<br>Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 18.812717856407776,
+                    "lng": 424.51171875000006
+                },
+                "title": "Jellies",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -15.792253570362446,
+                    "lng": 416.77734375000006
+                },
+                "title": "Dust<br>Devils",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -26.43122806450644,
+                    "lng": 383.90625000000006
+                },
+                "title": "Bloodvelds",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -46.92025531537452,
+                    "lng": 378.10546875000006
+                },
+                "title": "Jellies",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -47.8721439688873,
+                    "lng": 346.11328125000006
+                },
+                "title": "Dagannoth",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -50.17689812200105,
+                    "lng": 416.07421875000006
+                },
+                "title": "Sand<br>Crabs",
+                "description": null
+            }
+        ],
+        icons: {
+            agility_shortcuts: [
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":-37.57941251343839,"lng":323.43750000000006},
+                    title: "Agility Shortcut",
+                    description: "Crevice A",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":-44.96479793033102,"lng":320.62500000000006},
+                    title: "Agility Shortcut",
+                    description: "Crevice A",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":49.03786794532644,"lng":404.82421875000006},
+                    title: "Agility Shortcut",
+                    description: "Crevice B (34 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":27.371767300523047,"lng":418.88671875},
+                    title: "Agility Shortcut",
+                    description: "Crevice B (34 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":43.197167282501276,"lng":275.62500000000006},
+                    title: "Agility Shortcut",
+                    description: "Stepping stones",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":30.751277776257812,"lng":270.00000000000006},
+                    title: "Agility Shortcut",
+                    description: "Stepping stones",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+            ]
+        }
+    },
+    {
         machine_name: 'braindeath_island',
         full_name: 'Brain Death Island',
         icon: require('../../static/icons/misc/Transportation_icon.png'),
-        center_pos: {"lat":7.710991655433217,"lng":330.29296875000006},
+        center_pos: {"lat": 7.710991655433217, "lng": 330.29296875000006},
         exits: [
             {
                 label: 'To North of Ectofuntus',
-                position: {"lat":0.3515602939922709,"lng":382.32421875},
+                position: {"lat": 0.3515602939922709, "lng": 382.32421875},
                 target_layer: "surface",
-                target_layer_position: {"lat":80.52438742758532,"lng":347.2833251953125},
+                target_layer_position: {"lat": 80.52438742758532, "lng": 347.2833251953125},
                 icon: require('../../static/icons/misc/Transportation_icon.png')
             }
         ],
@@ -97,27 +582,27 @@ export const Dungeons = [
         machine_name: 'troll_stronghold_0',
         full_name: 'Troll Stronghold Lower',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":7.710991655433217,"lng":330.29296875000006},
+        center_pos: {"lat": 7.710991655433217, "lng": 330.29296875000006},
         exits: [
             {
                 label: 'To Trollheim',
-                position: {"lat":-37.30027528134431,"lng":299.88281250000006},
+                position: {"lat": -37.30027528134431, "lng": 299.88281250000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":81.63814406346873,"lng":290.93444824218756},
+                target_layer_position: {"lat": 81.63814406346873, "lng": 290.93444824218756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Troll Stronghold Middle',
-                position: {"lat":38.134556577054134,"lng":340.13671875},
+                position: {"lat": 38.134556577054134, "lng": 340.13671875},
                 target_layer: "troll_stronghold_1",
-                target_layer_position: {"lat":40.04443758460859,"lng":341.36718750000006},
+                target_layer_position: {"lat": 40.04443758460859, "lng": 341.36718750000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Troll Stronghold Middle',
-                position: {"lat":-19.476950206488414,"lng":340.3125},
+                position: {"lat": -19.476950206488414, "lng": 340.3125},
                 target_layer: "troll_stronghold_1",
-                target_layer_position: {"lat":-20.3034175184893,"lng":340.6640625},
+                target_layer_position: {"lat": -20.3034175184893, "lng": 340.6640625},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -128,20 +613,20 @@ export const Dungeons = [
         machine_name: 'troll_stronghold_1',
         full_name: 'Troll Stronghold Middle',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":7.710991655433217,"lng":330.29296875000006},
+        center_pos: {"lat": 7.710991655433217, "lng": 330.29296875000006},
         exits: [
             {
                 label: 'To Troll Stronghold Upper',
-                position: {"lat":39.774769485295465,"lng":325.89843750000006},
+                position: {"lat": 39.774769485295465, "lng": 325.89843750000006},
                 target_layer: "troll_stronghold_2",
-                target_layer_position: {"lat":40.04443758460859,"lng":328.00781250000006},
+                target_layer_position: {"lat": 40.04443758460859, "lng": 328.00781250000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Troll Stronghold Upper',
-                position: {"lat":-34.161818161230386,"lng":327.48046875000006},
+                position: {"lat": -34.161818161230386, "lng": 327.48046875000006},
                 target_layer: "troll_stronghold_2",
-                target_layer_position: {"lat":-34.016241889667015,"lng":328.00781250000006},
+                target_layer_position: {"lat": -34.016241889667015, "lng": 328.00781250000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -153,7 +638,7 @@ export const Dungeons = [
                     title: "Troll Romance",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":-16.425547506916725,"lng":305.1123046875},
+                    position: {"lat": -16.425547506916725, "lng": 305.1123046875},
                     difficulty: "Experienced",
                     length: "Medium",
                     quest_points: 2,
@@ -171,7 +656,7 @@ export const Dungeons = [
                     title: "My Arm's Big Adventure",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":-22.91792293614603,"lng":324.66796875000006},
+                    position: {"lat": -22.91792293614603, "lng": 324.66796875000006},
                     difficulty: "Intermediate",
                     length: "Medium",
                     quest_points: 1,
@@ -194,7 +679,7 @@ export const Dungeons = [
                     title: "Making Friends with My Arm",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":-28.14950321154457,"lng":330.29296875000006},
+                    position: {"lat": -28.14950321154457, "lng": 330.29296875000006},
                     difficulty: "Master",
                     length: "Medium",
                     quest_points: 2,
@@ -234,20 +719,20 @@ export const Dungeons = [
         machine_name: 'troll_stronghold_2',
         full_name: 'Troll Stronghold Upper',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":7.710991655433217,"lng":330.29296875000006},
+        center_pos: {"lat": 7.710991655433217, "lng": 330.29296875000006},
         exits: [
             {
                 label: 'To Trollheim',
-                position: {"lat":18.97902595325528,"lng":319.92187500000006},
+                position: {"lat": 18.97902595325528, "lng": 319.92187500000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.04041718857093,"lng":291.72546386718756},
+                target_layer_position: {"lat": 82.04041718857093, "lng": 291.72546386718756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Trollheim',
-                position: {"lat":-0.17578097424708533,"lng":310.60546875000006},
+                position: {"lat": -0.17578097424708533, "lng": 310.60546875000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":81.92009856891885,"lng":291.21459960937506},
+                target_layer_position: {"lat": 81.92009856891885, "lng": 291.21459960937506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -591,7 +1076,7 @@ export const Dungeons = [
                     title: "Dream Mentor",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":6.970049417296232,"lng":369.66796875},
+                    position: {"lat": 6.970049417296232, "lng": 369.66796875},
                     difficulty: "Master",
                     length: "Short",
                     quest_points: 2,
@@ -608,8 +1093,7 @@ export const Dungeons = [
                         "Death Plateau",
                         "Druidic Ritual"
                     ],
-                    skills_required: [
-                    ],
+                    skills_required: [],
                     full_guide: "https://oldschool.runescape.wiki/w/Dream_Mentor",
                     category: Categories.QUESTS
                 },
@@ -1604,7 +2088,7 @@ export const Dungeons = [
                     title: "Darkness of Hallowvale",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":27.68352808378776,"lng":394.1015625},
+                    position: {"lat": 27.68352808378776, "lng": 394.1015625},
                     difficulty: "Intermediate",
                     length: "Very Long",
                     quest_points: 2,
@@ -2023,7 +2507,7 @@ export const Dungeons = [
                     title: "Another Slice of H.A.M.",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":60.994423108456154,"lng":379.55566406250006},
+                    position: {"lat": 60.994423108456154, "lng": 379.55566406250006},
                     difficulty: "Intermediate",
                     length: "Medium",
                     quest_points: 1,
@@ -2966,7 +3450,7 @@ export const Dungeons = [
                     title: "Between a Rock...",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":-6.926426847059551,"lng":278.17382812500006},
+                    position: {"lat": -6.926426847059551, "lng": 278.17382812500006},
                     difficulty: "Experienced",
                     length: "Long",
                     quest_points: 2,
@@ -2986,7 +3470,7 @@ export const Dungeons = [
                     title: "The Giant Dwarf",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":-52.37559917665911,"lng":303.57421875000006},
+                    position: {"lat": -52.37559917665911, "lng": 303.57421875000006},
                     difficulty: "Intermediate",
                     length: "Medium",
                     quest_points: 2,
@@ -3006,7 +3490,7 @@ export const Dungeons = [
                     title: "Forgettable Tale...",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":50.84757295365389,"lng":282.56835937500006},
+                    position: {"lat": 50.84757295365389, "lng": 282.56835937500006},
                     difficulty: "Intermediate",
                     length: "Long",
                     quest_points: 2,
@@ -3041,9 +3525,9 @@ export const Dungeons = [
             },
             {
                 label: 'To Troll Montains',
-                position: {"lat":-7.01366792756663,"lng":377.75390625000006},
+                position: {"lat": -7.01366792756663, "lng": 377.75390625000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.29270201244428,"lng":288.88549804687506},
+                target_layer_position: {"lat": 82.29270201244428, "lng": 288.88549804687506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -4431,7 +4915,7 @@ export const Dungeons = [
                     title: "Nature Spirit",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":1.5818302639606454,"lng":379.6875},
+                    position: {"lat": 1.5818302639606454, "lng": 379.6875},
                     difficulty: "Novice",
                     length: "Medium",
                     quest_points: 2,
@@ -4764,7 +5248,7 @@ export const Dungeons = [
                     title: "Death to the Dorgeshuun",
                     iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
                     className: Categories.QUESTS,
-                    position: {"lat":1.3182430568620136,"lng":366.76757812500006},
+                    position: {"lat": 1.3182430568620136, "lng": 366.76757812500006},
                     difficulty: "Intermediate",
                     length: "Medium",
                     quest_points: 1,
@@ -5894,7 +6378,7 @@ export const Dungeons = [
         },],
         map_labels: [
             {
-                "position": {"lat":2.986927393334876,"lng":380.74218750000006},
+                "position": {"lat": 2.986927393334876, "lng": 380.74218750000006},
                 "title": "Zombies & Skeletons",
                 "description": null
             },
