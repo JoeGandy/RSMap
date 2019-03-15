@@ -19,6 +19,14 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
                         test: /Icons/,
                         use: loaders.null(),
                     },
+                    {
+                        test: /Quests/,
+                        use: loaders.null(),
+                    },
+                    {
+                        test: /Dungeons/,
+                        use: loaders.null(),
+                    },
                 ],
             },
         })
