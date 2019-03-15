@@ -29,6 +29,7 @@ Built on gatsby and react
 - ~Troll Stronghold~
 - ~Chasm of fire~
 - ~Kourend Slayer dungeon~
+- ~Shazian Crypts~
 - Waterbirth dungeon
 - Quest cave under gnome stronghold (no idea of name)
 - Other godwars layers
@@ -36,7 +37,6 @@ Built on gatsby and react
 - Double check Arandar Shorcuts
 - Log balance over Karamja river, what level?
 - Remember if toggle list is turned off
-- Shazian Crypts
 - Remember position on refresh (inside dungeons)
 
 #### Goal features

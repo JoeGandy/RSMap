@@ -75,25 +75,112 @@ export function getDungeonCenter(dungeon_name) {
 
  */
 
+//
 export const Dungeons = [
+    {
+        machine_name: 'shayzien_crypts_1',
+        full_name: 'Shayzian Crypts (Lower)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 4.390228926463396, "lng": 356.66015625000006},
+        exits: [
+            {
+                label: 'To Shayzian Crypts (Upper)',
+                position: {"lat":38.272688535980976,"lng":342.42187500000006},
+                target_layer: "shayzien_crypts_2",
+                target_layer_position: {"lat":38.272688535980976,"lng":366.50390625000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Shayzian Crypts (Upper)',
+                position: {"lat":39.232253141714914,"lng":365.44921875000006},
+                target_layer: "shayzien_crypts_2",
+                target_layer_position: {"lat":38.685509760012025,"lng":346.28906250000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Shayzian Crypts (Upper)',
+                position: {"lat":1.4061088354351594,"lng":322.03125000000006},
+                target_layer: "shayzien_crypts_2",
+                target_layer_position: {"lat":1.5818302639606454,"lng":321.85546875000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Shayzian Crypts (Upper)',
+                position: {"lat":1.5818302639606454,"lng":390.05859375000006},
+                target_layer: "shayzien_crypts_2",
+                target_layer_position: {"lat":2.28455066023697,"lng":390.05859375000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'shayzien_crypts_2',
+        full_name: 'Shayzian Crypts (Middle)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 4.390228926463396, "lng": 356.66015625000006},
+        exits: [
+            {
+                label: 'To Shayzian Crypts (Upper)',
+                position: {"lat": -29.22889003019423, "lng": 355.60546875000006},
+                target_layer: "shayzien_crypts_3",
+                target_layer_position: {"lat": -28.92163128242129, "lng": 356.13281250000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Shayzian Crypts (Upper)',
+                position: {"lat": 25.16517336866393, "lng": 385.66406250000006},
+                target_layer: "shayzien_crypts_3",
+                target_layer_position: {"lat": 24.5271348225978, "lng": 385.83984375000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Shayzian Crypts (Upper)',
+                position: {"lat": -21.779905342529634, "lng": 327.12890625000006},
+                target_layer: "shayzien_crypts_3",
+                target_layer_position: {"lat": -21.12549763660628, "lng": 328.18359375000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'shayzien_crypts_3',
+        full_name: 'Shayzian Crypts (Upper)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 4.390228926463396, "lng": 356.66015625000006},
+        exits: [
+            {
+                label: 'To Graveyard of Heros',
+                position: {"lat": 1.9332268264771233, "lng": 328.00781250000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 80.64257005581271, "lng": 202.33245849609378},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [],
+        icons: {}
+    },
     {
         machine_name: 'chasam_of_fire_1',
         full_name: 'Chasm of Fire (Bottom Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":4.390228926463396,"lng":356.66015625000006},
+        center_pos: {"lat": 4.390228926463396, "lng": 356.66015625000006},
         exits: [
             {
                 label: 'To Chasm of Fire (Second Level)',
-                position: {"lat":24.5271348225978,"lng":383.55468750000006},
+                position: {"lat": 24.5271348225978, "lng": 383.55468750000006},
                 target_layer: "chasam_of_fire_2",
-                target_layer_position: {"lat":26.43122806450644,"lng":382.85156250000006},
+                target_layer_position: {"lat": 26.43122806450644, "lng": 382.85156250000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Chasm of Fire (Second Level)',
-                position: {"lat":-2.6357885741666065,"lng":382.67578125000006},
+                position: {"lat": -2.6357885741666065, "lng": 382.67578125000006},
                 target_layer: "chasam_of_fire_2",
-                target_layer_position: {"lat":-1.2303741774326018,"lng":381.97265625},
+                target_layer_position: {"lat": -1.2303741774326018, "lng": 381.97265625},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             }
         ],
@@ -121,20 +208,20 @@ export const Dungeons = [
         machine_name: 'chasam_of_fire_2',
         full_name: 'Chasm of Fire (Second Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":4.390228926463396,"lng":356.66015625000006},
+        center_pos: {"lat": 4.390228926463396, "lng": 356.66015625000006},
         exits: [
             {
                 label: 'To Chasm of Fire (First Level)',
-                position: {"lat":23.725011735951796,"lng":353.32031250000006},
+                position: {"lat": 23.725011735951796, "lng": 353.32031250000006},
                 target_layer: "chasam_of_fire_3",
-                target_layer_position: {"lat":24.206889622398023,"lng":352.79296875},
+                target_layer_position: {"lat": 24.206889622398023, "lng": 352.79296875},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Chasm of Fire (First Level)',
-                position: {"lat":-13.2399454992863,"lng":373.00781250000006},
+                position: {"lat": -13.2399454992863, "lng": 373.00781250000006},
                 target_layer: "chasam_of_fire_3",
-                target_layer_position: {"lat":-11.5230875068685,"lng":374.06250000000006},
+                target_layer_position: {"lat": -11.5230875068685, "lng": 374.06250000000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             }
         ],
@@ -162,13 +249,13 @@ export const Dungeons = [
         machine_name: 'chasam_of_fire_3',
         full_name: 'Chasm of Fire (First Level)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {"lat":4.390228926463396,"lng":356.66015625000006},
+        center_pos: {"lat": 4.390228926463396, "lng": 356.66015625000006},
         exits: [
             {
                 label: 'To Shayzien House',
-                position: {"lat":1.9332268264771233,"lng":349.98046875},
+                position: {"lat": 1.9332268264771233, "lng": 349.98046875},
                 target_layer: "surface",
-                target_layer_position: {"lat":81.85654050886374,"lng":199.03930664062503},
+                target_layer_position: {"lat": 81.85654050886374, "lng": 199.03930664062503},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             }
         ],
@@ -513,7 +600,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":-37.57941251343839,"lng":323.43750000000006},
+                    position: {"lat": -37.57941251343839, "lng": 323.43750000000006},
                     title: "Agility Shortcut",
                     description: "Crevice A",
                     category: Categories.AGILITY_SHORTCUT
@@ -521,7 +608,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":-44.96479793033102,"lng":320.62500000000006},
+                    position: {"lat": -44.96479793033102, "lng": 320.62500000000006},
                     title: "Agility Shortcut",
                     description: "Crevice A",
                     category: Categories.AGILITY_SHORTCUT
@@ -529,7 +616,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":49.03786794532644,"lng":404.82421875000006},
+                    position: {"lat": 49.03786794532644, "lng": 404.82421875000006},
                     title: "Agility Shortcut",
                     description: "Crevice B (34 Agility)",
                     category: Categories.AGILITY_SHORTCUT
@@ -537,7 +624,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":27.371767300523047,"lng":418.88671875},
+                    position: {"lat": 27.371767300523047, "lng": 418.88671875},
                     title: "Agility Shortcut",
                     description: "Crevice B (34 Agility)",
                     category: Categories.AGILITY_SHORTCUT
@@ -545,7 +632,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":43.197167282501276,"lng":275.62500000000006},
+                    position: {"lat": 43.197167282501276, "lng": 275.62500000000006},
                     title: "Agility Shortcut",
                     description: "Stepping stones",
                     category: Categories.AGILITY_SHORTCUT
@@ -553,7 +640,7 @@ export const Dungeons = [
                 {
                     iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
                     className: Categories.AGILITY_SHORTCUT,
-                    position: {"lat":30.751277776257812,"lng":270.00000000000006},
+                    position: {"lat": 30.751277776257812, "lng": 270.00000000000006},
                     title: "Agility Shortcut",
                     description: "Stepping stones",
                     category: Categories.AGILITY_SHORTCUT
