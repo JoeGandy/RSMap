@@ -37,6 +37,7 @@ export function rewriteIcons(bounds) {
                 if(type.label !== "locations"){
                     let target_position = null;
                     let skip_check = false;
+                    skip_check = true;
 
                     if (type.data[key].position) {
                         target_position = type.data[key].position;

@@ -80,7 +80,6 @@ export default class Layer extends Component {
         if (this.props.layer !== prevProps.layer) {
             this.setState({zoomLevel: this.props.defaultZoom});
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer});
-            this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
             this.setState({icons: getDungeonIcons(this.props.layer)});
             this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer));
             this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMaxZoom(this.props.maxZoom);
@@ -110,7 +109,9 @@ export default class Layer extends Component {
     onViewportChanged(viewport) {
 
         if (this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon']) {
-            this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
+            if(this.state.bounds !== this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()) {
+                //this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
+            }
         }
 
         //Only do this on surface for now, there is an issue with the zoom level changes when saving dungeon spots
@@ -121,7 +122,7 @@ export default class Layer extends Component {
         }
     }
     onLoad(){
-        this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
+        //this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
     }
 
     render() {
