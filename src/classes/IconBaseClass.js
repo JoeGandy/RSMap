@@ -1,7 +1,4 @@
 import L, {Icon} from "leaflet";
-import OSRSMap from "../components/OSRSMap";
-
-
 
 const sizeConversionSurface = {
     9: 128,

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {withPrefix} from 'gatsby';
 import {Map, TileLayer, Polyline} from "react-leaflet";
 import MapMarkers from "./MapMarkers";
 import FiltersBox from "./FiltersBox";
@@ -80,7 +79,7 @@ export default class Layer extends Component {
     }
 
     handleClick(e) {
-        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        //prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
         this.setState({clicked_position: e.latlng});
     }
 
@@ -124,6 +123,7 @@ export default class Layer extends Component {
                         updateWhenZooming={false}
                         updateInterval={200}
                     />
+                    <DevTools layer={this.props.layer} clickedPos={this.state.clicked_position}/>
                     <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} regions={this.props.regions}
                                 handleLayerChange={this.props.handleLayerChange} layer={this.props.layer}
                                 filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}/>
@@ -140,7 +140,6 @@ export default class Layer extends Component {
                     </>
                     : null}
                 <Controls />
-                <DevTools clickedPos={this.state.clicked_position}/>
             </>
         )
 

@@ -275,9 +275,9 @@ export const Dungeons = [
             },
             {
                 label: 'To Waterbirth Island',
-                position: {"lat":3.162455530237848,"lng":422.40234375000006},
+                position: {"lat": 3.162455530237848, "lng": 422.40234375000006},
                 target_layer: "surface",
-                target_layer_position: {"lat":82.49195309085279,"lng":272.20825195312506},
+                target_layer_position: {"lat": 82.49195309085279, "lng": 272.20825195312506},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],

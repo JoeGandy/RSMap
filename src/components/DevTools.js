@@ -2,6 +2,15 @@ import React, {Component} from 'react'
 import 'leaflet/dist/leaflet.css';
 import {rewriteIcons} from "../classes/Icons";
 import {Typeahead} from 'react-bootstrap-typeahead';
+import {Polygon} from "react-leaflet";
+
+
+let example_monster = {
+    position: {},
+    title: "Black Demons",
+    description: null,
+    layer: "surface"
+};
 
 
 let example_label = {
@@ -21,11 +30,13 @@ export default class DevTools extends Component {
             action: null,
             built_locations: [],
             built_labels: [],
+            built_monsters: [],
             region_points: [],
         };
 
         this.startNewLocation = this.startNewLocation.bind(this);
         this.startNewLabel = this.startNewLabel.bind(this);
+        this.startNewMonster = this.startNewMonster.bind(this);
         this.startNewRegion = this.startNewRegion.bind(this);
         this.endNewRegion = this.endNewRegion.bind(this);
         this.cancelDevtools = this.cancelDevtools.bind(this);
@@ -49,6 +60,20 @@ export default class DevTools extends Component {
                         console.log(JSON.stringify(built_locations, null, 4));
 
 
+                        break;
+                    case 'new_monster':
+                        let monster_name = prompt("Enter a name for this monster: ");
+
+                        let new_monster_object = {...example_monster};
+                        new_monster_object.title = monster_name;
+                        new_monster_object.position = this.props.clickedPos;
+                        new_monster_object.layer = this.props.layer;
+
+                        let built_monsters = this.state.built_monsters;
+                        built_monsters.push(new_monster_object);
+                        this.setState({built_monsters: built_monsters});
+                        console.clear();
+                        console.log(JSON.stringify(built_monsters, null, 4));
                         break;
                     case 'new_label':
                         let label_name = prompt("Enter a name for this label: ");
@@ -103,8 +128,15 @@ export default class DevTools extends Component {
 
     startNewLabel() {
         this.setState({action_in_progress: true});
-        this.setState({action_message: "Please click on the in two locations to make the label"})
+        this.setState({action_message: "Please click on on a spot and name the label"})
         this.setState({action: 'new_label'});
+        this.setState({pending_positions: []});
+    }
+
+    startNewMonster() {
+        this.setState({action_in_progress: true});
+        this.setState({action_message: "Please click on spots and name the monster"});
+        this.setState({action: 'new_monster'});
         this.setState({pending_positions: []});
     }
 
@@ -122,10 +154,18 @@ export default class DevTools extends Component {
         if (typeof window !== 'undefined') {
             return (
                 <div className="dev_tools">
+                    <Polygon
+                        ref={"tmp"}
+                        positions={this.state.region_points}
+                    />
                     {this.state.action_in_progress ? <b>{this.state.action_message}</b> : null}
                     <br/>
                     <button disabled={this.state.action_in_progress} onClick={this.startNewLocation}>Generate
                         Location
+                    </button>
+                    <br/>
+                    <button disabled={this.state.action_in_progress} onClick={this.startNewMonster}>Generate
+                        Monster
                     </button>
                     <br/>
                     <button disabled={this.state.action_in_progress} onClick={this.startNewLabel}>Generate

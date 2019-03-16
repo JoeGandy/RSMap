@@ -20,6 +20,8 @@ export default class SearchBox extends Component {
         if (typeof (results[0]) !== "undefined") {
             let target_position = null;
 
+            console.log(results[0]);
+
             if (results[0].position) {
                 target_position = results[0].position;
             } else if (results[0].positions && results[0].positions.length > 0) {

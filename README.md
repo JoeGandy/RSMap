@@ -34,13 +34,14 @@ Built on gatsby and react
 - ~Add brimhaven upper~
 - ~Other godwars layers~
 - ~Quest cave under gnome stronghold (no idea of name)~
-- ~Woodcuting guild deungeon~
+- ~Woodcuting guild dungeon~
 - ~Tears of guthix cavern~
 - ~Waterbirth dungeon~
+- Add Ogre caves (Jiggig, Gutanoth)
+- Add corsair cove
 - Add mournings end dungeon
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
-- Log balance over Karamja river, what level?
 - Remember if toggle list is turned off
 - Remember position on refresh (inside dungeons
 
@@ -49,4 +50,4 @@ Built on gatsby and react
 - Stores to show what they sell w/ quantities 
 - Clue scroll locations
 - Show quickest route through dungeons
-- Allow Drawingon the map
+- Allow Drawing on the map
