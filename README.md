@@ -30,14 +30,19 @@ Built on gatsby and react
 - ~Chasm of fire~
 - ~Kourend Slayer dungeon~
 - ~Shazian Crypts~
-- Waterbirth dungeon
-- Quest cave under gnome stronghold (no idea of name)
-- Other godwars layers
+- ~Add taverly upper~
+- ~Add brimhaven upper~
+- ~Other godwars layers~
+- ~Quest cave under gnome stronghold (no idea of name)~
+- ~Woodcuting guild deungeon~
+- ~Tears of guthix cavern~
+- ~Waterbirth dungeon~
+- Add mournings end dungeon
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
 - Log balance over Karamja river, what level?
 - Remember if toggle list is turned off
-- Remember position on refresh (inside dungeons)
+- Remember position on refresh (inside dungeons
 
 #### Goal features
 - Farm patch info

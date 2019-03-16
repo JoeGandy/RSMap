@@ -78,6 +78,267 @@ export function getDungeonCenter(dungeon_name) {
 //
 export const Dungeons = [
     {
+        machine_name: 'dk_lair',
+        full_name: 'Dagannoth Kings\' Lair',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 5.266007882805498, "lng": 358.94531250000006},
+        exits: [
+            {
+                label: 'To Waterbirth Island Dungeon (Fifth Level)',
+                position: {"lat": 6.140554782450308, "lng": 337.67578125},
+                target_layer: "waterbith_dungeon_0",
+                target_layer_position: {"lat": 3.162455530237848, "lng": 400.07812500000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'waterbith_dungeon_0',
+        full_name: 'Waterbirth Island Dungeon (Fifth Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -4.039617826768424, "lng": 361.40625000000006},
+        exits: [
+            {
+                label: 'To Waterbirth Island Dungeon (Fourth Level)',
+                position: {"lat": 51.50874245880335, "lng": 371.25000000000006},
+                target_layer: "waterbith_dungeon_1",
+                target_layer_position: {"lat": 52.05249047600099, "lng": 370.1953125},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Fourth Level)',
+                position: {"lat": 8.754794702435618, "lng": 465.46875},
+                target_layer: "waterbith_dungeon_1",
+                target_layer_position: {"lat": 11.523087506868514, "lng": 465.99609375000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'waterbith_dungeon_1',
+        full_name: 'Waterbirth Island Dungeon (Fourth Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -4.039617826768424, "lng": 361.40625000000006},
+        exits: [
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": 37.99616267972814, "lng": 258.75000000000006},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": 38.272688535980976, "lng": 257.34375000000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": 30.44867367928756, "lng": 243.28125000000003},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": 30.44867367928756, "lng": 242.75390625000003},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": 23.40276490540795, "lng": 242.22656250000003},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": 23.07973176244989, "lng": 241.34765625000003},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": 5.61598581915534, "lng": 248.20312500000003},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": 6.489983332670651, "lng": 246.09375000000003},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": -4.039617826768424, "lng": 282.83203125000006},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": -3.864254615721396, "lng": 281.60156250000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": 8.928487062665504, "lng": 332.40234375000006},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": 8.754794702435618, "lng": 333.45703125},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": 31.203404950917395, "lng": 334.68750000000006},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": 31.203404950917395, "lng": 334.68750000000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": 17.476432197195518, "lng": 429.43359375000006},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": 19.476950206488414, "lng": 429.78515625000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Third Level)',
+                position: {"lat": 28.304380682962783, "lng": 314.47265625000006},
+                target_layer: "waterbith_dungeon_2",
+                target_layer_position: {"lat": 28.304380682962783, "lng": 314.47265625000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'waterbith_dungeon_2',
+        full_name: 'Waterbirth Island Dungeon (Third Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -4.039617826768424, "lng": 361.40625000000006},
+        exits: [
+            {
+                label: 'To Waterbirth Island Dungeon (Second Level)',
+                position: {"lat": 48.45835188280866, "lng": 256.64062500000006},
+                target_layer: "waterbith_dungeon_3",
+                target_layer_position: {"lat": 49.15296965617042, "lng": 255.23437500000003},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Second Level)',
+                position: {"lat": 48.69096039092552, "lng": 276.67968750000006},
+                target_layer: "waterbith_dungeon_3",
+                target_layer_position: {"lat": 48.45835188280866, "lng": 278.08593750000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Second Level)',
+                position: {"lat": 30.44867367928756, "lng": 291.26953125000006},
+                target_layer: "waterbith_dungeon_3",
+                target_layer_position: {"lat": 33.578014746144014, "lng": 291.97265625000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Second Level)',
+                position: {"lat": 21.12549763660629, "lng": 278.78906250000006},
+                target_layer: "waterbith_dungeon_3",
+                target_layer_position: {"lat": 21.616579336740603, "lng": 278.43750000000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island Dungeon (Second Level)',
+                position: {"lat": 15.961329081596647, "lng": 298.12500000000006},
+                target_layer: "waterbith_dungeon_3",
+                target_layer_position: {"lat": 15.961329081596647, "lng": 298.12500000000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'waterbith_dungeon_3',
+        full_name: 'Waterbirth Island Dungeon (Second Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -4.039617826768424, "lng": 361.40625000000006},
+        exits: [
+            {
+                label: 'To Waterbirth Island Dungeon (Main Level)',
+                position: {"lat": 49.724479188712984, "lng": 242.05078125000003},
+                target_layer: "waterbirth_island_level_1",
+                target_layer_position: {"lat": 2.8113711933311403, "lng": 427.67578125000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Lighthouse (One way)',
+                position: {"lat": 52.26815737376817, "lng": 491.48437500000006},
+                target_layer: "lighthouse_dungeon",
+                target_layer_position: {"lat": -50002.8113711933311403, "lng": 427.67578125000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'waterbirth_island_level_1',
+        full_name: 'Waterbirth Island Dungeon (Main Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -4.039617826768424, "lng": 361.40625000000006},
+        exits: [
+            {
+                label: 'To Waterbirth Island',
+                position: {"lat": 7.36246686553575, "lng": 277.55859375000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 82.48333497678894, "lng": 270.76354980468756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Waterbirth Island',
+                position: {"lat":3.162455530237848,"lng":422.40234375000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":82.49195309085279,"lng":272.20825195312506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {}
+    },
+    {
+        machine_name: 'gnome_stronghold_quest_0',
+        full_name: 'The Eyes of Glouphrie Cave',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -4.039617826768424, "lng": 361.40625000000006},
+        exits: [{
+            label: 'To Tree Gnome Stronghold',
+            position: {"lat": -2.460181181020993, "lng": 380.56640625000006},
+            target_layer: "surface",
+            target_layer_position: {"lat": 79.14240007236909, "lng": 263.00170898437506},
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        },],
+        map_labels: [],
+        icons: {
+            quests: [
+                {
+                    title: "The Eyes of Glouphrie",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat": 2.986927393334876, "lng": 379.6875},
+                    difficulty: "Intermediate",
+                    length: "Medium",
+                    quest_points: 2,
+                    quests_required: [
+                        "The Grand Tree"
+                    ],
+                    skills_required: [
+                        questSkill(5, "Construction"),
+                        questSkill(46, "Magic"),
+                        questSkill(45, "Woodcutting", true),
+                        questSkill(50, "Firemaking", true)
+
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/The_Eyes_of_Glouphrie",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
+    },
+    {
+        machine_name: 'woodcutting_guild_dungeon',
+        full_name: 'Woodcutting Guild Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -4.039617826768424, "lng": 361.40625000000006},
+        exits: [{
+            label: 'To Woodcutting Guild',
+            position: {"lat": 20.797201434307, "lng": 396.38671875000006},
+            target_layer: "surface",
+            target_layer_position: {"lat": 80.1955651585234, "lng": 210.32226562500003},
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        },],
+        map_labels: [],
+        icons: {}
+    },
+    {
         machine_name: 'shayzien_crypts_1',
         full_name: 'Shayzian Crypts (Lower)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
@@ -85,30 +346,30 @@ export const Dungeons = [
         exits: [
             {
                 label: 'To Shayzian Crypts (Upper)',
-                position: {"lat":38.272688535980976,"lng":342.42187500000006},
+                position: {"lat": 38.272688535980976, "lng": 342.42187500000006},
                 target_layer: "shayzien_crypts_2",
-                target_layer_position: {"lat":38.272688535980976,"lng":366.50390625000006},
+                target_layer_position: {"lat": 38.272688535980976, "lng": 366.50390625000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Shayzian Crypts (Upper)',
-                position: {"lat":39.232253141714914,"lng":365.44921875000006},
+                position: {"lat": 39.232253141714914, "lng": 365.44921875000006},
                 target_layer: "shayzien_crypts_2",
-                target_layer_position: {"lat":38.685509760012025,"lng":346.28906250000006},
+                target_layer_position: {"lat": 38.685509760012025, "lng": 346.28906250000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Shayzian Crypts (Upper)',
-                position: {"lat":1.4061088354351594,"lng":322.03125000000006},
+                position: {"lat": 1.4061088354351594, "lng": 322.03125000000006},
                 target_layer: "shayzien_crypts_2",
-                target_layer_position: {"lat":1.5818302639606454,"lng":321.85546875000006},
+                target_layer_position: {"lat": 1.5818302639606454, "lng": 321.85546875000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
             {
                 label: 'To Shayzian Crypts (Upper)',
-                position: {"lat":1.5818302639606454,"lng":390.05859375000006},
+                position: {"lat": 1.5818302639606454, "lng": 390.05859375000006},
                 target_layer: "shayzien_crypts_2",
-                target_layer_position: {"lat":2.28455066023697,"lng":390.05859375000006},
+                target_layer_position: {"lat": 2.28455066023697, "lng": 390.05859375000006},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -1186,6 +1447,49 @@ export const Dungeons = [
                 },
             ]
         }
+    },
+    {
+        machine_name: 'god_wars_0',
+        full_name: 'God Wars Dungeon (Lower)',
+        icon: require('../../static/icons/misc/agility_shortcut.png'),
+        center_pos: {"lat": 3.5134210456400448, "lng": 359.12109375000006},
+        exits: [
+            {
+                label: 'To God Wars Dungeon (Middle)',
+                position: {"lat": -42.811521745097885, "lng": 412.73437500000006},
+                target_layer: "god_wars_1",
+                target_layer_position: {"lat": -42.940339233631825, "lng": 413.08593750000006},
+                icon: require('../../static/icons/misc/agility_shortcut.png')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": -49.15296965617039,
+                    "lng": 380.39062500000006
+                },
+                "title": "Saradormin",
+                "description": null
+            }
+        ],
+        icons: {}
+    },
+    {
+        machine_name: 'god_wars_1',
+        full_name: 'God Wars Dungeon (Middle)',
+        icon: require('../../static/icons/misc/agility_shortcut.png'),
+        center_pos: {"lat": 3.5134210456400448, "lng": 359.12109375000006},
+        exits: [
+            {
+                label: 'To God Wars Dungeon (Upper)',
+                position: {"lat": -11.5230875068685, "lng": 403.41796875000006},
+                target_layer: "god_wars_2",
+                target_layer_position: {"lat": -12.382928338487396, "lng": 403.59375000000006},
+                icon: require('../../static/icons/misc/agility_shortcut.png'),
+            },
+        ],
+        map_labels: [],
+        icons: {}
     },
     {
         machine_name: 'god_wars_2',
@@ -4332,6 +4636,66 @@ export const Dungeons = [
         icons: {}
     },
     {
+        machine_name: 'brimhaven_dungeon_2',
+        full_name: 'Brimhaven Dungeon (Upper)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 58.99531118795094, "lng": 363.51562500000006},
+        exits: [
+            {
+                label: 'To Brimhaven Dungeon',
+                position: {"lat": 14.43468021529728, "lng": 283.88671875000006},
+                target_layer: "brimhaven_dungeon",
+                target_layer_position: {"lat": 18.145851771694467, "lng": 284.23828125000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Brimhaven Dungeon',
+                position: {"lat": 78.45542534118533, "lng": 293.20312500000006},
+                target_layer: "brimhaven_dungeon",
+                target_layer_position: {"lat": 78.56048828398782, "lng": 298.65234375000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 1.0546279422758869,
+                    "lng": 281.95312500000006
+                },
+                "title": "Greater<br>Demons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 66.86108230224609,
+                    "lng": 281.60156250000006
+                },
+                "title": "Fire Giants",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 74.06786624952264,
+                    "lng": 324.14062500000006
+                },
+                "title": "Baby Green<br>Dragons",
+                "description": null
+            }
+        ],
+        icons: {
+            agility_shortcuts: [
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat": 75.2082449863107, "lng": 333.19335937500006},
+                    title: "Agility Shortcut",
+                    description: "Climb (87 Agility)",
+                    category: Categories.AGILITY_SHORTCUT
+                }
+            ]
+        }
+    },
+    {
         machine_name: 'brimhaven_dungeon',
         full_name: 'Brimhaven Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
@@ -4342,6 +4706,13 @@ export const Dungeons = [
                 position: {"lat": 66.08936427047088, "lng": 391.9921875},
                 target_layer: "surface",
                 target_layer_position: {"lat": 75.31027753026149, "lng": 285.45776367187506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Karamja',
+                position: {"lat": -31.80289258670676, "lng": 421.52343750000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 73.68806787884861, "lng": 286.51794433593756},
                 icon: require('../../static/icons/misc/Map_link_icon.webp')
             },
         ],
@@ -5542,6 +5913,42 @@ export const Dungeons = [
         icons: {}
     },
     {
+        machine_name: 'tears_of_guthix_cavern_2',
+        full_name: 'Tears of guthix cavern',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": 7.18810087117902, "lng": 360.87890625000006},
+        exits: [{
+            label: 'To Lumbridge Swamp Cave',
+            position: {"lat": 41.902277040963696, "lng": 338.90625000000006},
+            target_layer: "lumbridge_swamp_cave",
+            target_layer_position: {"lat": -31.503629305773018, "lng": 392.34375000000006},
+            icon: require('../../static/icons/misc/Map_link_icon.webp')
+        }],
+        map_labels: [],
+        icons: {
+            quests: [
+                {
+                    title: "Tears of Guthix",
+                    iconUrl: require('../../static/icons/misc/Quest_start_icon.png'),
+                    className: Categories.QUESTS,
+                    position: {"lat": 21.94304553343818, "lng": 385.31250000000006},
+                    difficulty: "Intermediate",
+                    length: "Very Short",
+                    quest_points: 1,
+                    quests_required: [],
+                    skills_required: [
+                        questSkill(43, "Quest Points"),
+                        questSkill(49, "Firemaking"),
+                        questSkill(20, "Crafting"),
+                        questSkill(20, "Mining")
+                    ],
+                    full_guide: "https://oldschool.runescape.wiki/w/Tears_of_Guthix",
+                    category: Categories.QUESTS
+                },
+            ]
+        }
+    },
+    {
         machine_name: 'lumbridge_swamp_cave',
         full_name: 'Lumbridge Swamp Cave',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
@@ -6259,13 +6666,68 @@ export const Dungeons = [
         }
     },
     {
+        machine_name: 'taverly_dungeon_upper',
+        full_name: 'Taverly Dungeon (Upper)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -3.513421045640032, "lng": 377.92968750000006},
+        exits: [
+            {
+                label: 'To Taverly Dungeon',
+                position: {"lat": 17.14079039331665, "lng": 369.14062500000006},
+                target_layer: "taverly_dungeon",
+                target_layer_position: {"lat": 68.52823492039879, "lng": 346.99218750000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Taverly Dungeon (Blue Dragons)',
+                position: {"lat": 0.3515602939922709, "lng": 402.18750000000006},
+                target_layer: "taverly_dungeon",
+                target_layer_position: {"lat": 61.85614879566797, "lng": 380.03906250000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 14.944784875088372,
+                    "lng": 323.08593750000006
+                },
+                "title": "Baby Black<br>Dragons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 14.093957177836224,
+                    "lng": 242.40234375000003
+                },
+                "title": "Black<br>Dragons",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 4.740675384778373,
+                    "lng": 438.22265625
+                },
+                "title": "Blue Dragons",
+                "description": null
+            }
+        ],
+        icons: {
+            agility_shortcuts: [{
+                iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                className: Categories.AGILITY_SHORTCUT,
+                position: {"lat": 13.923403897723347, "lng": 379.51171875},
+                title: "Agility Shortcut",
+                description: "Wall Climb (70 Agility)",
+                category: Categories.AGILITY_SHORTCUT
+            }]
+        }
+    },
+    {
         machine_name: 'taverly_dungeon',
         full_name: 'Taverly Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
-        center_pos: {
-            "lat": 43.32517767999296,
-            "lng": 332.22656250000006
-        },
+        center_pos: {"lat": 52.16045455774706, "lng": 352.08984375000006},
         exits: [
             {
                 label: 'To Taverly',
@@ -6427,7 +6889,7 @@ export const Dungeons = [
                 className: Categories.AGILITY_SHORTCUT,
                 position: {"lat": 67.676084581981, "lng": 357.275390625},
                 title: "Agility Shortcut",
-                description: "Pipe Squeeze (70 Agility)",
+                description: "Wall Climb (70 Agility)",
                 category: Categories.AGILITY_SHORTCUT
             }, {
                 iconUrl: require('../../static/icons/misc/agility_shortcut.png'),

@@ -523,13 +523,11 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/The_Slug_Menace",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
     {
         title: "The Eyes of Glouphrie",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
         className: Categories.QUESTS,
-        position: {"lat":82.03166478362911,"lng":277.28393554687506},
+        position: {"lat":79.14136528336273,"lng":262.82043457031256},
         difficulty: "Intermediate",
         length: "Medium",
         quest_points: 2,
@@ -546,7 +544,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/The_Eyes_of_Glouphrie",
         category: Categories.QUESTS
     },
-    */
     {
         title: "Lunar Diplomacy",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
@@ -1086,28 +1083,6 @@ export const Quests = [
         full_guide: "https://oldschool.runescape.wiki/w/Zogre_Flesh_Eaters",
         category: Categories.QUESTS
     },
-    /*
-        TODO this is underrground start, figure a way to map it
-    {
-        title: "Tears of Guthix",
-        iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
-        className: Categories.QUESTS,
-        position: {"lat":69.25031156402504,"lng":323.1024169921875},
-        difficulty: "Intermediate",
-        length: "Very Short",
-        quest_points: 1,
-        quests_required: [
-        ],
-        skills_required: [
-            questSkill(43, "Quest Points"),
-            questSkill(49, "Firemaking"),
-            questSkill(20, "Crafting"),
-            questSkill(20, "Mining")
-        ],
-        full_guide: "https://oldschool.runescape.wiki/w/Tears_of_Guthix",
-        category: Categories.QUESTS
-    },
-    */
     {
         title: "Icthlarin's Little Helper",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),

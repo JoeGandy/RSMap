@@ -74,7 +74,7 @@ export default class OSRSMap extends Component {
                 layer: OSRSMap.getLatestLayer(OSRSMap.DEFAULT_LAYER),
                 defaultZoom: OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM)
             };
-            
+
             IconBaseClass.setZoomLevel(this.state.defaultZoom);
 
         } else {
