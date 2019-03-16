@@ -102,14 +102,14 @@ export default class OSRSMap extends Component {
             if (this.state.layer === "surface") {
                 return (
                     <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
-                           regions={this.state.regions} surface={true} minZoom={2} maxZoom={9}
+                           regions={this.state.regions} surface={true} minZoom={3} maxZoom={9}
                            defaultZoom={this.state.defaultZoom}
                            center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
                 )
             } else {
                 return (
                     <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
-                           regions={this.state.regions} surface={false} minZoom={1} maxZoom={4} defaultZoom={6}
+                           regions={this.state.regions} surface={false} minZoom={3} maxZoom={4} defaultZoom={3}
                            center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
                 )
             }

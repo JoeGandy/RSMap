@@ -26,14 +26,30 @@ function deg2rad(deg) {
 
 
 //Re renders the icons, almost definitely a more efficient way to be handling this, but it'll do for now
-export function rewriteIcons() {
+export function rewriteIcons(bounds) {
+    bounds = bounds !== undefined && typeof bounds.contains === 'function' ? bounds : null;
+
     let icons = {};
     for (let type of types) {
         icons[type.label] = [];
         if (typeof window !== 'undefined') {
             for (let key in type.data) {
                 if(type.label !== "locations"){
-                    icons[type.label][key] = new IconBaseClass(type.data[key]);
+                    let target_position = null;
+                    let skip_check = false;
+
+                    if (type.data[key].position) {
+                        target_position = type.data[key].position;
+                    } else if (type.data[key].positions && type.data[key].positions.length > 0) {
+                        skip_check = true;
+                    } else {
+                        skip_check = true;
+                    }
+
+                    
+                    if(skip_check || (bounds && bounds.contains(target_position)) ) {
+                        icons[type.label][key] = new IconBaseClass(type.data[key]);
+                    }
                 }
             }
         }

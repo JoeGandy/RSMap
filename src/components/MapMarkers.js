@@ -10,6 +10,7 @@ import SurfaceLink from "./MarkerTypes/SurfaceLink";
 import TextPath from "react-leaflet-textpath";
 import LabelMarker from "./MarkerTypes/LabelMarker";
 import QuestMarker from "./MarkerTypes/QuestMarker";
+import * as L from "leaflet";
 
 export default class MapMarkers extends Component {
     constructor(props) {
@@ -25,9 +26,8 @@ export default class MapMarkers extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props !== prevProps) {
             IconBaseClass.setZoomLevel(this.props.zoomLevel, !(this.props.layer === "surface"));
-            this.setState({icons: this.props.layer === "surface" ? rewriteIcons() : getDungeonIcons(this.props.layer)});
+            this.setState({icons: this.props.layer === "surface" ? rewriteIcons(this.props.bounds) : getDungeonIcons(this.props.layer, this.props.bounds)});
             this.setState({current_dungeon_layer: this.props.layer === "surface" ? null : getDungeonLayer(this.props.layer)})
-            //this.props.centerMap(this.props.layer === "surface" ? {"lat": 76.40881056467734, "lng": 317.13134765625006} : getDungeonCenter(this.props.layer))
         }
     }
 
@@ -37,11 +37,11 @@ export default class MapMarkers extends Component {
         let handleLayerChange = this.props.handleLayerChange;
         let layer = this.props.layer;
 
-
         return (
             <>
                 {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ? this.state.current_dungeon_layer.map_labels.map(function (label, i) {
-                    return <LabelMarker key={i} title={label.title} description={label.description} position={label.position} />
+                    return <LabelMarker key={i} title={label.title} description={label.description}
+                                        position={label.position}/>
                 }) : null}
 
                 {this.state.regions.map(function (region, i) {

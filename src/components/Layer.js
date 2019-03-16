@@ -10,6 +10,16 @@ import OSRSMap from "./OSRSMap";
 import Controls from "./Controls";
 
 
+function getMethods(obj) {
+    var res = [];
+    for (var m in obj) {
+        if (typeof obj[m] == "function") {
+            res.push(m)
+        }
+    }
+    return res;
+}
+
 const map_address = "http://tiles.rsmap.uk/public";
 
 export default class Layer extends Component {
@@ -27,7 +37,8 @@ export default class Layer extends Component {
             layer: this.props.layer,
             layer_url: this.props.surface ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer + "/",
             zoomLevel: this.props.defaultZoom,
-            center: this.props.center
+            center: this.props.center,
+            bounds: {}
         };
 
         this.map = {};
@@ -66,10 +77,13 @@ export default class Layer extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
-            this.setState({zoomLevel: this.props.layer === "surface" ? 6 : 3});
+            this.setState({zoomLevel: this.props.defaultZoom});
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer});
             this.setState({icons: getDungeonIcons(this.props.layer)});
             this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer));
+            this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMaxZoom(this.props.maxZoom);
+            this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMinZoom(this.props.minZoom);
+
         }
     }
 
@@ -92,6 +106,11 @@ export default class Layer extends Component {
     }
 
     onViewportChanged(viewport) {
+
+        if (this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon']) {
+            this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
+        }
+
         //Only do this on surface for now, there is an issue with the zoom level changes when saving dungeon spots
         if (this.props.layer === 'surface') {
             localStorage.setItem('center', JSON.stringify(viewport.center));
@@ -111,6 +130,8 @@ export default class Layer extends Component {
                     center={this.state.center}
                     maxZoom={this.props.maxZoom}
                     minZoom={this.props.minZoom}
+                    minNativeZoom={this.props.minZoom}
+                    maxNativeZoom={this.props.maxZoom}
                     onClick={this.handleClick}
                     onZoomEnd={this.handleZoomEnd}
                     onViewportChanged={this.onViewportChanged}
@@ -125,7 +146,7 @@ export default class Layer extends Component {
                     />
                     <DevTools layer={this.props.layer} clickedPos={this.state.clicked_position}/>
                     <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} regions={this.props.regions}
-                                handleLayerChange={this.props.handleLayerChange} layer={this.props.layer}
+                                handleLayerChange={this.props.handleLayerChange} layer={this.props.layer} bounds={this.state.bounds}
                                 filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}/>
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                 </Map>
@@ -139,7 +160,7 @@ export default class Layer extends Component {
                         <SearchBox centerMap={this.centerMap}/>
                     </>
                     : null}
-                <Controls />
+                <Controls/>
             </>
         )
 
