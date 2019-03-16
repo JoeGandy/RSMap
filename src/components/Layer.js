@@ -50,6 +50,7 @@ export default class Layer extends Component {
         this.searchSelect = this.searchSelect.bind(this);
         this.backToSurface = this.backToSurface.bind(this);
         this.onViewportChanged = this.onViewportChanged.bind(this);
+        this.onLoad = this.onLoad.bind(this);
     }
 
     handleZoomEnd() {
@@ -79,6 +80,7 @@ export default class Layer extends Component {
         if (this.props.layer !== prevProps.layer) {
             this.setState({zoomLevel: this.props.defaultZoom});
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer});
+            this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
             this.setState({icons: getDungeonIcons(this.props.layer)});
             this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer));
             this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMaxZoom(this.props.maxZoom);
@@ -118,6 +120,9 @@ export default class Layer extends Component {
             localStorage.setItem('layer', this.props.layer);
         }
     }
+    onLoad(){
+        this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
+    }
 
     render() {
         return (
@@ -142,7 +147,8 @@ export default class Layer extends Component {
                         url={map_address + this.state.layer_url + "/{z}/{x}/{y}.png"}
                         keepBuffer={15}
                         updateWhenZooming={false}
-                        updateInterval={200}
+                        updateInterval={200} 
+                        onLoad={this.onLoad}
                     />
                     <DevTools layer={this.props.layer} clickedPos={this.state.clicked_position}/>
                     <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} regions={this.props.regions}
