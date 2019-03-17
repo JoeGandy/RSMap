@@ -6,11 +6,16 @@ export default class FiltersBox extends Component {
     constructor(props) {
         super(props);
 
+        let hide_sidebar = false;
+        if(localStorage.getItem('hide_sidebar') !== "undefined" && localStorage.getItem('hide_sidebar') !== null){
+            hide_sidebar = localStorage.getItem('hide_sidebar') === "true";
+        }
+
         this.state = {
             icons: rewriteIcons(),
             filters: {},
             toggle_all: true,
-            show_side_bar: true,
+            show_side_bar: !hide_sidebar,
         };
 
         if (localStorage.getItem('filters') !== "undefined" && localStorage.getItem('filters') !== null) {
@@ -31,6 +36,7 @@ export default class FiltersBox extends Component {
     }
 
     toggleSidebar() {
+        localStorage.setItem('hide_sidebar', this.state.show_side_bar);
         this.setState({show_side_bar: !this.state.show_side_bar});
     }
 

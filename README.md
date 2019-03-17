@@ -37,12 +37,12 @@ Built on gatsby and react
 - ~Woodcuting guild dungeon~
 - ~Tears of guthix cavern~
 - ~Waterbirth dungeon~
+- ~Remember if toggle list is turned off~
 - Add Ogre caves (Jiggig, Gutanoth)
 - Add corsair cove
 - Add mournings end dungeon
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
-- Remember if toggle list is turned off
 - Remember position on refresh (inside dungeons
 
 #### Goal features
