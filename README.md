@@ -10,20 +10,26 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 Built on gatsby and react  
 
 #### Planned features (To do before even releasing):
-- ~All teleport locations~
-- ~Click on boat locations to see where they go~
-- ~Location searcher~
-- ~Agility short cuts to show where they go and level needed~
-- ~Dungeon maps (Pending last few)~
-- ~Remember position on refresh~
-- ~Share current position on map~
-- ~Remember filters on refresh~
-- ~Quest icon to show quest with basic info~
 - Monster Locator
 - Convert coord clues to map coordinates
 - Region highlighting (Area locked ironmen, multi combat)
 
 #### Issues to fix before going live
+- Add Ogre caves (Jiggig, Gutanoth)
+- Add corsair cove
+- Add mournings end dungeon
+- Double check troll stronghold shortcuts
+- Double check Arandar Shorcuts
+- Remember position on refresh (inside dungeons)
+
+#### Goal features
+- Farm patch info
+- Stores to show what they sell w/ quantities 
+- Clue scroll locations
+- Show quickest route through dungeons
+- Allow Drawing on the map
+
+#### Things done
 - ~Going in dungeons above a certain Y axis pans to above the dungeon~
 - ~Rum deal island~
 - ~Troll Stronghold~
@@ -38,16 +44,12 @@ Built on gatsby and react
 - ~Tears of guthix cavern~
 - ~Waterbirth dungeon~
 - ~Remember if toggle list is turned off~
-- Add Ogre caves (Jiggig, Gutanoth)
-- Add corsair cove
-- Add mournings end dungeon
-- Double check troll stronghold shortcuts
-- Double check Arandar Shorcuts
-- Remember position on refresh (inside dungeons
-
-#### Goal features
-- Farm patch info
-- Stores to show what they sell w/ quantities 
-- Clue scroll locations
-- Show quickest route through dungeons
-- Allow Drawing on the map
+- ~All teleport locations~
+- ~Click on boat locations to see where they go~
+- ~Location searcher~
+- ~Agility short cuts to show where they go and level needed~
+- ~Dungeon maps (Pending last few)~
+- ~Remember position on refresh~
+- ~Share current position on map~
+- ~Remember filters on refresh~
+- ~Quest icon to show quest with basic info~
