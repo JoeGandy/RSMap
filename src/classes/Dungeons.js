@@ -5,7 +5,6 @@ import {
 import {
     types
 } from "./Icons";
-import TextPath from "../components/MapMarkers";
 import React from "react";
 import {questSkill} from "./IconTypes/Quests";
 
@@ -5991,7 +5990,7 @@ export const Dungeons = [
     },
     {
         machine_name: 'stronghold_of_security_sepulchre_of_death',
-        full_name: 'Stronghold of Security Layer (Pit of Pestilence)',
+        full_name: 'Stronghold of Security SurfaceLayer (Pit of Pestilence)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
         center_pos: {"lat": 3.337953961416485, "lng": 362.63671875},
         exits: [{
@@ -6051,7 +6050,7 @@ export const Dungeons = [
     },
     {
         machine_name: 'stronghold_of_security_pit_of_pestilence',
-        full_name: 'Stronghold of Security Layer (Pit of Pestilence)',
+        full_name: 'Stronghold of Security SurfaceLayer (Pit of Pestilence)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
         center_pos: {"lat": 4.915832801313164, "lng": 357.890625},
         exits: [{
@@ -6120,7 +6119,7 @@ export const Dungeons = [
     },
     {
         machine_name: 'stronghold_of_security_catacomb_of_famine',
-        full_name: 'Stronghold of Security Layer (Catacomb of Famine)',
+        full_name: 'Stronghold of Security SurfaceLayer (Catacomb of Famine)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
         center_pos: {"lat": 3.6888551431470478, "lng": 363.51562500000006},
         exits: [{
@@ -6170,7 +6169,7 @@ export const Dungeons = [
     },
     {
         machine_name: 'stronghold_of_security_vault_of_war',
-        full_name: 'Stronghold of Security Layer (Vault of War)',
+        full_name: 'Stronghold of Security SurfaceLayer (Vault of War)',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),
         center_pos: {"lat": 4.214943141390651, "lng": 352.44140625},
         exits: [{

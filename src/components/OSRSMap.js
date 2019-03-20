@@ -2,11 +2,12 @@ import React, {Component} from 'react'
 import 'leaflet/dist/leaflet.css';
 import {rewriteIcons} from "../classes/Icons";
 import {getAllIconsFlat} from "../classes/Icons";
-import Layer from "./Layer";
+import SurfaceLayer from "./Surface/SurfaceLayer";
 import {Dungeons, getAllDungeonNames} from "../classes/Dungeons";
 import {Regions} from "../classes/Regions";
 import * as qs from 'query-string';
 import {IconBaseClass} from "../classes/IconBaseClass";
+import DungeonLayer from "./Dungeons/DungeonLayer";
 
 const DEFAULT_CENTER = {"lat": 76.40881056467734, "lng": 317.13134765625006};
 const DEFAULT_ZOOM = 6;
@@ -62,24 +63,18 @@ export default class OSRSMap extends Component {
     constructor(props) {
         super(props);
 
-        if (typeof window !== 'undefined') {
-            this.state = {
-                center: OSRSMap.getLatestCenter(OSRSMap.DEFAULT_CENTER),
-                icons_flat: typeof window !== 'undefined' ? getAllIconsFlat() : [],
-                icons: typeof window !== 'undefined' ? rewriteIcons() : [],
-                dungeons: Dungeons,
-                regions: Regions,
-                search_val: null,
-                clicked_position: null,
-                layer: OSRSMap.getLatestLayer(OSRSMap.DEFAULT_LAYER),
-                defaultZoom: OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM)
-            };
+        this.state = {
+            center: OSRSMap.getLatestCenter(OSRSMap.DEFAULT_CENTER),
+            layer: OSRSMap.getLatestLayer(OSRSMap.DEFAULT_LAYER),
+            defaultZoom: OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM),
+            icons_flat: getAllIconsFlat(),
+            icons: rewriteIcons(),
+            dungeons: Dungeons,
+            regions: Regions,
+            clicked_position: null
+        };
 
-            IconBaseClass.setZoomLevel(this.state.defaultZoom);
-
-        } else {
-            this.state = {};
-        }
+        IconBaseClass.setZoomLevel(DEFAULT_ZOOM);
 
 
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
@@ -93,24 +88,34 @@ export default class OSRSMap extends Component {
     }
 
     handleLayerChange(layer, new_center) {
-        this.setState({center: new_center});
-        this.setState({layer: layer});
+        this.setState({center: new_center}, function(){
+            this.setState({layer: layer});
+        });
     }
 
     render() {
         if (typeof window !== 'undefined') {
             if (this.state.layer === "surface") {
                 return (
-                    <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
-                           regions={this.state.regions} surface={true} minZoom={3} maxZoom={9}
-                           defaultZoom={this.state.defaultZoom}
-                           center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
+                    <SurfaceLayer handleLayerChange={this.handleLayerChange}
+                                  layer={this.state.layer}
+                                  regions={this.state.regions}
+                                  surface={true} minZoom={3} maxZoom={9}
+                                  defaultZoom={this.state.defaultZoom}
+                                  center={this.state.center}
+                                  icons={this.state.icons}
+                                  dungeons={this.state.dungeons}/>
                 )
             } else {
                 return (
-                    <Layer handleLayerChange={this.handleLayerChange} layer={this.state.layer}
-                           regions={this.state.regions} surface={false} minZoom={3} maxZoom={4} defaultZoom={3}
-                           center={this.state.center} icons={this.state.icons} dungeons={this.state.dungeons}/>
+                    <DungeonLayer handleLayerChange={this.handleLayerChange}
+                                  layer={this.state.layer}
+                                  center={this.state.center}
+                                  minZoom={2}
+                                  maxZoom={4}
+                                  defaultZoom={3}
+                                  icons={this.state.icons}
+                                  dungeons={this.state.dungeons}/>
                 )
             }
         } else {

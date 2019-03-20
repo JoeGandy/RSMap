@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import {Map, Marker, Polyline, Popup} from "react-leaflet";
+import {Marker, Popup} from "react-leaflet";
 import {AgilityShortcutIcon} from "../../classes/Icons";
-import MapMarkers from "../OSRSMap";
 import {IconBaseClass} from "../../classes/IconBaseClass";
-import LayerLink from "../MapMarkers";
 
 const marker = {lat: 76.40881056467734, lng: 317.13134765625006};
 

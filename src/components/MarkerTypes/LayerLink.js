@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
-import {Map, Marker, Polyline, Popup} from "react-leaflet";
+import {Marker, Popup} from "react-leaflet";
 import {AgilityShortcutIcon} from "../../classes/Icons";
-import MapMarkers from "../OSRSMap";
 import {IconBaseClass} from "../../classes/IconBaseClass";
-import LayerLink from "../MapMarkers";
+import {getDungeonCenter} from "../../classes/Dungeons";
 
 const marker = {lat: 76.40881056467734, lng: 317.13134765625006};
 
-export default class MapMarker extends Component {
+export default class LayerLink extends Component {
     constructor(props) {
         super(props);
 
@@ -15,7 +14,7 @@ export default class MapMarker extends Component {
     }
 
     onLayerLinkClick(machine_name){
-        this.props.handleLayerChange(machine_name);
+        this.props.handleLayerChange(machine_name, getDungeonCenter(machine_name));
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {

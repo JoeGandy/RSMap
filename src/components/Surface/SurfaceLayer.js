@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import {Map, TileLayer, Polyline} from "react-leaflet";
-import MapMarkers from "./MapMarkers";
-import FiltersBox from "./FiltersBox";
-import SearchBox from "./SearchBox";
-import DevTools from "./DevTools";
-import {getDungeonCenter, getDungeonIcons} from "../classes/Dungeons";
+import FiltersBox from "../FiltersBox";
+import SearchBox from "../SearchBox";
+import DevTools from "../DevTools";
+import {getDungeonCenter, getDungeonIcons} from "../../classes/Dungeons";
 import * as L from "leaflet";
-import OSRSMap from "./OSRSMap";
-import Controls from "./Controls";
+import OSRSMap from "../OSRSMap";
+import Controls from "../Controls";
+import SurfaceMarkers from "./SurfaceMarkers";
 
 
 function getMethods(obj) {
@@ -22,23 +22,19 @@ function getMethods(obj) {
 
 const map_address = "http://tiles.rsmap.uk/public";
 
-export default class Layer extends Component {
+export default class SurfaceLayer extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            line: null,
             filters: {},
             icons_flat: this.props.icons_flat,
             icons: this.props.icons,
-            search_val: null,
-            clicked_position: null,
             layer: this.props.layer,
             layer_url: this.props.surface ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer + "/",
             zoomLevel: this.props.defaultZoom,
-            center: this.props.center,
-            bounds: {}
+            center: this.props.center
         };
 
         this.map = {};
@@ -78,6 +74,11 @@ export default class Layer extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
+            if (this.props.layer === "surface") {
+
+            } else {
+
+            }
             this.setState({zoomLevel: this.props.defaultZoom});
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer});
             this.setState({icons: getDungeonIcons(this.props.layer)});
@@ -89,8 +90,6 @@ export default class Layer extends Component {
     }
 
     backToSurface() {
-        let center = OSRSMap.getLatestCenter(this.props.center);
-        this.props.handleLayerChange('surface', new L.latLng(center[0], center[1]));
     }
 
     handleClick(e) {
@@ -99,7 +98,6 @@ export default class Layer extends Component {
     }
 
     centerMap(_center) {
-        this.setState({center: {"lat": _center.lat, "lng": _center.lng}})
     }
 
     updateFilters(filters) {
@@ -107,21 +105,9 @@ export default class Layer extends Component {
     }
 
     onViewportChanged(viewport) {
-
-        if (this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon']) {
-            if(this.state.bounds !== this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()) {
-                //this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
-            }
-        }
-
-        //Only do this on surface for now, there is an issue with the zoom level changes when saving dungeon spots
-        if (this.props.layer === 'surface') {
-            localStorage.setItem('center', JSON.stringify(viewport.center));
-            localStorage.setItem('zoom', JSON.stringify(viewport.zoom));
-            localStorage.setItem('layer', this.props.layer);
-        }
     }
-    onLoad(){
+
+    onLoad() {
         //this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
     }
 
@@ -148,25 +134,23 @@ export default class Layer extends Component {
                         url={map_address + this.state.layer_url + "/{z}/{x}/{y}.png"}
                         keepBuffer={15}
                         updateWhenZooming={false}
-                        updateInterval={200} 
+                        updateInterval={200}
                         onLoad={this.onLoad}
                     />
-                    <DevTools layer={this.props.layer} clickedPos={this.state.clicked_position}/>
-                    <MapMarkers zoomLevel={this.state.zoomLevel} centerMap={this.centerMap} regions={this.props.regions}
-                                handleLayerChange={this.props.handleLayerChange} layer={this.props.layer} bounds={this.state.bounds}
-                                filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}/>
-                    {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
+                    <DevTools layer={this.props.layer}
+                              clickedPos={this.state.clicked_position}
+                    />
+                    <SurfaceMarkers zoomLevel={this.state.zoomLevel}
+                                centerMap={this.centerMap}
+                                regions={this.props.regions}
+                                handleLayerChange={this.props.handleLayerChange}
+                                layer={this.props.layer}
+                                bounds={this.state.bounds}
+                                filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}
+                    />
                 </Map>
-                {this.props.layer !== "surface" ?
-                    <button className="back_to_surface_button main_button" onClick={this.backToSurface}>Back to
-                        surface</button>
-                    : null}
-                {this.props.layer === "surface" ?
-                    <>
-                        <FiltersBox updateFilters={this.updateFilters}/>
-                        <SearchBox centerMap={this.centerMap}/>
-                    </>
-                    : null}
+                <FiltersBox updateFilters={this.updateFilters}/>
+                <SearchBox centerMap={this.centerMap}/>
                 <Controls/>
             </>
         )

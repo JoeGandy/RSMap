@@ -1,15 +1,12 @@
 import React, {Component} from 'react'
-import MapMarker from "./MarkerTypes/MapMarker";
+import MapMarker from "../MarkerTypes/MapMarker";
 import {Map, Marker, Tooltip, Popup, Polygon} from "react-leaflet";
-import {rewriteIcons, types} from "../classes/Icons";
-import {Categories, IconBaseClass} from "../classes/IconBaseClass";
-import MapPointToPointMarker from "./MarkerTypes/MapPointToPointMarker";
-import LayerLink from "./MarkerTypes/LayerLink";
-import {getDungeonCenter, getDungeonIcons, getDungeonLayer} from "../classes/Dungeons";
-import SurfaceLink from "./MarkerTypes/SurfaceLink";
-import TextPath from "react-leaflet-textpath";
-import LabelMarker from "./MarkerTypes/LabelMarker";
-import QuestMarker from "./MarkerTypes/QuestMarker";
+import {rewriteIcons, types} from "../../classes/Icons";
+import {Categories, IconBaseClass} from "../../classes/IconBaseClass";
+import MapPointToPointMarker from "../MarkerTypes/MapPointToPointMarker";
+import LayerLink from "../MarkerTypes/LayerLink";
+import {getDungeonCenter, getDungeonIcons, getDungeonLayer} from "../../classes/Dungeons";
+import QuestMarker from "../MarkerTypes/QuestMarker";
 import * as L from "leaflet";
 
 export default class MapMarkers extends Component {
@@ -39,11 +36,6 @@ export default class MapMarkers extends Component {
 
         return (
             <>
-                {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ? this.state.current_dungeon_layer.map_labels.map(function (label, i) {
-                    return <LabelMarker key={i} title={label.title} description={label.description}
-                                        position={label.position}/>
-                }) : null}
-
                 {this.state.regions.map(function (region, i) {
                     return <Polygon
                         key={i}
@@ -56,10 +48,6 @@ export default class MapMarkers extends Component {
                     return layer === "surface" && !filters[Categories.DUNGEONS] ? null :
                         <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
                 })}
-
-                {this.props.layer !== "surface" && this.state.current_dungeon_layer !== null ?
-                    <SurfaceLink dungeon={this.state.current_dungeon_layer} handleLayerChange={handleLayerChange}/>
-                    : null}
 
                 {this.state.icons.agility_shortcuts.map(function (icon, i) {
                     return filters[icon.options.category] ?
