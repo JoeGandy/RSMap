@@ -21,6 +21,7 @@ Built on gatsby and react
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
 - Remember position on refresh (inside dungeons)
+- Fix new structure with layers
 
 #### Goal features
 - Farm patch info
