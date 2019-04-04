@@ -9,7 +9,7 @@ import {getDungeonCenter, getDungeonIcons, getDungeonLayer} from "../../classes/
 import QuestMarker from "../MarkerTypes/QuestMarker";
 import * as L from "leaflet";
 
-export default class MapMarkers extends Component {
+export default class SurfaceMarkers extends Component {
     constructor(props) {
         super(props);
         this.state = {

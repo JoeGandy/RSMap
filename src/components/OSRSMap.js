@@ -88,38 +88,35 @@ export default class OSRSMap extends Component {
     }
 
     handleLayerChange(layer, new_center) {
-        this.setState({center: new_center}, function(){
-            this.setState({layer: layer});
-        });
+        let state = {...this.state};
+        state.center = new_center;
+        state.layer = layer;
+        this.setState(state);
     }
 
     render() {
-        if (typeof window !== 'undefined') {
-            if (this.state.layer === "surface") {
-                return (
-                    <SurfaceLayer handleLayerChange={this.handleLayerChange}
-                                  layer={this.state.layer}
-                                  regions={this.state.regions}
-                                  surface={true} minZoom={3} maxZoom={9}
-                                  defaultZoom={this.state.defaultZoom}
-                                  center={this.state.center}
-                                  icons={this.state.icons}
-                                  dungeons={this.state.dungeons}/>
-                )
-            } else {
-                return (
-                    <DungeonLayer handleLayerChange={this.handleLayerChange}
-                                  layer={this.state.layer}
-                                  center={this.state.center}
-                                  minZoom={2}
-                                  maxZoom={4}
-                                  defaultZoom={3}
-                                  icons={this.state.icons}
-                                  dungeons={this.state.dungeons}/>
-                )
-            }
+        if (this.state.layer === "surface") {
+            return (
+                <SurfaceLayer handleLayerChange={this.handleLayerChange}
+                              layer={this.state.layer}
+                              regions={this.state.regions}
+                              surface={true} minZoom={3} maxZoom={9}
+                              defaultZoom={this.state.defaultZoom}
+                              center={this.state.center}
+                              icons={this.state.icons}
+                              dungeons={this.state.dungeons}/>
+            )
         } else {
-            return <div>Page is loading...</div>
+            return (
+                <DungeonLayer handleLayerChange={this.handleLayerChange}
+                              layer={this.state.layer}
+                              center={this.state.center}
+                              minZoom={2}
+                              maxZoom={4}
+                              defaultZoom={3}
+                              icons={this.state.icons}
+                              dungeons={this.state.dungeons}/>
+            )
         }
     }
 }

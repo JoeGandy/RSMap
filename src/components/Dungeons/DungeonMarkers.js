@@ -10,7 +10,7 @@ import MapMarker from "../MarkerTypes/MapMarker";
 import QuestMarker from "../MarkerTypes/QuestMarker";
 import MapPointToPointMarker from "../MarkerTypes/MapPointToPointMarker";
 
-export default class MapMarkers extends Component {
+export default class DungeonMarkers extends Component {
     constructor(props) {
         super(props);
 
@@ -26,9 +26,9 @@ export default class MapMarkers extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props !== prevProps) {
-            console.log(this.props);
             IconBaseClass.setZoomLevel(this.props.zoomLevel, true);
             this.setState({icons: getDungeonIcons(this.props.layer)})
+            this.setState({current_dungeon_layer: getDungeonLayer(this.props.layer)});
         }
     }
 

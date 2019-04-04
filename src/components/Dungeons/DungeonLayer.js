@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Map, TileLayer, Polyline} from "react-leaflet";
 import DevTools from "../DevTools";
 import DungeonMarkers from "./DungeonMarkers";
+import {getDungeonIcons} from "../../classes/Dungeons";
 
 
 function getMethods(obj) {
@@ -28,8 +29,6 @@ export default class Layer extends Component {
             center: this.props.center
         };
 
-        console.log(this.state);
-
         this.map = {};
 
         this.centerMap = this.centerMap.bind(this);
@@ -40,6 +39,9 @@ export default class Layer extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
+            let state = {...this.state};
+            state.layer_url = "/map/dungeons/generated/" + this.props.layer + "/";
+            this.setState(state);
             /*
             this.setState({zoomLevel: this.props.defaultZoom});
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer});
@@ -101,7 +103,7 @@ export default class Layer extends Component {
                                     layer={this.props.layer}
                                     bounds={this.state.bounds}
                                     filters={this.state.filters}
-                                    icons={this.props.icons}
+                                    icons={getDungeonIcons(this.props.layer)}
                                     dungeons={this.props.dungeons}/>
                     {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
                 </Map>
