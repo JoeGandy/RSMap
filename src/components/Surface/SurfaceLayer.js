@@ -98,6 +98,7 @@ export default class SurfaceLayer extends Component {
     }
 
     centerMap(_center) {
+        this.setState({center: _center});
     }
 
     updateFilters(filters) {

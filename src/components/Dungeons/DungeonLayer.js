@@ -58,6 +58,7 @@ export default class Layer extends Component {
     }
 
     centerMap(_center) {
+        this.setState({center: _center});
     }
 
     onViewportChanged(viewport) {
