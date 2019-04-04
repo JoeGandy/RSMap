@@ -74,7 +74,7 @@ export default class OSRSMap extends Component {
             clicked_position: null
         };
 
-        IconBaseClass.setZoomLevel(DEFAULT_ZOOM);
+        IconBaseClass.setZoomLevel(OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM));
 
 
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
@@ -92,8 +92,8 @@ export default class OSRSMap extends Component {
         state.center = new_center;
         state.layer = layer;
         if (layer === "surface") {
-            state.zoomLevel = DEFAULT_ZOOM;
-            IconBaseClass.setZoomLevel(DEFAULT_ZOOM);
+            state.zoomLevel = OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM);
+            IconBaseClass.setZoomLevel(OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM));
         }
         this.setState(state);
     }
