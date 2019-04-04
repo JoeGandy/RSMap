@@ -55,6 +55,10 @@ export default class Layer extends Component {
         }
     }
 
+    handleClick(e) {
+        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+    }
+
     backToSurface() {
         this.props.handleLayerChange("surface", OSRSMap.getLatestCenter(OSRSMap.DEFAULT_CENTER));
     }

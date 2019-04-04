@@ -11,11 +11,9 @@ Built on gatsby and react
 
 #### Issues to fix before going live
 - Add Ogre caves (Jiggig, Gutanoth)
-- Add corsair cove
 - Add mournings end dungeon
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
-- ~Fix new structure with layers~
 
 #### Goal features
 - Monster Locator
@@ -52,3 +50,5 @@ Built on gatsby and react
 - ~Share current position on map~
 - ~Remember filters on refresh~
 - ~Quest icon to show quest with basic info~
+- ~Add corsair cove~
+- ~Fix new structure with layers~

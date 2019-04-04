@@ -73,9 +73,57 @@ export function getDungeonCenter(dungeon_name) {
     },
 
  */
-
 //
 export const Dungeons = [
+    {
+        machine_name: 'myths_guild_basement_1',
+        full_name: 'Corsair Cove Dungeon',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat": -32.842673631954305, "lng": 345.41015625},
+        exits: [
+            {
+                label: 'To North Entrance',
+                position: {"lat": 19.311143355064655, "lng": 349.98046875},
+                target_layer: "surface",
+                target_layer_position: {"lat": 70.2055755505951, "lng": 268.25866699218756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To East Entrance',
+                position: {"lat": -21.12549763660628, "lng": 407.63671875000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 69.52395146540032, "lng": 270.89538574218756},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Island South of Myths\' Guild',
+                position: {"lat": -61.01572481397616, "lng": 300.41015625000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 68.53426631064977, "lng": 265.7510375976563},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Myths\' Guild',
+                position: {"lat": -15.792253570362446, "lng": 301.99218750000006},
+                target_layer: "surface",
+                target_layer_position: {"lat": 69.20550391636529, "lng": 266.53930664062506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+        ],
+        map_labels: [],
+        icons: {
+            agility_shortcuts: [
+                {
+                    iconUrl: require('../../static/icons/misc/agility_shortcut.png'),
+                    className: Categories.AGILITY_SHORTCUT,
+                    position: {"lat":-33.137551192346145,"lng":364.04296875000006},
+                    title: "Agility Shortcut",
+                    description: "Pillar Jump (Level 15)",
+                    category: Categories.AGILITY_SHORTCUT
+                },
+            ]
+        }
+    },
     {
         machine_name: 'dk_lair',
         full_name: 'Dagannoth Kings\' Lair',
