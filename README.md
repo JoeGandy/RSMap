@@ -9,26 +9,24 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 ## About
 Built on gatsby and react  
 
-#### Planned features (To do before even releasing):
-- Monster Locator
-- Convert coord clues to map coordinates
-- Region highlighting (Area locked ironmen, multi combat)
-
 #### Issues to fix before going live
 - Add Ogre caves (Jiggig, Gutanoth)
 - Add corsair cove
 - Add mournings end dungeon
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
-- Remember position on refresh (inside dungeons)
-- Fix new structure with layers
+- ~Fix new structure with layers~
 
 #### Goal features
+- Monster Locator
+- Convert coord clues to map coordinates
+- Region highlighting (Area locked ironmen, multi combat)
 - Farm patch info
 - Stores to show what they sell w/ quantities 
 - Clue scroll locations
 - Show quickest route through dungeons
 - Allow Drawing on the map
+- Remember position on refresh (inside dungeons)
 
 #### Things done
 - ~Going in dungeons above a certain Y axis pans to above the dungeon~
