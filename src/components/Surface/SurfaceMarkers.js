@@ -45,7 +45,7 @@ export default class SurfaceMarkers extends Component {
                 })}
 
                 {this.state.dungeons.map(function (dungeon, i) {
-                    return layer === "surface" && !filters[Categories.DUNGEONS] ? null :
+                    return !filters[Categories.DUNGEONS] ? null :
                         <LayerLink key={i} dungeon={dungeon} handleLayerChange={handleLayerChange} layer={layer}/>
                 })}
 
