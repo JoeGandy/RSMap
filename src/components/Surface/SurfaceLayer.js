@@ -106,6 +106,9 @@ export default class SurfaceLayer extends Component {
     }
 
     onViewportChanged(viewport) {
+        localStorage.setItem('zoom', viewport.zoom);
+        localStorage.setItem('center', JSON.stringify(viewport.center));
+        localStorage.setItem('layer', this.props.layer);
     }
 
     onLoad() {

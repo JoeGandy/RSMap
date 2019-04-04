@@ -91,6 +91,7 @@ export default class OSRSMap extends Component {
         let state = {...this.state};
         state.center = new_center;
         state.layer = layer;
+        console.log(layer, DEFAULT_ZOOM);
         if (layer === "surface") {
             state.zoomLevel = DEFAULT_ZOOM;
             IconBaseClass.setZoomLevel(DEFAULT_ZOOM);
