@@ -17,17 +17,18 @@ export default class DungeonMarkers extends Component {
         IconBaseClass.setZoomLevel(this.props.zoomLevel, true);
 
         this.state = {
-            icons: this.props.icons,
+            icons: getDungeonIcons(this.props.layer),
             dungeons: this.props.dungeons,
             regions: this.props.regions,
             current_dungeon_layer: getDungeonLayer(this.props.layer)
         };
+
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props !== prevProps) {
             IconBaseClass.setZoomLevel(this.props.zoomLevel, true);
-            this.setState({icons: getDungeonIcons(this.props.layer)})
+            this.setState({icons: getDungeonIcons(this.props.layer)});
             this.setState({current_dungeon_layer: getDungeonLayer(this.props.layer)});
         }
     }

@@ -91,7 +91,6 @@ export default class OSRSMap extends Component {
         let state = {...this.state};
         state.center = new_center;
         state.layer = layer;
-        console.log(layer, DEFAULT_ZOOM);
         if (layer === "surface") {
             state.zoomLevel = DEFAULT_ZOOM;
             IconBaseClass.setZoomLevel(DEFAULT_ZOOM);
@@ -116,7 +115,7 @@ export default class OSRSMap extends Component {
                 <DungeonLayer handleLayerChange={this.handleLayerChange}
                               layer={this.state.layer}
                               center={this.state.center}
-                              minZoom={2}
+                              minZoom={3}
                               maxZoom={4}
                               defaultZoom={3}
                               icons={this.state.icons}

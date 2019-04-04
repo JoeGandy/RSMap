@@ -64,6 +64,8 @@ export default class Layer extends Component {
     }
 
     onViewportChanged(viewport) {
+        this.setState({zoomLevel: viewport.zoom});
+        this.setState({center: viewport.center});
     }
 
     onLoad() {
