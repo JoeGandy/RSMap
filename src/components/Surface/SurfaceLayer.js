@@ -141,16 +141,17 @@ export default class SurfaceLayer extends Component {
                         updateInterval={200}
                         onLoad={this.onLoad}
                     />
-                    <DevTools layer={this.props.layer}
-                              clickedPos={this.state.clicked_position}
-                    />
+                    {this.props.showDevTools ?
+                        <DevTools layer={this.props.layer}
+                                  clickedPos={this.state.clicked_position}
+                        /> : null}
                     <SurfaceMarkers zoomLevel={this.state.zoomLevel}
-                                centerMap={this.centerMap}
-                                regions={this.props.regions}
-                                handleLayerChange={this.props.handleLayerChange}
-                                layer={this.props.layer}
-                                bounds={this.state.bounds}
-                                filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}
+                                    centerMap={this.centerMap}
+                                    regions={this.props.regions}
+                                    handleLayerChange={this.props.handleLayerChange}
+                                    layer={this.props.layer}
+                                    bounds={this.state.bounds}
+                                    filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}
                     />
                 </Map>
                 <FiltersBox updateFilters={this.updateFilters}/>

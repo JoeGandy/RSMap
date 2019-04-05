@@ -147,10 +147,13 @@ img:not(.text_icon):not(.jewellery):not(.item_icon):not(.skill_icon) {
 
 .dev_tools {
   position: fixed;
-  right: 0;
-  bottom: 30px;
+  left: 30px;
+  top: 30px;
   z-index: 400;
-  height: 400px;
+  background-color:black;
+  padding:20px 10px;
+  text-align:center;
+  border:5px groove $secondary-text-color;
 
   & > b {
     color: $text-color;
@@ -248,9 +251,9 @@ img:not(.text_icon):not(.jewellery):not(.item_icon):not(.skill_icon) {
 
 .quest_popup {
 
-  .skill_icon{
-    max-width:16px;
-    height:auto;
+  .skill_icon {
+    max-width: 16px;
+    height: auto;
   }
 
   .leaflet-popup-content {
@@ -278,11 +281,22 @@ img:not(.text_icon):not(.jewellery):not(.item_icon):not(.skill_icon) {
 
   }
 
-  i{
-    font-style:italic;
+  i {
+    font-style: italic;
   }
 
-  li.end_of_list{
-    color:#444;
+  li.end_of_list {
+    color: #444;
   }
+}
+
+.yellow_text {
+  font-family: 'RuneScape', serif;
+  color: $text-color;
+  text-shadow: $text-shadow;
+  line-height: 25px;
+}
+
+h5.yellow_text {
+  font-size: 2em;
 }

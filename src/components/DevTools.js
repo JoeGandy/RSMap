@@ -3,6 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import {rewriteIcons} from "../classes/Icons";
 import {Typeahead} from 'react-bootstrap-typeahead';
 import {Polygon} from "react-leaflet";
+import {hotkey_display} from "react-keyboard-shortcuts";
 
 
 let example_monster = {
@@ -154,37 +155,41 @@ export default class DevTools extends Component {
         if (typeof window !== 'undefined') {
             return (
                 <div className="dev_tools">
+                    <h5 className={"yellow_text"}>Dev Tools</h5>
                     <Polygon
                         ref={"tmp"}
                         positions={this.state.region_points}
                     />
                     {this.state.action_in_progress ? <b>{this.state.action_message}</b> : null}
                     <br/>
-                    <button disabled={this.state.action_in_progress} onClick={this.startNewLocation}>Generate
+                    <button className="main_button small" disabled={this.state.action_in_progress} onClick={this.startNewLocation}>Generate
                         Location
                     </button>
                     <br/>
-                    <button disabled={this.state.action_in_progress} onClick={this.startNewMonster}>Generate
+                    <button className="main_button small" disabled={this.state.action_in_progress} onClick={this.startNewMonster}>Generate
                         Monster
                     </button>
                     <br/>
-                    <button disabled={this.state.action_in_progress} onClick={this.startNewLabel}>Generate
+                    <button className="main_button small" disabled={this.state.action_in_progress} onClick={this.startNewLabel}>Generate
                         Label
                     </button>
                     <br/>
-                    <button disabled={this.state.action_in_progress} onClick={this.startNewRegion}>Generate
+                    <button className="main_button small" disabled={this.state.action_in_progress} onClick={this.startNewRegion}>Generate
                         Region
                     </button>
                     {this.state.action_in_progress && this.state.action === "new_region" ?
-                        <button disabled={!this.state.action_in_progress} onClick={this.endNewRegion}>End
+                        <button className="main_button small" disabled={!this.state.action_in_progress} onClick={this.endNewRegion}>End
                             Region
                         </button> : null}
                     <br/>
                     <br/>
 
-                    <button disabled={!this.state.action_in_progress} onClick={this.cancelDevtools}>Cancel
+                    <button className="main_button small" disabled={!this.state.action_in_progress} onClick={this.cancelDevtools}>Cancel
                         DevTools
                     </button>
+                    <br />
+                    <br />
+                    <p className={"yellow_text"}>Hit {hotkey_display('alt+n')} to toggle this devtools window</p>
                 </div>
             )
         } else {

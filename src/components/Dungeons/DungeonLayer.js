@@ -101,7 +101,10 @@ export default class Layer extends Component {
                         updateInterval={200}
                         onLoad={this.onLoad}
                     />
-                    <DevTools layer={this.props.layer} clickedPos={this.state.clicked_position}/>
+                    {this.props.showDevTools ?
+                        <DevTools layer={this.props.layer}
+                                  clickedPos={this.state.clicked_position}
+                        /> : null}
                     <DungeonMarkers zoomLevel={this.state.zoomLevel}
                                     centerMap={this.centerMap}
                                     regions={this.props.regions}

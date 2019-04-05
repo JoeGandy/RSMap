@@ -47,6 +47,13 @@ html, body, #___gatsby, #___gatsby > div, #___gatsby > div {
 
   &:hover{
     filter: brightness(90%);
+    cursor:pointer;
+  }
+
+  &.small{
+    height:15px;
+    font-size:1.4em;
+    line-height:0px;
   }
 
 }

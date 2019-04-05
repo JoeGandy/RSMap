@@ -8,12 +8,13 @@ import {Regions} from "../classes/Regions";
 import * as qs from 'query-string';
 import {IconBaseClass} from "../classes/IconBaseClass";
 import DungeonLayer from "./Dungeons/DungeonLayer";
+import {hotkeys} from 'react-keyboard-shortcuts'
 
 const DEFAULT_CENTER = {"lat": 76.40881056467734, "lng": 317.13134765625006};
 const DEFAULT_ZOOM = 6;
 const DEFAULT_LAYER = 'surface';
 
-export default class OSRSMap extends Component {
+class OSRSMap extends Component {
     static get DEFAULT_CENTER() {
         return DEFAULT_CENTER;
     }
@@ -71,7 +72,8 @@ export default class OSRSMap extends Component {
             icons: rewriteIcons(),
             dungeons: Dungeons,
             regions: Regions,
-            clicked_position: null
+            clicked_position: null,
+            dev_tools_enabled: false
         };
 
         IconBaseClass.setZoomLevel(OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM));
@@ -79,6 +81,17 @@ export default class OSRSMap extends Component {
 
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
         this.handleLayerChange = this.handleLayerChange.bind(this);
+    }
+
+    hot_keys = {
+        'alt+n': { // combo from mousetrap
+            priority: 1,
+            handler: (event) => this.onDevModeToggle(),
+        },
+    };
+
+    onDevModeToggle(event) {
+        this.setState({dev_tools_enabled: !this.state.dev_tools_enabled});
     }
 
     handleZoomEnd() {
@@ -108,7 +121,9 @@ export default class OSRSMap extends Component {
                               defaultZoom={this.state.defaultZoom}
                               center={this.state.center}
                               icons={this.state.icons}
-                              dungeons={this.state.dungeons}/>
+                              dungeons={this.state.dungeons}
+                              showDevTools={this.state.dev_tools_enabled}
+                />
             )
         } else {
             return (
@@ -119,8 +134,12 @@ export default class OSRSMap extends Component {
                               maxZoom={4}
                               defaultZoom={3}
                               icons={this.state.icons}
-                              dungeons={this.state.dungeons}/>
+                              dungeons={this.state.dungeons}
+                              showDevTools={this.state.dev_tools_enabled}
+                />
             )
         }
     }
 }
+
+export default hotkeys(OSRSMap)
