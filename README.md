@@ -14,6 +14,7 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 - Add mournings end dungeon
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
+- Quest icons inside of dungeons not working
 
 #### Goal features
 - Monster Locator (Searching for a monster would show you locations)

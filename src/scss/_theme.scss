@@ -289,14 +289,3 @@ img:not(.text_icon):not(.jewellery):not(.item_icon):not(.skill_icon) {
     color: #444;
   }
 }
-
-.yellow_text {
-  font-family: 'RuneScape', serif;
-  color: $text-color;
-  text-shadow: $text-shadow;
-  line-height: 25px;
-}
-
-h5.yellow_text {
-  font-size: 2em;
-}

@@ -93,7 +93,9 @@ export default class SurfaceLayer extends Component {
     }
 
     handleClick(e) {
-        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        if(this.props.showDevTools) {
+            prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        }
         this.setState({clicked_position: e.latlng});
     }
 

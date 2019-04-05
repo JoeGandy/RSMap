@@ -45,15 +45,34 @@ html, body, #___gatsby, #___gatsby > div, #___gatsby > div {
   color:yellow;
   text-shadow: 1px 1px black;
 
-  &:hover{
-    filter: brightness(90%);
+  &:disabled {
+    filter: brightness(40%);
+  }
+
+  &:not(:disabled):hover{
+    filter: brightness(80%);
     cursor:pointer;
   }
 
   &.small{
     height:15px;
     font-size:1.4em;
-    line-height:0px;
+    line-height:0;
   }
+}
 
+
+h5.yellow_text{
+  font-size: 2em;
+}
+
+p.yellow_text{
+  font-size: 1.3em;
+}
+
+.yellow_text {
+  font-family: 'RuneScape', serif;
+  color: $text-color;
+  text-shadow: $text-shadow;
+  line-height: 25px;
 }

@@ -189,7 +189,7 @@ export default class DevTools extends Component {
                     </button>
                     <br />
                     <br />
-                    <p className={"yellow_text"}>Hit {hotkey_display('alt+n')} to toggle this devtools window</p>
+                    <p className={"yellow_text"}>Hit {hotkey_display('alt+n')} to toggle<br /> this devtools window</p>
                 </div>
             )
         } else {

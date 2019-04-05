@@ -34,6 +34,7 @@ export default class Layer extends Component {
 
         this.centerMap = this.centerMap.bind(this);
         this.backToSurface = this.backToSurface.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.onViewportChanged = this.onViewportChanged.bind(this);
         this.onLoad = this.onLoad.bind(this);
     }
@@ -56,7 +57,9 @@ export default class Layer extends Component {
     }
 
     handleClick(e) {
-        prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        if (this.props.showDevTools) {
+            prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        }
     }
 
     backToSurface() {
