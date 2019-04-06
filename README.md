@@ -1,5 +1,7 @@
 # RSMap
 
+See the site live here: [rsmap.uk](https://rsmap.uk/)
+
 ## About
 Built on gatsby and react. The aim was a rebuilt of osrs map into a nice map like format, hoping to get the power of the ingame map on to the web. I know some already exist but they lack the features I'm trying to add
 
