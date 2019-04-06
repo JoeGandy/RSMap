@@ -16,7 +16,7 @@ function getMethods(obj) {
     return res;
 }
 
-const map_address = "http://tiles.rsmap.uk/public";
+const map_address = "https://tiles.rsmap.uk/public";
 
 export default class Layer extends Component {
 
