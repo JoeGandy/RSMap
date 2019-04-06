@@ -14,6 +14,30 @@ const DEFAULT_CENTER = {"lat": 76.40881056467734, "lng": 317.13134765625006};
 const DEFAULT_ZOOM = 6;
 const DEFAULT_LAYER = 'surface';
 
+export function getLatestZoom(default_zoom) {
+    if (OSRSMap.getGETParam('zoom') === false) {
+        return localStorage.getItem('zoom') !== "undefined" && localStorage.getItem('zoom') !== null ? localStorage.getItem('zoom') : default_zoom;
+    } else {
+        return OSRSMap.getGETParam('zoom');
+    }
+}
+
+export function getLatestLayer(default_layer) {
+    if (OSRSMap.getGETParam('layer') === false) {
+        return localStorage.getItem('layer') !== "undefined" && localStorage.getItem('layer') !== null ? localStorage.getItem('layer') : default_layer;
+    } else {
+        return OSRSMap.getGETParam('layer');
+    }
+}
+
+export function getLatestCenter(default_center) {
+    if (OSRSMap.getGETParam('center') === false) {
+        return localStorage.getItem('center') !== "undefined" && localStorage.getItem('center') !== null ? JSON.parse(localStorage.getItem('center')) : default_center;
+    } else {
+        return OSRSMap.getGETParam('center');
+    }
+}
+
 class OSRSMap extends Component {
     static get DEFAULT_CENTER() {
         return DEFAULT_CENTER;
@@ -25,30 +49,6 @@ class OSRSMap extends Component {
 
     static get DEFAULT_LAYER() {
         return DEFAULT_LAYER;
-    }
-
-    static getLatestZoom(default_zoom) {
-        if (OSRSMap.getGETParam('zoom') === false) {
-            return localStorage.getItem('zoom') !== "undefined" && localStorage.getItem('zoom') !== null ? localStorage.getItem('zoom') : default_zoom;
-        } else {
-            return OSRSMap.getGETParam('zoom');
-        }
-    }
-
-    static getLatestLayer(default_layer) {
-        if (OSRSMap.getGETParam('layer') === false) {
-            return localStorage.getItem('layer') !== "undefined" && localStorage.getItem('layer') !== null ? localStorage.getItem('layer') : default_layer;
-        } else {
-            return OSRSMap.getGETParam('layer');
-        }
-    }
-
-    static getLatestCenter(default_center) {
-        if (OSRSMap.getGETParam('center') === false) {
-            return localStorage.getItem('center') !== "undefined" && localStorage.getItem('center') !== null ? JSON.parse(localStorage.getItem('center')) : default_center;
-        } else {
-            return OSRSMap.getGETParam('center');
-        }
     }
 
     static getGETParam(param_name) {
@@ -65,9 +65,9 @@ class OSRSMap extends Component {
         super(props);
 
         this.state = {
-            center: OSRSMap.getLatestCenter(OSRSMap.DEFAULT_CENTER),
-            layer: OSRSMap.getLatestLayer(OSRSMap.DEFAULT_LAYER),
-            defaultZoom: OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM),
+            center: getLatestCenter(OSRSMap.DEFAULT_CENTER),
+            layer: getLatestLayer(OSRSMap.DEFAULT_LAYER),
+            defaultZoom: getLatestZoom(OSRSMap.DEFAULT_ZOOM),
             icons_flat: getAllIconsFlat(),
             icons: rewriteIcons(),
             dungeons: Dungeons,
@@ -76,7 +76,7 @@ class OSRSMap extends Component {
             dev_tools_enabled: false
         };
 
-        IconBaseClass.setZoomLevel(OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM));
+        IconBaseClass.setZoomLevel(getLatestZoom(OSRSMap.DEFAULT_ZOOM));
 
 
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
@@ -105,8 +105,8 @@ class OSRSMap extends Component {
         state.center = new_center;
         state.layer = layer;
         if (layer === "surface") {
-            state.zoomLevel = OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM);
-            IconBaseClass.setZoomLevel(OSRSMap.getLatestZoom(OSRSMap.DEFAULT_ZOOM));
+            state.zoomLevel = getLatestZoom(OSRSMap.DEFAULT_ZOOM);
+            IconBaseClass.setZoomLevel(getLatestZoom(OSRSMap.DEFAULT_ZOOM));
         }
         this.setState(state);
     }

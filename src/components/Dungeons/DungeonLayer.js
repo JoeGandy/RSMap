@@ -3,7 +3,7 @@ import {Map, TileLayer, Polyline} from "react-leaflet";
 import DevTools from "../DevTools";
 import DungeonMarkers from "./DungeonMarkers";
 import {getDungeonIcons} from "../../classes/Dungeons";
-import OSRSMap from "../OSRSMap";
+import OSRSMap, {getLatestCenter} from "../OSRSMap";
 
 
 function getMethods(obj) {
@@ -70,7 +70,7 @@ export default class Layer extends Component {
     }
 
     backToSurface() {
-        this.props.handleLayerChange("surface", OSRSMap.getLatestCenter(OSRSMap.DEFAULT_CENTER));
+        this.props.handleLayerChange("surface", getLatestCenter(OSRSMap.DEFAULT_CENTER));
     }
 
     centerMap(_center) {
