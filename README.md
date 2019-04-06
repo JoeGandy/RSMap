@@ -11,10 +11,9 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 
 
 #### Issues to fix before going live
-- Add mournings end dungeon
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
-- Quest icons inside of dungeons not working
+- icons inside of dungeons not working on hover when it would appear offscreen
 
 #### Goal features
 - Monster Locator (Searching for a monster would show you locations)
@@ -55,3 +54,4 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 - ~Quest icon to show quest with basic info~
 - ~Add corsair cove~
 - ~Fix new structure with layers~
+- ~Add mournings end dungeon~

@@ -152,7 +152,6 @@ export default class SurfaceLayer extends Component {
                                     regions={this.props.regions}
                                     handleLayerChange={this.props.handleLayerChange}
                                     layer={this.props.layer}
-                                    bounds={this.state.bounds}
                                     filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}
                     />
                 </Map>

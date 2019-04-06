@@ -76,6 +76,133 @@ export function getDungeonCenter(dungeon_name) {
 //
 export const Dungeons = [
     {
+        machine_name: 'mournings_end_dungeon_2',
+        full_name: 'Template of Light (Third Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":3.337953961416485,"lng":358.41796875000006},
+        exits: [
+            {
+                label: 'To Template of Light (Second Level)',
+                position: {"lat":9.44906182688142,"lng":361.23046875000006},
+                target_layer: "mournings_end_dungeon_1",
+                target_layer_position: {"lat":9.622414142924818,"lng":361.23046875000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Template of Light (Second Level)',
+                position: {"lat":-3.162455530237848,"lng":360.87890625000006},
+                target_layer: "mournings_end_dungeon_1",
+                target_layer_position: {"lat":-3.337953961416472,"lng":360.70312500000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Template of Light (Second Level)',
+                position: {"lat":40.04443758460859,"lng":370.54687500000006},
+                target_layer: "mournings_end_dungeon_1",
+                target_layer_position: {"lat":40.04443758460859,"lng":370.54687500000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Template of Light (Second Level)',
+                position: {"lat":-34.88593094075316,"lng":370.72265625000006},
+                target_layer: "mournings_end_dungeon_1",
+                target_layer_position: {"lat":-34.88593094075316,"lng":370.72265625000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Template of Light (Second Level)',
+                position: {"lat":28.613459424004414,"lng":364.04296875000006},
+                target_layer: "mournings_end_dungeon_1",
+                target_layer_position: {"lat":28.613459424004414,"lng":364.04296875000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Template of Light (Second Level)',
+                position: {"lat":-22.75592068148639,"lng":362.8125},
+                target_layer: "mournings_end_dungeon_1",
+                target_layer_position: {"lat":-22.75592068148639,"lng":362.8125},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [],
+        icons: {
+            agility_shortcuts: [
+            ]
+        }
+    },
+    {
+        machine_name: 'mournings_end_dungeon_1',
+        full_name: 'Template of Light (Second Level)',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":3.337953961416485,"lng":358.41796875000006},
+        exits: [
+            {
+                label: 'To Mourners\' Tunnels and Temple of Light',
+                position: {"lat":3.5134210456400448,"lng":378.28125000000006},
+                target_layer: "mourner_hq_dungeon_and_template_of_light_1",
+                target_layer_position: {"lat":2.4601811810210052,"lng":287.05078125000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            },
+            {
+                label: 'To Mourners\' Tunnels and Temple of Light',
+                position: {"lat":3.6888551431470478,"lng":356.13281250000006},
+                target_layer: "mourner_hq_dungeon_and_template_of_light_1",
+                target_layer_position: {"lat":3.162455530237848,"lng":266.13281250000006},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [],
+        icons: {
+            agility_shortcuts: [
+            ]
+        }
+    },
+    {
+        machine_name: 'mourner_hq_dungeon_and_template_of_light_1',
+        full_name: 'Mourners\' Tunnels and Temple of Light',
+        icon: require('../../static/icons/misc/Dungeon_icon.webp'),
+        center_pos: {"lat":2.986927393334876,"lng":368.43750000000006},
+        exits: [
+            {
+                label: 'To Mourners Hideout',
+                position: {"lat":16.97274101999902,"lng":483.92578125000006},
+                target_layer: "surface",
+                target_layer_position: {"lat":77.90876704390809,"lng":272.23022460937506},
+                icon: require('../../static/icons/misc/Map_link_icon.webp')
+            }
+        ],
+        map_labels: [
+            {
+                "position": {
+                    "lat": 30.90222470517144,
+                    "lng": 413.08593750000006
+                },
+                "title": "Dark<br/>Beasts",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": -19.642587534013032,
+                    "lng": 442.08984375000006
+                },
+                "title": "Dark Beasts",
+                "description": null
+            },
+            {
+                "position": {
+                    "lat": 32.99023555965106,
+                    "lng": 463.35937500000006
+                },
+                "title": "Dark<br/>Beasts",
+                "description": null
+            }
+        ],
+        icons: {
+            agility_shortcuts: [
+            ]
+        }
+    },
+    {
         machine_name: 'myths_guild_basement_1',
         full_name: 'Corsair Cove Dungeon',
         icon: require('../../static/icons/misc/Dungeon_icon.webp'),

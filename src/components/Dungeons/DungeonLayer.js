@@ -39,6 +39,12 @@ export default class Layer extends Component {
         this.onLoad = this.onLoad.bind(this);
     }
 
+    handleZoomEnd() {
+        if (this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon']) {
+            this.setState({zoomLevel: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].viewport.zoom});
+        }
+    }
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
             let state = {...this.state};
@@ -60,6 +66,7 @@ export default class Layer extends Component {
         if (this.props.showDevTools) {
             prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
         }
+        this.setState({clicked_position: e.latlng});
     }
 
     backToSurface() {
@@ -113,7 +120,6 @@ export default class Layer extends Component {
                                     regions={this.props.regions}
                                     handleLayerChange={this.props.handleLayerChange}
                                     layer={this.props.layer}
-                                    bounds={this.state.bounds}
                                     filters={this.state.filters}
                                     icons={getDungeonIcons(this.props.layer)}
                                     dungeons={this.props.dungeons}/>
