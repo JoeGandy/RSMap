@@ -8,7 +8,9 @@ export default class extends React.Component {
 
         return <Layout>
             <div id={"map-container"}>
-                <OSRSMap />
+                {typeof(window) !== "undefined" ?
+                    <OSRSMap/> : <></>
+                }
             </div>
         </Layout>
     }

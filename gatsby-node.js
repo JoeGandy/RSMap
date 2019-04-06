@@ -4,6 +4,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             module: {
                 rules: [
                     {
+                        test: /react-keyboard-shortcuts/,
+                        use: loaders.null(),
+                    },
+                    {
                         test: /react-leaflet/,
                         use: loaders.null(),
                     },
@@ -27,6 +31,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
                         test: /Dungeons/,
                         use: loaders.null(),
                     },
+                    {
+                        test: /OSRSMap/,
+                        use: loaders.null()
+                    }
                 ],
             },
         })
