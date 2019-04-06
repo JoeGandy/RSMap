@@ -47,7 +47,7 @@ export default class QuestMarker extends Component {
                         QuestMarker.openInNewTab(this.props.options.full_guide);
                     }}
                 >
-                    <Popup className={"quest_popup"}>
+                    <Popup autoPan={false}  className={"quest_popup"}>
                         <h4><img src={this.props.options.iconUrl}/> {this.props.options.title} <img
                             src={this.props.options.iconUrl}/></h4>
                         <table>

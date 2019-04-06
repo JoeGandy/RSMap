@@ -45,7 +45,7 @@ export default class LayerLink extends Component {
                             }}
                             onClick={() => onLayerLinkClick(props.dungeon.machine_name)}
                         >
-                            <Popup>
+                            <Popup autoPan={false} >
                                 <h4>{props.dungeon.full_name}</h4>
                                 {props.dungeon.description ?
                                     <div><br/>{props.dungeon.description.split("\n").map(function (item, i) {

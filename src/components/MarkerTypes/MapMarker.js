@@ -39,7 +39,7 @@ export default class MapMarker extends Component {
                         this.setState({active: false});
                     }}
                 >
-                    <Popup>
+                    <Popup autoPan={false} >
                         <h4>{this.props.title}</h4>
                         {this.props.icon.options.description ?
                             <div><br />{this.props.icon.options.description.split("\n").map(function (item, i) {

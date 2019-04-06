@@ -13,8 +13,6 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 #### Issues to fix before going live
 - Double check troll stronghold shortcuts
 - Double check Arandar Shorcuts
-- icons inside of dungeons not working on hover when it would appear offscreen
-
 #### Goal features
 - Monster Locator (Searching for a monster would show you locations)
 - Convert coord clues to map coordinates (Needed but difficult to do)
@@ -55,3 +53,4 @@ Run `npm run build` to set up a production build, ideally this wouldn't be in th
 - ~Add corsair cove~
 - ~Fix new structure with layers~
 - ~Add mournings end dungeon~
+- ~icons inside of dungeons not working on hover when it would appear offscreen~

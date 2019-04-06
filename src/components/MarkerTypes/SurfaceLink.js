@@ -43,7 +43,7 @@ export default class SurfaceLink extends Component {
                         }}
                         onClick={() => onLayerLinkClick(exit.target_layer, exit.target_layer_position)}
                     >
-                        <Popup>
+                        <Popup autoPan={false} >
                             <h4>{exit.label}</h4>
                             {props.dungeon.description ?
                                 <div><br/>{props.dungeon.description.split("\n").map(function (item, i) {

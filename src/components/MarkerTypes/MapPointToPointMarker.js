@@ -74,7 +74,7 @@ export default class MapPointToPointMarker extends Component {
                     //onClick={this.onMarkerClick}
                     opacity={this.props.end ? 0.4 : 1}
                 >
-                    <Popup>
+                    <Popup autoPan={false} >
                         <h4>{this.props.title}</h4>
                         {this.props.icon.options.description ? <p>{this.props.icon.options.description}</p> : null}
                     </Popup>
