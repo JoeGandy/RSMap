@@ -1,4 +1,4 @@
-const siteUrl = "https://map.rsclues.com/"
+const siteUrl = "https://rsmap.co.uk/";
 
 module.exports = {
 	siteMetadata: {
@@ -8,7 +8,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
-				trackingId: "UA-49984946-3"
+				trackingId: "UA-49984946-8"
 			},
 		},
 		{
