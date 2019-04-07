@@ -4,25 +4,55 @@ import FiltersBox from "../FiltersBox";
 import SearchBox from "../SearchBox";
 import DevTools from "../DevTools";
 import {getDungeonCenter, getDungeonIcons} from "../../classes/Dungeons";
+import * as L from "leaflet";
+import OSRSMap from "../OSRSMap";
 import Controls from "../Controls";
 import SurfaceMarkers from "./SurfaceMarkers";
-import Layer from "../Layer";
 
-export default class SurfaceLayer extends Layer {
+
+function getMethods(obj) {
+    var res = [];
+    for (var m in obj) {
+        if (typeof obj[m] == "function") {
+            res.push(m)
+        }
+    }
+    return res;
+}
+
+const map_address = "https://tiles.rsmap.uk/public";
+
+export default class SurfaceLayer extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            ...this.state,
             filters: {},
             icons_flat: this.props.icons_flat,
-            icons: this.props.icons
+            icons: this.props.icons,
+            layer: this.props.layer,
+            layer_url: this.props.surface ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer + "/",
+            zoomLevel: this.props.defaultZoom,
+            center: this.props.center
         };
 
+        this.map = {};
+
+        this.handleClick = this.handleClick.bind(this);
+        this.handleZoomEnd = this.handleZoomEnd.bind(this);
+        this.centerMap = this.centerMap.bind(this);
         this.updateFilters = this.updateFilters.bind(this);
         this.searchSelect = this.searchSelect.bind(this);
+        this.backToSurface = this.backToSurface.bind(this);
         this.onViewportChanged = this.onViewportChanged.bind(this);
+        this.onLoad = this.onLoad.bind(this);
+    }
+
+    handleZoomEnd() {
+        if (this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon']) {
+            this.setState({zoomLevel: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].viewport.zoom});
+        }
     }
 
     searchSelect(results) {
@@ -59,6 +89,20 @@ export default class SurfaceLayer extends Layer {
         }
     }
 
+    backToSurface() {
+    }
+
+    handleClick(e) {
+        if(this.props.showDevTools) {
+            prompt(JSON.stringify(e.latlng), JSON.stringify(e.latlng));
+        }
+        this.setState({clicked_position: e.latlng});
+    }
+
+    centerMap(_center) {
+        this.setState({center: _center});
+    }
+
     updateFilters(filters) {
         this.setState({filters: filters});
     }
@@ -69,14 +113,36 @@ export default class SurfaceLayer extends Layer {
         localStorage.setItem('layer', this.props.layer);
     }
 
+    onLoad() {
+        //this.setState({bounds: this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.getBounds()});
+    }
+
     render() {
         return (
             <>
                 <Map
-                    {...this.getLayerMapProps()}
+                    ref={(ref) => {
+                        this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'] = ref;
+                    }}
+                    zoom={this.state.zoomLevel}
+                    center={this.state.center}
+                    maxZoom={this.props.maxZoom}
+                    minZoom={this.props.minZoom}
+                    minNativeZoom={this.props.minZoom}
+                    maxNativeZoom={this.props.maxZoom}
+                    onClick={this.handleClick}
+                    onZoomEnd={this.handleZoomEnd}
+                    onViewportChanged={this.onViewportChanged}
+                    keyboardPanDelta={600}
                 >
                     <TileLayer
-                        {...this.getLayerTileProps()}
+                        attribution="RSMap - All content/assets belong to jagex - Marker data from osrs.wiki"
+                        url={map_address + this.state.layer_url + "/{z}/{x}/{y}.png"}
+                        keepBuffer={15}
+                        updateWhenZooming={false}
+                        updateInterval={200}
+                        errorTileUrl={map_address + "/public/map/generated/7/1/30.png"}
+                        onLoad={this.onLoad}
                     />
                     {this.props.showDevTools ?
                         <DevTools layer={this.props.layer}
