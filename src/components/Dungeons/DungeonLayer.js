@@ -37,6 +37,7 @@ export default class Layer extends Component {
         this.handleClick = this.handleClick.bind(this);
         this.onViewportChanged = this.onViewportChanged.bind(this);
         this.onLoad = this.onLoad.bind(this);
+        this.handleZoomEnd = this.handleZoomEnd.bind(this);
     }
 
     handleZoomEnd() {
