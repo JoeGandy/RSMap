@@ -141,6 +141,7 @@ export default class SurfaceLayer extends Component {
                         keepBuffer={15}
                         updateWhenZooming={false}
                         updateInterval={200}
+                        errorTileUrl={map_address + "/public/map/generated/7/1/30.png"}
                         onLoad={this.onLoad}
                     />
                     {this.props.showDevTools ?

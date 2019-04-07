@@ -110,6 +110,7 @@ export default class Layer extends Component {
                         updateWhenZooming={false}
                         updateInterval={200}
                         onLoad={this.onLoad}
+                        errorTileUrl={map_address + "/public/map/generated/7/1/30.png"}
                     />
                     {this.props.showDevTools ?
                         <DevTools layer={this.props.layer}
