@@ -100,13 +100,15 @@ class OSRSMap extends Component {
         }
     }
 
-    handleLayerChange(layer, new_center) {
+    handleLayerChange(layer, new_center, zoom) {
+        zoom = typeof zoom === 'undefined' ? 3 : zoom;
+
         let state = {...this.state};
         state.center = new_center;
         state.layer = layer;
         if (layer === "surface") {
-            state.zoomLevel = getLatestZoom(OSRSMap.DEFAULT_ZOOM);
-            IconBaseClass.setZoomLevel(getLatestZoom(OSRSMap.DEFAULT_ZOOM));
+            state.zoomLevel = zoom;
+            IconBaseClass.setZoomLevel(zoom);
         }
         this.setState(state);
     }
@@ -123,6 +125,8 @@ class OSRSMap extends Component {
                               icons={this.state.icons}
                               dungeons={this.state.dungeons}
                               showDevTools={this.state.dev_tools_enabled}
+                              newCenter={this.state.center}
+                              newZoomLevel={this.state.zoomLevel}
                 />
             )
         } else {
@@ -136,6 +140,8 @@ class OSRSMap extends Component {
                               icons={this.state.icons}
                               dungeons={this.state.dungeons}
                               showDevTools={this.state.dev_tools_enabled}
+                              newCenter={this.state.center}
+                              newZoomLevel={this.state.zoomLevel}
                 />
             )
         }

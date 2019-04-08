@@ -53,15 +53,17 @@ export default class DungeonLayer extends Layer {
                     <DungeonMarkers zoomLevel={this.state.zoomLevel}
                                     centerMap={this.centerMap}
                                     regions={this.props.regions}
-                                    handleLayerChange={this.props.handleLayerChange}
+                                    handleLayerChange={this.handleLayerChange}
                                     layer={this.props.layer}
                                     filters={this.state.filters}
                                     icons={getDungeonIcons(this.props.layer)}
                                     dungeons={this.props.dungeons}/>
-                    {this.state.line ? <Polyline weight={6} color={'yellow'} positions={this.state.line}/> : null}
+                    {this.state.line ?
+                        <Polyline weight={6} color={'yellow'} positions={this.state.line}/>
+                        : null}
                 </Map>
-                <button className="back_to_surface_button main_button" onClick={this.backToSurface}>Back to
-                    surface
+                <button className="back_to_surface_button main_button" onClick={this.backToSurface}>
+                    Back to surface
                 </button>
             </>
         )

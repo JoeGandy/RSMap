@@ -45,12 +45,19 @@ export default class SurfaceLayer extends Layer {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
             this.setState({zoomLevel: this.props.defaultZoom});
-            this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer});
+            this.setState({layer_url: "/map/generated"});
             this.setState({icons: getDungeonIcons(this.props.layer)});
             this.centerMap(this.props.center);
-            this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMaxZoom(this.props.maxZoom);
-            this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMinZoom(this.props.minZoom);
+            this.map['surface'].leafletElement.setMaxZoom(this.props.maxZoom);
+            this.map['surface'].leafletElement.setMinZoom(this.props.minZoom);
 
+            if(this.props.newCenter !== prevProps.newCenter){
+                this.centerMap(this.props.newCenter);
+            }
+
+            if(this.props.newZoomLevel !== prevProps.newZoomLevel){
+                this.setMapZoom(this.props.newZoomLevel);
+            }
         }
     }
 
@@ -76,13 +83,16 @@ export default class SurfaceLayer extends Layer {
                     {this.props.showDevTools ?
                         <DevTools layer={this.props.layer}
                                   clickedPos={this.state.clicked_position}
-                        /> : null}
+                        />
+                        : null}
                     <SurfaceMarkers zoomLevel={this.state.zoomLevel}
                                     centerMap={this.centerMap}
                                     regions={this.props.regions}
-                                    handleLayerChange={this.props.handleLayerChange}
+                                    handleLayerChange={this.handleLayerChange}
                                     layer={this.props.layer}
-                                    filters={this.state.filters} icons={this.props.icons} dungeons={this.props.dungeons}
+                                    filters={this.state.filters}
+                                    icons={this.props.icons}
+                                    dungeons={this.props.dungeons}
                     />
                 </Map>
                 <FiltersBox updateFilters={this.updateFilters}/>

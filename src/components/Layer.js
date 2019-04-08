@@ -21,8 +21,10 @@ export default class Layer extends Component {
         this.map = {};
 
         this.centerMap = this.centerMap.bind(this);
+        this.setMapZoom = this.setMapZoom.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleZoomEnd = this.handleZoomEnd.bind(this);
+        this.handleLayerChange = this.handleLayerChange.bind(this);
     }
 
     getMapAddress() {
@@ -48,6 +50,11 @@ export default class Layer extends Component {
 
     centerMap(_center) {
         this.setState({center: _center});
+    }
+
+    setMapZoom(_zoomLevel){
+        this.setState({zoomLevel: _zoomLevel});
+        this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMapZoom(_zoomLevel);
     }
 
     getLayerMapProps() {
@@ -77,5 +84,9 @@ export default class Layer extends Component {
             updateInterval: 200,
             errorTileUrl: this.getMapAddress() + this.getBlankTile()
         }
+    }
+
+    handleLayerChange(layer, new_center) {
+        this.props.handleLayerChange(layer, new_center);
     }
 }
