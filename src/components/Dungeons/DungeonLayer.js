@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Map, TileLayer, Polyline} from "react-leaflet";
 import DevTools from "../DevTools";
 import DungeonMarkers from "./DungeonMarkers";
-import {getDungeonIcons} from "../../classes/Dungeons";
+import {getDungeonCenter, getDungeonIcons} from "../../classes/Dungeons";
 import OSRSMap, {getLatestCenter} from "../OSRSMap";
 import Layer from "../Layer";
 
@@ -23,10 +23,8 @@ export default class DungeonLayer extends Layer {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
-            let state = {...this.state};
-            state.layer_url = "/map/dungeons/generated/" + this.props.layer + "/";
-            this.setState(state);
-
+            this.setState({layer_url: "/map/dungeons/generated/" + this.props.layer + "/"});
+            this.centerMap(getDungeonCenter(this.props.layer));
         }
     }
 

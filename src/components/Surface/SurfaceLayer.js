@@ -44,15 +44,10 @@ export default class SurfaceLayer extends Layer {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.layer !== prevProps.layer) {
-            if (this.props.layer === "surface") {
-
-            } else {
-
-            }
             this.setState({zoomLevel: this.props.defaultZoom});
             this.setState({layer_url: this.props.layer === "surface" ? "/map/generated" : "/map/dungeons/generated/" + this.props.layer});
             this.setState({icons: getDungeonIcons(this.props.layer)});
-            this.centerMap(this.props.layer === "surface" ? this.props.center : getDungeonCenter(this.props.layer));
+            this.centerMap(this.props.center);
             this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMaxZoom(this.props.maxZoom);
             this.map[this.props.layer === 'surface' ? 'surface' : 'dungeon'].leafletElement.setMinZoom(this.props.minZoom);
 
