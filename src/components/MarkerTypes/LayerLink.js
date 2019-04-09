@@ -13,8 +13,8 @@ export default class LayerLink extends Component {
         this.onLayerLinkClick = this.onLayerLinkClick.bind(this);
     }
 
-    onLayerLinkClick(machine_name){
-        this.props.handleLayerChange(machine_name, getDungeonCenter(machine_name));
+    onLayerLinkClick(machine_name, position){
+        this.props.handleLayerChange(machine_name, position);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -43,7 +43,7 @@ export default class LayerLink extends Component {
                             onMouseOut={(e) => {
                                 e.target.closePopup();
                             }}
-                            onClick={() => onLayerLinkClick(props.dungeon.machine_name)}
+                            onClick={() => onLayerLinkClick(props.dungeon.machine_name, exit.position)}
                         >
                             <Popup autoPan={false} >
                                 <h4>{props.dungeon.full_name}</h4>
