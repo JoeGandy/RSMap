@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import OSRSMap, {getLatestCenter, getLatestLayer, getLatestZoom} from "./OSRSMap";
+import GitHubLogo from '../../static/ui/github.png';
 
 export default class Controls extends Component {
     constructor(props) {
@@ -9,6 +10,7 @@ export default class Controls extends Component {
         };
 
         this.shareLocation = this.shareLocation.bind(this);
+        this.goToGithub = this.goToGithub.bind(this);
 
     }
 
@@ -31,10 +33,17 @@ export default class Controls extends Component {
         prompt("Copy this url to share this location", share_url)
     }
 
+    goToGithub(){
+        window.location = "https://github.com/JoeGandy/RSMap";
+    }
+
     render() {
         return (
             <>
                 <button className={"controls_button"} title={"Share Location"} onClick={this.shareLocation}>Share</button>
+                <button className={"controls_button"} title={"Go to github"} onClick={this.goToGithub}>
+                    <img src={GitHubLogo} alt="Github Icon" />
+                </button>
             </>
         );
     }
