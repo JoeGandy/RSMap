@@ -607,7 +607,7 @@ export const PointToPoints = [
             {"lat":71.68784119522113,"lng":293.29101562500006},
             {"lat":71.65329138425155,"lng":291.39038085937506}
         ],
-        title: "Shilo Village card System",
+        title: "Shilo Village cart System",
         description: "",
         category: Categories.BOATS
     },
