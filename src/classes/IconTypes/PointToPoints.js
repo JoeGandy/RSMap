@@ -533,7 +533,7 @@ export const PointToPoints = [
         iconUrl: require('../../../static/icons/misc/Transportation_icon.png'),
         className: Categories.BOATS,
         positions: [
-            {"lat": 79.23000193927321, "lng": 275.89416503906256},
+            {"lat":76.48604560648228,"lng":296.40014648437506},
             {"lat": 79.38997509071015, "lng": 276.89392089843756}
 
         ],

@@ -955,7 +955,7 @@ export const Teleports = [
     {
         iconUrl: require('../../../static/icons/teleport/Xeric\'s_talisman_(inert).webp'),
         className: 'xerics_amulet item_icon ' + Categories.OTHER,
-        position: {"lat":80.13739971053121,"lng":221.48437500000003},
+        position: {"lat":80.85189079086516,"lng":220.133056640625},
         title: "Xeric's Glade",
         category: Categories.OTHER,
         description: "",
@@ -1181,7 +1181,7 @@ export const Teleports = [
     {
         iconUrl: require('../../../static/icons/teleport/Minigame_icon.webp'),
         className: Categories.MINI_GAMES,
-        position: {"lat":81.08981123884188,"lng":222.22045898437503},
+        position: {"lat":80.09402404333052,"lng":223.42895507812503},
         title: "Mini-game Teleport",
         description: "Tithe Farm",
         category: Categories.MINI_GAMES

@@ -154,7 +154,7 @@ export const Quests = [
         title: "The Depths of Despair",
         iconUrl: require('../../../static/icons/misc/Quest_start_icon.png'),
         className: Categories.QUESTS,
-        position: {"lat": 80.71951223728973, "lng": 226.32659912109375},
+        position: {"lat":80.86585369109436,"lng":222.044677734375},
         difficulty: "Novice",
         length: "Short",
         quest_points: 1,
