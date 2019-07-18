@@ -563,6 +563,18 @@ export const PointToPoints = [
         iconUrl: require('../../../static/icons/misc/Transportation_icon.png'),
         className: Categories.BOATS,
         positions: [
+            {"lat":79.60821469998169,"lng":221.92382812500003},
+            {"lat":79.27200689959992,"lng":222.96752929687503},
+            {"lat":79.11753822560125,"lng":221.98974609375003}
+        ],
+        title: "Hosidius Beach ↔ Cranbclaw Isle",
+        description: "",
+        category: Categories.BOATS
+    },
+    {
+        iconUrl: require('../../../static/icons/misc/Transportation_icon.png'),
+        className: Categories.BOATS,
+        positions: [
             {"lat":83.36839854826567,"lng":345.838623046875},
             {"lat":83.68178108996156,"lng":342.509765625},
             {"lat":84.24793541158849,"lng":340.76843261718756}
