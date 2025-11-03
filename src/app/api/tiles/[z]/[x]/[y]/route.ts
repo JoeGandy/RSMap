@@ -31,13 +31,11 @@ export async function GET(
     // Construct the static file path
     const staticTilePath = `/tiles/${plane}/${z}/${x}/${y}.png`;
     
-    // On Vercel, redirect to static files (eliminates function compute cost)
+    // On Vercel, redirect to GitHub Pages (simple and reliable)
     if (process.env.VERCEL || process.env.NODE_ENV === 'production') {
-      const baseUrl = process.env.VERCEL_URL 
-        ? `https://${process.env.VERCEL_URL}` 
-        : request.url.split('/api')[0]; // Use current origin as fallback
-        
-      return NextResponse.redirect(new URL(staticTilePath, baseUrl), 301);
+      // Use GitHub Pages for tile hosting - simple, fast, and free
+      const githubPagesUrl = `https://joegandy.github.io/RSMap${staticTilePath}`;
+      return NextResponse.redirect(githubPagesUrl, 301);
     }
     
     // Development fallback: return 404 for missing tiles

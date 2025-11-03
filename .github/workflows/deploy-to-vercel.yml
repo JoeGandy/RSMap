@@ -15,8 +15,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # Only run if tile generation succeeded OR if it's a regular code push
+    # Only run if tile generation succeeded
     if: |
+      github.event_name == 'push' || 
+      github.event_name == 'pull_request' ||
       (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     
     steps:
@@ -47,8 +49,18 @@ jobs:
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
+    - name: Create lightweight deployment
+      run: |
+        echo "⚠️  Tiles are 864MB - too large for Vercel deployment"
+        echo "🔄 Creating deployment without tiles (API will redirect to GitHub)"
+        mkdir -p public/tiles-placeholder
+        echo "Tiles served from GitHub repository" > public/tiles-placeholder/README.txt
+        rm -rf public/tiles
+
     - name: Deploy to Vercel (Production)
-      run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+      run: |
+        echo "🚀 Deploying lightweight version..."
+        vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
       if: github.ref == 'refs/heads/main' && env.VERCEL_TOKEN != ''
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

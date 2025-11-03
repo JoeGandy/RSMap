@@ -1,0 +1,60 @@
+# Vercel Ignore File
+# Exclude large files and directories from deployment
+
+# Tile files (served as static assets, not uploaded)
+public/tiles/
+
+# Cache and generated files
+cache/
+generated_images/
+.vercel/
+
+# Development files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# next.js build output
+.next
+
+# Tile generator Docker files (not needed for deployment)
+tile_generator/
+
+# Scripts (not needed for runtime)
+scripts/
