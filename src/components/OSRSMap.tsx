@@ -86,12 +86,11 @@ export default function OSRSMap({
               return (
                 <TileLayer
                   key={`plane-${p}`}
-                  url={`/tiles/${p}/{z}/{x}/{y}.png`}
+                  url={`https://joegandy.github.io/RSMap/tiles/${p}/{z}/{x}/{y}.png`}
                   tileSize={256}
                   noWrap={true}
                   opacity={1}
                   attribution="OSRS Map Data"
-                  errorTileUrl="/api/tiles/{z}/{x}/{y}?plane=${p}"
                 />
               );
             }
