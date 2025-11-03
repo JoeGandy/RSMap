@@ -245,7 +245,17 @@ def build_full_map_images(cache_dir, xtea_file):
     if not jar_files:
         raise RuntimeError("No JAR file found. Java component may not have built correctly.")
     
-    jar_file = os.path.join(java_build_dir, jar_files[0])
+    # Prefer the shadow JAR (contains all dependencies and main class)
+    shadow_jar = None
+    for jar in jar_files:
+        if '-all.jar' in jar:
+            shadow_jar = jar
+            break
+    
+    if shadow_jar:
+        jar_file = os.path.join(java_build_dir, shadow_jar)
+    else:
+        jar_file = os.path.join(java_build_dir, jar_files[0])
     LOG.info(f"Using JAR file: {jar_file}")
     
     # Run the Java MapImageDumper
