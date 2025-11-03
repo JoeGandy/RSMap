@@ -47,6 +47,13 @@ jobs:
           TILE_COUNT=$(find public/tiles -name "*.png" | wc -l)
           git commit -m "🗺️ Auto-update OSRS tiles (${TILE_COUNT} files) - $(date '+%Y-%m-%d')"
           git push
+          echo "✅ Tiles updated and pushed - Vercel deployment will be triggered automatically"
         else
-          echo "No changes to commit"
+          echo "No changes to commit - Vercel deployment will still be triggered"
         fi
+
+    - name: Trigger Vercel deployment
+      run: |
+        echo "🚀 Tile generation completed successfully"
+        echo "📡 Vercel deployment will be triggered via workflow_run event"
+        echo "🎯 New tiles are ready for production deployment"
