@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { readFile } from 'fs/promises';
-import { join } from 'path';
 
 interface TileParams {
   z: string;
@@ -9,22 +7,36 @@ interface TileParams {
 }
 
 /**
- * Serve pre-generated OSRS tiles from the public/tiles directory
- * Falls back to generating placeholder tiles if the file doesn't exist
+ * Redirect to static tile files or generate placeholder tiles
+ * This avoids bundling large tile files into the serverless function
  */
-async function getTile(plane: number, z: number, x: number, y: number): Promise<Buffer> {
-  const tilePath = join(process.cwd(), 'public', 'tiles', plane.toString(), z.toString(), x.toString(), `${y}.png`);
+async function handleTileRequest(plane: number, z: number, x: number, y: number): Promise<NextResponse> {
+  // Construct the static file path
+  const staticTilePath = `/tiles/${plane}/${z}/${x}/${y}.png`;
   
+  // Try to redirect to static file first
   try {
-    // Try to serve pre-generated tile
-    console.log(`Looking for tile: ${tilePath}`);
-    const tileBuffer = await readFile(tilePath);
-    console.log(`Served tile: ${tilePath} (${tileBuffer.length} bytes)`);
-    return tileBuffer;
+    // Check if we're in production (Vercel) - redirect to static files
+    if (process.env.VERCEL) {
+      return NextResponse.redirect(new URL(staticTilePath, process.env.VERCEL_URL || 'http://localhost:3000'));
+    }
+    
+    // In development, we can try to serve the file directly
+    // But for Vercel deployment, we'll generate a placeholder
+    return new NextResponse(generatePlaceholderTile(plane, z, x, y), {
+      headers: {
+        'Content-Type': 'image/bmp',
+        'Cache-Control': 'public, max-age=3600',
+      },
+    });
   } catch (error) {
-    console.log(`Tile not found: ${tilePath}, serving black tile`);
-    // Fall back to generating a placeholder tile
-    return generatePlaceholderTile(plane, z, x, y);
+    console.log(`Tile not found: ${staticTilePath}, serving placeholder`);
+    return new NextResponse(generatePlaceholderTile(plane, z, x, y), {
+      headers: {
+        'Content-Type': 'image/bmp',
+        'Cache-Control': 'public, max-age=3600',
+      },
+    });
   }
 }
 
@@ -98,18 +110,8 @@ export async function GET(
     // No transformation needed since we're using direct mapping
     const tileY = y; // Direct mapping
 
-    // Get tile (serve pre-generated or create placeholder)
-    const tileBuffer = await getTile(plane, z, x, tileY);
-
-    // Determine content type based on whether it's a pre-generated PNG or placeholder BMP
-    const contentType = tileBuffer.length > 100 && tileBuffer[0] === 0x89 && tileBuffer[1] === 0x50 ? 'image/png' : 'image/bmp';
-    
-    return new NextResponse(tileBuffer as BodyInit, {
-      headers: {
-        'Content-Type': contentType,
-        'Cache-Control': 'public, max-age=3600',
-      },
-    });
+    // Handle tile request (redirect to static files or generate placeholder)
+    return await handleTileRequest(plane, z, x, tileY);
   } catch (error) {
     console.error('Error generating tile:', error);
     return new NextResponse('Internal Server Error', { status: 500 });
