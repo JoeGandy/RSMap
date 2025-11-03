@@ -29,6 +29,13 @@ def process_tile_transparency(tile_path, threshold=10, dark_alpha=102):
         dark_alpha: Alpha value for dark pixels (0-255)
     """
     try:
+        # Fix file permissions first (in case Docker created files as root)
+        try:
+            os.chmod(tile_path, 0o666)  # Make file writable
+        except (OSError, PermissionError):
+            # If we can't change permissions, try to continue anyway
+            pass
+        
         # Load the image
         img = Image.open(tile_path).convert('RGBA')
         data = np.array(img)
@@ -51,10 +58,30 @@ def process_tile_transparency(tile_path, threshold=10, dark_alpha=102):
         
         # Save the processed image
         processed_img = Image.fromarray(data, 'RGBA')
-        processed_img.save(tile_path, 'PNG')
+        
+        # Try to save directly first
+        try:
+            processed_img.save(tile_path, 'PNG')
+        except PermissionError:
+            # If we can't overwrite, try creating a temporary file and moving it
+            import tempfile
+            import shutil
+            
+            temp_path = tile_path.with_suffix('.tmp.png')
+            processed_img.save(temp_path, 'PNG')
+            
+            try:
+                shutil.move(str(temp_path), str(tile_path))
+            except PermissionError:
+                # If we still can't move it, clean up and fail
+                temp_path.unlink(missing_ok=True)
+                raise
         
         return True
         
+    except PermissionError as e:
+        LOG.warning(f"Permission denied for {tile_path}: {e}")
+        return False
     except Exception as e:
         LOG.warning(f"Failed to process {tile_path}: {e}")
         return False

@@ -36,5 +36,8 @@ ENV PATH="$JAVA_HOME/bin:$PATH"
 RUN echo "* soft nofile 65536" >> /etc/security/limits.conf && \
     echo "* hard nofile 65536" >> /etc/security/limits.conf
 
-# Default command
-CMD ["python3", "src/tile_generator.py"]
+# Set umask to create files with proper permissions (readable/writable by all)
+RUN echo "umask 0002" >> /etc/bash.bashrc
+
+# Default command with proper umask
+CMD ["sh", "-c", "umask 0002 && python3 src/tile_generator.py"]

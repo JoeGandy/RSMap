@@ -60,6 +60,22 @@ echo "=================================================="
 
 cd "$PROJECT_ROOT"
 
+# Fix permissions on tile directories (in case Docker created them as root)
+echo "🔧 Fixing file permissions..."
+if [ -d "public/tiles" ]; then
+    # Try to fix permissions, but don't fail if we can't
+    chmod -R u+w public/tiles 2>/dev/null || true
+    find public/tiles -type f -name "*.png" -exec chmod 666 {} \; 2>/dev/null || true
+    
+    # If we're in CI and still have permission issues, try with sudo
+    if [ "$CI" = "true" ] && [ ! -w "public/tiles" ]; then
+        echo "🔐 Using sudo to fix permissions in CI environment..."
+        sudo chmod -R 755 public/tiles 2>/dev/null || true
+        sudo find public/tiles -type f -name "*.png" -exec chmod 666 {} \; 2>/dev/null || true
+        sudo chown -R $(whoami):$(whoami) public/tiles 2>/dev/null || true
+    fi
+fi
+
 # Check if PIL is available
 if ! python3 -c "import PIL" 2>/dev/null; then
     echo "⚠️  PIL (Pillow) not found. Installing..."
