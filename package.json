@@ -1,0 +1,41 @@
+{
+  "name": "osrs-world-map",
+  "version": "1.0.0",
+  "description": "Interactive Old School RuneScape world map built with Next.js and authentic game cache data",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/osrs-world-map.git"
+  },
+  "keywords": ["osrs", "runescape", "map", "nextjs", "react", "leaflet", "gaming"],
+  "private": false,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:with-tiles": "npm run clean && ./scripts/generate-tiles.sh && next build",
+    "clean": "rm -rf generated_images/ public/tiles/ cache/ .next/",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^4.2.1",
+    "osrscachereader": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/leaflet": "^1.9.8",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.0"
+  }
+}

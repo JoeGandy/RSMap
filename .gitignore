@@ -1,0 +1,60 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# OSRS Map specific
+# Cache files and generated content (regenerated as needed)
+/cache/
+/generated_images/
+/__pycache__/
+/venv/
+
+# Debug and test files
+debug_*.py
+debug_*.png
+test_*.png
+generate_tiles_only.py
+
+# Include all tiles for full functionality
+# Note: This makes the repo large (~2GB) but ensures full map functionality
+
+# Java build artifacts
+/tile_generator/java/build/
+/tile_generator/java/.gradle/
+
+# Python cache
+*.pyc
+__pycache__/
