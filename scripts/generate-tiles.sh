@@ -34,11 +34,22 @@ docker build -t osrs-tile-generator .
 echo "🚀 Running tile generator..."
 
 # Run the tile generator
-docker run -it \
-    -v "$PROJECT_ROOT/cache:/repo/cache" \
-    -v "$PROJECT_ROOT/generated_images:/repo/generated_images" \
-    -v "$PROJECT_ROOT/public/tiles:/repo/public/tiles" \
-    osrs-tile-generator
+# Use -it for interactive mode locally, but not in CI
+if [ "$CI" = "true" ]; then
+    echo "🤖 Running in CI mode (non-interactive)"
+    docker run \
+        -v "$PROJECT_ROOT/cache:/repo/cache" \
+        -v "$PROJECT_ROOT/generated_images:/repo/generated_images" \
+        -v "$PROJECT_ROOT/public/tiles:/repo/public/tiles" \
+        osrs-tile-generator
+else
+    echo "💻 Running in interactive mode"
+    docker run -it \
+        -v "$PROJECT_ROOT/cache:/repo/cache" \
+        -v "$PROJECT_ROOT/generated_images:/repo/generated_images" \
+        -v "$PROJECT_ROOT/public/tiles:/repo/public/tiles" \
+        osrs-tile-generator
+fi
 
 echo "✅ Tile generation completed!"
 
