@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
-import { LatLngBounds, CRS } from 'leaflet';
+import { LatLngBounds, CRS, LeafletEvent } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { leafletToTile, formatTile, leafletToRegion, formatRegion, LeafletCoords } from '@/lib/coordinates';
-import PlaneSelector from './PlaneSelector';
+import { MapIcon } from '@/types/mapIcon';
+import MapIconMarker from './MapIconMarker';
 
 // Back to simple CRS
 const OSRSCRS = CRS.Simple;
@@ -14,6 +15,14 @@ interface OSRSMapProps {
   onCoordinateClick?: (coords: LeafletCoords) => void;
   plane?: number;
   onPlaneChange?: (plane: number) => void;
+  onMapReady?: (map: any) => void;
+  icons?: MapIcon[];
+  onIconDelete?: (id: string) => void;
+  onIconCopy?: (icon: MapIcon) => void;
+  onIconMove?: (icon: MapIcon) => void;
+  onIconEdit?: (icon: MapIcon) => void;
+  onIconClick?: (icon: MapIcon) => void;
+  addIconMode?: boolean;
 }
 
 function MapClickHandler({ onCoordinateClick }: { onCoordinateClick?: (coords: LeafletCoords) => void }) {
@@ -44,7 +53,15 @@ function MapClickHandler({ onCoordinateClick }: { onCoordinateClick?: (coords: L
 export default function OSRSMap({ 
   onCoordinateClick, 
   plane = 0,
-  onPlaneChange
+  onPlaneChange,
+  onMapReady,
+  icons = [],
+  onIconDelete,
+  onIconCopy,
+  onIconMove,
+  onIconEdit,
+  onIconClick,
+  addIconMode = false
 }: OSRSMapProps) {
   const [mounted, setMounted] = useState(false);
 
@@ -75,8 +92,13 @@ export default function OSRSMap({
         maxBoundsViscosity={1.0}
         crs={OSRSCRS}
         className="w-full h-full"
-        zoomControl={true}
+        zoomControl={false}
         attributionControl={false}
+        ref={(mapInstance: any) => {
+          if (mapInstance && onMapReady) {
+            onMapReady(mapInstance);
+          }
+        }}
       >
         {/* OSRS tile layers - serve directly from static files */}
         <>
@@ -99,15 +121,22 @@ export default function OSRSMap({
         </>
         
         <MapClickHandler onCoordinateClick={onCoordinateClick} />
+        
+        {/* Render map icons for current plane */}
+        {icons
+          .filter(icon => icon.plane === plane)
+          .map(icon => (
+            <MapIconMarker
+              key={icon.id}
+              icon={icon}
+              onDelete={onIconDelete}
+              onCopy={onIconCopy}
+              onMove={onIconMove}
+              onEdit={onIconEdit}
+              onClick={onIconClick}
+            />
+          ))}
       </MapContainer>
-      
-      {/* Plane Selector Overlay */}
-      {onPlaneChange && (
-        <PlaneSelector 
-          currentPlane={plane} 
-          onPlaneChange={onPlaneChange} 
-        />
-      )}
     </div>
   );
 }

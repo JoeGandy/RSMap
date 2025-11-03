@@ -29,6 +29,7 @@ body {
 /* Leaflet map styles */
 .leaflet-container {
   background: #2c5530;
+  cursor: crosshair !important;
 }
 
 .leaflet-control-zoom {
@@ -39,9 +40,30 @@ body {
   background: rgba(0, 0, 0, 0.8) !important;
   color: white !important;
   border: 1px solid #444 !important;
+  cursor: pointer !important;
 }
 
 .leaflet-control-zoom a:hover {
   background: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Crosshair cursor for map interactions */
+.leaflet-grab {
+  cursor: crosshair !important;
+}
+
+.leaflet-dragging .leaflet-grab {
+  cursor: crosshair !important;
+}
+
+/* Keep pointer cursor for interactive elements */
+.leaflet-interactive {
+  cursor: pointer !important;
+}
+
+.leaflet-marker-icon {
+  cursor: pointer !important;
+  transition: width 0.25s cubic-bezier(0, 0, 0.25, 1), height 0.25s cubic-bezier(0, 0, 0.25, 1) !important;
+  transform-origin: center center !important;
 }
 

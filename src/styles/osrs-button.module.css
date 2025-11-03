@@ -1,0 +1,151 @@
+/* OSRS World Map Button Styles */
+
+.osrsButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  min-height: 32px;
+  background: url('/vanilla-resource-pack/dialog/background.png') repeat;
+  border: none;
+  cursor: pointer;
+  font-family: 'RuneScape-UF', sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000;
+  font-size: 14px;
+  overflow: hidden;
+  user-select: none;
+  transition: filter 0.1s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.osrsButton:hover {
+  filter: brightness(1.1);
+}
+
+.osrsButton:active {
+  filter: brightness(0.9);
+}
+
+/* Top edge */
+.osrsButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 7px;
+  right: 7px;
+  height: 4px;
+  background: url('/vanilla-resource-pack/button/world_map_edge_top.png') repeat-x;
+  background-size: auto 4px;
+  pointer-events: none;
+}
+
+/* Bottom edge */
+.osrsButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+  right: 7px;
+  height: 4px;
+  background: url('/vanilla-resource-pack/button/world_map_edge_bottom.png') repeat-x;
+  background-size: auto 4px;
+  pointer-events: none;
+}
+
+/* Left edge */
+.edgeLeft {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  bottom: 7px;
+  width: 4px;
+  background: url('/vanilla-resource-pack/button/world_map_edge_left.png') repeat-y;
+  background-size: 4px auto;
+  pointer-events: none;
+}
+
+/* Right edge */
+.edgeRight {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  bottom: 7px;
+  width: 4px;
+  background: url('/vanilla-resource-pack/button/world_map_edge_right.png') repeat-y;
+  background-size: 4px auto;
+  pointer-events: none;
+}
+
+/* Top-left corner */
+.cornerTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: url('/vanilla-resource-pack/button/world_map_metal_corner_top_left.png') no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top-right corner */
+.cornerTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  background: url('/vanilla-resource-pack/button/world_map_metal_corner_top_right.png') no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Bottom-left corner */
+.cornerBottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: url('/vanilla-resource-pack/button/world_map_metal_corner_bottom_left.png') no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Bottom-right corner */
+.cornerBottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  background: url('/vanilla-resource-pack/button/world_map_metal_corner_bottom_right.png') no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Button content */
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Disabled state */
+.osrsButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+.osrsButton:disabled:hover {
+  filter: grayscale(0.5);
+}

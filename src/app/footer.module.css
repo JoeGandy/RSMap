@@ -1,0 +1,105 @@
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 64px;
+  background: url('/vanilla-resource-pack/dialog/background.png') repeat;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Top border - repeating horizontal rivets */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 25px;
+  right: 25px;
+  height: 30px;
+  background: url('/vanilla-resource-pack/dialog/iron_rivets_edge_top.png') repeat-x;
+  image-rendering: pixelated;
+}
+
+/* Bottom border - repeating horizontal rivets */
+.footer::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 25px;
+  right: 25px;
+  height: 30px;
+  background: url('/vanilla-resource-pack/dialog/iron_rivets_bottom.png') repeat-x;
+  image-rendering: pixelated;
+}
+
+.borderLeft {
+  position: absolute;
+  left: -15px;
+  top: 30px;
+  bottom: 30px;
+  width: 25px;
+  background: url('/vanilla-resource-pack/dialog/iron_rivets_vertical.png') repeat-y;
+  image-rendering: pixelated;
+}
+
+.borderRight {
+  position: absolute;
+  right: -5px;
+  top: 30px;
+  bottom: 30px;
+  width: 25px;
+  background: url('/vanilla-resource-pack/dialog/iron_rivets_vertical.png') repeat-y;
+  image-rendering: pixelated;
+}
+
+.cornerTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 30px;
+  background: url('/vanilla-resource-pack/dialog/iron_rivets_corner_top_left.png') no-repeat;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+.cornerTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 30px;
+  background: url('/vanilla-resource-pack/dialog/iron_rivets_corner_top_right.png') no-repeat;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+.cornerBottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 30px;
+  background: url('/vanilla-resource-pack/dialog/iron_rivets_corner_bottom_left.png') no-repeat;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+.cornerBottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25px;
+  height: 30px;
+  background: url('/vanilla-resource-pack/dialog/iron_rivets_corner_bottom_right.png') no-repeat;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
