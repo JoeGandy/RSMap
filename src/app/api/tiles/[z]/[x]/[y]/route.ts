@@ -23,7 +23,8 @@ async function handleTileRequest(plane: number, z: number, x: number, y: number)
     
     // In development, we can try to serve the file directly
     // But for Vercel deployment, we'll generate a placeholder
-    return new NextResponse(generatePlaceholderTile(plane, z, x, y), {
+    const tileBuffer = generatePlaceholderTile(plane, z, x, y);
+    return new NextResponse(tileBuffer as BodyInit, {
       headers: {
         'Content-Type': 'image/bmp',
         'Cache-Control': 'public, max-age=3600',
@@ -31,7 +32,8 @@ async function handleTileRequest(plane: number, z: number, x: number, y: number)
     });
   } catch (error) {
     console.log(`Tile not found: ${staticTilePath}, serving placeholder`);
-    return new NextResponse(generatePlaceholderTile(plane, z, x, y), {
+    const tileBuffer = generatePlaceholderTile(plane, z, x, y);
+    return new NextResponse(tileBuffer as BodyInit, {
       headers: {
         'Content-Type': 'image/bmp',
         'Cache-Control': 'public, max-age=3600',
