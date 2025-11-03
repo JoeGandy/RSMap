@@ -24,8 +24,8 @@
   ],
   "rewrites": [
     {
-      "source": "/tiles/:path*",
-      "destination": "/tiles/:path*"
+      "source": "/tiles/:plane/:z/:x/:y.png",
+      "destination": "/api/tiles/:z/:x/:y?plane=:plane"
     }
   ]
 }
