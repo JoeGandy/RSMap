@@ -7,89 +7,9 @@ interface TileParams {
 }
 
 /**
- * Redirect to static tile files or generate placeholder tiles
- * This avoids bundling large tile files into the serverless function
+ * Cost-optimized tile serving for Vercel
+ * Redirects to static files to minimize function invocations and compute costs
  */
-async function handleTileRequest(plane: number, z: number, x: number, y: number): Promise<NextResponse> {
-  // Construct the static file path
-  const staticTilePath = `/tiles/${plane}/${z}/${x}/${y}.png`;
-  
-  // Try to redirect to static file first
-  try {
-    // Check if we're in production (Vercel) - redirect to static files
-    if (process.env.VERCEL) {
-      return NextResponse.redirect(new URL(staticTilePath, process.env.VERCEL_URL || 'http://localhost:3000'));
-    }
-    
-    // In development, we can try to serve the file directly
-    // But for Vercel deployment, we'll generate a placeholder
-    const tileBuffer = generatePlaceholderTile(plane, z, x, y);
-    return new NextResponse(tileBuffer as BodyInit, {
-      headers: {
-        'Content-Type': 'image/bmp',
-        'Cache-Control': 'public, max-age=3600',
-      },
-    });
-  } catch (error) {
-    console.log(`Tile not found: ${staticTilePath}, serving placeholder`);
-    const tileBuffer = generatePlaceholderTile(plane, z, x, y);
-    return new NextResponse(tileBuffer as BodyInit, {
-      headers: {
-        'Content-Type': 'image/bmp',
-        'Cache-Control': 'public, max-age=3600',
-      },
-    });
-  }
-}
-
-/**
- * Generate a black tile when pre-generated tiles are not available
- */
-function generatePlaceholderTile(plane: number, z: number, x: number, y: number): Buffer {
-  const width = 256;
-  const height = 256;
-  
-  // Create BMP header
-  const headerSize = 54;
-  const imageSize = width * height * 3; // RGB (no alpha for BMP)
-  const fileSize = headerSize + imageSize;
-  
-  const buffer = Buffer.alloc(fileSize);
-  
-  // BMP Header
-  buffer.write('BM', 0); // Signature
-  buffer.writeUInt32LE(fileSize, 2); // File size
-  buffer.writeUInt32LE(0, 6); // Reserved
-  buffer.writeUInt32LE(headerSize, 10); // Data offset
-  
-  // DIB Header
-  buffer.writeUInt32LE(40, 14); // Header size
-  buffer.writeInt32LE(width, 18); // Width
-  buffer.writeInt32LE(-height, 22); // Height (negative for top-down)
-  buffer.writeUInt16LE(1, 26); // Planes
-  buffer.writeUInt16LE(24, 28); // Bits per pixel
-  buffer.writeUInt32LE(0, 30); // Compression
-  buffer.writeUInt32LE(imageSize, 34); // Image size
-  buffer.writeInt32LE(2835, 38); // X pixels per meter
-  buffer.writeInt32LE(2835, 42); // Y pixels per meter
-  buffer.writeUInt32LE(0, 46); // Colors used
-  buffer.writeUInt32LE(0, 50); // Important colors
-  
-  // Generate black image data
-  let bufferIndex = headerSize;
-  
-  for (let py = 0; py < height; py++) {
-    for (let px = 0; px < width; px++) {
-      // All pixels are black (BMP uses BGR order)
-      buffer[bufferIndex++] = 0; // B
-      buffer[bufferIndex++] = 0; // G
-      buffer[bufferIndex++] = 0; // R
-    }
-  }
-  
-  return buffer;
-}
-
 export async function GET(
   request: NextRequest,
   { params }: { params: TileParams }
@@ -108,14 +28,30 @@ export async function GET(
     const url = new URL(request.url);
     const plane = parseInt(url.searchParams.get('plane') || '0');
 
-    // Direct coordinate mapping - Leaflet coordinates should now map directly to tile coordinates
-    // No transformation needed since we're using direct mapping
-    const tileY = y; // Direct mapping
-
-    // Handle tile request (redirect to static files or generate placeholder)
-    return await handleTileRequest(plane, z, x, tileY);
+    // Construct the static file path
+    const staticTilePath = `/tiles/${plane}/${z}/${x}/${y}.png`;
+    
+    // On Vercel, redirect to static files (eliminates function compute cost)
+    if (process.env.VERCEL || process.env.NODE_ENV === 'production') {
+      const baseUrl = process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}` 
+        : request.url.split('/api')[0]; // Use current origin as fallback
+        
+      return NextResponse.redirect(new URL(staticTilePath, baseUrl), 301);
+    }
+    
+    // Development fallback: return 404 for missing tiles
+    // This prevents expensive placeholder generation in development
+    return new NextResponse('Tile not available - generate tiles first', {
+      status: 404,
+      headers: {
+        'Cache-Control': 'public, max-age=300', // Cache 404s for 5 minutes
+        'Content-Type': 'text/plain',
+      },
+    });
+    
   } catch (error) {
-    console.error('Error generating tile:', error);
+    console.error('Error handling tile request:', error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
