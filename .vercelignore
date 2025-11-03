@@ -1,0 +1,27 @@
+# Exclude large tile files and cache from deployment
+public/tiles/
+cache/
+generated_images/
+
+# Exclude tile generator files (not needed for runtime)
+tile_generator/
+
+# Exclude development files
+.next/
+node_modules/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Exclude test files
+*.png
+*.jpg
+*.jpeg
+debug_tile.png
+test_*.png
+
+# Exclude large dependencies that aren't needed
+*.jar
+*.dat2
+*.idx*
