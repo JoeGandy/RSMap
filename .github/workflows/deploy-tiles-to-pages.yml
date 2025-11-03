@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths:
       - 'public/tiles/**'  # Only run when tiles are updated
+  workflow_dispatch:  # Allow manual triggering
+  workflow_run:
+    workflows: ["Generate OSRS Tiles"]
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -26,14 +31,28 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Check if tiles exist
+      id: check_tiles
+      run: |
+        if [ -d "public/tiles" ] && [ "$(find public/tiles -name '*.png' | wc -l)" -gt 0 ]; then
+          echo "tiles_exist=true" >> $GITHUB_OUTPUT
+          echo "✅ Found $(find public/tiles -name '*.png' | wc -l) tile files"
+        else
+          echo "tiles_exist=false" >> $GITHUB_OUTPUT
+          echo "⚠️ No tiles found - skipping deployment"
+        fi
+
     - name: Setup Pages
       uses: actions/configure-pages@v4
+      if: steps.check_tiles.outputs.tiles_exist == 'true'
 
     - name: Upload tiles artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: './public'
+      if: steps.check_tiles.outputs.tiles_exist == 'true'
 
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
+      if: steps.check_tiles.outputs.tiles_exist == 'true'
