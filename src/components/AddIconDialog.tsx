@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import OSRSButton from './OSRSButton';
 import IronRivetPanel from './IronRivetPanel';
 import { AVAILABLE_ICONS } from '@/lib/availableIcons';
+import { iconPathToLabel } from '@/lib/iconUtils';
 
 interface AddIconDialogProps {
   position: { lng: number; lat: number };
@@ -78,7 +79,10 @@ export default function AddIconDialog({ position, plane, onAdd, onCancel }: AddI
             {availableIcons.map((iconPath) => (
               <button
                 key={iconPath}
-                onClick={() => setSelectedIcon(iconPath)}
+                onClick={() => {
+                  setSelectedIcon(iconPath);
+                  setLabel(iconPathToLabel(iconPath));
+                }}
                 className={`p-2 border-2 rounded transition-all ${
                   selectedIcon === iconPath
                     ? 'border-yellow-500 bg-yellow-500 bg-opacity-20 scale-110'

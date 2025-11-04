@@ -2436,6 +2436,655 @@
       "plane": 0,
       "id": "icon_1762244658828_h2wn2sqw4",
       "createdAt": 1762244658828
+    },
+    {
+      "position": {
+        "lng": 257.34375,
+        "lat": -1149.625
+      },
+      "iconPath": "/map_icons/Anvil_icon.png",
+      "label": "Anvil",
+      "plane": 0,
+      "id": "icon_1762246570443_e1iv3lasb",
+      "createdAt": 1762246570443
+    },
+    {
+      "position": {
+        "lng": 257.28125,
+        "lat": -1147.125
+      },
+      "iconPath": "/map_icons/Spinning_wheel_icon.png",
+      "label": "Spinning Wheel",
+      "plane": 0,
+      "id": "icon_1762246587157_29zvar2tf",
+      "createdAt": 1762246587157
+    },
+    {
+      "position": {
+        "lng": 256.859375,
+        "lat": -1145.828125
+      },
+      "iconPath": "/map_icons/Pub_icon.png",
+      "label": "Pub",
+      "plane": 0,
+      "id": "icon_1762246593977_zoo0zhkmy",
+      "createdAt": 1762246593977
+    },
+    {
+      "position": {
+        "lng": 257.796875,
+        "lat": -1141.015625
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "1 x Yew",
+      "plane": 0,
+      "id": "icon_1762246607368_qfdrn3444",
+      "createdAt": 1762246607368
+    },
+    {
+      "position": {
+        "lng": 257.765625,
+        "lat": -1142.46875
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "1 x Yew",
+      "plane": 0,
+      "id": "icon_1762246608597_hcoqsp67s",
+      "createdAt": 1762246608597
+    },
+    {
+      "position": {
+        "lng": 259.15625,
+        "lat": -1141.171875
+      },
+      "iconPath": "/map_icons/Death's_Office_icon.png",
+      "label": "Death's Office",
+      "plane": 0,
+      "id": "icon_1762246623731_tmfrc3x69",
+      "createdAt": 1762246623731
+    },
+    {
+      "position": {
+        "lng": 258.875,
+        "lat": -1139.234375
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762246635083_ywfov3pp3",
+      "createdAt": 1762246635083
+    },
+    {
+      "position": {
+        "lng": 258.53125,
+        "lat": -1139.921875
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762246638328_ls2oq1pke",
+      "createdAt": 1762246638328
+    },
+    {
+      "position": {
+        "lng": 256.71875,
+        "lat": -1139.796875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762246646197_d0nv90jh2",
+      "createdAt": 1762246646197
+    },
+    {
+      "position": {
+        "lng": 256.71875,
+        "lat": -1139.171875
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762246650578_uso0o6dyj",
+      "createdAt": 1762246650578
+    },
+    {
+      "position": {
+        "lng": 257.5,
+        "lat": -1138.046875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762246658040_7fgzb0enw",
+      "createdAt": 1762246658040
+    },
+    {
+      "position": {
+        "lng": 260.765625,
+        "lat": -1138.546875
+      },
+      "iconPath": "/map_icons/Furnace_icon.png",
+      "label": "Furnace",
+      "plane": 0,
+      "id": "icon_1762246670702_vcu5stgx1",
+      "createdAt": 1762246670702
+    },
+    {
+      "position": {
+        "lng": 260.66226473644707,
+        "lat": -1136.534912100918
+      },
+      "iconPath": "/map_icons/Slayer_Master_icon.png",
+      "label": "Slayer Master",
+      "plane": 0,
+      "id": "icon_1762246679324_zuv3zghlo",
+      "createdAt": 1762246679324
+    },
+    {
+      "position": {
+        "lng": 262.21875,
+        "lat": -1136.34375
+      },
+      "iconPath": "/map_icons/Task_Master_icon.png",
+      "label": "Task Master",
+      "plane": 0,
+      "id": "icon_1762246693149_eipbh15dy",
+      "createdAt": 1762246693149
+    },
+    {
+      "position": {
+        "lng": 257.015625,
+        "lat": -1137.296875
+      },
+      "iconPath": "/map_icons/General_store_icon.png",
+      "label": "General Store",
+      "plane": 0,
+      "id": "icon_1762246705544_vspf7bkso",
+      "createdAt": 1762246705544
+    },
+    {
+      "position": {
+        "lng": 253.46875,
+        "lat": -1139.984375
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762246715446_l06aeo4ht",
+      "createdAt": 1762246715446
+    },
+    {
+      "position": {
+        "lng": 240.90625,
+        "lat": -1144.578125
+      },
+      "iconPath": "/map_icons/Anvil_icon.png",
+      "label": "Anvil",
+      "plane": 0,
+      "id": "icon_1762246741740_006twg1n9",
+      "createdAt": 1762246741740
+    },
+    {
+      "position": {
+        "lng": 241.515625,
+        "lat": -1152.3125
+      },
+      "iconPath": "/map_icons/General_store_icon.png",
+      "label": "General Store",
+      "plane": 0,
+      "id": "icon_1762246756732_zkd04gtlp",
+      "createdAt": 1762246756732
+    },
+    {
+      "position": {
+        "lng": 240.03125,
+        "lat": -1154.4375
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762246768043_3hufpv1hm",
+      "createdAt": 1762246768043
+    },
+    {
+      "position": {
+        "lng": 240.296875,
+        "lat": -1155.015625
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762246772619_bdn9cfoue",
+      "createdAt": 1762246772619
+    },
+    {
+      "position": {
+        "lng": 241.59375,
+        "lat": -1154.90625
+      },
+      "iconPath": "/map_icons/Pub_icon.png",
+      "label": "Pub",
+      "plane": 0,
+      "id": "icon_1762246781815_vosdqf552",
+      "createdAt": 1762246781815
+    },
+    {
+      "position": {
+        "lng": 240.90625,
+        "lat": -1153.265625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762246794064_11u0ufjj3",
+      "createdAt": 1762246794064
+    },
+    {
+      "position": {
+        "lng": 251.703125,
+        "lat": -1156.6875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762246798074_391r4jmck",
+      "createdAt": 1762246798074
+    },
+    {
+      "position": {
+        "lng": 253.375,
+        "lat": -1157.53125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762246803147_a67aqu8w1",
+      "createdAt": 1762246803147
+    },
+    {
+      "position": {
+        "lng": 245.34375,
+        "lat": -1161.5625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762246809466_if2y6l8i6",
+      "createdAt": 1762246809466
+    },
+    {
+      "position": {
+        "lng": 243.265625,
+        "lat": -1159.734375
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762246831316_yfn6y2qb2",
+      "createdAt": 1762246831316
+    },
+    {
+      "position": {
+        "lng": 251.84375,
+        "lat": -1155.15625
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762246837666_mlac9wy6r",
+      "createdAt": 1762246837666
+    },
+    {
+      "position": {
+        "lng": 252.03125,
+        "lat": -1157.78125
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762246838413_amvz2wk13",
+      "createdAt": 1762246838413
+    },
+    {
+      "position": {
+        "lng": 253.53125,
+        "lat": -1156.375
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762246846882_3bugp8yn9",
+      "createdAt": 1762246846882
+    },
+    {
+      "position": {
+        "lng": 248.484375,
+        "lat": -1156.59375
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762246852897_say0u1672",
+      "createdAt": 1762246852897
+    },
+    {
+      "position": {
+        "lng": 249.3125,
+        "lat": -1156.375
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762246855746_5x87mdtlz",
+      "createdAt": 1762246855746
+    },
+    {
+      "position": {
+        "lng": 244.890625,
+        "lat": -1154.828125
+      },
+      "iconPath": "/map_icons/Estate_Agent_icon.png",
+      "label": "Estate Agent",
+      "plane": 0,
+      "id": "icon_1762246873285_bbrpg2xi3",
+      "createdAt": 1762246873285
+    },
+    {
+      "position": {
+        "lng": 243.9375,
+        "lat": -1154.84375
+      },
+      "iconPath": "/map_icons/Furnace_icon.png",
+      "label": "Furnace",
+      "plane": 0,
+      "id": "icon_1762246883806_tzvoyfdnp",
+      "createdAt": 1762246883806
+    },
+    {
+      "position": {
+        "lng": 244.796875,
+        "lat": -1161.703125
+      },
+      "iconPath": "/map_icons/Spinning_wheel_icon.png",
+      "label": "Spinning Wheel",
+      "plane": 0,
+      "id": "icon_1762246901354_isftl0u2n",
+      "createdAt": 1762246901354
+    },
+    {
+      "position": {
+        "lng": 247.765625,
+        "lat": -1154.09375
+      },
+      "iconPath": "/map_icons/Farming_patch_icon.png",
+      "label": "Tree Patch",
+      "plane": 0,
+      "id": "icon_1762246916453_9tz8jk017",
+      "createdAt": 1762246916453
+    },
+    {
+      "position": {
+        "lng": 240.09375,
+        "lat": -1159.234375
+      },
+      "iconPath": "/map_icons/Gem_shop_icon.png",
+      "label": "Gem Shop",
+      "plane": 0,
+      "id": "icon_1762246933180_tbmiem1ul",
+      "createdAt": 1762246933180
+    },
+    {
+      "position": {
+        "lng": 252.140625,
+        "lat": -1163.09375
+      },
+      "iconPath": "/map_icons/Dairy_cow_icon.png",
+      "label": "Dairy Cow",
+      "plane": 0,
+      "id": "icon_1762246948398_24zc58zce",
+      "createdAt": 1762246948398
+    },
+    {
+      "position": {
+        "lng": 252.234375,
+        "lat": -1161.15625
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "1 x Yew",
+      "plane": 0,
+      "id": "icon_1762246955859_j25el78oj",
+      "createdAt": 1762246955859
+    },
+    {
+      "position": {
+        "lng": 249.515625,
+        "lat": -1161.640625
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "1 x Yew",
+      "plane": 0,
+      "id": "icon_1762246957027_k1yclv4hp",
+      "createdAt": 1762246957027
+    },
+    {
+      "position": {
+        "lng": 246.640625,
+        "lat": -1162.1875
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "1 x Yew",
+      "plane": 0,
+      "id": "icon_1762246958531_1ox70o152",
+      "createdAt": 1762246958531
+    },
+    {
+      "position": {
+        "lng": 250.15625,
+        "lat": -1164.796875
+      },
+      "iconPath": "/map_icons/Dairy_churn_icon.png",
+      "label": "Dairy Churn",
+      "plane": 0,
+      "id": "icon_1762246975833_ylyf9d1l2",
+      "createdAt": 1762246975833
+    },
+    {
+      "position": {
+        "lng": 249.78125,
+        "lat": -1165.03125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762246982370_4m9dxa46z",
+      "createdAt": 1762246982370
+    },
+    {
+      "position": {
+        "lng": 252.765625,
+        "lat": -1168.84375
+      },
+      "iconPath": "/map_icons/Pub_icon.png",
+      "label": "Pub",
+      "plane": 0,
+      "id": "icon_1762246998746_unx4hhbzi",
+      "createdAt": 1762246998746
+    },
+    {
+      "position": {
+        "lng": 248.625,
+        "lat": -1168.59375
+      },
+      "iconPath": "/map_icons/Magic_shop_icon.png",
+      "label": "Rune Shop",
+      "plane": 0,
+      "id": "icon_1762247009202_7lw4hhzuf",
+      "createdAt": 1762247009202
+    },
+    {
+      "position": {
+        "lng": 249.390625,
+        "lat": -1171.203125
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762247029673_nux78587q",
+      "createdAt": 1762247029673
+    },
+    {
+      "position": {
+        "lng": 243.28125,
+        "lat": -1174.625
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762247039241_4b0d1v3t6",
+      "createdAt": 1762247039241
+    },
+    {
+      "position": {
+        "lng": 250.375,
+        "lat": -1168.390625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762247051660_0e2mqqflr",
+      "createdAt": 1762247051660
+    },
+    {
+      "position": {
+        "lng": 242.859375,
+        "lat": -1174.8125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762247058551_k6ohm7c1n",
+      "createdAt": 1762247058551
+    },
+    {
+      "position": {
+        "lng": 238.53125,
+        "lat": -1165.96875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762247067538_p7aioghpk",
+      "createdAt": 1762247067538
+    },
+    {
+      "position": {
+        "lng": 239.03125,
+        "lat": -1165.9375
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762247078366_3rhdml5o5",
+      "createdAt": 1762247078366
+    },
+    {
+      "position": {
+        "lng": 238.125,
+        "lat": -1166.515625
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762247089152_ugo8vacar",
+      "createdAt": 1762247089152
+    },
+    {
+      "position": {
+        "lng": 237.359375,
+        "lat": -1164.96875
+      },
+      "iconPath": "/map_icons/Dairy_cow_icon.png",
+      "label": "Dairy Cow",
+      "plane": 0,
+      "id": "icon_1762247095807_tawv1kbe9",
+      "createdAt": 1762247095807
+    },
+    {
+      "position": {
+        "lng": 240.78125,
+        "lat": -1174
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762247115596_tfd1914ua",
+      "createdAt": 1762247115596
+    },
+    {
+      "position": {
+        "lng": 240.34375,
+        "lat": -1173.78125
+      },
+      "iconPath": "/map_icons/General_store_icon.png",
+      "label": "General Store",
+      "plane": 0,
+      "id": "icon_1762247126955_9jgltvt1q",
+      "createdAt": 1762247126956
+    },
+    {
+      "position": {
+        "lng": 241.546875,
+        "lat": -1175.515625
+      },
+      "iconPath": "/map_icons/Archery_shop_icon.png",
+      "label": "Archery Shop",
+      "plane": 0,
+      "id": "icon_1762247138134_76h4mh95q",
+      "createdAt": 1762247138134
+    },
+    {
+      "position": {
+        "lng": 240.515625,
+        "lat": -1175.53125
+      },
+      "iconPath": "/map_icons/Crafting_shop_icon.png",
+      "label": "Crafting Shop",
+      "plane": 0,
+      "id": "icon_1762247147272_iylij42s1",
+      "createdAt": 1762247147272
+    },
+    {
+      "position": {
+        "lng": 246.515625,
+        "lat": -1178.8125
+      },
+      "iconPath": "/map_icons/Altar_icon.png",
+      "label": "Altar",
+      "plane": 0,
+      "id": "icon_1762247161729_dcjmbc4kb",
+      "createdAt": 1762247161729
+    },
+    {
+      "position": {
+        "lng": 247.109375,
+        "lat": -1182.859375
+      },
+      "iconPath": "/map_icons/Anvil_icon.png",
+      "label": "Anvil",
+      "plane": 0,
+      "id": "icon_1762247167273_1ikpuipcu",
+      "createdAt": 1762247167273
+    },
+    {
+      "position": {
+        "lng": 244.078125,
+        "lat": -1153.0625
+      },
+      "iconPath": "/map_icons/Shield_shop_icon.png",
+      "label": "Shield Shop",
+      "plane": 0,
+      "id": "icon_1762248617172_8dz2igb6b",
+      "createdAt": 1762248617172
     }
   ],
   "version": 1

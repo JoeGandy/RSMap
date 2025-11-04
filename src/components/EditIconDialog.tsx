@@ -5,6 +5,7 @@ import OSRSButton from './OSRSButton';
 import IronRivetPanel from './IronRivetPanel';
 import { AVAILABLE_ICONS } from '@/lib/availableIcons';
 import { MapIcon } from '@/types/mapIcon';
+import { iconPathToLabel } from '@/lib/iconUtils';
 
 interface EditIconDialogProps {
   icon: MapIcon;
@@ -56,7 +57,10 @@ export default function EditIconDialog({ icon, onSave, onCancel }: EditIconDialo
             {availableIcons.map((iconPath) => (
               <button
                 key={iconPath}
-                onClick={() => setSelectedIcon(iconPath)}
+                onClick={() => {
+                  setSelectedIcon(iconPath);
+                  setLabel(iconPathToLabel(iconPath));
+                }}
                 className={`p-1 rounded transition-all ${
                   selectedIcon === iconPath 
                     ? 'bg-yellow-600 ring-2 ring-yellow-400' 
