@@ -6,7 +6,7 @@ import { LatLngBounds, CRS, LeafletEvent } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { leafletToTile, formatTile, leafletToRegion, formatRegion, LeafletCoords } from '@/lib/coordinates';
 import { MapIcon } from '@/types/mapIcon';
-import MapIconMarker from './MapIconMarker';
+import CanvasIconLayer from './CanvasIconLayer';
 
 // Back to simple CRS
 const OSRSCRS = CRS.Simple;
@@ -122,20 +122,16 @@ export default function OSRSMap({
         
         <MapClickHandler onCoordinateClick={onCoordinateClick} />
         
-        {/* Render map icons for current plane */}
-        {icons
-          .filter(icon => icon.plane === plane)
-          .map(icon => (
-            <MapIconMarker
-              key={icon.id}
-              icon={icon}
-              onDelete={onIconDelete}
-              onCopy={onIconCopy}
-              onMove={onIconMove}
-              onEdit={onIconEdit}
-              onClick={onIconClick}
-            />
-          ))}
+        {/* Canvas-based icon rendering for performance */}
+        <CanvasIconLayer
+          icons={icons}
+          plane={plane}
+          onIconClick={onIconClick}
+          onIconEdit={onIconEdit}
+          onIconDelete={onIconDelete}
+          onIconCopy={onIconCopy}
+          onIconMove={onIconMove}
+        />
       </MapContainer>
     </div>
   );
