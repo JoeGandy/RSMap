@@ -68,17 +68,6 @@
     },
     {
       "position": {
-        "lng": 256.2851839587827,
-        "lat": -1170.3471531325224
-      },
-      "iconPath": "/map_icons/Rare_trees_icon.png",
-      "label": "1 x Yew",
-      "plane": 0,
-      "id": "icon_1762204495479_6gslwqwug",
-      "createdAt": 1762204495479
-    },
-    {
-      "position": {
         "lng": 274.78321697939134,
         "lat": -1172.7829515662613
       },
@@ -1303,7 +1292,7 @@
         "lng": 276.671875,
         "lat": -1143.75
       },
-      "iconPath": "/map_icons/Dungeon_icon.png",
+      "iconPath": "/map_icons/Dungeon_map_link_icon.png",
       "label": "Varrock Sewers",
       "plane": 0,
       "id": "icon_1762206698891_q70lgqu3l",
@@ -1327,7 +1316,7 @@
         "lng": 275.84375,
         "lat": -1138
       },
-      "iconPath": "/map_icons/Dungeon_icon.png",
+      "iconPath": "/map_icons/Dungeon_map_link_icon.png",
       "label": "Varrock Sewers",
       "plane": 0,
       "id": "icon_1762206847640_bvpr1l1zz",
@@ -1351,7 +1340,7 @@
         "lng": 261.59375,
         "lat": -1144.515625
       },
-      "iconPath": "/map_icons/Dungeon_icon.png",
+      "iconPath": "/map_icons/Dungeon_map_link_icon.png",
       "label": "Hill Giants Cave",
       "plane": 0,
       "id": "icon_1762206886888_m9ynqv0of",
@@ -1447,7 +1436,7 @@
         "lng": 267.78125,
         "lat": -1169.5
       },
-      "iconPath": "/map_icons/Dungeon_icon.png",
+      "iconPath": "/map_icons/Dungeon_map_link_icon.png",
       "label": "H.A.M Hideout",
       "plane": 0,
       "id": "icon_1762207402862_uqumi0m7j",
@@ -1465,6 +1454,988 @@
       "linkedIconId": "icon_1762207402862_uqumi0m7j",
       "id": "icon_1762207453185_k19n7jy1g",
       "createdAt": 1762207453185
+    },
+    {
+      "position": {
+        "lng": 276.828125,
+        "lat": -1177
+      },
+      "iconPath": "/map_icons/Death's_Office_icon.png",
+      "label": "Death's Office",
+      "plane": 0,
+      "id": "icon_1762242303666_9oji8hd88",
+      "createdAt": 1762242303666
+    },
+    {
+      "position": {
+        "lng": 283.625,
+        "lat": -1179.546875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762242312161_h39mhn7ga",
+      "createdAt": 1762242312161
+    },
+    {
+      "position": {
+        "lng": 283.703125,
+        "lat": -1178.09375
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762242313991_ij5rexlh6",
+      "createdAt": 1762242313991
+    },
+    {
+      "position": {
+        "lng": 286.90625,
+        "lat": -1183.75
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762242328376_d0wlm2owo",
+      "createdAt": 1762242328376
+    },
+    {
+      "position": {
+        "lng": 286.3125,
+        "lat": -1175.8125
+      },
+      "iconPath": "/map_icons/Farming_patch_icon.png",
+      "label": "Cactus Patch",
+      "plane": 0,
+      "id": "icon_1762242342474_vrvh8slv7",
+      "createdAt": 1762242342475
+    },
+    {
+      "position": {
+        "lng": 281.375,
+        "lat": -1178.265625
+      },
+      "iconPath": "/map_icons/Kebab_shop_icon.png",
+      "label": "Kebab Shop",
+      "plane": 0,
+      "id": "icon_1762242389004_iwvy2cgf3",
+      "createdAt": 1762242389004
+    },
+    {
+      "position": {
+        "lng": 281.203125,
+        "lat": -1177.09375
+      },
+      "iconPath": "/map_icons/Tannery_icon.png",
+      "label": "Tannery",
+      "plane": 0,
+      "id": "icon_1762242405202_l27v38br6",
+      "createdAt": 1762242405202
+    },
+    {
+      "position": {
+        "lng": 286.5,
+        "lat": -1179.15625
+      },
+      "iconPath": "/map_icons/Platelegs_shop_icon.png",
+      "label": "Plateleg Shop",
+      "plane": 0,
+      "id": "icon_1762242418274_1079vjikr",
+      "createdAt": 1762242418274
+    },
+    {
+      "position": {
+        "lng": 286.453125,
+        "lat": -1180.640625
+      },
+      "iconPath": "/map_icons/Plateskirt_shop_icon.png",
+      "label": "Plateskirt Shop",
+      "plane": 0,
+      "id": "icon_1762242432768_m0n9epozt",
+      "createdAt": 1762242432768
+    },
+    {
+      "position": {
+        "lng": 287.078125,
+        "lat": -1176.75
+      },
+      "iconPath": "/map_icons/Crafting_shop_icon.png",
+      "label": "Crafting Shop",
+      "plane": 0,
+      "id": "icon_1762242443779_dwm5i2v9q",
+      "createdAt": 1762242443779
+    },
+    {
+      "position": {
+        "lng": 284.1875,
+        "lat": -1175.734375
+      },
+      "iconPath": "/map_icons/Silk_trader_icon.png",
+      "label": "Silk Trader",
+      "plane": 0,
+      "id": "icon_1762242458949_n6cjrp0xy",
+      "createdAt": 1762242458950
+    },
+    {
+      "position": {
+        "lng": 283.015625,
+        "lat": -1177.3125
+      },
+      "iconPath": "/map_icons/Scimitar_shop_icon.png",
+      "label": "Sword Shop",
+      "plane": 0,
+      "id": "icon_1762242483498_y4l59fmnl",
+      "createdAt": 1762242483498
+    },
+    {
+      "position": {
+        "lng": 282.703125,
+        "lat": -1174.453125
+      },
+      "iconPath": "/map_icons/Gem_shop_icon.png",
+      "label": "Gem Shop",
+      "plane": 0,
+      "id": "icon_1762242504163_bo743i1kk",
+      "createdAt": 1762242504163
+    },
+    {
+      "position": {
+        "lng": 284.40625,
+        "lat": -1165.84375
+      },
+      "iconPath": "/map_icons/Mining_site_icon.png",
+      "label": "Al Kharid Mine",
+      "plane": 0,
+      "id": "icon_1762242519077_ipt1xrqmy",
+      "createdAt": 1762242519077
+    },
+    {
+      "position": {
+        "lng": 294.046875,
+        "lat": -1165.34375
+      },
+      "iconPath": "/map_icons/Altar_icon.png",
+      "label": "Altar",
+      "plane": 0,
+      "id": "icon_1762242529516_m9kdbi35v",
+      "createdAt": 1762242529516
+    },
+    {
+      "position": {
+        "lng": 295.46875,
+        "lat": -1167.4375
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762242535282_8blj7masm",
+      "createdAt": 1762242535282
+    },
+    {
+      "position": {
+        "lng": 294.78125,
+        "lat": -1167.0625
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762242542358_ur89qsxzk",
+      "createdAt": 1762242542358
+    },
+    {
+      "position": {
+        "lng": 291.625,
+        "lat": -1162.09375
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "1 x Magic",
+      "plane": 0,
+      "id": "icon_1762242552361_yo592y0po",
+      "createdAt": 1762242552361
+    },
+    {
+      "position": {
+        "lng": 293.125,
+        "lat": -1162.140625
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "1 x Magic",
+      "plane": 0,
+      "id": "icon_1762242560882_q59dkpvbx",
+      "createdAt": 1762242560882
+    },
+    {
+      "position": {
+        "lng": 299.640625,
+        "lat": -1178.484375
+      },
+      "iconPath": "/map_icons/Altar_icon.png",
+      "label": "Altar",
+      "plane": 0,
+      "id": "icon_1762242575375_65ycbv6af",
+      "createdAt": 1762242575375
+    },
+    {
+      "position": {
+        "lng": 298.1875,
+        "lat": -1177.859375
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762242585687_z71km7314",
+      "createdAt": 1762242585687
+    },
+    {
+      "position": {
+        "lng": 297.953125,
+        "lat": -1178.671875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762242595685_a3x0626wr",
+      "createdAt": 1762242595685
+    },
+    {
+      "position": {
+        "lng": 296.65625,
+        "lat": -1179.5625
+      },
+      "iconPath": "/map_icons/Mining_site_icon.png",
+      "label": "Citharede Abbey Mine",
+      "plane": 0,
+      "id": "icon_1762242611606_58kodft5i",
+      "createdAt": 1762242611606
+    },
+    {
+      "position": {
+        "lng": 291.953125,
+        "lat": -1181.609375
+      },
+      "iconPath": "/map_icons/Anvil_icon.png",
+      "label": "Anvil",
+      "plane": 0,
+      "id": "icon_1762242625252_2ret7sz32",
+      "createdAt": 1762242625252
+    },
+    {
+      "position": {
+        "lng": 285.6875,
+        "lat": -1185.359375
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762242640150_c1lo3km3c",
+      "createdAt": 1762242640150
+    },
+    {
+      "position": {
+        "lng": 275.125,
+        "lat": -1164.296875
+      },
+      "iconPath": "/map_icons/Dairy_churn_icon.png",
+      "label": "Dairy Churn",
+      "plane": 0,
+      "id": "icon_1762242668824_sbscbiqdp",
+      "createdAt": 1762242668824
+    },
+    {
+      "position": {
+        "lng": 270.671875,
+        "lat": -1166.71875
+      },
+      "iconPath": "/map_icons/Dairy_churn_icon.png",
+      "label": "Dairy Churn",
+      "plane": 0,
+      "id": "icon_1762242683987_zsi1gyud7",
+      "createdAt": 1762242683987
+    },
+    {
+      "position": {
+        "lng": 278.6875,
+        "lat": -1166.625
+      },
+      "iconPath": "/map_icons/Dairy_cow_icon.png",
+      "label": "Dairy Cow",
+      "plane": 0,
+      "id": "icon_1762242710908_w5cvtrvh3",
+      "createdAt": 1762242710908
+    },
+    {
+      "position": {
+        "lng": 268.5,
+        "lat": -1161.25
+      },
+      "iconPath": "/map_icons/Dairy_cow_icon.png",
+      "label": "Dairy Cow",
+      "plane": 0,
+      "id": "icon_1762242717710_1w5krwsp1",
+      "createdAt": 1762242717710
+    },
+    {
+      "position": {
+        "lng": 267.796875,
+        "lat": -1162.5625
+      },
+      "iconPath": "/map_icons/Windmill_icon.png",
+      "label": "Windmill",
+      "plane": 0,
+      "id": "icon_1762242735480_tize4ljki",
+      "createdAt": 1762242735480
+    },
+    {
+      "position": {
+        "lng": 270.59375,
+        "lat": -1156.5
+      },
+      "iconPath": "/map_icons/Dungeon_map_link_icon.png",
+      "label": "Champions Guild Basement",
+      "plane": 0,
+      "id": "icon_1762242803462_jhnqxml9v",
+      "createdAt": 1762242803462,
+      "linkedIconId": "icon_1762242927949_5xu729z05"
+    },
+    {
+      "position": {
+        "lng": 270.828125,
+        "lat": -356.265625
+      },
+      "iconPath": "/map_icons/Map_link_icon.png",
+      "label": "Champions Guild",
+      "plane": 0,
+      "linkedIconId": "icon_1762242803462_jhnqxml9v",
+      "id": "icon_1762242927949_5xu729z05",
+      "createdAt": 1762242927949
+    },
+    {
+      "position": {
+        "lng": 272.8125,
+        "lat": -1151.125
+      },
+      "iconPath": "/map_icons/Scimitar_shop_icon.png",
+      "label": "Sword Shop",
+      "plane": 0,
+      "id": "icon_1762242970001_4gvgj9ep6",
+      "createdAt": 1762242970001
+    },
+    {
+      "position": {
+        "lng": 278.65625,
+        "lat": -1150.71875
+      },
+      "iconPath": "/map_icons/Magic_shop_icon.png",
+      "label": "Rune Shop",
+      "plane": 0,
+      "id": "icon_1762242975395_ep0rd64tj",
+      "createdAt": 1762242975395
+    },
+    {
+      "position": {
+        "lng": 277.90625,
+        "lat": -1150.5
+      },
+      "iconPath": "/map_icons/Anvil_icon.png",
+      "label": "Anvil",
+      "plane": 0,
+      "id": "icon_1762242990253_g4dxy989c",
+      "createdAt": 1762242990253
+    },
+    {
+      "position": {
+        "lng": 276.078125,
+        "lat": -1148.0625
+      },
+      "iconPath": "/map_icons/Archery_shop_icon.png",
+      "label": "Archery Shop",
+      "plane": 0,
+      "id": "icon_1762242999855_oj9nvx0ip",
+      "createdAt": 1762242999855
+    },
+    {
+      "position": {
+        "lng": 275.515625,
+        "lat": -1145.96875
+      },
+      "iconPath": "/map_icons/Platebody_shop_icon.png",
+      "label": "Platebody Shop",
+      "plane": 0,
+      "id": "icon_1762243041738_2v9lhopn4",
+      "createdAt": 1762243041738
+    },
+    {
+      "position": {
+        "lng": 275.515625,
+        "lat": -1146.59375
+      },
+      "iconPath": "/map_icons/Anvil_icon.png",
+      "label": "Anvil",
+      "plane": 0,
+      "id": "icon_1762243066002_l779vb6ci",
+      "createdAt": 1762243066002
+    },
+    {
+      "position": {
+        "lng": 274.265625,
+        "lat": -1146.71875
+      },
+      "iconPath": "/map_icons/Fur_trader_icon.png",
+      "label": "Fur Stall",
+      "plane": 0,
+      "id": "icon_1762243071502_sb0b8abp2",
+      "createdAt": 1762243071502
+    },
+    {
+      "position": {
+        "lng": 274.625,
+        "lat": -1147
+      },
+      "iconPath": "/map_icons/Newspaper_trader_icon.png",
+      "label": "Newspaper Trader",
+      "plane": 0,
+      "id": "icon_1762243083216_bsmznw2sd",
+      "createdAt": 1762243083216
+    },
+    {
+      "position": {
+        "lng": 272.28125,
+        "lat": -1146.453125
+      },
+      "iconPath": "/map_icons/Staff_shop_icon.png",
+      "label": "Staff Shop",
+      "plane": 0,
+      "id": "icon_1762243108896_4lz1xdgux",
+      "createdAt": 1762243108896
+    },
+    {
+      "position": {
+        "lng": 270.3125,
+        "lat": -1148.21875
+      },
+      "iconPath": "/map_icons/Smithing_Tutor_icon.png",
+      "label": "Smithing Tutor",
+      "plane": 0,
+      "id": "icon_1762243118070_iqp69xt5g",
+      "createdAt": 1762243118070
+    },
+    {
+      "position": {
+        "lng": 271.4375,
+        "lat": -1150.484375
+      },
+      "iconPath": "/map_icons/Apothecary_icon.png",
+      "label": "Apothecary",
+      "plane": 0,
+      "id": "icon_1762243141167_s3jjt3eds",
+      "createdAt": 1762243141167
+    },
+    {
+      "position": {
+        "lng": 274.40625,
+        "lat": -1152.53125
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762243177274_ityb569vc",
+      "createdAt": 1762243177274
+    },
+    {
+      "position": {
+        "lng": 276.671875,
+        "lat": -1153.15625
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762243178446_rv32qymcf",
+      "createdAt": 1762243178446
+    },
+    {
+      "position": {
+        "lng": 280.4375,
+        "lat": -1151.90625
+      },
+      "iconPath": "/map_icons/Pub_icon.png",
+      "label": "Pub",
+      "plane": 0,
+      "id": "icon_1762243192881_0b09jtm79",
+      "createdAt": 1762243192881
+    },
+    {
+      "position": {
+        "lng": 280.953125,
+        "lat": -1149.515625
+      },
+      "iconPath": "/map_icons/Tea_trader_icon.png",
+      "label": "Tea Stall",
+      "plane": 0,
+      "id": "icon_1762243196862_s3bix1ruh",
+      "createdAt": 1762243196862
+    },
+    {
+      "position": {
+        "lng": 277.984375,
+        "lat": -1145.03125
+      },
+      "iconPath": "/map_icons/Pub_icon.png",
+      "label": "Pub",
+      "plane": 0,
+      "id": "icon_1762243225936_1kg66wcff",
+      "createdAt": 1762243225936
+    },
+    {
+      "position": {
+        "lng": 276.984375,
+        "lat": -1141.484375
+      },
+      "iconPath": "/map_icons/Estate_Agent_icon.png",
+      "label": "Estate Agent",
+      "plane": 0,
+      "id": "icon_1762243229958_1uurzu6dp",
+      "createdAt": 1762243229958
+    },
+    {
+      "position": {
+        "lng": 279.46875,
+        "lat": -1142.609375
+      },
+      "iconPath": "/map_icons/Pub_icon.png",
+      "label": "Pub",
+      "plane": 0,
+      "id": "icon_1762243241226_eluyhpq4w",
+      "createdAt": 1762243241226
+    },
+    {
+      "position": {
+        "lng": 266.609375,
+        "lat": -1138.875
+      },
+      "iconPath": "/map_icons/Pricing_expert_(weapons_and_armour)_icon.png",
+      "label": "Pricing Expert (Weapons & Armor)",
+      "plane": 0,
+      "id": "icon_1762243269327_xwfgh5s21",
+      "createdAt": 1762243269327
+    },
+    {
+      "position": {
+        "lng": 266.265625,
+        "lat": -1139.765625
+      },
+      "iconPath": "/map_icons/Pricing_expert_(logs)_icon.png",
+      "label": "Pricing Expert (Logs)",
+      "plane": 0,
+      "id": "icon_1762243329478_0sl8b56uc",
+      "createdAt": 1762243329478
+    },
+    {
+      "position": {
+        "lng": 266.640625,
+        "lat": -1140.8125
+      },
+      "iconPath": "/map_icons/Pricing_expert_(herbs)_icon.png",
+      "label": "Pricing Expert (Herbs)",
+      "plane": 0,
+      "id": "icon_1762243346019_p34zwvmzp",
+      "createdAt": 1762243346019
+    },
+    {
+      "position": {
+        "lng": 268.484375,
+        "lat": -1140.828125
+      },
+      "iconPath": "/map_icons/Pricing_expert_icon.png",
+      "label": "Pricing Expert (Runes)",
+      "plane": 0,
+      "id": "icon_1762243364901_j5bnce5i3",
+      "createdAt": 1762243364901
+    },
+    {
+      "position": {
+        "lng": 268.546875,
+        "lat": -1138.828125
+      },
+      "iconPath": "/map_icons/Pricing_expert_(ores_and_bars)_icon.png",
+      "label": "Pricing Expert (Ores & Bars)",
+      "plane": 0,
+      "id": "icon_1762243375850_pm5ungzuh",
+      "createdAt": 1762243375850
+    },
+    {
+      "position": {
+        "lng": 264.65625,
+        "lat": -1144.640625
+      },
+      "iconPath": "/map_icons/Windmill_icon.png",
+      "label": "Windmill",
+      "plane": 0,
+      "id": "icon_1762243398192_wpvjpmola",
+      "createdAt": 1762243398192
+    },
+    {
+      "position": {
+        "lng": 264.6875,
+        "lat": -1145.140625
+      },
+      "iconPath": "/map_icons/Cookery_shop_icon.png",
+      "label": "Food Shop",
+      "plane": 0,
+      "id": "icon_1762243422618_p4qt6wuqr",
+      "createdAt": 1762243422618
+    },
+    {
+      "position": {
+        "lng": 265.5,
+        "lat": -1144.796875
+      },
+      "iconPath": "/map_icons/Dairy_churn_icon.png",
+      "label": "Dairy Churn",
+      "plane": 0,
+      "id": "icon_1762243446180_nluetd8en",
+      "createdAt": 1762243446180
+    },
+    {
+      "position": {
+        "lng": 284.671875,
+        "lat": -1139.28125
+      },
+      "iconPath": "/map_icons/Sawmill_icon.png",
+      "label": "Sawmill",
+      "plane": 0,
+      "id": "icon_1762243472512_gj5wdnheu",
+      "createdAt": 1762243472512
+    },
+    {
+      "position": {
+        "lng": 292.0625,
+        "lat": -1182.578125
+      },
+      "iconPath": "/map_icons/Dungeon_icon.png",
+      "label": "Giant's Foundary",
+      "plane": 0,
+      "id": "icon_1762243623567_x781ai2q7",
+      "createdAt": 1762243623567
+    },
+    {
+      "position": {
+        "lng": 265.859375,
+        "lat": -1157.515625
+      },
+      "iconPath": "/map_icons/Dungeon_map_link_icon.png",
+      "label": "Sourhog Cave",
+      "plane": 0,
+      "id": "icon_1762244057598_9wklshk25",
+      "createdAt": 1762244057598,
+      "linkedIconId": "icon_1762244080029_d5epo4atp"
+    },
+    {
+      "position": {
+        "lng": 266.765625,
+        "lat": -361.765625
+      },
+      "iconPath": "/map_icons/Map_link_icon.png",
+      "label": "Sourhog Cave",
+      "plane": 0,
+      "linkedIconId": "icon_1762244057598_9wklshk25",
+      "id": "icon_1762244080029_d5epo4atp",
+      "createdAt": 1762244080029
+    },
+    {
+      "position": {
+        "lng": 261.484375,
+        "lat": -1156.359375
+      },
+      "iconPath": "/map_icons/Dungeon_icon.png",
+      "label": "Draynor Manor Crypt",
+      "plane": 0,
+      "id": "icon_1762244137404_ul7hizqrj",
+      "createdAt": 1762244137404,
+      "linkedIconId": "icon_1762244147082_v3xh9x1er"
+    },
+    {
+      "position": {
+        "lng": 256.78125,
+        "lat": -354.953125
+      },
+      "iconPath": "/map_icons/Map_link_icon.png",
+      "label": "Draynor Manor",
+      "plane": 0,
+      "linkedIconId": "icon_1762244137404_ul7hizqrj",
+      "id": "icon_1762244147082_v3xh9x1er",
+      "createdAt": 1762244147082
+    },
+    {
+      "position": {
+        "lng": 258.609375,
+        "lat": -1155.765625
+      },
+      "iconPath": "/map_icons/Dungeon_icon.png",
+      "label": "Draynor Manor Basement",
+      "plane": 0,
+      "id": "icon_1762244171173_gioekhnle",
+      "createdAt": 1762244171173,
+      "linkedIconId": "icon_1762244180298_b760b4apt"
+    },
+    {
+      "position": {
+        "lng": 261.7242779540959,
+        "lat": -356.76064036910367
+      },
+      "iconPath": "/map_icons/Map_link_icon.png",
+      "label": "Draynor Manor",
+      "plane": 0,
+      "linkedIconId": "icon_1762244171173_gioekhnle",
+      "id": "icon_1762244180298_b760b4apt",
+      "createdAt": 1762244180298
+    },
+    {
+      "position": {
+        "lng": 259.1875,
+        "lat": -1154.984375
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762244203384_euq66qux0",
+      "createdAt": 1762244203384
+    },
+    {
+      "position": {
+        "lng": 257.671875,
+        "lat": -1156.5625
+      },
+      "iconPath": "/map_icons/Farming_patch_icon.png",
+      "label": "Belladona Patch",
+      "plane": 0,
+      "id": "icon_1762244213534_1lj68j3yg",
+      "createdAt": 1762244213534
+    },
+    {
+      "position": {
+        "lng": 260.09375,
+        "lat": -1180.703125
+      },
+      "iconPath": "/map_icons/Dungeon_icon.png",
+      "label": "Wizard's Tower Basement",
+      "plane": 0,
+      "id": "icon_1762244271522_x5i4w25hz",
+      "createdAt": 1762244271522,
+      "linkedIconId": "icon_1762244286251_k8e92dmbn"
+    },
+    {
+      "position": {
+        "lng": 260.140625,
+        "lat": -378.96875
+      },
+      "iconPath": "/map_icons/Map_link_icon.png",
+      "label": "Wizard's Tower",
+      "plane": 0,
+      "linkedIconId": "icon_1762244271522_x5i4w25hz",
+      "id": "icon_1762244286251_k8e92dmbn",
+      "createdAt": 1762244286251
+    },
+    {
+      "position": {
+        "lng": 261.640625,
+        "lat": -1180.125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762244302042_7pxea33eu",
+      "createdAt": 1762244302042
+    },
+    {
+      "position": {
+        "lng": 258.5625,
+        "lat": -1170.796875
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762244354413_wlccxl40l",
+      "createdAt": 1762244354413
+    },
+    {
+      "position": {
+        "lng": 259.109375,
+        "lat": -1170.421875
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762244359879_tff31ydim",
+      "createdAt": 1762244359879
+    },
+    {
+      "position": {
+        "lng": 257.71875,
+        "lat": -1172.140625
+      },
+      "iconPath": "/map_icons/Fishing_spot_icon.png",
+      "label": "Small Net/Bait Fishing",
+      "plane": 0,
+      "id": "icon_1762244376420_1qbcrboz9",
+      "createdAt": 1762244376420
+    },
+    {
+      "position": {
+        "lng": 255.54959995189972,
+        "lat": -1169.4849619822642
+      },
+      "iconPath": "/map_icons/Fishing_spot_icon.png",
+      "label": "Small Fishing Net",
+      "plane": 0,
+      "id": "icon_1762244402664_3mpbjiwwz",
+      "createdAt": 1762244402664
+    },
+    {
+      "position": {
+        "lng": 257.1277249518997,
+        "lat": -1170.1255869822642
+      },
+      "iconPath": "/map_icons/Holiday_item_trader_icon.png",
+      "label": "Diango's Toy Store",
+      "plane": 0,
+      "id": "icon_1762244425283_w6cckvomc",
+      "createdAt": 1762244425283
+    },
+    {
+      "position": {
+        "lng": 257.4558499518997,
+        "lat": -1169.3755869822642
+      },
+      "iconPath": "/map_icons/Wine_trader_icon.png",
+      "label": "Wine Trader",
+      "plane": 0,
+      "id": "icon_1762244438061_8luyvgthf",
+      "createdAt": 1762244438061
+    },
+    {
+      "position": {
+        "lng": 256.6433499518997,
+        "lat": -1169.5787119822642
+      },
+      "iconPath": "/map_icons/Farming_shop_icon.png",
+      "label": "Seed Market",
+      "plane": 0,
+      "id": "icon_1762244470961_bvgjt6czw",
+      "createdAt": 1762244470961
+    },
+    {
+      "position": {
+        "lng": 257.7527249518997,
+        "lat": -1168.6568369822642
+      },
+      "iconPath": "/map_icons/Dye_trader_icon.png",
+      "label": "Dye Trader",
+      "plane": 0,
+      "id": "icon_1762244489875_bcnoaocvy",
+      "createdAt": 1762244489875
+    },
+    {
+      "position": {
+        "lng": 258.2058499518997,
+        "lat": -1169.1568369822642
+      },
+      "iconPath": "/map_icons/Junk_checker_icon.png",
+      "label": "Wise Old Man",
+      "plane": 0,
+      "id": "icon_1762244530211_ym3i1lyfp",
+      "createdAt": 1762244530211
+    },
+    {
+      "position": {
+        "lng": 259.3777249518997,
+        "lat": -1168.6724619822642
+      },
+      "iconPath": "/map_icons/Rope_trader_icon.png",
+      "label": "Rope Trader",
+      "plane": 0,
+      "id": "icon_1762244548525_wdaptt6ug",
+      "createdAt": 1762244548525
+    },
+    {
+      "position": {
+        "lng": 258.3464749518997,
+        "lat": -1167.6099619822642
+      },
+      "iconPath": "/map_icons/Slayer_Master_icon.png",
+      "label": "Slayer Master",
+      "plane": 0,
+      "id": "icon_1762244562354_rfz4v6aar",
+      "createdAt": 1762244562354
+    },
+    {
+      "position": {
+        "lng": 261.7839749518997,
+        "lat": -1170.4849619822642
+      },
+      "iconPath": "/map_icons/Dungeon_icon.png",
+      "label": "Draynor Sewers",
+      "plane": 0,
+      "id": "icon_1762244581538_gykh4ewtg",
+      "createdAt": 1762244581538,
+      "linkedIconId": "icon_1762244589498_a2wtml2e6"
+    },
+    {
+      "position": {
+        "lng": 261.890625,
+        "lat": -370.5625
+      },
+      "iconPath": "/map_icons/Map_link_icon.png",
+      "label": "Draynor Jail",
+      "plane": 0,
+      "linkedIconId": "icon_1762244581538_gykh4ewtg",
+      "id": "icon_1762244589498_a2wtml2e6",
+      "createdAt": 1762244589498
+    },
+    {
+      "position": {
+        "lng": 257.5625,
+        "lat": -1166.96875
+      },
+      "iconPath": "/map_icons/Dungeon_icon.png",
+      "label": "Draynor Sewers",
+      "plane": 0,
+      "id": "icon_1762244613146_mqifu4xuy",
+      "createdAt": 1762244613146,
+      "linkedIconId": "icon_1762244616402_3qe8uh94g"
+    },
+    {
+      "position": {
+        "lng": 257.625,
+        "lat": -367.015625
+      },
+      "iconPath": "/map_icons/Map_link_icon.png",
+      "label": "Draynor",
+      "plane": 0,
+      "linkedIconId": "icon_1762244613146_mqifu4xuy",
+      "id": "icon_1762244616402_3qe8uh94g",
+      "createdAt": 1762244616402
+    },
+    {
+      "position": {
+        "lng": 259.140625,
+        "lat": -1172.625
+      },
+      "iconPath": "/map_icons/Task_Master_icon.png",
+      "label": "Task Master",
+      "plane": 0,
+      "id": "icon_1762244648200_kclb3outi",
+      "createdAt": 1762244648200
+    },
+    {
+      "position": {
+        "lng": 276.265625,
+        "lat": -1174.140625
+      },
+      "iconPath": "/map_icons/Task_Master_icon.png",
+      "label": "Task Master",
+      "plane": 0,
+      "id": "icon_1762244658828_h2wn2sqw4",
+      "createdAt": 1762244658828
     }
   ],
   "version": 1
