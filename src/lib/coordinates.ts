@@ -24,17 +24,70 @@ export interface TileCoords {
   localY: number;
 }
 
-// Tile grid dimensions: 50 tiles wide (X), 178 tiles tall (Y)
-// Leaflet bounds: lng 0-50, lat -178 to 0 (negative Y due to coordinate flip)
+export interface TileMetadata {
+  version: number;
+  generatedAt: string;
+  dimensions: {
+    tilesX: number;
+    tilesY: number;
+    comment: string;
+  };
+  history: Array<{
+    date: string;
+    tilesX: number;
+    tilesY: number;
+    description: string;
+  }>;
+}
+
+// Default tile grid dimensions (fallback if metadata not available)
+// These will be overridden by loading from tile_metadata.json
+let TILES_X = 51;
+let TILES_Y = 178;
+
+// Load tile dimensions from metadata
+let metadataLoaded = false;
+
+async function loadTileMetadata(): Promise<void> {
+  if (metadataLoaded) return;
+  
+  try {
+    const response = await fetch('/tile_metadata.json');
+    if (response.ok) {
+      const metadata: TileMetadata = await response.json();
+      TILES_X = metadata.dimensions.tilesX;
+      TILES_Y = metadata.dimensions.tilesY;
+      console.log(`Loaded tile dimensions: ${TILES_X}x${TILES_Y}`);
+    }
+  } catch (error) {
+    console.warn('Failed to load tile metadata, using defaults:', error);
+  }
+  
+  metadataLoaded = true;
+}
+
+// Initialize metadata loading
+if (typeof window !== 'undefined') {
+  loadTileMetadata();
+}
+
+/**
+ * Get current tile dimensions
+ */
+export function getTileDimensions(): { tilesX: number; tilesY: number } {
+  return { tilesX: TILES_X, tilesY: TILES_Y };
+}
+
+// Leaflet bounds: lng 0-TILES_X, lat -TILES_Y to 0 (negative Y due to coordinate flip)
 
 /**
  * Convert Leaflet coordinates to tile grid coordinates
  */
 export function leafletToTileGrid(coords: LeafletCoords): { tileX: number; tileY: number } {
   // Leaflet coordinates directly map to tile grid
-  // lng 0-50 = tile X 0-49
-  // lat -178 to 0 = tile Y 0-177 (with transformation)
-  const tileX = Math.floor(Math.max(0, Math.min(49, coords.lng)));
+  // lng 0-TILES_X = tile X 0-(TILES_X-1)
+  // lat -TILES_Y to 0 = tile Y 0-(TILES_Y-1) (with transformation)
+  const tileX = Math.floor(Math.max(0, Math.min(TILES_X - 1, coords.lng)));
   const tileY = Math.floor(Math.abs(coords.lat + 1)); // Convert negative lat to positive tile Y
   
   return { tileX, tileY };

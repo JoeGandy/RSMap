@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "generatedAt": "2025-11-05T13:57:34.572Z",
+  "dimensions": {
+    "tilesX": 51,
+    "tilesY": 178,
+    "comment": "Updated tile grid dimensions at zoom level 5"
+  },
+  "history": [
+    {
+      "date": "2025-11-03",
+      "tilesX": 50,
+      "tilesY": 178,
+      "description": "Pre-update dimensions (before commit 073ece5d)"
+    },
+    {
+      "date": "2025-11-05",
+      "tilesX": 51,
+      "tilesY": 178,
+      "description": "Migration after OSRS update - dimensions changed from 50x178 to 51x178"
+    }
+  ]
+}

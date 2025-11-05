@@ -232,6 +232,51 @@ def download_cache_with_xteas():
     
     return cache_dir, xtea_file
 
+def update_tile_metadata(tiles_x, tiles_y):
+    """Update tile metadata file with current dimensions"""
+    metadata_path = os.path.join(REPO_DIR, 'public', 'tile_metadata.json')
+    
+    # Load existing metadata or create new
+    if os.path.exists(metadata_path):
+        with open(metadata_path, 'r') as f:
+            metadata = json.load(f)
+    else:
+        metadata = {
+            'version': 1,
+            'generatedAt': '',
+            'dimensions': {},
+            'history': []
+        }
+    
+    # Check if dimensions changed
+    old_x = metadata.get('dimensions', {}).get('tilesX', 0)
+    old_y = metadata.get('dimensions', {}).get('tilesY', 0)
+    
+    if old_x != tiles_x or old_y != tiles_y:
+        LOG.info(f"Tile dimensions changed: {old_x}x{old_y} -> {tiles_x}x{tiles_y}")
+        
+        # Add to history
+        metadata['history'].append({
+            'date': datetime.now().strftime('%Y-%m-%d'),
+            'tilesX': tiles_x,
+            'tilesY': tiles_y,
+            'description': f'Tile generation - dimensions: {tiles_x}x{tiles_y}'
+        })
+    
+    # Update current dimensions
+    metadata['dimensions'] = {
+        'tilesX': tiles_x,
+        'tilesY': tiles_y,
+        'comment': 'Current tile grid dimensions at zoom level 5'
+    }
+    metadata['generatedAt'] = datetime.now().isoformat()
+    
+    # Save metadata
+    with open(metadata_path, 'w') as f:
+        json.dump(metadata, f, indent=2)
+    
+    LOG.info(f"Updated tile metadata: {tiles_x}x{tiles_y}")
+
 def build_full_map_images(cache_dir, xtea_file):
     """Generate full map images using RuneLite MapImageDumper"""
     LOG.info("Building full map images with RuneLite...")
@@ -354,6 +399,10 @@ def generate_tiles_for_zoom(full_image, plane, zoom, base_zoom):
     # Calculate number of tiles
     tiles_x = math.ceil(scaled_image.width / TILE_SIZE_PX)
     tiles_y = math.ceil(scaled_image.height / TILE_SIZE_PX)
+    
+    # Update metadata for zoom level 5 (reference zoom)
+    if zoom == 5 and plane == 0:
+        update_tile_metadata(tiles_x, tiles_y)
     
     # Create output directory
     zoom_dir = os.path.join(TILES_OUTPUT_DIR, str(plane), str(zoom))

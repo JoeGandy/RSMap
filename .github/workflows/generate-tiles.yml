@@ -37,17 +37,37 @@ jobs:
         NODE_OPTIONS: '--max-old-space-size=4096'
         CI: 'true'
 
+    - name: Migrate markers if dimensions changed
+      run: |
+        echo "🔄 Checking if marker migration is needed..."
+        npm run migrate-markers -- --auto-detect || echo "⚠️ Migration skipped (no dimension changes or error)"
+      continue-on-error: true
+
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
+        # Add tiles, metadata, and markers
         git add public/tiles/
+        git add public/tile_metadata.json
+        git add public/map_data.json
+        git add backups/
+        
         if ! git diff --staged --quiet; then
           TILE_COUNT=$(find public/tiles -name "*.png" | wc -l)
-          git commit -m "🗺️ Auto-update OSRS tiles (${TILE_COUNT} files) - $(date '+%Y-%m-%d')"
+          
+          # Check if metadata changed (dimension update)
+          if git diff --staged --name-only | grep -q "tile_metadata.json"; then
+            echo "📊 Tile dimensions changed - markers migrated"
+            COMMIT_MSG="🗺️ Auto-update OSRS tiles & migrate markers (${TILE_COUNT} files) - $(date '+%Y-%m-%d')"
+          else
+            COMMIT_MSG="🗺️ Auto-update OSRS tiles (${TILE_COUNT} files) - $(date '+%Y-%m-%d')"
+          fi
+          
+          git commit -m "${COMMIT_MSG}"
           git push
-          echo "✅ Tiles updated and pushed - Vercel deployment will be triggered automatically"
+          echo "✅ Changes pushed - Vercel deployment will be triggered automatically"
         else
           echo "No changes to commit - Vercel deployment will still be triggered"
         fi
