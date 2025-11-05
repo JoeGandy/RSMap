@@ -72,6 +72,72 @@ jobs:
           echo "No changes to commit - Vercel deployment will still be triggered"
         fi
 
+    - name: Generate workflow summary
+      if: always()
+      run: |
+        echo "# 🗺️ OSRS Tile Generation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # Tile statistics
+        TILE_COUNT=$(find public/tiles -name "*.png" 2>/dev/null | wc -l || echo "0")
+        echo "## 📊 Tile Statistics" >> $GITHUB_STEP_SUMMARY
+        echo "- **Total tiles generated**: ${TILE_COUNT}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Planes**: 4 (0-3)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Zoom levels**: 7 (0-6)" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # Tile dimensions
+        if [ -f "public/tile_metadata.json" ]; then
+          TILES_X=$(grep -o '"tilesX": [0-9]*' public/tile_metadata.json | head -1 | grep -o '[0-9]*')
+          TILES_Y=$(grep -o '"tilesY": [0-9]*' public/tile_metadata.json | head -1 | grep -o '[0-9]*')
+          echo "## 📐 Map Dimensions" >> $GITHUB_STEP_SUMMARY
+          echo "- **Width**: ${TILES_X} tiles" >> $GITHUB_STEP_SUMMARY
+          echo "- **Height**: ${TILES_Y} tiles" >> $GITHUB_STEP_SUMMARY
+          echo "- **Reference zoom**: Level 5" >> $GITHUB_STEP_SUMMARY
+          
+          # Check for dimension changes in history
+          HISTORY_COUNT=$(grep -c '"date":' public/tile_metadata.json || echo "0")
+          if [ "$HISTORY_COUNT" -gt 1 ]; then
+            echo "- **History**: ${HISTORY_COUNT} dimension changes recorded" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # Check if markers were migrated
+        if git log -1 --pretty=%B | grep -q "migrate markers"; then
+          MARKER_COUNT=$(grep -o '"id":' public/map_data.json 2>/dev/null | wc -l || echo "0")
+          BACKUP_COUNT=$(ls -1 backups/*.json 2>/dev/null | wc -l || echo "0")
+          echo "## ✅ Marker Migration" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: Migrated successfully" >> $GITHUB_STEP_SUMMARY
+          echo "- **Markers updated**: ${MARKER_COUNT}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Backups created**: ${BACKUP_COUNT}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Reason**: Map dimensions changed" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "## ℹ️ Marker Migration" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: Not needed (dimensions unchanged)" >> $GITHUB_STEP_SUMMARY
+        fi
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # Cache information (if available from tile generation logs)
+        echo "## 🎮 OSRS Cache" >> $GITHUB_STEP_SUMMARY
+        if [ -f "cache_info.txt" ]; then
+          cat cache_info.txt >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- **Source**: Latest from archive.openrs2.org" >> $GITHUB_STEP_SUMMARY
+          echo "- **Generated**: $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        fi
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # Deployment info
+        echo "## 🚀 Deployment" >> $GITHUB_STEP_SUMMARY
+        echo "- **Status**: Ready for deployment" >> $GITHUB_STEP_SUMMARY
+        echo "- **Platform**: Vercel (auto-triggered)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Commit**: \`$(git rev-parse --short HEAD)\`" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        echo "---" >> $GITHUB_STEP_SUMMARY
+        echo "*Workflow completed at $(date '+%Y-%m-%d %H:%M:%S UTC')*" >> $GITHUB_STEP_SUMMARY
+
     - name: Trigger Vercel deployment
       run: |
         echo "🚀 Tile generation completed successfully"

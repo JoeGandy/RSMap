@@ -187,6 +187,13 @@ def download_cache_with_xteas():
     cache_dir = os.path.join(CACHE_DIR, cache_timestamp)
     xtea_file = os.path.join(cache_dir, "xteas.json")
     
+    # Write cache info for GitHub Actions summary
+    cache_info_file = os.path.join(REPO_DIR, 'cache_info.txt')
+    with open(cache_info_file, 'w') as f:
+        f.write(f"- **Cache ID**: {cache_info['id']}\n")
+        f.write(f"- **Timestamp**: {cache_info['timestamp'].strftime('%Y-%m-%d %H:%M:%S UTC')}\n")
+        f.write(f"- **Source**: archive.openrs2.org\n")
+    
     if os.path.exists(cache_dir):
         LOG.info(f"Cache directory {cache_dir} already exists, skipping download")
         return cache_dir, xtea_file
