@@ -61,15 +61,23 @@ export default function CanvasIconLayer({
     loadCanvasMarkers().then(() => {
       if (!layerRef.current && (L as any).canvasIconLayer) {
         layerRef.current = (L as any).canvasIconLayer({}).addTo(map);
-
+        
+        // Hide the marker img elements - we only want canvas rendering
+        // The library creates img elements for click detection, but they cause ghost icons
+        // We hide them and rely on the canvas click listener instead
+        const style = document.createElement('style');
+        style.id = 'canvas-marker-hide-imgs';
+        style.textContent = '.leaflet-marker-icon.leaflet-zoom-hide { display: none !important; }';
+        if (!document.getElementById('canvas-marker-hide-imgs')) {
+          document.head.appendChild(style);
+        }
+        
+    
         // Add click listener
         layerRef.current.addOnClickListener((e: any, data: any) => {
-          console.log('Canvas click event:', e, data);
           if (data && data.length > 0) {
             const markerData = data[0].data;
-            console.log('Marker data:', markerData);
             const iconData = markerData._iconData;
-            console.log('Icon data from marker:', iconData);
             
             if (iconData) {
               // Show popup at click position
@@ -101,17 +109,6 @@ export default function CanvasIconLayer({
     // Filter icons for current plane
     const planeIcons = icons.filter(icon => icon.plane === plane);
 
-    console.log(`Updating canvas layer for plane ${plane}, found ${planeIcons.length} icons`);
-
-    // Track which icons should exist and create a hash for change detection
-    const currentIconIds = new Set(planeIcons.map(icon => icon.id));
-    const iconHashes = new Map(
-      planeIcons.map(icon => [
-        icon.id,
-        `${icon.position.lat},${icon.position.lng},${icon.iconPath},${icon.plane}`
-      ])
-    );
-
     // Remove ALL existing markers first (to handle plane changes properly)
     iconsRef.current.forEach((marker, id) => {
       layerRef.current.removeMarker(marker, false);
@@ -132,9 +129,8 @@ export default function CanvasIconLayer({
         icon: leafletIcon
       });
       
-      // Store icon data and hash on the marker instance
+      // Store icon data on the marker instance
       (marker as any)._iconData = icon;
-      (marker as any)._iconHash = iconHashes.get(icon.id);
       
       layerRef.current.addMarker(marker);
       iconsRef.current.set(icon.id, marker);
@@ -144,7 +140,7 @@ export default function CanvasIconLayer({
     layerRef.current.redraw();
   }, [icons, plane, map, isLibraryLoaded]);
 
-  // Update icon sizes on zoom
+  // Update icon sizes on zoom and handle map movement
   useEffect(() => {
     const handleZoomEnd = () => {
       if (!layerRef.current) return;
@@ -165,13 +161,23 @@ export default function CanvasIconLayer({
         }
       });
 
+      // Redraw canvas (library should handle clearing)
+      layerRef.current.redraw();
+    };
+
+    const handleMoveEnd = () => {
+      if (!layerRef.current) return;
+      
+      // Redraw canvas (library should handle clearing)
       layerRef.current.redraw();
     };
 
     map.on('zoomend', handleZoomEnd);
+    map.on('moveend', handleMoveEnd);
 
     return () => {
       map.off('zoomend', handleZoomEnd);
+      map.off('moveend', handleMoveEnd);
     };
   }, [map]);
 
