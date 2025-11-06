@@ -9,6 +9,11 @@ export interface MapIcon {
   plane: number;
   createdAt: number;
   linkedIconId?: string; // ID of linked icon (for dungeon entrances/exits)
+  linkDestination?: { // Direct coordinates for intermap links
+    lng: number;
+    lat: number;
+    plane: number;
+  };
 }
 
 export interface MapIconsData {

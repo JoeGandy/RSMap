@@ -44,7 +44,7 @@ export default function IconPopup({
           Plane {icon.plane} | ({icon.position.lng.toFixed(2)}, {icon.position.lat.toFixed(2)})
         </div>
         <div className="flex flex-wrap gap-2">
-          {icon.linkedIconId && onClick && (
+          {(icon.linkedIconId || icon.linkDestination) && onClick && (
             <OSRSButton
               onClick={() => {
                 onClick(icon);

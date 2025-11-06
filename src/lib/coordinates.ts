@@ -177,3 +177,88 @@ export function leafletToTileGridDisplay(coords: LeafletCoords): string {
   const tileGrid = leafletToTileGrid(coords);
   return `Tile Grid (${tileGrid.tileX}, ${tileGrid.tileY})`;
 }
+
+/**
+ * Convert OSRS world coordinates to Leaflet coordinates
+ * OSRS world coordinates are the actual in-game coordinates (e.g., Lumbridge = 3239, 3234)
+ * 
+ * Known reference point: Lumbridge (3239, 3234) should map to Leaflet (273, -1173)
+ * 
+ * Map bounds: lng [0, 405], lat [0, -1428]
+ * Tile grid: 51 × 178 tiles at zoom level 5
+ * Each tile: 256×256 pixels, representing 64×64 OSRS world units
+ * Pixel scale: 256 pixels / 64 world units = 4 pixels per world unit
+ */
+export function osrsWorldToLeaflet(worldX: number, worldY: number, plane: number = 0): LeafletCoords {
+  // Reference point: Lumbridge
+  // Calibrated by clicking on actual Lumbridge location on map
+  const LUMBRIDGE_WORLD_X = 3239;
+  const LUMBRIDGE_WORLD_Y = 3234;
+  const LUMBRIDGE_LEAFLET_LNG = 284.91; // Calibrated from user click
+  const LUMBRIDGE_LEAFLET_LAT = -1171.81; // Calibrated from user click
+  
+  // Calculate the world coordinate offset from Lumbridge
+  const worldDeltaX = worldX - LUMBRIDGE_WORLD_X;
+  const worldDeltaY = worldY - LUMBRIDGE_WORLD_Y;
+  
+  // Scale factor: 4 pixels per world unit (256 pixels / 64 world units)
+  // But Leaflet coordinates are at zoom level 5, so we need to account for zoom scaling
+  // At zoom 5, each tile is 256 pixels, and we have 51×178 tiles
+  // Total map size: 51*256 = 13056 pixels wide, 178*256 = 45568 pixels tall
+  // But Leaflet bounds are [0,405] × [0,-1428], which is 405×1428 units
+  // So the scale is: 405 / (51*256) ≈ 0.031 and 1428 / (178*256) ≈ 0.031
+  // This means 1 Leaflet unit ≈ 32 pixels ≈ 8 world units
+  
+  const PIXELS_PER_WORLD_UNIT = 4; // 256 pixels / 64 world units
+  const PIXELS_PER_LEAFLET_UNIT = 32; // Derived from bounds vs tile grid
+  const LEAFLET_UNITS_PER_WORLD_UNIT = PIXELS_PER_WORLD_UNIT / PIXELS_PER_LEAFLET_UNIT; // 4/32 = 0.125
+  
+  const leafletDeltaX = worldDeltaX * LEAFLET_UNITS_PER_WORLD_UNIT;
+  const leafletDeltaY = worldDeltaY * LEAFLET_UNITS_PER_WORLD_UNIT;
+  
+  // Apply to Lumbridge's Leaflet coordinates
+  // User reports Y-axis is inverted, so we ADD instead of subtract
+  const lng = LUMBRIDGE_LEAFLET_LNG + leafletDeltaX;
+  const lat = LUMBRIDGE_LEAFLET_LAT + leafletDeltaY; // ADD - Y-axis goes same direction
+  
+  return { lng, lat };
+}
+
+/**
+ * Convert Leaflet coordinates to OSRS world coordinates
+ */
+export function leafletToOsrsWorld(coords: LeafletCoords): { worldX: number; worldY: number } {
+  // Reference point: Lumbridge
+  const LUMBRIDGE_WORLD_X = 3239;
+  const LUMBRIDGE_WORLD_Y = 3234;
+  const LUMBRIDGE_LEAFLET_LNG = 284.91; // Calibrated from user click
+  const LUMBRIDGE_LEAFLET_LAT = -1171.81; // Calibrated from user click
+  
+  // Calculate Leaflet deltas from Lumbridge
+  const lngDelta = coords.lng - LUMBRIDGE_LEAFLET_LNG;
+  const latDelta = coords.lat - LUMBRIDGE_LEAFLET_LAT;
+  
+  // Scale factor (inverse of forward conversion)
+  const LEAFLET_UNITS_PER_WORLD_UNIT = 0.125; // 1 world unit = 0.125 Leaflet units
+  const WORLD_UNITS_PER_LEAFLET_UNIT = 1 / LEAFLET_UNITS_PER_WORLD_UNIT; // 8 world units per Leaflet unit
+  
+  // Convert to world deltas (Y-axis goes same direction now)
+  const worldDeltaX = lngDelta * WORLD_UNITS_PER_LEAFLET_UNIT;
+  const worldDeltaY = latDelta * WORLD_UNITS_PER_LEAFLET_UNIT; // No negation - same direction
+  
+  // Apply to Lumbridge's world coordinates
+  const worldX = Math.floor(LUMBRIDGE_WORLD_X + worldDeltaX);
+  const worldY = Math.floor(LUMBRIDGE_WORLD_Y + worldDeltaY);
+  
+  return { worldX, worldY };
+}
+
+/**
+ * Format OSRS world coordinates as a string
+ */
+export function formatOsrsWorld(worldX: number, worldY: number, plane: number = 0): string {
+  if (plane === 0) {
+    return `(${worldX}, ${worldY})`;
+  }
+  return `(${worldX}, ${worldY}, ${plane})`;
+}

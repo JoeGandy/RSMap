@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* RuneScape Font */
+@font-face {
+  font-family: 'RuneScape';
+  src: url('/fonts/runescape.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,7 +25,12 @@
   }
 }
 
+* {
+  font-family: 'RuneScape', sans-serif;
+}
+
 body {
+  font-family: 'RuneScape', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

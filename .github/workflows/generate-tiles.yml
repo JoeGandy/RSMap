@@ -43,15 +43,22 @@ jobs:
         npm run migrate-markers -- --auto-detect || echo "⚠️ Migration skipped (no dimension changes or error)"
       continue-on-error: true
 
+    - name: Extract worldmap data from cache
+      run: |
+        echo "🗺️ Extracting worldmap labels and intermap links..."
+        npm run explore-worldmap || echo "⚠️ Worldmap extraction failed"
+      continue-on-error: true
+
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        # Add tiles, metadata, and markers
+        # Add tiles, metadata, markers, and worldmap data
         git add public/tiles/
         git add public/tile_metadata.json
         git add public/map_data.json
+        git add public/worldmap_data_full.json
         git add backups/
         
         if ! git diff --staged --quiet; then

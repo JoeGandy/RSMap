@@ -9,6 +9,7 @@ import AddIconDialog from '@/components/AddIconDialog';
 import EditIconDialog from '@/components/EditIconDialog';
 import { MapIcon } from '@/types/mapIcon';
 import { MapIconService } from '@/lib/mapIconService';
+import { loadWorldMapAsIcons, mergeWithUserIcons } from '@/lib/convertWorldMapToIcons';
 
 // Dynamically import the map component to avoid SSR issues
 const OSRSMap = dynamic(() => import('@/components/OSRSMap'), {
@@ -33,26 +34,35 @@ export default function Home() {
   const [pendingDungeonLink, setPendingDungeonLink] = useState<MapIcon | null>(null);
   const mapRef = useRef<any>(null);
 
-  // Load icons on mount - first from localStorage, then from public/map_data.json if empty
+  // Load icons on mount - merge user icons with worldmap icons
   useEffect(() => {
     const loadIcons = async () => {
-      let icons = MapIconService.loadIcons();
+      let userIcons = MapIconService.loadIcons();
       
       // If no icons in localStorage, try loading from public file
-      if (icons.length === 0) {
+      if (userIcons.length === 0) {
         try {
           const response = await fetch('/map_data.json');
           if (response.ok) {
             const jsonString = await response.text();
             MapIconService.importFromJSON(jsonString);
-            icons = MapIconService.loadIcons();
+            userIcons = MapIconService.loadIcons();
           }
         } catch (error) {
           // No default map_data.json found, starting with empty icons
         }
       }
       
-      setMapIcons(icons);
+      // Load worldmap icons and merge with user icons
+      try {
+        const worldMapIcons = await loadWorldMapAsIcons(true); // Include intermap links
+        const allIcons = mergeWithUserIcons(worldMapIcons, userIcons);
+        setMapIcons(allIcons);
+        console.log(`✅ Loaded ${userIcons.length} user icons + ${worldMapIcons.length} worldmap icons = ${allIcons.length} total`);
+      } catch (error) {
+        console.error('Failed to load worldmap icons:', error);
+        setMapIcons(userIcons); // Fall back to just user icons
+      }
     };
     
     loadIcons();
@@ -184,6 +194,15 @@ export default function Home() {
         // Pan to the linked icon's location
         mapRef.current.setView([linkedIcon.position.lat, linkedIcon.position.lng], mapRef.current.getZoom());
       }
+    }
+    // If icon has a link destination (intermap link), jump to those coordinates
+    else if (icon.linkDestination && mapRef.current) {
+      // Change plane if needed
+      if (icon.linkDestination.plane !== currentPlane) {
+        setCurrentPlane(icon.linkDestination.plane);
+      }
+      // Pan to the destination coordinates
+      mapRef.current.setView([icon.linkDestination.lat, icon.linkDestination.lng], mapRef.current.getZoom());
     }
   };
 

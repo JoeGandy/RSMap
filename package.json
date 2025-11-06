@@ -26,13 +26,13 @@
     "start": "next start",
     "lint": "next lint",
     "migrate-markers": "ts-node scripts/migrate-markers.ts",
-    "check-dimensions": "./scripts/check-dimensions.sh"
+    "check-dimensions": "./scripts/check-dimensions.sh",
+    "explore-worldmap": "./scripts/explore-worldmap-data.sh"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
     "leaflet-canvas-marker": "^0.2.0",
     "next": "14.0.0",
-    "osrscachereader": "^1.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-leaflet": "^4.2.1"

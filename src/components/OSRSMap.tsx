@@ -7,6 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import { leafletToTile, formatTile, leafletToRegion, formatRegion, LeafletCoords } from '@/lib/coordinates';
 import { MapIcon } from '@/types/mapIcon';
 import CanvasIconLayer from './CanvasIconLayer';
+import WorldMapLabels from './WorldMapLabels';
 
 // Back to simple CRS
 const OSRSCRS = CRS.Simple;
@@ -23,12 +24,20 @@ interface OSRSMapProps {
   onIconEdit?: (icon: MapIcon) => void;
   onIconClick?: (icon: MapIcon) => void;
   addIconMode?: boolean;
+  showWorldMapLabels?: boolean;
 }
 
 function MapClickHandler({ onCoordinateClick }: { onCoordinateClick?: (coords: LeafletCoords) => void }) {
   useMapEvents({
     click: (e) => {
       const coords = { lng: e.latlng.lng, lat: e.latlng.lat };
+      
+      // Always log click coordinates for debugging
+      console.log('📍 Map clicked at:', {
+        leafletCoords: { lng: coords.lng.toFixed(2), lat: coords.lat.toFixed(2) },
+        rawCoords: coords
+      });
+      
       if (onCoordinateClick) {
         onCoordinateClick(coords);
       }
@@ -57,7 +66,8 @@ export default function OSRSMap({
   onIconMove,
   onIconEdit,
   onIconClick,
-  addIconMode = false
+  addIconMode = false,
+  showWorldMapLabels = true
 }: OSRSMapProps) {
   const [mounted, setMounted] = useState(false);
 
@@ -117,6 +127,9 @@ export default function OSRSMap({
         </>
         
         <MapClickHandler onCoordinateClick={onCoordinateClick} />
+        
+        {/* World map labels from OSRS cache */}
+        {showWorldMapLabels && <WorldMapLabels />}
         
         {/* Canvas-based icon rendering for performance */}
         <CanvasIconLayer
