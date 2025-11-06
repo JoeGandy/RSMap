@@ -4617,28 +4617,6 @@
     },
     {
       "position": {
-        "lng": 239.90625,
-        "lat": -1158.625
-      },
-      "iconPath": "/map_icons/Fishing_spot_icon.png",
-      "label": "Fishing Spot",
-      "plane": 0,
-      "id": "icon_1762250924237_4dvarwgwv",
-      "createdAt": 1762250924237
-    },
-    {
-      "position": {
-        "lng": 239.90625,
-        "lat": -1159.234375
-      },
-      "iconPath": "/map_icons/Fishing_spot_icon.png",
-      "label": "Fishing Spot",
-      "plane": 0,
-      "id": "icon_1762250925519_ilxk8tycm",
-      "createdAt": 1762250925519
-    },
-    {
-      "position": {
         "lng": 239.578125,
         "lat": -1159.59375
       },
@@ -16945,6 +16923,1502 @@
       "plane": 0,
       "id": "icon_1762437853834_3hh0e6k7t",
       "createdAt": 1762437853834
+    },
+    {
+      "position": {
+        "lng": 250.140625,
+        "lat": -1182.609375
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442252443_nykx3hgam",
+      "createdAt": 1762442252443
+    },
+    {
+      "position": {
+        "lng": 249.5625,
+        "lat": -1182.390625
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762442259454_po18bdnc4",
+      "createdAt": 1762442259454
+    },
+    {
+      "position": {
+        "lng": 247.515625,
+        "lat": -1183.078125
+      },
+      "iconPath": "/map_icons/Notice_board_map_icon.png",
+      "label": "Notice Board Map",
+      "plane": 0,
+      "id": "icon_1762442266367_8pedu4398",
+      "createdAt": 1762442266367
+    },
+    {
+      "position": {
+        "lng": 247.796875,
+        "lat": -1182.515625
+      },
+      "iconPath": "/map_icons/Shipyard_map_icon.png",
+      "label": "Shipyard Map",
+      "plane": 0,
+      "id": "icon_1762442274102_o2j58ijyr",
+      "createdAt": 1762442274102
+    },
+    {
+      "position": {
+        "lng": 248.9375,
+        "lat": -1182.328125
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762442280352_31pi4b7ln",
+      "createdAt": 1762442280352
+    },
+    {
+      "position": {
+        "lng": 258.3125,
+        "lat": -1176.75
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762442289906_gijqck6jt",
+      "createdAt": 1762442289906
+    },
+    {
+      "position": {
+        "lng": 258.640625,
+        "lat": -1176.25
+      },
+      "iconPath": "/map_icons/Notice_board_map_icon.png",
+      "label": "Notice Board Map",
+      "plane": 0,
+      "id": "icon_1762442296587_ndg6ch0nq",
+      "createdAt": 1762442296587
+    },
+    {
+      "position": {
+        "lng": 261.375,
+        "lat": -1176.859375
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442303935_l775iu0z8",
+      "createdAt": 1762442303935
+    },
+    {
+      "position": {
+        "lng": 257.765625,
+        "lat": -1175.546875
+      },
+      "iconPath": "/map_icons/Shipyard_map_icon.png",
+      "label": "Shipyard Map",
+      "plane": 0,
+      "id": "icon_1762442312348_3w3cxyttv",
+      "createdAt": 1762442312348
+    },
+    {
+      "position": {
+        "lng": 258.078125,
+        "lat": -1174.859375
+      },
+      "iconPath": "/map_icons/Quest_start_icon.png",
+      "label": "Quest Start",
+      "plane": 0,
+      "id": "icon_1762442322769_xqaojftcm",
+      "createdAt": 1762442322769
+    },
+    {
+      "position": {
+        "lng": 258.625,
+        "lat": -1175.109375
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762442327548_n37wgkes4",
+      "createdAt": 1762442327548
+    },
+    {
+      "position": {
+        "lng": 244.765625,
+        "lat": -1172.671875
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762442341368_167ccewnm",
+      "createdAt": 1762442341368
+    },
+    {
+      "position": {
+        "lng": 243.359375,
+        "lat": -1172.78125
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442344971_3paeb20rx",
+      "createdAt": 1762442344971
+    },
+    {
+      "position": {
+        "lng": 239.90625,
+        "lat": -1159.015625
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442370342_p1r1poh0d",
+      "createdAt": 1762442370342
+    },
+    {
+      "position": {
+        "lng": 239.15625,
+        "lat": -1158.609375
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762442377236_1vqmfg06x",
+      "createdAt": 1762442377236
+    },
+    {
+      "position": {
+        "lng": 229.88165530293446,
+        "lat": -1149.3919754689025
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762442386181_dehwwp0b3",
+      "createdAt": 1762442386181
+    },
+    {
+      "position": {
+        "lng": 229.49103030293446,
+        "lat": -1149.4701004689025
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442390607_935isgoiv",
+      "createdAt": 1762442390607
+    },
+    {
+      "position": {
+        "lng": 230.50665530293446,
+        "lat": -1149.6576004689025
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762442396205_8fhvzdp8j",
+      "createdAt": 1762442396205
+    },
+    {
+      "position": {
+        "lng": 230.35040530293446,
+        "lat": -1148.5638504689025
+      },
+      "iconPath": "/map_icons/Notice_board_map_icon.png",
+      "label": "Notice Board Map",
+      "plane": 0,
+      "id": "icon_1762442403136_2suwxi5rq",
+      "createdAt": 1762442403136
+    },
+    {
+      "position": {
+        "lng": 230.77228030293446,
+        "lat": -1147.6576004689025
+      },
+      "iconPath": "/map_icons/Shipyard_map_icon.png",
+      "label": "Shipyard Map",
+      "plane": 0,
+      "id": "icon_1762442409836_v1j4mg5qb",
+      "createdAt": 1762442409836
+    },
+    {
+      "position": {
+        "lng": 223.35706060586895,
+        "lat": -1162.877700937805
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442419029_hfjq5wdcs",
+      "createdAt": 1762442419029
+    },
+    {
+      "position": {
+        "lng": 227.66956060586895,
+        "lat": -1160.658950937805
+      },
+      "iconPath": "/map_icons/Salvaging_map_icon.png",
+      "label": "Salvaging Map",
+      "plane": 0,
+      "id": "icon_1762442428574_3suogsnsv",
+      "createdAt": 1762442428574
+    },
+    {
+      "position": {
+        "lng": 213.40625,
+        "lat": -1167.625
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762442461634_j0kg1tmiy",
+      "createdAt": 1762442461634
+    },
+    {
+      "position": {
+        "lng": 213.84375,
+        "lat": -1167.84375
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442474162_nbr146wa2",
+      "createdAt": 1762442474162
+    },
+    {
+      "position": {
+        "lng": 214.234375,
+        "lat": -1167.34375
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762442479898_3w9dbd5si",
+      "createdAt": 1762442479898
+    },
+    {
+      "position": {
+        "lng": 214.578125,
+        "lat": -1166.375
+      },
+      "iconPath": "/map_icons/Notice_board_map_icon.png",
+      "label": "Notice Board Map",
+      "plane": 0,
+      "id": "icon_1762442486886_mo99flkus",
+      "createdAt": 1762442486886
+    },
+    {
+      "position": {
+        "lng": 225.59375,
+        "lat": -1172.703125
+      },
+      "iconPath": "/map_icons/Notice_board_map_icon.png",
+      "label": "Notice Board Map",
+      "plane": 0,
+      "id": "icon_1762442493807_axcuagl07",
+      "createdAt": 1762442493807
+    },
+    {
+      "position": {
+        "lng": 224.796875,
+        "lat": -1172.359375
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442498588_4h2olffwy",
+      "createdAt": 1762442498588
+    },
+    {
+      "position": {
+        "lng": 225.28125,
+        "lat": -1171.875
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762442505320_9v7iuljje",
+      "createdAt": 1762442505320
+    },
+    {
+      "position": {
+        "lng": 226.234375,
+        "lat": -1172.40625
+      },
+      "iconPath": "/map_icons/Shipyard_map_icon.png",
+      "label": "Shipyard Map",
+      "plane": 0,
+      "id": "icon_1762442512048_vh2c0d1e4",
+      "createdAt": 1762442512048
+    },
+    {
+      "position": {
+        "lng": 226.1875,
+        "lat": -1172.84375
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762442516619_geixulcaz",
+      "createdAt": 1762442516619
+    },
+    {
+      "position": {
+        "lng": 213.35252890361946,
+        "lat": -1180.9989862040725
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762442737657_o4ka60ikb",
+      "createdAt": 1762442737657
+    },
+    {
+      "position": {
+        "lng": 214.83690390361946,
+        "lat": -1180.6552362040725
+      },
+      "iconPath": "/map_icons/Notice_board_map_icon.png",
+      "label": "Notice Board Map",
+      "plane": 0,
+      "id": "icon_1762442743961_hshvdgzuv",
+      "createdAt": 1762442743961
+    },
+    {
+      "position": {
+        "lng": 215.38377890361946,
+        "lat": -1180.4364862040725
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762442750909_0aahpl5a4",
+      "createdAt": 1762442750909
+    },
+    {
+      "position": {
+        "lng": 215.79002890361946,
+        "lat": -1180.9364862040725
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442756451_tm2m1h7b9",
+      "createdAt": 1762442756451
+    },
+    {
+      "position": {
+        "lng": 218.1875,
+        "lat": -1194.3125
+      },
+      "iconPath": "/map_icons/Salvaging_map_icon.png",
+      "label": "Salvaging Map",
+      "plane": 0,
+      "id": "icon_1762442777217_4b58p0zlm",
+      "createdAt": 1762442777217
+    },
+    {
+      "position": {
+        "lng": 223.734375,
+        "lat": -1206.984375
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762442787934_yh19ac4t2",
+      "createdAt": 1762442787934
+    },
+    {
+      "position": {
+        "lng": 224.484375,
+        "lat": -1207.265625
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762442794046_f0u5zn60l",
+      "createdAt": 1762442794046
+    },
+    {
+      "position": {
+        "lng": 224.6875,
+        "lat": -1206.703125
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762442800164_qjotmzutr",
+      "createdAt": 1762442800164
+    },
+    {
+      "position": {
+        "lng": 318.59375,
+        "lat": -1204.59375
+      },
+      "iconPath": "/map_icons/Quest_start_icon.png",
+      "label": "Quest Start",
+      "plane": 0,
+      "id": "icon_1762442871963_nc0svoxyi",
+      "createdAt": 1762442871963
+    },
+    {
+      "position": {
+        "lng": 102.234375,
+        "lat": -1122.34375
+      },
+      "iconPath": "/map_icons/Estate_Agent_icon.png",
+      "label": "Estate Agent",
+      "plane": 0,
+      "id": "icon_1762443038945_gg9mhbl8t",
+      "createdAt": 1762443038945
+    },
+    {
+      "position": {
+        "lng": 100.390625,
+        "lat": -1121.8125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443043583_e82jj9bgc",
+      "createdAt": 1762443043583
+    },
+    {
+      "position": {
+        "lng": 100.328125,
+        "lat": -1123.1875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443046912_qnbxegzh1",
+      "createdAt": 1762443046912
+    },
+    {
+      "position": {
+        "lng": 102.171875,
+        "lat": -1123.4375
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443048912_pzflh6y5j",
+      "createdAt": 1762443048912
+    },
+    {
+      "position": {
+        "lng": 97.3125,
+        "lat": -1124.71875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443053197_tv7ununqz",
+      "createdAt": 1762443053197
+    },
+    {
+      "position": {
+        "lng": 101.953125,
+        "lat": -1126.796875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443056542_r1gb15ccx",
+      "createdAt": 1762443056542
+    },
+    {
+      "position": {
+        "lng": 103.3125,
+        "lat": -1126.6875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443058493_03eldoyyn",
+      "createdAt": 1762443058493
+    },
+    {
+      "position": {
+        "lng": 100.265625,
+        "lat": -1128.796875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443062485_q9w8ofo10",
+      "createdAt": 1762443062485
+    },
+    {
+      "position": {
+        "lng": 100.25,
+        "lat": -1130.015625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443064040_ry7zemhl1",
+      "createdAt": 1762443064040
+    },
+    {
+      "position": {
+        "lng": 101.5,
+        "lat": -1130.109375
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443066408_d4l1ukik0",
+      "createdAt": 1762443066408
+    },
+    {
+      "position": {
+        "lng": 107.625,
+        "lat": -1131.65625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443082780_ism1qk4lq",
+      "createdAt": 1762443082780
+    },
+    {
+      "position": {
+        "lng": 103.59375,
+        "lat": -1135.28125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443086249_wap28avfd",
+      "createdAt": 1762443086249
+    },
+    {
+      "position": {
+        "lng": 89.703125,
+        "lat": -1123.984375
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443106408_t1ptiyelc",
+      "createdAt": 1762443106408
+    },
+    {
+      "position": {
+        "lng": 97.328125,
+        "lat": -1124.28125
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443110909_dkknmhvsx",
+      "createdAt": 1762443110909
+    },
+    {
+      "position": {
+        "lng": 105.203125,
+        "lat": -1124.28125
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443118736_gbebm3am8",
+      "createdAt": 1762443118736
+    },
+    {
+      "position": {
+        "lng": 105.25,
+        "lat": -1124.625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443121456_dy20qqhk3",
+      "createdAt": 1762443121456
+    },
+    {
+      "position": {
+        "lng": 97.875,
+        "lat": -1123.96875
+      },
+      "iconPath": "/map_icons/Pub_icon.png",
+      "label": "Pub",
+      "plane": 0,
+      "id": "icon_1762443132563_xx2fpvg20",
+      "createdAt": 1762443132563
+    },
+    {
+      "position": {
+        "lng": 98.328125,
+        "lat": -1125.953125
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762443136372_5zzfyeqbw",
+      "createdAt": 1762443136372
+    },
+    {
+      "position": {
+        "lng": 98.453125,
+        "lat": -1126.5625
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762443150619_h4z2ggzaz",
+      "createdAt": 1762443150619
+    },
+    {
+      "position": {
+        "lng": 101.65625,
+        "lat": -1127.625
+      },
+      "iconPath": "/map_icons/General_store_icon.png",
+      "label": "General Store",
+      "plane": 0,
+      "id": "icon_1762443156232_3457i2ilx",
+      "createdAt": 1762443156232
+    },
+    {
+      "position": {
+        "lng": 104.703125,
+        "lat": -1126.140625
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443163092_ds9uvmfyf",
+      "createdAt": 1762443163092
+    },
+    {
+      "position": {
+        "lng": 98.984375,
+        "lat": -1130.375
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443167322_ocu2h6zbe",
+      "createdAt": 1762443167323
+    },
+    {
+      "position": {
+        "lng": 100.78125,
+        "lat": -1125.828125
+      },
+      "iconPath": "/map_icons/Vegetable_shop_icon.png",
+      "label": "Vegetable Shop",
+      "plane": 0,
+      "id": "icon_1762443177796_lbm70l0vh",
+      "createdAt": 1762443177796
+    },
+    {
+      "position": {
+        "lng": 100.40625,
+        "lat": -1126.78125
+      },
+      "iconPath": "/map_icons/Farming_shop_icon.png",
+      "label": "Farming Shop",
+      "plane": 0,
+      "id": "icon_1762443182488_r3uvzdxwp",
+      "createdAt": 1762443182488
+    },
+    {
+      "position": {
+        "lng": 106.15625,
+        "lat": -1130.109375
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762443192183_to2bib2a2",
+      "createdAt": 1762443192183
+    },
+    {
+      "position": {
+        "lng": 105.71875,
+        "lat": -1131.46875
+      },
+      "iconPath": "/map_icons/Farming_patch_icon.png",
+      "label": "Farming Patch",
+      "plane": 0,
+      "id": "icon_1762443196467_nxjdbfr2p",
+      "createdAt": 1762443196467
+    },
+    {
+      "position": {
+        "lng": 103.171875,
+        "lat": -1135.4375
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443202753_0u79smqil",
+      "createdAt": 1762443202753
+    },
+    {
+      "position": {
+        "lng": 107.6875,
+        "lat": -1136.53125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443208704_e7xrme695",
+      "createdAt": 1762443208704
+    },
+    {
+      "position": {
+        "lng": 109.453125,
+        "lat": -1138.328125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443210416_3exrrxem5",
+      "createdAt": 1762443210416
+    },
+    {
+      "position": {
+        "lng": 107.90625,
+        "lat": -1140.21875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443212646_8d5ns31ul",
+      "createdAt": 1762443212646
+    },
+    {
+      "position": {
+        "lng": 106.0625,
+        "lat": -1138.390625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443215046_bdqis3ubz",
+      "createdAt": 1762443215046
+    },
+    {
+      "position": {
+        "lng": 102.296875,
+        "lat": -1139.8125
+      },
+      "iconPath": "/map_icons/Mining_site_icon.png",
+      "label": "Mining Site",
+      "plane": 0,
+      "id": "icon_1762443229582_v31a95lpr",
+      "createdAt": 1762443229583
+    },
+    {
+      "position": {
+        "lng": 97.796875,
+        "lat": -1138.484375
+      },
+      "iconPath": "/map_icons/Altar_icon.png",
+      "label": "Altar",
+      "plane": 0,
+      "id": "icon_1762443236984_u52sbvj79",
+      "createdAt": 1762443236984
+    },
+    {
+      "position": {
+        "lng": 97.578125,
+        "lat": -1136.25
+      },
+      "iconPath": "/map_icons/House_portal_icon.png",
+      "label": "House Portal",
+      "plane": 0,
+      "id": "icon_1762443242584_vds0npe5b",
+      "createdAt": 1762443242584
+    },
+    {
+      "position": {
+        "lng": 98.453125,
+        "lat": -1134.109375
+      },
+      "iconPath": "/map_icons/Dairy_churn_icon.png",
+      "label": "Dairy Churn",
+      "plane": 0,
+      "id": "icon_1762443248614_hdwq16tue",
+      "createdAt": 1762443248614
+    },
+    {
+      "position": {
+        "lng": 99.15625,
+        "lat": -1134.46875
+      },
+      "iconPath": "/map_icons/Loom_icon.png",
+      "label": "Loom",
+      "plane": 0,
+      "id": "icon_1762443260153_r9tjbnfos",
+      "createdAt": 1762443260153
+    },
+    {
+      "position": {
+        "lng": 96.625,
+        "lat": -1133.140625
+      },
+      "iconPath": "/map_icons/Windmill_icon.png",
+      "label": "Windmill",
+      "plane": 0,
+      "id": "icon_1762443265880_5cjl5ckg6",
+      "createdAt": 1762443265881
+    },
+    {
+      "position": {
+        "lng": 96.390625,
+        "lat": -1131.1875
+      },
+      "iconPath": "/map_icons/Farming_patch_icon.png",
+      "label": "Farming Patch",
+      "plane": 0,
+      "id": "icon_1762443271332_84vztf0i6",
+      "createdAt": 1762443271332
+    },
+    {
+      "position": {
+        "lng": 95.203125,
+        "lat": -1132.109375
+      },
+      "iconPath": "/map_icons/Agility_shortcut_icon.png",
+      "label": "Agility Shortcut",
+      "plane": 0,
+      "id": "icon_1762443274540_kmjoup1i6",
+      "createdAt": 1762443274540
+    },
+    {
+      "position": {
+        "lng": 96.53125,
+        "lat": -1129.25
+      },
+      "iconPath": "/map_icons/Altar_icon.png",
+      "label": "Altar",
+      "plane": 0,
+      "id": "icon_1762443281208_t2hfonazn",
+      "createdAt": 1762443281208
+    },
+    {
+      "position": {
+        "lng": 94.375,
+        "lat": -1124.421875
+      },
+      "iconPath": "/map_icons/Fishing_spot_icon.png",
+      "label": "Fishing Spot",
+      "plane": 0,
+      "id": "icon_1762443292500_h808fovkj",
+      "createdAt": 1762443292500
+    },
+    {
+      "position": {
+        "lng": 95.84375,
+        "lat": -1144.375
+      },
+      "iconPath": "/map_icons/Port_map_icon.png",
+      "label": "Port Map",
+      "plane": 0,
+      "id": "icon_1762443313041_p66qn08im",
+      "createdAt": 1762443313041
+    },
+    {
+      "position": {
+        "lng": 95.609375,
+        "lat": -1143.421875
+      },
+      "iconPath": "/map_icons/Port_master_map_icon.png",
+      "label": "Port Master Map",
+      "plane": 0,
+      "id": "icon_1762443317953_zhzdatau1",
+      "createdAt": 1762443317953
+    },
+    {
+      "position": {
+        "lng": 95.84375,
+        "lat": -1142.546875
+      },
+      "iconPath": "/map_icons/Salvage_station_map_icon.png",
+      "label": "Salvage Station Map",
+      "plane": 0,
+      "id": "icon_1762443325481_z1mu3zt2b",
+      "createdAt": 1762443325481
+    },
+    {
+      "position": {
+        "lng": 94.578125,
+        "lat": -1143
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762443327896_p36nsu5v5",
+      "createdAt": 1762443327896
+    },
+    {
+      "position": {
+        "lng": 89.8125,
+        "lat": -1142.25
+      },
+      "iconPath": "/map_icons/Fishing_spot_icon.png",
+      "label": "Fishing Spot",
+      "plane": 0,
+      "id": "icon_1762443333381_i3v1a37vb",
+      "createdAt": 1762443333381
+    },
+    {
+      "position": {
+        "lng": 88.765625,
+        "lat": -1141.0625
+      },
+      "iconPath": "/map_icons/Fishing_spot_icon.png",
+      "label": "Fishing Spot",
+      "plane": 0,
+      "id": "icon_1762443335696_uqxa2i4y1",
+      "createdAt": 1762443335696
+    },
+    {
+      "position": {
+        "lng": 89.75,
+        "lat": -1139.578125
+      },
+      "iconPath": "/map_icons/Fishing_spot_icon.png",
+      "label": "Fishing Spot",
+      "plane": 0,
+      "id": "icon_1762443337503_glt26aoya",
+      "createdAt": 1762443337503
+    },
+    {
+      "position": {
+        "lng": 93.859375,
+        "lat": -1134.015625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443344535_fgc8dvgch",
+      "createdAt": 1762443344535
+    },
+    {
+      "position": {
+        "lng": 91.375,
+        "lat": -1135.703125
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443352844_mguvb8lpu",
+      "createdAt": 1762443352844
+    },
+    {
+      "position": {
+        "lng": 91.390625,
+        "lat": -1133.4375
+      },
+      "iconPath": "/map_icons/Farming_patch_icon.png",
+      "label": "Farming Patch",
+      "plane": 0,
+      "id": "icon_1762443357851_ldcs7mmuf",
+      "createdAt": 1762443357851
+    },
+    {
+      "position": {
+        "lng": 92.140625,
+        "lat": -1131.71875
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443364413_cs1frmryh",
+      "createdAt": 1762443364413
+    },
+    {
+      "position": {
+        "lng": 88.671875,
+        "lat": -1125.90625
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443374050_w6ap8idh8",
+      "createdAt": 1762443374050
+    },
+    {
+      "position": {
+        "lng": 85.078125,
+        "lat": -1129.78125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443388578_441u468kq",
+      "createdAt": 1762443388578
+    },
+    {
+      "position": {
+        "lng": 84.671875,
+        "lat": -1129.59375
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443392148_tsryhcp4j",
+      "createdAt": 1762443392148
+    },
+    {
+      "position": {
+        "lng": 86.390625,
+        "lat": -1129.703125
+      },
+      "iconPath": "/map_icons/Spinning_wheel_icon.png",
+      "label": "Spinning Wheel",
+      "plane": 0,
+      "id": "icon_1762443397329_961z52rbr",
+      "createdAt": 1762443397329
+    },
+    {
+      "position": {
+        "lng": 85.921875,
+        "lat": -1127.234375
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443403993_jrmdlj709",
+      "createdAt": 1762443403993
+    },
+    {
+      "position": {
+        "lng": 85.890625,
+        "lat": -1131.265625
+      },
+      "iconPath": "/map_icons/Fishing_spot_icon.png",
+      "label": "Fishing Spot",
+      "plane": 0,
+      "id": "icon_1762443409004_r6a6ynkky",
+      "createdAt": 1762443409004
+    },
+    {
+      "position": {
+        "lng": 81.65625,
+        "lat": -1129.71875
+      },
+      "iconPath": "/map_icons/Agility_shortcut_icon.png",
+      "label": "Agility Shortcut",
+      "plane": 0,
+      "id": "icon_1762443412887_7fa0odghv",
+      "createdAt": 1762443412888
+    },
+    {
+      "position": {
+        "lng": 80.8125,
+        "lat": -1129.625
+      },
+      "iconPath": "/map_icons/Agility_shortcut_icon.png",
+      "label": "Agility Shortcut",
+      "plane": 0,
+      "id": "icon_1762443414969_l5nlsatup",
+      "createdAt": 1762443414969
+    },
+    {
+      "position": {
+        "lng": 89.421875,
+        "lat": -1124.125
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762443419620_72k812d7t",
+      "createdAt": 1762443419620
+    },
+    {
+      "position": {
+        "lng": 89.859375,
+        "lat": -1123.1875
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443424169_unteep922",
+      "createdAt": 1762443424169
+    },
+    {
+      "position": {
+        "lng": 85.96875,
+        "lat": -1122.703125
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443429960_anbn9hg6k",
+      "createdAt": 1762443429960
+    },
+    {
+      "position": {
+        "lng": 85.53125,
+        "lat": -1122.328125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443433859_tr6qdj7av",
+      "createdAt": 1762443433859
+    },
+    {
+      "position": {
+        "lng": 88.796875,
+        "lat": -1118.84375
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443465818_a5jehjgak",
+      "createdAt": 1762443465818
+    },
+    {
+      "position": {
+        "lng": 90.421875,
+        "lat": -1118.875
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443467902_ojfjtf99l",
+      "createdAt": 1762443467902
+    },
+    {
+      "position": {
+        "lng": 85.453125,
+        "lat": -1118.109375
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443473757_o7t3qcmwf",
+      "createdAt": 1762443473757
+    },
+    {
+      "position": {
+        "lng": 85.4375,
+        "lat": -1115.59375
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443476511_tln3hpbhy",
+      "createdAt": 1762443476511
+    },
+    {
+      "position": {
+        "lng": 83.328125,
+        "lat": -1116.328125
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443478241_7de31zisj",
+      "createdAt": 1762443478241
+    },
+    {
+      "position": {
+        "lng": 83.28125,
+        "lat": -1117.328125
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443480055_t8vvf02eh",
+      "createdAt": 1762443480055
+    },
+    {
+      "position": {
+        "lng": 90.234375,
+        "lat": -1114.953125
+      },
+      "iconPath": "/map_icons/Rare_trees_icon.png",
+      "label": "Rare Trees",
+      "plane": 0,
+      "id": "icon_1762443482630_h9n7j3d4q",
+      "createdAt": 1762443482630
+    },
+    {
+      "position": {
+        "lng": 89.28125,
+        "lat": -1114.765625
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443485994_l5yd755ll",
+      "createdAt": 1762443485994
+    },
+    {
+      "position": {
+        "lng": 89.203125,
+        "lat": -1116.34375
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443488389_wmyfmvv0e",
+      "createdAt": 1762443488389
+    },
+    {
+      "position": {
+        "lng": 89.890625,
+        "lat": -1118.46875
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443490612_hr8tnu171",
+      "createdAt": 1762443490612
+    },
+    {
+      "position": {
+        "lng": 90.4375,
+        "lat": -1117.640625
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443493235_xfh74qln2",
+      "createdAt": 1762443493235
+    },
+    {
+      "position": {
+        "lng": 83.296875,
+        "lat": -1118.484375
+      },
+      "iconPath": "/map_icons/Cooking_range_icon.png",
+      "label": "Cooking Range",
+      "plane": 0,
+      "id": "icon_1762443497407_qcksrutsh",
+      "createdAt": 1762443497407
+    },
+    {
+      "position": {
+        "lng": 89.640625,
+        "lat": -1115.171875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443503007_6ieyv7jwo",
+      "createdAt": 1762443503007
+    },
+    {
+      "position": {
+        "lng": 88.90625,
+        "lat": -1116.359375
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443506268_j2unq4ucv",
+      "createdAt": 1762443506268
+    },
+    {
+      "position": {
+        "lng": 90.1875,
+        "lat": -1117.375
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443509309_ei99kjg4l",
+      "createdAt": 1762443509309
+    },
+    {
+      "position": {
+        "lng": 89.3125,
+        "lat": -1118.5
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443512044_im5y8p9ee",
+      "createdAt": 1762443512044
+    },
+    {
+      "position": {
+        "lng": 86.421875,
+        "lat": -1116.28125
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443518924_7zck0elg8",
+      "createdAt": 1762443518924
+    },
+    {
+      "position": {
+        "lng": 86.390625,
+        "lat": -1117.421875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443521249_zyxic6ntf",
+      "createdAt": 1762443521249
+    },
+    {
+      "position": {
+        "lng": 82.734375,
+        "lat": -1118.71875
+      },
+      "iconPath": "/map_icons/Water_source_icon.png",
+      "label": "Water Source",
+      "plane": 0,
+      "id": "icon_1762443524516_v3iibqzwc",
+      "createdAt": 1762443524516
+    },
+    {
+      "position": {
+        "lng": 87.953125,
+        "lat": -1116.875
+      },
+      "iconPath": "/map_icons/Quest_start_icon.png",
+      "label": "Quest Start",
+      "plane": 0,
+      "id": "icon_1762443539167_cs2krjg3p",
+      "createdAt": 1762443539167
+    },
+    {
+      "position": {
+        "lng": 84.8125,
+        "lat": -1115.359375
+      },
+      "iconPath": "/map_icons/Food_shop_icon.png",
+      "label": "Food Shop",
+      "plane": 0,
+      "id": "icon_1762443549447_zrp8nxpkr",
+      "createdAt": 1762443549447
+    },
+    {
+      "position": {
+        "lng": 84.234375,
+        "lat": -1115.40625
+      },
+      "iconPath": "/map_icons/Gem_shop_icon.png",
+      "label": "Gem Shop",
+      "plane": 0,
+      "id": "icon_1762443554769_b9vs2k5i5",
+      "createdAt": 1762443554769
+    },
+    {
+      "position": {
+        "lng": 84.828125,
+        "lat": -1118.328125
+      },
+      "iconPath": "/map_icons/Gem_shop_icon.png",
+      "label": "Gem Shop",
+      "plane": 0,
+      "id": "icon_1762443558154_chzhpj7zz",
+      "createdAt": 1762443558154
+    },
+    {
+      "position": {
+        "lng": 84.234375,
+        "lat": -1118.328125
+      },
+      "iconPath": "/map_icons/Vegetable_shop_icon.png",
+      "label": "Vegetable Shop",
+      "plane": 0,
+      "id": "icon_1762443562501_yf49r1n06",
+      "createdAt": 1762443562501
+    },
+    {
+      "position": {
+        "lng": 82.96875,
+        "lat": -1115.671875
+      },
+      "iconPath": "/map_icons/Silk_trader_icon.png",
+      "label": "Silk Trader",
+      "plane": 0,
+      "id": "icon_1762443592504_un98fspwt",
+      "createdAt": 1762443592504
+    },
+    {
+      "position": {
+        "lng": 82.953125,
+        "lat": -1117.90625
+      },
+      "iconPath": "/map_icons/Silver_shop_icon.png",
+      "label": "Silver Shop",
+      "plane": 0,
+      "id": "icon_1762443604633_9gavyjdb8",
+      "createdAt": 1762443604633
+    },
+    {
+      "position": {
+        "lng": 82.40625,
+        "lat": -1118.234375
+      },
+      "iconPath": "/map_icons/Death's_Office_icon.png",
+      "label": "Death's Office",
+      "plane": 0,
+      "id": "icon_1762443608890_jkdykg1rr",
+      "createdAt": 1762443608890
+    },
+    {
+      "position": {
+        "lng": 82.1875,
+        "lat": -1116.828125
+      },
+      "iconPath": "/map_icons/Altar_icon.png",
+      "label": "Altar",
+      "plane": 0,
+      "id": "icon_1762443614526_o1f5mvzhq",
+      "createdAt": 1762443614526
+    },
+    {
+      "position": {
+        "lng": 81.46875,
+        "lat": -1115.5625
+      },
+      "iconPath": "/map_icons/Poll_booth_icon.png",
+      "label": "Poll Booth",
+      "plane": 0,
+      "id": "icon_1762443621428_831o23x6b",
+      "createdAt": 1762443621428
+    },
+    {
+      "position": {
+        "lng": 81.3125,
+        "lat": -1116.078125
+      },
+      "iconPath": "/map_icons/Bank_icon.png",
+      "label": "Bank",
+      "plane": 0,
+      "id": "icon_1762443624435_x9xrbosqb",
+      "createdAt": 1762443624435
+    },
+    {
+      "position": {
+        "lng": 79.515625,
+        "lat": -1118
+      },
+      "iconPath": "/map_icons/Anvil_icon.png",
+      "label": "Anvil",
+      "plane": 0,
+      "id": "icon_1762443627591_l4ue31bly",
+      "createdAt": 1762443627591
+    },
+    {
+      "position": {
+        "lng": 80.171875,
+        "lat": -1120.421875
+      },
+      "iconPath": "/map_icons/Mining_site_icon.png",
+      "label": "Mining Site",
+      "plane": 0,
+      "id": "icon_1762443641950_c96qyv9n0",
+      "createdAt": 1762443641950
     }
   ],
   "version": 1
