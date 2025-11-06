@@ -14,7 +14,7 @@ interface OSRSButtonProps {
  * Reusable OSRS-style button with authentic world map button styling
  * 
  * Usage:
- * <OSRSButton onClick={() => console.log('clicked')}>
+ * <OSRSButton onClick={handleClick}>
  *   Click Me
  * </OSRSButton>
  */

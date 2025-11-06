@@ -25,8 +25,6 @@ export default function IconPopup({
   onClick,
   onClose
 }: IconPopupProps) {
-  console.log('IconPopup rendering:', { icon, position, onEdit, onDelete, onCopy, onMove, onClick });
-  
   return (
     <div
       className="icon-popup-container fixed z-[2000] pointer-events-auto"
@@ -36,7 +34,6 @@ export default function IconPopup({
         transform: 'translate(-50%, -100%) translateY(-10px)'
       }}
       onClick={(e) => {
-        console.log('Popup div clicked');
         e.stopPropagation();
         e.preventDefault();
       }}
@@ -50,7 +47,6 @@ export default function IconPopup({
           {icon.linkedIconId && onClick && (
             <OSRSButton
               onClick={() => {
-                console.log('Go to Link clicked for icon:', icon);
                 onClick(icon);
                 onClose();
               }}
@@ -61,7 +57,6 @@ export default function IconPopup({
           {onEdit && (
             <OSRSButton
               onClick={() => {
-                console.log('Edit clicked for icon:', icon);
                 onEdit(icon);
                 onClose();
               }}
@@ -72,7 +67,6 @@ export default function IconPopup({
           {onMove && (
             <OSRSButton
               onClick={() => {
-                console.log('Move clicked for icon:', icon);
                 onMove(icon);
                 onClose();
               }}
@@ -83,7 +77,6 @@ export default function IconPopup({
           {onCopy && (
             <OSRSButton
               onClick={() => {
-                console.log('Copy clicked for icon:', icon);
                 onCopy(icon);
                 onClose();
               }}
@@ -94,7 +87,6 @@ export default function IconPopup({
           {onDelete && (
             <OSRSButton
               onClick={() => {
-                console.log('Delete clicked for icon:', icon);
                 onDelete(icon.id);
                 onClose();
               }}

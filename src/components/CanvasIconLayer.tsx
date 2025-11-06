@@ -43,9 +43,12 @@ export default function CanvasIconLayer({
 
   // Calculate icon size based on zoom
   const getIconSize = (zoom: number) => {
-    const baseZoom = 5;
-    const baseSize = 15;
-    const scale = Math.pow(2, zoom - baseZoom);
+    const maxZoom = 6;
+    const baseSize = 25;
+
+    const zoomDiff = maxZoom - zoom;
+    const scale = Math.max(0.25, 1 - (zoomDiff * 0.35));
+    
     return baseSize * scale;
   };
 
@@ -138,11 +141,23 @@ export default function CanvasIconLayer({
 
     // Redraw the canvas
     layerRef.current.redraw();
+    
+    // Ensure canvas is visible
+    if (layerRef.current._canvas) {
+      layerRef.current._canvas.style.opacity = '1';
+    }
   }, [icons, plane, map, isLibraryLoaded]);
 
   // Update icon sizes on zoom and handle map movement
   useEffect(() => {
-    const handleZoomEnd = () => {
+    const handleZoomStart = () => {
+      if (!layerRef.current?._canvas) return;
+      
+      // Hide canvas during zoom animation
+      layerRef.current._canvas.style.opacity = '0';
+    };
+
+    const updateIconSizes = () => {
       if (!layerRef.current) return;
 
       const zoom = map.getZoom();
@@ -161,27 +176,34 @@ export default function CanvasIconLayer({
         }
       });
 
-      // Redraw canvas (library should handle clearing)
+      // Redraw canvas
       layerRef.current.redraw();
+      
+      // Show canvas after zoom completes
+      if (layerRef.current._canvas) {
+        layerRef.current._canvas.style.opacity = '1';
+      }
     };
 
     const handleMoveEnd = () => {
       if (!layerRef.current) return;
       
-      // Redraw canvas (library should handle clearing)
+      // Redraw canvas after pan
       layerRef.current.redraw();
     };
 
-    map.on('zoomend', handleZoomEnd);
+    map.on('zoomstart', handleZoomStart);
+    map.on('zoomend', updateIconSizes);
     map.on('moveend', handleMoveEnd);
 
     return () => {
-      map.off('zoomend', handleZoomEnd);
+      map.off('zoomstart', handleZoomStart);
+      map.off('zoomend', updateIconSizes);
       map.off('moveend', handleMoveEnd);
     };
   }, [map]);
 
-  // Close popup when clicking on map or when map moves
+  // Close popup when clicking on map (but not on the popup itself)
   useEffect(() => {
     const handleMapClick = (e: any) => {
       // Check if click target is the popup or its children
@@ -195,18 +217,10 @@ export default function CanvasIconLayer({
       setPopupPosition(null);
     };
 
-    const handleMapMove = () => {
-      // Close popup when map pans/moves
-      setPopupIcon(null);
-      setPopupPosition(null);
-    };
-
     map.on('click', handleMapClick);
-    map.on('movestart', handleMapMove);
 
     return () => {
       map.off('click', handleMapClick);
-      map.off('movestart', handleMapMove);
     };
   }, [map]);
 

@@ -37,13 +37,9 @@ function MapClickHandler({ onCoordinateClick }: { onCoordinateClick?: (coords: L
       const regionCoords = leafletToRegion(coords);
       
       // Calculate what tile should be requested with direct mapping
-      const tileX = Math.floor(coords.lng);
-      const tileY = Math.floor(coords.lat);
-      
-      console.log('Clicked coordinates:', coords);
-      console.log('Expected tile request:', `5/${tileX}/${tileY}.png`);
-      console.log('Region:', formatRegion(regionCoords));
-      console.log('Tile:', formatTile(tileCoords));
+      // Tile coordinates for debugging if needed
+      // const tileX = Math.floor(coords.lng);
+      // const tileY = Math.floor(coords.lat);
     },
   });
   

@@ -33,7 +33,7 @@ export default function EditIconDialog({ icon, onSave, onCancel }: EditIconDialo
         const labels = Array.from(labelSet);
         setExistingLabels(labels);
       } catch (e) {
-        console.error('Error loading existing labels:', e);
+        // Error loading existing labels
       }
     }
   }, []);

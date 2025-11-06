@@ -93,7 +93,7 @@ export async function initializeColors(): Promise<void> {
     
     colorsInitialized = true;
   } catch (error) {
-    console.error('Failed to initialize cache colors:', error);
+    // Failed to initialize cache colors
     colorsInitialized = true; // Set to true to prevent infinite retries
   }
 }

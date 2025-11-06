@@ -57,10 +57,9 @@ async function loadTileMetadata(): Promise<void> {
       const metadata: TileMetadata = await response.json();
       TILES_X = metadata.dimensions.tilesX;
       TILES_Y = metadata.dimensions.tilesY;
-      console.log(`Loaded tile dimensions: ${TILES_X}x${TILES_Y}`);
     }
   } catch (error) {
-    console.warn('Failed to load tile metadata, using defaults:', error);
+    // Failed to load tile metadata, using defaults
   }
   
   metadataLoaded = true;

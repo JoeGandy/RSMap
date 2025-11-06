@@ -21,7 +21,7 @@ export class MapIconService {
         return data.icons;
       }
     } catch (error) {
-      console.error('Error loading map icons:', error);
+      // Error loading map icons
     }
     
     return [];
@@ -40,7 +40,7 @@ export class MapIconService {
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     } catch (error) {
-      console.error('Error saving map icons:', error);
+      // Error saving map icons
     }
   }
 
@@ -109,7 +109,6 @@ export class MapIconService {
       const data: MapIconsData = JSON.parse(jsonString);
       this.saveIcons(data.icons);
     } catch (error) {
-      console.error('Error importing map icons:', error);
       throw new Error('Invalid JSON format');
     }
   }

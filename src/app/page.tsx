@@ -48,7 +48,7 @@ export default function Home() {
             icons = MapIconService.loadIcons();
           }
         } catch (error) {
-          console.log('No default map_data.json found, starting with empty icons');
+          // No default map_data.json found, starting with empty icons
         }
       }
       
@@ -228,7 +228,6 @@ export default function Home() {
             alert('Icons imported successfully!');
           } catch (error) {
             alert('Error importing icons: Invalid JSON format');
-            console.error(error);
           }
         };
         reader.readAsText(file);
