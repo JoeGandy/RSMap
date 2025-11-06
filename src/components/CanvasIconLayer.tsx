@@ -181,7 +181,7 @@ export default function CanvasIconLayer({
     };
   }, [map]);
 
-  // Close popup when clicking on map (but not on the popup itself)
+  // Close popup when clicking on map or when map moves
   useEffect(() => {
     const handleMapClick = (e: any) => {
       // Check if click target is the popup or its children
@@ -195,10 +195,18 @@ export default function CanvasIconLayer({
       setPopupPosition(null);
     };
 
+    const handleMapMove = () => {
+      // Close popup when map pans/moves
+      setPopupIcon(null);
+      setPopupPosition(null);
+    };
+
     map.on('click', handleMapClick);
+    map.on('movestart', handleMapMove);
 
     return () => {
       map.off('click', handleMapClick);
+      map.off('movestart', handleMapMove);
     };
   }, [map]);
 
