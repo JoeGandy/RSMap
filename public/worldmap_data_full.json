@@ -5031,9 +5031,9 @@
       "spriteId": -1
     },
     {
-      "name": "Sleep\u003cbr\u003eSound",
-      "worldX": 3733,
-      "worldY": 3248,
+      "name": "Slepe\u003cbr\u003eSound",
+      "worldX": 3718,
+      "worldY": 3259,
       "plane": 0,
       "textColor": 16777215,
       "textScale": 1,
@@ -12879,6 +12879,14 @@
       "textScale": 0
     },
     {
+      "id": 146,
+      "name": "Slepe\u003cbr\u003eSound",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 1
+    },
+    {
       "id": 147,
       "name": "Pirates\u0027\u003cbr\u003eHideout",
       "category": 1129,
@@ -18937,14 +18945,6 @@
     {
       "id": 1198,
       "name": "Gravewater\u003cbr\u003eBay",
-      "category": 1129,
-      "spriteId": -1,
-      "textColor": 16777215,
-      "textScale": 1
-    },
-    {
-      "id": 1199,
-      "name": "Sleep\u003cbr\u003eSound",
       "category": 1129,
       "spriteId": -1,
       "textColor": 16777215,
