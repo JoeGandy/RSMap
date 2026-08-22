@@ -12,12 +12,13 @@ interface TileParams {
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: TileParams }
+  { params }: { params: Promise<TileParams> }
 ) {
   try {
-    const z = parseInt(params.z);
-    const x = parseInt(params.x);
-    const y = parseInt(params.y);
+    const resolved = await params;
+    const z = parseInt(resolved.z);
+    const x = parseInt(resolved.x);
+    const y = parseInt(resolved.y);
 
     // Validate parameters
     if (isNaN(z) || isNaN(x) || isNaN(y)) {
