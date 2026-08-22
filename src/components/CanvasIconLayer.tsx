@@ -52,6 +52,18 @@ export default function CanvasIconLayer({
     return baseSize * scale;
   };
 
+  // leaflet-canvas-marker lazily creates its internal _latlngMarkers index on
+  // the first addMarker() call, but redraw() dereferences it unconditionally.
+  // Calling redraw() before any marker exists throws
+  // "can't access property \"dirty\", n._latlngMarkers is undefined" and can
+  // take down the whole page on load. Guard all redraw call sites until the
+  // index exists.
+  const safeRedraw = () => {
+    const layer = layerRef.current;
+    if (!layer || !layer._latlngMarkers) return;
+    layer.redraw();
+  };
+
   // Initialize canvas layer
   useEffect(() => {
     // Dynamically import the canvas marker library (client-side only)
@@ -139,8 +151,8 @@ export default function CanvasIconLayer({
       iconsRef.current.set(icon.id, marker);
     });
 
-    // Redraw the canvas
-    layerRef.current.redraw();
+    // Redraw the canvas (guarded - index may not exist before first marker)
+    safeRedraw();
     
     // Ensure canvas is visible
     if (layerRef.current._canvas) {
@@ -176,8 +188,8 @@ export default function CanvasIconLayer({
         }
       });
 
-      // Redraw canvas
-      layerRef.current.redraw();
+      // Redraw canvas (guarded)
+      safeRedraw();
       
       // Show canvas after zoom completes
       if (layerRef.current._canvas) {
@@ -188,8 +200,8 @@ export default function CanvasIconLayer({
     const handleMoveEnd = () => {
       if (!layerRef.current) return;
       
-      // Redraw canvas after pan
-      layerRef.current.redraw();
+      // Redraw canvas after pan (guarded)
+      safeRedraw();
     };
 
     map.on('zoomstart', handleZoomStart);
