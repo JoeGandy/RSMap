@@ -3151,66 +3151,6 @@
       "spriteId": -1
     },
     {
-      "name": "Callisto\u0027s\u003cbr\u003eDen",
-      "worldX": 3293,
-      "worldY": 3848,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
-      "name": "Silk\u003cbr\u003eChasm",
-      "worldX": 3321,
-      "worldY": 3793,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
-      "name": "Vet\u0027ion\u0027s\u003cbr\u003eRest",
-      "worldX": 3223,
-      "worldY": 3786,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
-      "name": "Hunter\u0027s\u003cbr\u003eEnd",
-      "worldX": 3116,
-      "worldY": 3675,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
-      "name": "Web\u003cbr\u003eChasm",
-      "worldX": 3184,
-      "worldY": 3743,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
-      "name": "Skeletal\u003cbr\u003eTomb",
-      "worldX": 3181,
-      "worldY": 3682,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
       "name": "The\u003cbr\u003eStranglewood",
       "worldX": 1155,
       "worldY": 3391,
@@ -3604,6 +3544,66 @@
       "name": "Villa\u003cbr\u003eLucens",
       "worldX": 1448,
       "worldY": 2933,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Callisto\u0027s\u003cbr\u003eDen",
+      "worldX": 3293,
+      "worldY": 3848,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Silk\u003cbr\u003eChasm",
+      "worldX": 3321,
+      "worldY": 3793,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Vet\u0027ion\u0027s\u003cbr\u003eRest",
+      "worldX": 3223,
+      "worldY": 3786,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Hunter\u0027s\u003cbr\u003eEnd",
+      "worldX": 3116,
+      "worldY": 3675,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Web\u003cbr\u003eChasm",
+      "worldX": 3184,
+      "worldY": 3743,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Skeletal\u003cbr\u003eTomb",
+      "worldX": 3181,
+      "worldY": 3682,
       "plane": 0,
       "textColor": 16777215,
       "textScale": 0,
@@ -5031,16 +5031,6 @@
       "spriteId": -1
     },
     {
-      "name": "Slepe\u003cbr\u003eSound",
-      "worldX": 3718,
-      "worldY": 3259,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 1,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
       "name": "Hallowed\u003cbr\u003eSea",
       "worldX": 3866,
       "worldY": 3330,
@@ -5524,6 +5514,46 @@
       "name": "Shipyard",
       "worldX": 2078,
       "worldY": 2720,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Slepe\u003cbr\u003eSound",
+      "worldX": 3718,
+      "worldY": 3259,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 1,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Wyrmscraig",
+      "worldX": 2600,
+      "worldY": 2240,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 1,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Ardeaglais",
+      "worldX": 2540,
+      "worldY": 2220,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Auchrie",
+      "worldX": 2570,
+      "worldY": 2250,
       "plane": 0,
       "textColor": 16777215,
       "textScale": 0,
@@ -8471,16 +8501,6 @@
       "spriteId": -1
     },
     {
-      "name": "Yama",
-      "worldX": 1504,
-      "worldY": 10084,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
       "name": "Ents",
       "worldX": 1565,
       "worldY": 9891,
@@ -8964,6 +8984,16 @@
       "name": "Sarachnis",
       "worldX": 1844,
       "worldY": 9902,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Yama",
+      "worldX": 1504,
+      "worldY": 10084,
       "plane": 0,
       "textColor": 16777215,
       "textScale": 0,
@@ -9721,26 +9751,6 @@
       "spriteId": -1
     },
     {
-      "name": "Stalker\u003cbr\u003eDen",
-      "worldX": 1286,
-      "worldY": 9775,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
-      "name": "Dragon\u003cbr\u003eNest",
-      "worldX": 1247,
-      "worldY": 9503,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
       "name": "Hunter\u003cbr\u003eGuild",
       "worldX": 1558,
       "worldY": 9459,
@@ -9804,6 +9814,26 @@
       "name": "Moonrise Brewery\u003cbr\u003eand Winery",
       "worldX": 1360,
       "worldY": 9316,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Stalker\u003cbr\u003eDen",
+      "worldX": 1286,
+      "worldY": 9775,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Dragon\u003cbr\u003eNest",
+      "worldX": 1247,
+      "worldY": 9503,
       "plane": 0,
       "textColor": 16777215,
       "textScale": 0,
@@ -10231,19 +10261,9 @@
       "spriteId": -1
     },
     {
-      "name": "Deepfin\u003cbr\u003eMine",
-      "worldX": 2016,
-      "worldY": 9194,
-      "plane": 0,
-      "textColor": 16777215,
-      "textScale": 0,
-      "category": 1129,
-      "spriteId": -1
-    },
-    {
-      "name": "Sunbleak\u003cbr\u003eCave",
-      "worldX": 2227,
-      "worldY": 8738,
+      "name": "Wyrmscraig\u003cbr\u003eCavern",
+      "worldX": 2593,
+      "worldY": 8639,
       "plane": 0,
       "textColor": 16777215,
       "textScale": 0,
@@ -10284,6 +10304,26 @@
       "name": "Iron\u003cbr\u003edragons",
       "worldX": 2154,
       "worldY": 9296,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Deepfin\u003cbr\u003eMine",
+      "worldX": 2016,
+      "worldY": 9194,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Sunbleak\u003cbr\u003eCave",
+      "worldX": 2227,
+      "worldY": 8738,
       "plane": 0,
       "textColor": 16777215,
       "textScale": 0,
@@ -10469,54 +10509,69 @@
       "textScale": 0,
       "category": 1129,
       "spriteId": -1
+    },
+    {
+      "name": "Castle\u003cbr\u003eDrakan",
+      "worldX": 2507,
+      "worldY": 7841,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Sangvesti",
+      "worldX": 2596,
+      "worldY": 7840,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 1,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Sotfa\u003cbr\u003eForest",
+      "worldX": 2771,
+      "worldY": 7832,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 1,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Ruined\u003cbr\u003eVillage",
+      "worldX": 2710,
+      "worldY": 7853,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Apsul\u003cbr\u003eHunting\u003cbr\u003eGround",
+      "worldX": 2597,
+      "worldY": 7777,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
+      "name": "Virer\u003cbr\u003eHunting\u003cbr\u003eGround",
+      "worldX": 2509,
+      "worldY": 7758,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
     }
   ],
   "icons": [
-    {
-      "name": "Icon 1535",
-      "worldX": 1696,
-      "worldY": 3865,
-      "plane": 0,
-      "spriteId": 1535,
-      "category": 1063,
-      "membersOnly": false
-    },
-    {
-      "name": "Icon 1535",
-      "worldX": 1563,
-      "worldY": 3791,
-      "plane": 0,
-      "spriteId": 1535,
-      "category": 1063,
-      "membersOnly": false
-    },
-    {
-      "name": "Icon 1535",
-      "worldX": 1470,
-      "worldY": 3653,
-      "plane": 0,
-      "spriteId": 1535,
-      "category": 1063,
-      "membersOnly": false
-    },
-    {
-      "name": "Icon 1535",
-      "worldX": 3203,
-      "worldY": 3169,
-      "plane": 0,
-      "spriteId": 1535,
-      "category": 1063,
-      "membersOnly": false
-    },
-    {
-      "name": "Icon 1535",
-      "worldX": 3681,
-      "worldY": 3537,
-      "plane": 0,
-      "spriteId": 1535,
-      "category": 1063,
-      "membersOnly": false
-    },
     {
       "name": "Icon 1535",
       "worldX": 2239,
@@ -10548,6 +10603,51 @@
       "name": "Icon 1535",
       "worldX": 2183,
       "worldY": 3327,
+      "plane": 0,
+      "spriteId": 1535,
+      "category": 1063,
+      "membersOnly": false
+    },
+    {
+      "name": "Icon 1535",
+      "worldX": 3681,
+      "worldY": 3537,
+      "plane": 0,
+      "spriteId": 1535,
+      "category": 1063,
+      "membersOnly": false
+    },
+    {
+      "name": "Icon 1535",
+      "worldX": 1696,
+      "worldY": 3865,
+      "plane": 0,
+      "spriteId": 1535,
+      "category": 1063,
+      "membersOnly": false
+    },
+    {
+      "name": "Icon 1535",
+      "worldX": 1563,
+      "worldY": 3791,
+      "plane": 0,
+      "spriteId": 1535,
+      "category": 1063,
+      "membersOnly": false
+    },
+    {
+      "name": "Icon 1535",
+      "worldX": 1470,
+      "worldY": 3653,
+      "plane": 0,
+      "spriteId": 1535,
+      "category": 1063,
+      "membersOnly": false
+    },
+    {
+      "name": "Icon 1535",
+      "worldX": 3203,
+      "worldY": 3169,
       "plane": 0,
       "spriteId": 1535,
       "category": 1063,
@@ -12238,8 +12338,8 @@
     },
     {
       "name": "Icon 1535",
-      "worldX": 1959,
-      "worldY": 9190,
+      "worldX": 2563,
+      "worldY": 8630,
       "plane": 0,
       "spriteId": 1535,
       "category": 1063,
@@ -12247,8 +12347,17 @@
     },
     {
       "name": "Icon 1535",
-      "worldX": 2219,
-      "worldY": 8730,
+      "worldX": 2564,
+      "worldY": 8606,
+      "plane": 0,
+      "spriteId": 1535,
+      "category": 1063,
+      "membersOnly": false
+    },
+    {
+      "name": "Icon 1535",
+      "worldX": 2577,
+      "worldY": 8657,
       "plane": 0,
       "spriteId": 1535,
       "category": 1063,
@@ -12267,6 +12376,24 @@
       "name": "Icon 1535",
       "worldX": 1941,
       "worldY": 9451,
+      "plane": 0,
+      "spriteId": 1535,
+      "category": 1063,
+      "membersOnly": false
+    },
+    {
+      "name": "Icon 1535",
+      "worldX": 1959,
+      "worldY": 9190,
+      "plane": 0,
+      "spriteId": 1535,
+      "category": 1063,
+      "membersOnly": false
+    },
+    {
+      "name": "Icon 1535",
+      "worldX": 2219,
+      "worldY": 8730,
       "plane": 0,
       "spriteId": 1535,
       "category": 1063,
@@ -16983,6 +17110,14 @@
       "textScale": 0
     },
     {
+      "id": 700,
+      "name": "Sangvesti",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 1
+    },
+    {
       "id": 851,
       "name": "Ancient\u003cbr\u003ePrison",
       "category": 1129,
@@ -18951,6 +19086,14 @@
       "textScale": 1
     },
     {
+      "id": 1199,
+      "name": "Sotfa\u003cbr\u003eForest",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 1
+    },
+    {
       "id": 1200,
       "name": "Hallowed\u003cbr\u003eSea",
       "category": 1129,
@@ -19357,6 +19500,62 @@
       "spriteId": -1,
       "textColor": 16777215,
       "textScale": 0
+    },
+    {
+      "id": 1257,
+      "name": "Ruined\u003cbr\u003eVillage",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 0
+    },
+    {
+      "id": 1258,
+      "name": "Apsul\u003cbr\u003eHunting\u003cbr\u003eGround",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 0
+    },
+    {
+      "id": 1259,
+      "name": "Virer\u003cbr\u003eHunting\u003cbr\u003eGround",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 0
+    },
+    {
+      "id": 1261,
+      "name": "Wyrmscraig\u003cbr\u003eCavern",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 0
+    },
+    {
+      "id": 1262,
+      "name": "Wyrmscraig",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 1
+    },
+    {
+      "id": 1263,
+      "name": "Ardeaglais",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 0
+    },
+    {
+      "id": 1264,
+      "name": "Auchrie",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 0
     }
   ],
   "intermapLinks": {
@@ -19388,6 +19587,11 @@
     "3059,9778,0": {
       "x": 3059,
       "y": 3377,
+      "z": 0
+    },
+    "2563,2203,0": {
+      "x": 2564,
+      "y": 8606,
       "z": 0
     },
     "2731,3713,0": {
@@ -19453,6 +19657,11 @@
     "2857,3519,0": {
       "x": 2857,
       "y": 9919,
+      "z": 0
+    },
+    "2769,8657,0": {
+      "x": 2541,
+      "y": 2213,
       "z": 0
     },
     "3168,8874,0": {
@@ -19593,6 +19802,11 @@
     "2724,9775,0": {
       "x": 2724,
       "y": 3375,
+      "z": 0
+    },
+    "2756,8606,0": {
+      "x": 2563,
+      "y": 2203,
       "z": 0
     },
     "3088,3571,0": {
@@ -19793,6 +20007,11 @@
     "3681,3537,0": {
       "x": 2163,
       "y": 5115,
+      "z": 0
+    },
+    "2530,2206,0": {
+      "x": 2563,
+      "y": 8630,
       "z": 0
     },
     "1597,9900,0": {
@@ -20785,6 +21004,11 @@
       "y": 2819,
       "z": 0
     },
+    "2755,8630,0": {
+      "x": 2529,
+      "y": 2206,
+      "z": 0
+    },
     "2820,3484,0": {
       "x": 2820,
       "y": 9884,
@@ -20863,6 +21087,11 @@
     "2587,3235,0": {
       "x": 2571,
       "y": 9685,
+      "z": 0
+    },
+    "2541,2213,0": {
+      "x": 2577,
+      "y": 8657,
       "z": 0
     },
     "2632,9694,0": {
@@ -21362,11 +21591,11 @@
     }
   },
   "stats": {
-    "totalElements": 1259,
-    "elementsWithLabels": 1047,
-    "elementsWithIcons": 212,
-    "totalAreas": 1254,
-    "intermapLinkCount": 400,
+    "totalElements": 1272,
+    "elementsWithLabels": 1057,
+    "elementsWithIcons": 215,
+    "totalAreas": 1266,
+    "intermapLinkCount": 406,
     "categories": {
       "-1": "Unknown",
       "0": "City/Town",
