@@ -15,13 +15,32 @@ repositories {
 }
 
 dependencies {
-    implementation 'net.runelite:cache:1.12.0'
+    // Dynamic patch version: always resolve the latest stable 1.12.x release
+    // at build time (snapshots rejected below). OSRS game updates regularly
+    // add new definition opcodes that old cache library versions cannot parse
+    // (BufferUnderflowException), which broke monthly tile generation from
+    // March-August 2026 while pinned to 1.12.0.
+    implementation 'net.runelite:cache:1.12.+'
     implementation 'commons-cli:commons-cli:1.5.0'
     implementation 'org.projectlombok:lombok:1.18.30'
     implementation 'ch.qos.logback:logback-classic:1.4.14'
     implementation 'com.google.code.gson:gson:2.10.1'
     
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+configurations.all {
+    resolutionStrategy {
+        // Prefer stable releases over -SNAPSHOT builds when resolving
+        // dynamic versions (repo publishes both).
+        componentSelection {
+            all { ComponentSelection selection ->
+                if (selection.candidate.version.contains('SNAPSHOT')) {
+                    selection.reject("prefer stable release")
+                }
+            }
+        }
+    }
 }
 
 application {
