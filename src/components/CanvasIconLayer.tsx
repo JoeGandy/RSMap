@@ -39,7 +39,28 @@ export default function CanvasIconLayer({
   const iconsRef = useRef<Map<string, any>>(new Map());
   const [isLibraryLoaded, setIsLibraryLoaded] = useState(false);
   const [popupIcon, setPopupIcon] = useState<MapIcon | null>(null);
-  const [popupPosition, setPopupPosition] = useState<{ x: number; y: number } | null>(null);
+  // Anchor the popup to the icon's geographic position (not a frozen screen
+  // point) so it pans/zooms together with the map.
+  const [popupLatLng, setPopupLatLng] = useState<{ lat: number; lng: number } | null>(null);
+
+  // Project the anchored geographic point to a screen position whenever the
+  // map moves or zooms, so the popup rides along with its icon.
+  const [popupScreen, setPopupScreen] = useState<{ x: number; y: number } | null>(null);
+  useEffect(() => {
+    if (!popupLatLng) {
+      setPopupScreen(null);
+      return;
+    }
+    const project = () => {
+      const p = map.latLngToContainerPoint([popupLatLng.lat, popupLatLng.lng]);
+      setPopupScreen({ x: p.x, y: p.y });
+    };
+    project();
+    map.on('move zoom viewreset resize', project);
+    return () => {
+      map.off('move zoom viewreset resize', project);
+    };
+  }, [map, popupLatLng]);
 
   // Calculate icon size based on zoom
   const getIconSize = (zoom: number) => {
@@ -93,11 +114,13 @@ export default function CanvasIconLayer({
           if (data && data.length > 0) {
             const markerData = data[0].data;
             const iconData = markerData._iconData;
-            
+
             if (iconData) {
-              // Show popup at click position
+              // Anchor popup to the icon's geographic position so it tracks
+              // the map on pan/zoom; convert to screen point for rendering.
+              const ll = markerData.getLatLng();
               setPopupIcon(iconData);
-              setPopupPosition({ x: e.containerPoint.x, y: e.containerPoint.y });
+              setPopupLatLng({ lat: ll.lat, lng: ll.lng });
             }
           }
         });
@@ -226,7 +249,7 @@ export default function CanvasIconLayer({
       }
       
       setPopupIcon(null);
-      setPopupPosition(null);
+      setPopupLatLng(null);
     };
 
     map.on('click', handleMapClick);
@@ -238,10 +261,10 @@ export default function CanvasIconLayer({
 
   return (
     <>
-      {popupIcon && popupPosition && (
+      {popupIcon && popupScreen && (
         <IconPopup
           icon={popupIcon}
-          position={popupPosition}
+          position={popupScreen}
           onEdit={onIconEdit}
           onDelete={onIconDelete}
           onCopy={onIconCopy}
@@ -249,7 +272,7 @@ export default function CanvasIconLayer({
           onClick={onIconClick}
           onClose={() => {
             setPopupIcon(null);
-            setPopupPosition(null);
+            setPopupLatLng(null);
           }}
         />
       )}

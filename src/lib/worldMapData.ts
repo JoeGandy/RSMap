@@ -216,7 +216,13 @@ export async function loadWorldMapPlacementsAsIcons(): Promise<MapIcon[]> {
 
   const icons: MapIcon[] = [];
   let index = 0;
+  // Sprite IDs 1534 (dungeon map link) and 1535 (map link) are navigation
+  // markers already covered by the dedicated intermap-links system
+  // (loadWorldMapAsIcons), which carries real linkDestination coordinates.
+  // Rendering them here too would stack dead icons over working links.
+  const LINK_SPRITES = new Set([1534, 1535]);
   for (const p of data.placements ?? []) {
+    if (LINK_SPRITES.has(p.spriteId)) continue;
     const coords = osrsWorldToLeaflet(p.worldX, p.worldY, p.plane);
     const rawName = spriteNames[String(p.spriteId)] || p.name || `Icon ${p.spriteId}`;
     const name = rawName

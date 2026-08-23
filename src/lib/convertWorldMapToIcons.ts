@@ -24,23 +24,16 @@ export async function loadWorldMapAsIcons(includeIntermapLinks: boolean = true):
       const endCoords = osrsWorldToLeaflet(endPos.x, endPos.y, endPos.z);
       
       // Create icon at start location with destination stored.
-      // Self-contained SVG arrow - no dependency on manual icon assets.
-      const linkIcon = 'data:image/svg+xml;base64,' + Buffer.from(
-        `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">` +
-        `<circle cx="9" cy="9" r="8" fill="rgba(0,0,0,0.65)" stroke="#FFD700" stroke-width="1.5"/>` +
-        `<path d="M5 9h6M8.5 6l3 3-3 3" stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>` +
-        `</svg>`
-      ).toString('base64');
-
-      // Create icon at start location with destination stored
+      // Keeps the proven manual-system asset (Map_link_icon.png) so link
+      // visuals stay consistent with the pre-cache behaviour.
       mapIcons.push({
         id: `worldmap-link-${linkIndex}`,
         position: {
           lng: startCoords.lng,
           lat: startCoords.lat
         },
-        iconPath: linkIcon,
-        label: `Link ${linkIndex + 1}`,
+        iconPath: '/map_icons/Map_link_icon.png',
+        label: 'Map link',
         plane: startZ,
         createdAt: Date.now(),
         linkDestination: {
