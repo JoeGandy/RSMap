@@ -2,7 +2,7 @@
 
 An interactive Old School RuneScape world map built with Next.js, React-Leaflet, and TypeScript. Explore the world of Gielinor with authentic map tiles generated from the actual game cache.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/osrs-world-map)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/JoeGandy/RSMap)
 
 ## ✨ Features
 
@@ -17,17 +17,17 @@ An interactive Old School RuneScape world map built with Next.js, React-Leaflet,
 
 ### Prerequisites
 
-- Node.js 18+ 
-- npm or yarn
-- Docker (for tile generation)
+- Node.js 22
+- npm
+- Docker + Python 3 (tile generation only — not needed for app development)
 
 ### Quick Start
 
 1. **Clone and install**:
 ```bash
-git clone https://github.com/yourusername/osrs-world-map.git
-cd osrs-world-map
-npm install
+git clone https://github.com/JoeGandy/RSMap.git
+cd RSMap
+npm ci
 ```
 
 2. **Run development server**:
@@ -49,9 +49,9 @@ npm run build
 # Deploy the .next folder to your hosting provider
 ```
 
-### 🎮 Generating Real OSRS Tiles (Optional)
+### 🎮 Generating Real OSRS Tiles
 
-To use actual OSRS map data instead of placeholder tiles:
+Tiles come from the real game cache and are regenerated monthly by GitHub Actions, so you normally don't need to generate them locally:
 
 1. **Prerequisites**: Docker and Python 3 installed
 2. **Clean build** (recommended):
@@ -132,22 +132,24 @@ When you click on the map, you'll see:
 ### Adding New Features
 
 1. **Custom Overlays**: Add markers, shapes, or other overlays using React-Leaflet components
-2. **Real Cache Data**: Replace the placeholder tile generation with actual OSRS cache data using `osrscachereader`
-3. **Map Layers**: Add different map layers (surface, underground, etc.)
+2. **Map Layers**: Add different map layers (surface, underground, etc.)
+3. **AI agents**: start with `AGENTS.md` — it lists the repo's known traps and diagnostic shortcuts
 
 ### Tile Generation
 
-The current tile generation is a placeholder. For production use:
+Tile generation is fully implemented (not a placeholder): the monthly GitHub Action downloads the real OSRS cache from [OpenRS2](https://www.openrs2.org/), renders it with RuneLite's MapImageDumper, slices it into ~193k zoom-pyramid tiles, and commits them. See `TILE_AUTOMATION.md`, `tile_generator/README.md`, and `AGENTS.md` for internals and known failure modes.
 
-1. Use `osrscachereader` to load actual OSRS cache data
-2. Implement proper underlay/overlay rendering
-3. Add height-based shading and textures
-4. Cache generated tiles for performance
+### Documentation
+
+- `AGENTS.md` — entry point for AI agents: architecture map, gotchas, diagnostics
+- `DEPLOYMENT.md` / `docs/DEPLOYMENT_ARCHITECTURE.md` — hosting reality and deploy verification
+- `docs/WORLDMAP_DATA_SYSTEM.md` — worldmap data extraction + coordinate functions
+- `docs/GITHUB_ACTIONS_SUMMARY.md` — tile-run summary reference
 
 ## 🛠️ Tech Stack
 
-- **[Next.js 14](https://nextjs.org/)**: React framework with App Router
-- **[React-Leaflet](https://react-leaflet.js.org/)**: React components for Leaflet maps  
+- **[Next.js 15](https://nextjs.org/)**: React framework with App Router
+- **[React 19](https://react.dev/)** + **[React-Leaflet v5](https://react-leaflet.js.org/)**: map UI
 - **[TypeScript](https://www.typescriptlang.org/)**: Type-safe JavaScript
 - **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework
 - **[Leaflet](https://leafletjs.com/)**: Interactive map library
