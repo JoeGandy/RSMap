@@ -2,19 +2,21 @@
 
 ## Overview
 
-The map now uses data extracted directly from the OSRS cache via RuneLite's cache library. This provides **863 location labels** with accurate positions and metadata.
+The map uses data extracted directly from the OSRS cache via RuneLite's cache library. All map icons are **fully automatic** — there is no manual icon management anywhere in the app.
 
 ## Data Files
 
 ### `public/worldmap_data_full.json`
 Complete worldmap data extracted from OSRS cache containing:
-- **863 labels**: City names, dungeon names, landmarks
-- **198 icons**: Generic POI markers (sprite ID 1535)
-- **683 area definitions**: All named areas in the game
-- **372 intermap links**: Teleport/ladder connections
+- **1,057 labels**: City names, dungeon names, landmarks
+- **4,310 icon placements** (`placements[]`): every official map icon — 4,095 from object placements whose definition carries a `mapAreaId` → area → sprite chain (dungeon entrances, stairs, shortcuts, transport...) and 215 from worldmap elements
+- **881 area definitions**
+- **406 intermap links**: Teleport/ladder connections
 
-### `public/worldmap_labels.json` (legacy)
-Simplified label-only export for backward compatibility.
+### `public/map_sprites/`
+The **135 actual game sprite PNGs** referenced by placements (`{spriteId}.png`), exported straight from the cache's sprite archive. The frontend renders each placement with its real sprite — no hand-drawn substitutes.
+
+Both are regenerated monthly by the tile-generation workflow.
 
 ## Architecture
 
@@ -176,13 +178,8 @@ The data includes two main categories:
 4. **Search**: Add search functionality for locations
 5. **Filtering**: Filter by category, members/F2P, plane
 
-## Migration from map_data.json
+## Icon Rendering
 
-The old `map_data.json` system is still supported for custom markers. The worldmap labels are additive and can be toggled independently:
+Icons come exclusively from the cache extraction (see `placements[]` above) and render through `CanvasIconLayer` using the exported sprite PNGs. The former manual system (`map_data.json`, add/edit dialogs, localStorage icons, marker migration) was removed — every icon on the map is regenerated from the game cache each month, so it can never drift from the actual game.
 
-```typescript
-<OSRSMap
-  icons={customIcons}              // Your custom icons
-  showWorldMapLabels={true}        // + OSRS cache labels
-/>
-```
+Intermap links render as a self-contained SVG arrow marker and remain clickable to jump to their destination.

@@ -4,6 +4,7 @@
  */
 
 import { osrsWorldToLeaflet, LeafletCoords } from './coordinates';
+import { MapIcon } from '@/types/mapIcon';
 
 export interface WorldMapLabel {
   name: string;
@@ -40,6 +41,7 @@ export interface WorldMapData {
   icons: WorldMapIcon[];
   areas: WorldMapArea[];
   intermapLinks: Record<string, { x: number; y: number; z: number }>;
+  placements?: IconPlacement[];
   stats: {
     totalElements: number;
     elementsWithLabels: number;
@@ -48,6 +50,22 @@ export interface WorldMapData {
     intermapLinkCount: number;
     categories: Record<number, string>;
   };
+}
+
+/**
+ * A concrete icon position extracted from the game cache. Sourced from an
+ * official worldmap element ("element") or from an object placement with a
+ * mapAreaId -> area -> sprite chain ("object"). Rendered using the sprite
+ * PNG at /map_sprites/{spriteId}.png.
+ */
+export interface IconPlacement {
+  name: string;
+  worldX: number;
+  worldY: number;
+  plane: number;
+  spriteId: number;
+  membersOnly?: boolean;
+  source?: 'object' | 'element';
 }
 
 export interface MapMarker {
@@ -65,65 +83,7 @@ export interface MapMarker {
   plane?: number;
 }
 
-interface SpriteMapping {
-  version: number;
-  description: string;
-  mappings: {
-    byCategory: Record<string, { name: string; icon: string | null; description: string }>;
-    bySpriteId: Record<string, { name: string; icon: string | null; description: string }>;
-    byName: Record<string, { keywords: string[]; icon: string }>;
-  };
-  defaultIcon: string;
-  iconPath: string;
-}
-
-let spriteMappingCache: SpriteMapping | null = null;
-
-/**
- * Load sprite mapping configuration
- */
-async function loadSpriteMapping(): Promise<SpriteMapping> {
-  if (spriteMappingCache) {
-    return spriteMappingCache;
-  }
-  
-  const response = await fetch('/sprite_mapping.json');
-  if (!response.ok) {
-    throw new Error(`Failed to load sprite mapping: ${response.statusText}`);
-  }
-  spriteMappingCache = await response.json();
-  return spriteMappingCache!;
-}
-
-/**
- * Get icon filename from sprite ID, category, and name
- */
-async function getIconFile(spriteId: number, category: number, name: string): Promise<string | null> {
-  const mapping = await loadSpriteMapping();
-  
-  // Try sprite ID first
-  const spriteMapping = mapping.mappings.bySpriteId[spriteId.toString()];
-  if (spriteMapping && spriteMapping.icon) {
-    return mapping.iconPath + spriteMapping.icon;
-  }
-  
-  // Try category
-  const categoryMapping = mapping.mappings.byCategory[category.toString()];
-  if (categoryMapping && categoryMapping.icon) {
-    return mapping.iconPath + categoryMapping.icon;
-  }
-  
-  // Try name-based matching
-  const nameLower = name.toLowerCase();
-  for (const [type, config] of Object.entries(mapping.mappings.byName)) {
-    if (config.keywords.some(keyword => nameLower.includes(keyword))) {
-      return mapping.iconPath + config.icon;
-    }
-  }
-  
-  // Return default icon
-  return mapping.iconPath + mapping.defaultIcon;
-}
+let spriteMappingCache: unknown = null;
 
 /**
  * Get icon type from name for backward compatibility
@@ -235,6 +195,33 @@ export async function loadAllMarkers(): Promise<MapMarker[]> {
   const iconMarkers = iconsToMarkers(data.icons);
   
   return [...labelMarkers, ...iconMarkers];
+}
+
+/**
+ * Convert cache-extracted icon placements to MapIcon format for CanvasIconLayer.
+ * Each placement renders the actual game sprite PNG exported next to the data.
+ */
+export async function loadWorldMapPlacementsAsIcons(): Promise<MapIcon[]> {
+  const data = await loadWorldMapData();
+
+  const icons: MapIcon[] = [];
+  let index = 0;
+  for (const p of data.placements ?? []) {
+    const coords = osrsWorldToLeaflet(p.worldX, p.worldY, p.plane);
+    const name = (p.name || `Icon ${p.spriteId}`)
+      .replace(/\\u003cbr\\u003e/g, ' ')
+      .replace(/<br>/g, ' ')
+      .replace(/\\u0027/g, "'");
+    icons.push({
+      id: `wm-${index++}`,
+      position: { lng: coords.lng, lat: coords.lat },
+      iconPath: `/map_sprites/${p.spriteId}.png`,
+      label: name,
+      plane: p.plane,
+      createdAt: 0,
+    });
+  }
+  return icons;
 }
 
 /**

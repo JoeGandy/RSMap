@@ -37,12 +37,6 @@ jobs:
         NODE_OPTIONS: '--max-old-space-size=4096'
         CI: 'true'
 
-    - name: Migrate markers if dimensions changed
-      run: |
-        echo "🔄 Checking if marker migration is needed..."
-        npm run migrate-markers -- --auto-detect || echo "⚠️ Migration skipped (no dimension changes or error)"
-      continue-on-error: true
-
     - name: Extract worldmap data from cache
       run: |
         echo "🗺️ Extracting worldmap labels and intermap links..."
@@ -54,23 +48,15 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        # Add tiles, metadata, markers, and worldmap data
+        # Add tiles, metadata, worldmap data, and map sprites
         git add public/tiles/
         git add public/tile_metadata.json
-        git add public/map_data.json
         git add public/worldmap_data_full.json
-        git add backups/
+        git add public/map_sprites/
         
         if ! git diff --staged --quiet; then
           TILE_COUNT=$(find public/tiles -name "*.png" | wc -l)
-          
-          # Check if metadata changed (dimension update)
-          if git diff --staged --name-only | grep -q "tile_metadata.json"; then
-            echo "📊 Tile dimensions changed - markers migrated"
-            COMMIT_MSG="🗺️ Auto-update OSRS tiles & migrate markers (${TILE_COUNT} files) - $(date '+%Y-%m-%d')"
-          else
-            COMMIT_MSG="🗺️ Auto-update OSRS tiles (${TILE_COUNT} files) - $(date '+%Y-%m-%d')"
-          fi
+          COMMIT_MSG="🗺️ Auto-update OSRS tiles (${TILE_COUNT} files) - $(date '+%Y-%m-%d')"
           
           git commit -m "${COMMIT_MSG}"
           git push
@@ -110,18 +96,14 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
         fi
         
-        # Check if markers were migrated
-        if git log -1 --pretty=%B | grep -q "migrate markers"; then
-          MARKER_COUNT=$(grep -o '"id":' public/map_data.json 2>/dev/null | wc -l || echo "0")
-          BACKUP_COUNT=$(ls -1 backups/*.json 2>/dev/null | wc -l || echo "0")
-          echo "## ✅ Marker Migration" >> $GITHUB_STEP_SUMMARY
-          echo "- **Status**: Migrated successfully" >> $GITHUB_STEP_SUMMARY
-          echo "- **Markers updated**: ${MARKER_COUNT}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Backups created**: ${BACKUP_COUNT}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Reason**: Map dimensions changed" >> $GITHUB_STEP_SUMMARY
-        else
-          echo "## ℹ️ Marker Migration" >> $GITHUB_STEP_SUMMARY
-          echo "- **Status**: Not needed (dimensions unchanged)" >> $GITHUB_STEP_SUMMARY
+        # Icon placement stats
+        if [ -f "public/worldmap_data_full.json" ]; then
+          PLACEMENTS=$(python3 -c "import json;print(len(json.load(open('public/worldmap_data_full.json')).get('placements',[])))" 2>/dev/null || echo "?")
+          SPRITES=$(ls public/map_sprites 2>/dev/null | wc -l)
+          echo "## 📍 Map Icons" >> $GITHUB_STEP_SUMMARY
+          echo "- **Icon placements**: ${PLACEMENTS}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Sprites exported**: ${SPRITES}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
         fi
         echo "" >> $GITHUB_STEP_SUMMARY
         

@@ -5,11 +5,9 @@ import dynamic from 'next/dynamic';
 import { LeafletCoords } from '@/lib/coordinates';
 import IronRivetPanel from '@/components/IronRivetPanel';
 import OSRSButton from '@/components/OSRSButton';
-import AddIconDialog from '@/components/AddIconDialog';
-import EditIconDialog from '@/components/EditIconDialog';
 import { MapIcon } from '@/types/mapIcon';
-import { MapIconService } from '@/lib/mapIconService';
-import { loadWorldMapAsIcons, mergeWithUserIcons } from '@/lib/convertWorldMapToIcons';
+import { loadWorldMapAsIcons } from '@/lib/convertWorldMapToIcons';
+import { loadWorldMapPlacementsAsIcons } from '@/lib/worldMapData';
 
 // Dynamically import the map component to avoid SSR issues
 const OSRSMap = dynamic(() => import('@/components/OSRSMap'), {
@@ -24,185 +22,47 @@ const OSRSMap = dynamic(() => import('@/components/OSRSMap'), {
 export default function Home() {
   const [clickedCoords, setClickedCoords] = useState<LeafletCoords | null>(null);
   const [currentPlane, setCurrentPlane] = useState(0);
-  const [addIconMode, setAddIconMode] = useState(false);
-  const [showIconDialog, setShowIconDialog] = useState(false);
-  const [pendingIconPosition, setPendingIconPosition] = useState<LeafletCoords | null>(null);
   const [mapIcons, setMapIcons] = useState<MapIcon[]>([]);
-  const [copyingIcon, setCopyingIcon] = useState<MapIcon | null>(null);
-  const [movingIcon, setMovingIcon] = useState<MapIcon | null>(null);
-  const [editingIcon, setEditingIcon] = useState<MapIcon | null>(null);
-  const [pendingDungeonLink, setPendingDungeonLink] = useState<MapIcon | null>(null);
   const mapRef = useRef<any>(null);
 
-  // Load icons on mount - merge user icons with worldmap icons
+  // Load icons extracted from the OSRS game cache: every object placement /
+  // worldmap element that carries an official map sprite, plus intermap links.
+  // Regenerated monthly alongside the map tiles - no manual icon management.
   useEffect(() => {
     const loadIcons = async () => {
-      let userIcons = MapIconService.loadIcons();
-      
-      // If no icons in localStorage, try loading from public file
-      if (userIcons.length === 0) {
-        try {
-          const response = await fetch('/map_data.json');
-          if (response.ok) {
-            const jsonString = await response.text();
-            MapIconService.importFromJSON(jsonString);
-            userIcons = MapIconService.loadIcons();
-          }
-        } catch (error) {
-          // No default map_data.json found, starting with empty icons
-        }
-      }
-      
-      // Load worldmap icons and merge with user icons
       try {
-        const worldMapIcons = await loadWorldMapAsIcons(true); // Include intermap links
-        const allIcons = mergeWithUserIcons(worldMapIcons, userIcons);
+        const [placementIcons, linkIcons] = await Promise.all([
+          loadWorldMapPlacementsAsIcons(),
+          loadWorldMapAsIcons(true),
+        ]);
+        const allIcons = [...placementIcons, ...linkIcons];
         setMapIcons(allIcons);
-        console.log(`✅ Loaded ${userIcons.length} user icons + ${worldMapIcons.length} worldmap icons = ${allIcons.length} total`);
+        console.log(
+          `✅ Loaded ${placementIcons.length} cache icon placements + ${linkIcons.length} intermap links = ${allIcons.length} total`
+        );
       } catch (error) {
         console.error('Failed to load worldmap icons:', error);
-        setMapIcons(userIcons); // Fall back to just user icons
+        setMapIcons([]);
       }
     };
-    
+
     loadIcons();
   }, []);
 
   const handleCoordinateClick = (coords: LeafletCoords) => {
     setClickedCoords(coords);
-    
-    // If placing linked icon (dungeon exit or map link pair)
-    if (pendingDungeonLink) {
-      // Determine what icon type to create based on the first icon
-      const linkedIconPath = pendingDungeonLink.iconPath === '/map_icons/Dungeon_icon.png' 
-        ? '/map_icons/Map_link_icon.png'  // Dungeon -> Map link
-        : '/map_icons/Map_link_icon.png';  // Map link -> Map link
-      
-      // Create the linked icon at the new location
-      const linkedIcon = MapIconService.addIcon({
-        position: coords,
-        iconPath: linkedIconPath,
-        label: pendingDungeonLink.label,
-        plane: currentPlane,
-        linkedIconId: pendingDungeonLink.id
-      });
-      
-      // Update the first icon to link back
-      MapIconService.updateIcon(pendingDungeonLink.id, {
-        linkedIconId: linkedIcon.id
-      });
-      
-      setMapIcons(MapIconService.loadIcons());
-      setPendingDungeonLink(null);
-      return;
-    }
-    
-    // If moving an icon, update its position
-    if (movingIcon) {
-      MapIconService.updateIcon(movingIcon.id, {
-        position: coords,
-        plane: currentPlane
-      });
-      setMapIcons(MapIconService.loadIcons());
-      setMovingIcon(null); // Exit move mode after placing
-      return;
-    }
-    
-    // If copying an icon, add it at the new location
-    if (copyingIcon) {
-      MapIconService.addIcon({
-        position: coords,
-        iconPath: copyingIcon.iconPath,
-        label: copyingIcon.label,
-        plane: currentPlane
-      });
-      setMapIcons(MapIconService.loadIcons());
-      // Stay in copy mode for multiple placements
-      return;
-    }
-    
-    // If in add icon mode, show dialog
-    if (addIconMode) {
-      setPendingIconPosition(coords);
-      setShowIconDialog(true);
-    }
-  };
-
-  const handleAddIcon = (iconPath: string, label: string) => {
-    if (pendingIconPosition) {
-      const newIcon = MapIconService.addIcon({
-        position: pendingIconPosition,
-        iconPath,
-        label,
-        plane: currentPlane
-      });
-      setMapIcons(MapIconService.loadIcons());
-      setShowIconDialog(false);
-      setPendingIconPosition(null);
-      
-      // Check if this is a dungeon or map link icon - if so, prompt for linked pair
-      if (iconPath === '/map_icons/Dungeon_icon.png' || iconPath === '/map_icons/Map_link_icon.png') {
-        setPendingDungeonLink(newIcon);
-        // Don't exit add mode, wait for second click
-      }
-      // Keep addIconMode active so user can add more icons
-      // setAddIconMode(false); // Commented out to stay in add mode
-    }
-  };
-
-  const handleDeleteIcon = (id: string) => {
-    MapIconService.removeIcon(id);
-    setMapIcons(MapIconService.loadIcons());
-  };
-
-  const handleCopyIcon = (icon: MapIcon) => {
-    setCopyingIcon(icon);
-    setMovingIcon(null); // Exit move mode if active
-    setAddIconMode(false); // Exit add mode if active
-  };
-
-  const handleMoveIcon = (icon: MapIcon) => {
-    setMovingIcon(icon);
-    setCopyingIcon(null); // Exit copy mode if active
-    setAddIconMode(false); // Exit add mode if active
-  };
-
-  const handleEditIcon = (icon: MapIcon) => {
-    setEditingIcon(icon);
-  };
-
-  const handleSaveEdit = (iconPath: string, label: string) => {
-    if (editingIcon) {
-      MapIconService.updateIcon(editingIcon.id, {
-        iconPath,
-        label
-      });
-      setMapIcons(MapIconService.loadIcons());
-      setEditingIcon(null);
-    }
   };
 
   const handleIconClick = (icon: MapIcon) => {
-    // If icon has a linked icon, jump to it
-    if (icon.linkedIconId) {
-      const linkedIcon = mapIcons.find(i => i.id === icon.linkedIconId);
-      if (linkedIcon && mapRef.current) {
-        // Change plane if needed
-        if (linkedIcon.plane !== currentPlane) {
-          setCurrentPlane(linkedIcon.plane);
-        }
-        // Pan to the linked icon's location
-        mapRef.current.setView([linkedIcon.position.lat, linkedIcon.position.lng], mapRef.current.getZoom());
-      }
-    }
-    // If icon has a link destination (intermap link), jump to those coordinates
-    else if (icon.linkDestination && mapRef.current) {
-      // Change plane if needed
+    // Jump to the destination of an intermap link (stairs/ladders between planes etc.)
+    if (icon.linkDestination && mapRef.current) {
       if (icon.linkDestination.plane !== currentPlane) {
         setCurrentPlane(icon.linkDestination.plane);
       }
-      // Pan to the destination coordinates
-      mapRef.current.setView([icon.linkDestination.lat, icon.linkDestination.lng], mapRef.current.getZoom());
+      mapRef.current.setView(
+        [icon.linkDestination.lat, icon.linkDestination.lng],
+        mapRef.current.getZoom()
+      );
     }
   };
 
@@ -218,43 +78,6 @@ export default function Home() {
     }
   };
 
-  const handleExportIcons = () => {
-    const jsonString = MapIconService.exportToJSON();
-    const blob = new Blob([jsonString], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `osrs-map-icons-${Date.now()}.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  };
-
-  const handleImportIcons = () => {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'application/json';
-    input.onchange = (e) => {
-      const file = (e.target as HTMLInputElement).files?.[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          try {
-            const jsonString = event.target?.result as string;
-            MapIconService.importFromJSON(jsonString);
-            setMapIcons(MapIconService.loadIcons());
-            alert('Icons imported successfully!');
-          } catch (error) {
-            alert('Error importing icons: Invalid JSON format');
-          }
-        };
-        reader.readAsText(file);
-      }
-    };
-    input.click();
-  };
-
   return (
     <main className="flex min-h-screen flex-col">
       <div className="flex-1 flex">
@@ -265,12 +88,7 @@ export default function Home() {
             onPlaneChange={setCurrentPlane}
             onMapReady={(map) => { mapRef.current = map; }}
             icons={mapIcons}
-            onIconDelete={handleDeleteIcon}
-            onIconCopy={handleCopyIcon}
-            onIconMove={handleMoveIcon}
-            onIconEdit={handleEditIcon}
             onIconClick={handleIconClick}
-            addIconMode={addIconMode}
           />
         </div>
       </div>
@@ -320,67 +138,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Add Icon Button */}
-            <OSRSButton 
-              onClick={() => {
-                if (pendingDungeonLink) {
-                  setPendingDungeonLink(null);
-                } else if (movingIcon) {
-                  setMovingIcon(null);
-                } else if (copyingIcon) {
-                  setCopyingIcon(null);
-                } else {
-                  setAddIconMode(!addIconMode);
-                }
-              }}
-              className={addIconMode ? '!bg-yellow-600' : copyingIcon ? '!bg-green-600' : movingIcon ? '!bg-purple-600' : pendingDungeonLink ? '!bg-orange-600' : ''}
-            >
-              {pendingDungeonLink ? `🔗 Place Exit: ${pendingDungeonLink.label}` : movingIcon ? `↔️ Moving: ${movingIcon.label}` : copyingIcon ? `📋 Copying: ${copyingIcon.label}` : addIconMode ? '✓ Click Map' : '+ Add Icon'}
-            </OSRSButton>
-
-            {/* Export/Import Buttons */}
-            <div className="flex items-center gap-1 border-l border-gray-600 pl-4">
-              <OSRSButton 
-                onClick={handleExportIcons}
-                className="!min-h-[28px]"
-                title="Export icons to JSON file"
-              >
-                💾 Export
-              </OSRSButton>
-              <OSRSButton 
-                onClick={handleImportIcons}
-                className="!min-h-[28px]"
-                title="Import icons from JSON file"
-              >
-                📂 Import
-              </OSRSButton>
-            </div>
+            {clickedCoords && (
+              <div className="text-xs text-gray-400 hidden md:block">
+                {clickedCoords.lat.toFixed(1)}, {clickedCoords.lng.toFixed(1)}
+              </div>
+            )}
           </div>
         </div>
       </IronRivetPanel>
-
-      {/* Add Icon Dialog */}
-      {showIconDialog && pendingIconPosition && (
-        <AddIconDialog
-          position={pendingIconPosition}
-          plane={currentPlane}
-          onAdd={handleAddIcon}
-          onCancel={() => {
-            setShowIconDialog(false);
-            setPendingIconPosition(null);
-            setAddIconMode(false);
-          }}
-        />
-      )}
-
-      {/* Edit Icon Dialog */}
-      {editingIcon && (
-        <EditIconDialog
-          icon={editingIcon}
-          onSave={handleSaveEdit}
-          onCancel={() => setEditingIcon(null)}
-        />
-      )}
     </main>
   );
 }

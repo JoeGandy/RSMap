@@ -108,7 +108,8 @@ def explore_all_data(cache_dir, xtea_file):
         'org.explv.mapimage.WorldMapDataExplorer',
         '--cachedir', cache_dir,
         '--xteapath', xtea_file,
-        '--outputfile', output_file
+        '--outputfile', output_file,
+        '--spriteoutdir', os.path.join(REPO_DIR, 'public', 'map_sprites')
     ]
     
     LOG.info(f"Running command: {' '.join(cmd)}")
@@ -170,6 +171,7 @@ def main():
             LOG.info(f"  Icons: {len(data.get('icons', []))}")
             LOG.info(f"  Areas: {len(data.get('areas', []))}")
             LOG.info(f"  Intermap links: {len(data.get('intermapLinks', {}))}")
+            LOG.info(f"  Icon placements (object+element): {len(data.get('placements', []))}")
     else:
         # Extract just labels
         output_file = extract_labels(cache_path, xtea_path)

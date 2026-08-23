@@ -25,7 +25,6 @@
     "clean": "rm -rf generated_images/ public/tiles/ cache/ .next/",
     "start": "next start",
     "lint": "next lint",
-    "migrate-markers": "ts-node scripts/migrate-markers.ts",
     "check-dimensions": "./scripts/check-dimensions.sh",
     "explore-worldmap": "./scripts/explore-worldmap-data.sh"
   },
