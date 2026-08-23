@@ -23,7 +23,9 @@ export async function loadWorldMapAsIcons(includeIntermapLinks: boolean = true):
       const startCoords = osrsWorldToLeaflet(startX, startY, startZ);
       const endCoords = osrsWorldToLeaflet(endPos.x, endPos.y, endPos.z);
       
-      // Create icon at start location with destination stored
+      // Create icon at start location with destination stored.
+      // Keeps the proven manual-system asset (Map_link_icon.png) so link
+      // visuals stay consistent with the pre-cache behaviour.
       mapIcons.push({
         id: `worldmap-link-${linkIndex}`,
         position: {
@@ -31,7 +33,7 @@ export async function loadWorldMapAsIcons(includeIntermapLinks: boolean = true):
           lat: startCoords.lat
         },
         iconPath: '/map_icons/Map_link_icon.png',
-        label: `Link ${linkIndex + 1}`,
+        label: 'Map link',
         plane: startZ,
         createdAt: Date.now(),
         linkDestination: {
