@@ -1,72 +1,78 @@
 # Deployment Guide
 
-## Vercel Deployment (Recommended)
+> **Topology, incident history and verification steps live in [`docs/DEPLOYMENT_ARCHITECTURE.md`](docs/DEPLOYMENT_ARCHITECTURE.md) — read that first if you're debugging deploys or domains.** This file covers the practical "how to deploy".
 
-### Quick Deploy
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/osrs-world-map)
+## Production (how it actually works)
 
-### Manual Deployment
+Production is deployed **by GitHub Actions only** — Vercel's Git integration is disabled in `vercel.json` (`git.deploymentEnabled: false`).
 
-1. **Fork/Clone the repository**
-2. **Connect to Vercel**:
-   - Go to [vercel.com](https://vercel.com)
-   - Import your GitHub repository
-   - Vercel will auto-detect Next.js settings
+```
+push to main (non-tile paths)      ──► deploy-to-vercel.yml ──► vercel --prod ──► project "rsmap-uk"
+monthly tile run success           ──► same workflow via workflow_run
+push touching public/tiles/** only ──► deploy-tiles-to-pages.yml ──► GitHub Pages mirror
+```
 
-3. **Environment Variables** (if needed):
-   - No environment variables required for basic functionality
-   - Add any API keys if you extend the functionality
+### Required GitHub secrets
 
-4. **Build Settings**:
-   - Framework Preset: **Next.js**
-   - Build Command: `npm run build`
-   - Output Directory: `.next`
-   - Install Command: `npm install`
+| Secret | Purpose |
+|---|---|
+| `VERCEL_TOKEN` | CLI auth. **If empty, the deploy step silently skips and the job still passes** — a green run is not proof of a deploy. |
+| `VERCEL_ORG_ID` | Vercel team/scope id |
+| `VERCEL_PROJECT_ID` | Project id of `rsmap-uk` |
 
-### Vercel Configuration
+### What the workflow does
 
-The project includes optimal settings for Vercel:
+1. `npm ci` on Node 22
+2. `npm run build` (type-check + lint + prerender — this is the real gate)
+3. Removes `public/tiles/` (864 MB — tiles are served from GitHub Pages, never Vercel)
+4. `vercel --prod --token …` → deploys to project **`rsmap-uk`**
 
-- **Static File Serving**: Tiles served from `public/tiles/`
-- **API Routes**: Tile generation API works seamlessly
-- **Automatic HTTPS**: Provided by Vercel
-- **Global CDN**: Fast tile delivery worldwide
+### Verify a deploy actually shipped
 
-### Performance Considerations
+```bash
+# 1. log must contain the project name:
+#    "Deploying joegandys-projects/rsmap-uk"
+# 2. fresh deployment URL must NOT redirect to vercel.com/sso-api
+#    (if it does: Project → Settings → Deployment Protection → disable Vercel Authentication)
+# 3. served page chunk must match a local build of main:
+npm run build && ls .next/static/chunks/app/page-*.js
+curl -s https://www.rsmap.uk/ | grep -oE 'chunks/app/page-[a-f0-9]+\.js'
+# 4. tiles still flow:
+curl -sL -o /dev/null -w '%{http_code}\n' https://www.rsmap.uk/tiles/0/5/25/145.png   # expect 200
+```
 
-- **Tile Caching**: API routes include proper cache headers
-- **Static Assets**: Large tile files are served as static assets
-- **Bundle Size**: Core app is lightweight (~2MB)
+## Domains
 
-## Alternative Hosting
+`rsmap.uk` + `www.rsmap.uk` must be attached to the **`rsmap-uk`** project (Settings → Domains). DNS (Cloudflare):
 
-### Netlify
-1. Connect your repository to Netlify
-2. Build command: `npm run build && npm run export`
-3. Publish directory: `out`
+```
+A      @    76.76.21.21
+CNAME  www  cname.vercel-dns.com
+```
 
-### Self-Hosting
-1. Build the project: `npm run build`
-2. Start the server: `npm start`
-3. Serve on port 3000 or configure reverse proxy
+⚠️ Vercel allows a domain on only one project at a time. If the site serves stale builds while deploys succeed, the domain is probably attached to an old project — see `docs/DEPLOYMENT_ARCHITECTURE.md`.
 
-## Domain Setup
+## Local development
 
-1. **Custom Domain**: Add your domain in Vercel dashboard
-2. **DNS Configuration**: Point your domain to Vercel's nameservers
-3. **SSL**: Automatically provided by Vercel
+```bash
+npm ci
+npm run dev        # http://localhost:3000
+```
 
-## Monitoring
+Tiles load from the GitHub Pages mirror in dev too — no local tile files required.
 
-- **Vercel Analytics**: Built-in performance monitoring
-- **Error Tracking**: Automatic error reporting in Vercel dashboard
-- **Logs**: Real-time function logs available
+## Self-hosting (alternative)
 
-## Scaling
+The app is a standard Next.js server:
 
-Vercel Free Tier Limits:
-- **Bandwidth**: 100GB/month
-- **Function Executions**: 100GB-hours/month
-- **Build Time**: 6000 minutes/month
+```bash
+npm ci && npm run build && npm start   # :3000, reverse-proxy as needed
+```
 
-For higher traffic, upgrade to Pro plan.
+Tiles: either mirror `public/tiles/` onto the same host (restore from the repo or Pages) or keep pointing the frontend at the Pages mirror (it's a plain URL constant in `src/components/OSRSMap.tsx`).
+
+## Cost notes
+
+- **Vercel** serves only the lightweight app (~2 MB + chunks); tiles bypass it entirely, keeping bandwidth/billing minimal.
+- **GitHub Pages** carries the ~864 MB tile pyramid (repo-hosted, free for public repos).
+- The tile-generation runner costs up to 120 min/month of Actions time.

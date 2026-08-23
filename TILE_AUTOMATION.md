@@ -5,9 +5,11 @@ This project includes automated tile generation that runs monthly via GitHub Act
 ## 🚀 How It Works
 
 ### Automatic Monthly Updates
-- **Schedule**: Runs on the 1st of every month at 2:00 AM UTC
+- **Schedule**: Runs on the 1st of every month at 2:00 AM UTC (`cron: '0 2 1 * *'`)
 - **Process**: Downloads latest OSRS cache → Generates tiles → Commits changes
-- **Smart Updates**: Only regenerates if tiles are older than 30 days or missing
+- **Change detection**: Every run regenerates from the latest cache; the commit step only pushes when files actually differ
+
+> ⚠️ **The schedule can silently stop**: GitHub disables scheduled workflows on public repos after 60 days without repo activity. Because failed runs commit nothing, this already happened once (Apr–Aug 2026 the cron never fired). Check **Actions → Generate OSRS Tiles → ⋯ → Enable workflow** if a month goes quiet.
 
 ### Manual Triggering
 You can manually trigger tile generation anytime:
@@ -21,14 +23,9 @@ You can manually trigger tile generation anytime:
 ## 📋 What the Workflow Does
 
 ### 1. Environment Setup
-- ✅ Ubuntu runner with Node.js 18, Java 11, Python 3.9
-- ✅ Installs system dependencies (libvips, build tools)
-- ✅ Installs project dependencies (npm, pip, gradle)
-
-### 2. Smart Tile Checking
-- 🔍 Checks if tiles exist and are recent (< 30 days old)
-- 🔍 Skips generation if tiles are up-to-date (saves resources)
-- 🔍 Forces regeneration if manually requested
+- ✅ Ubuntu runner with Node.js 22 (npm install + app build); Java 17 + Python 3.11 live inside the generator Docker image
+- ✅ Installs system dependencies (libvips via Docker image), npm deps, Pillow/numpy for transparency pass
+- ✅ Tile generation itself runs in Docker (`osrs-tile-generator` image built from `tile_generator/Dockerfile`)
 
 ### 3. Tile Generation Process
 ```bash
@@ -105,27 +102,28 @@ env:
 
 ## 🚨 Troubleshooting
 
-### Common Issues
+These are the failure modes this pipeline has actually hit, in order of likelihood:
 
-**Workflow fails with memory errors:**
-- Increase `NODE_OPTIONS` memory limit
-- Consider splitting tile generation into smaller batches
+**1. Java dumper crashes: `BufferUnderflowException` while loading objects (with `Unrecognized opcode` warnings)**
+The pinned RuneLite cache library can't parse a newer game cache. `tile_generator/java/build.gradle` uses `net.runelite:cache:1.12.+` which auto-tracks the latest **stable** release — if you still see this, check whether a new stable was published recently and whether Gradle resolved it (`./gradlew dependencies | grep runelite`). This froze the map Mar–Aug 2026 when the dep was hard-pinned to `1.12.0`.
 
-**Tiles not updating:**
-- Check if workflow is enabled in repository settings
-- Verify the cron schedule syntax
-- Manually trigger to test
+**2. Cron never fired at all**
+GitHub disables scheduled workflows after 60 days without repo activity (`disabled_inactivity`). Failed tile runs commit nothing → inactivity → schedule dies silently. Fix: Actions tab → Generate OSRS Tiles → Enable workflow. Consider a keepalive commit or a watchdog alert.
 
-**Build fails after tile generation:**
-- Check if `public/tiles/` directory structure is correct
-- Verify tile files are valid PNG format
-- Check Next.js build logs for specific errors
+**3. Workflow "succeeds" but site still shows old tiles**
+Deploy chain: tiles commit → Pages publish → Vercel deploy. Check each hop: Pages deployment status, then `docs/DEPLOYMENT_ARCHITECTURE.md` (domain/project mismatch has bitten here).
+
+**4. Memory errors during render/slice**
+The Java dumper wants ~8 GB heap; Node slicing uses `NODE_OPTIONS='--max-old-space-size=4096'`. On local machines ensure Docker has ≥8 GB allocated.
+
+**5. Build fails after generation**
+Check `public/tiles/` structure (planes 0–3 × zooms 0–6) and that PNGs are valid. The slicer logs per-zoom failures but continues — inspect the Python step output, not just the exit code.
 
 ### Debug Steps
-1. Check workflow logs in GitHub Actions
+1. Check workflow logs in GitHub Actions (the Java step's stderr is inside the Docker build/run logs)
 2. Download failed run artifacts (if available)
-3. Run tile generation locally to reproduce issues
-4. Check system dependencies and versions
+3. Reproduce locally: `npm run clean && ./scripts/generate-tiles.sh`
+4. Compare against the last known-good cache on [archive.openrs2.org](https://archive.openrs2.org/) — if only the newest cache fails, it's a format change (see #1)
 
 ## 📁 File Structure
 
@@ -133,13 +131,14 @@ After successful generation:
 ```
 public/tiles/
 ├── 0/          # Plane 0 (surface)
-│   ├── 3/      # Zoom level 3
-│   ├── 4/      # Zoom level 4
-│   └── ...     # Up to zoom level 11
+│   ├── 0/      # Zoom level 0 … up to zoom level 6
+│   └── 5/      # Zoom 5 = reference grid: 51 x 178 tiles (256px each)
 ├── 1/          # Plane 1 (underground)
 ├── 2/          # Plane 2 (sky level 1)
 └── 3/          # Plane 3 (sky level 2)
 ```
+
+~193k files / ~864 MB total. Tile path pattern: `/tiles/{plane}/{zoom}/{x}/{y}.png`.
 
 ## 🔐 Security
 
@@ -154,6 +153,6 @@ public/tiles/
 - 💰 **Cost Effective**: Only regenerates when needed
 - 🛡️ **Reliable**: Robust error handling and recovery
 - 📊 **Transparent**: Full logging and status reporting
-- 🚀 **Zero Maintenance**: Set it and forget it
+- 🚀 **Low maintenance**: fully automated, with per-run summaries — but check in monthly: this pipeline has several *silent* failure modes (see Troubleshooting)
 
 Your OSRS map will now stay current with the latest game updates automatically! 🎉
