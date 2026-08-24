@@ -79,10 +79,21 @@ export default function CanvasIconLayer({
   // "can't access property \"dirty\", n._latlngMarkers is undefined" and can
   // take down the whole page on load. Guard all redraw call sites until the
   // index exists.
+  // The plugin's plain redraw() repaints icons at current viewport pixel
+  // positions WITHOUT first re-anchoring the canvas to the new layer-space
+  // origin (that re-anchor only happens in its internal _reset). Repainting
+  // against a stale anchor offsets every icon by exactly the pan/zoom drift,
+  // accumulating with each move. Always go through the atomic sequence the
+  // plugin itself uses on map movement: _reset (re-anchor + resize canvas)
+  // then a clearing redraw.
   const safeRedraw = () => {
-    const layer = layerRef.current;
-    if (!layer || !layer._latlngMarkers) return;
-    layer.redraw();
+    const layer: any = layerRef.current;
+    if (!layer || !layer._latlngMarkers || !map) return;
+    if (typeof layer._reset !== 'function' || !layer._canvas) {
+      return;
+    }
+    layer._reset();
+    layer._redraw(true);
   };
 
   // Initialize canvas layer
@@ -235,21 +246,15 @@ export default function CanvasIconLayer({
       }
     };
 
-    const handleMoveEnd = () => {
-      if (!layerRef.current) return;
-      
-      // Redraw canvas after pan (guarded)
-      safeRedraw();
-    };
-
     map.on('zoomstart', handleZoomStart);
     map.on('zoomend', updateIconSizes);
-    map.on('moveend', handleMoveEnd);
+    // moveend is handled internally by the plugin (onAdd registers its own
+    // _reset handler). Adding ours here caused double-repaints against a
+    // stale canvas anchor — the source of the icon-position drift on pan.
 
     return () => {
       map.off('zoomstart', handleZoomStart);
       map.off('zoomend', updateIconSizes);
-      map.off('moveend', handleMoveEnd);
     };
   }, [map]);
 
