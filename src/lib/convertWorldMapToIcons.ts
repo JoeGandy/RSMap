@@ -24,15 +24,15 @@ export async function loadWorldMapAsIcons(includeIntermapLinks: boolean = true):
       const endCoords = osrsWorldToLeaflet(endPos.x, endPos.y, endPos.z);
       
       // Create icon at start location with destination stored.
-      // Keeps the proven manual-system asset (Map_link_icon.png) so link
-      // visuals stay consistent with the pre-cache behaviour.
+      // Uses the actual game's map-link sprite (1535) from the cache export
+      // instead of a manually curated PNG that may not exist in the repo.
       mapIcons.push({
         id: `worldmap-link-${linkIndex}`,
         position: {
           lng: startCoords.lng,
           lat: startCoords.lat
         },
-        iconPath: '/map_icons/Map_link_icon.png',
+        iconPath: '/map_sprites/1535.png',
         label: 'Map link',
         plane: startZ,
         createdAt: Date.now(),

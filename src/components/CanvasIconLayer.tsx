@@ -124,6 +124,33 @@ export default function CanvasIconLayer({
           layer._latlngMarkers.total = 0;
         }
 
+        // Defensive: wrap the plugin's _drawImage so a single broken image
+        // (404, invalid data-URI, still-loading) logs a warning instead of
+        // throwing DOMException that aborts the entire repaint loop.
+        const nativeDrawImage = layer._drawImage.bind(layer);
+        const warnedUrls = new Set<string>();
+        layer._drawImage = (marker: any, point: any) => {
+          try {
+            const img = marker?.canvas_img;
+            if (!img) return;
+            if (!img.complete || img.naturalWidth === 0) {
+              const url = marker?.options?.icon?.options?.iconUrl;
+              if (url && !warnedUrls.has(url)) {
+                warnedUrls.add(url);
+                console.warn('🖼️ [map icons] skipping broken/unloaded image:', url);
+              }
+              return;
+            }
+            nativeDrawImage(marker, point);
+          } catch (e) {
+            const url = marker?.options?.icon?.options?.iconUrl;
+            if (url && !warnedUrls.has(url)) {
+              warnedUrls.add(url);
+              console.warn('🖼️ [map icons] drawImage failed for:', url, e);
+            }
+          }
+        };
+
         // Hide the marker img elements - we only want canvas rendering
         // The library creates img elements for click detection, but they cause ghost icons
         // We hide them and rely on the canvas click listener instead
@@ -167,46 +194,80 @@ export default function CanvasIconLayer({
   useEffect(() => {
     if (!layerRef.current || !isLibraryLoaded) return;
 
-    const zoom = map.getZoom();
-    const iconSize = getIconSize(zoom);
+    let cancelled = false;
 
-    // Filter icons for current plane
-    const planeIcons = icons.filter(icon => icon.plane === plane);
+    const updateMarkers = async () => {
+      const zoom = map.getZoom();
+      const iconSize = getIconSize(zoom);
 
-    // Remove ALL existing markers first (to handle plane changes properly)
-    iconsRef.current.forEach((marker, id) => {
-      layerRef.current.removeMarker(marker, false);
-    });
-    iconsRef.current.clear();
+      // Filter icons for current plane
+      const planeIcons = icons.filter(icon => icon.plane === plane);
 
-    // Add all icons for current plane
-    planeIcons.forEach(icon => {
-      // Create Leaflet icon
-      const leafletIcon = L.icon({
-        iconUrl: icon.iconPath,
-        iconSize: [iconSize, iconSize],
-        iconAnchor: [iconSize / 2, iconSize / 2],
+      // Preload all distinct icon URLs and filter out broken ones.
+      // A single broken image (404, invalid data-URI) causes
+      // CanvasRenderingContext2D.drawImage to throw DOMException, which
+      // aborts the entire repaint loop — killing all icons on every pan.
+      const uniqueUrls = Array.from(new Set(planeIcons.map(i => i.iconPath)));
+      const preloadResults = await Promise.all(
+        uniqueUrls.map(
+          url =>
+            new Promise<string | null>(resolve => {
+              const img = new Image();
+              img.onload = () => resolve(null);
+              img.onerror = () => resolve(url);
+              img.src = url;
+            }),
+        ),
+      );
+      const brokenUrls = new Set(preloadResults.filter(Boolean) as string[]);
+      if (brokenUrls.size > 0) {
+        console.warn(
+          '🚨 [map icons] broken icon assets (markers filtered out):',
+          Array.from(brokenUrls),
+        );
+      }
+      if (cancelled) return;
+
+      const usableIcons = planeIcons.filter(i => !brokenUrls.has(i.iconPath));
+
+      // Remove ALL existing markers first (to handle plane changes properly)
+      iconsRef.current.forEach((marker, id) => {
+        layerRef.current.removeMarker(marker, false);
+      });
+      iconsRef.current.clear();
+
+      // Add all icons for current plane
+      usableIcons.forEach(icon => {
+        // Create Leaflet icon
+        const leafletIcon = L.icon({
+          iconUrl: icon.iconPath,
+          iconSize: [iconSize, iconSize],
+          iconAnchor: [iconSize / 2, iconSize / 2],
+        });
+
+        // Add new marker
+        const marker = L.marker([icon.position.lat, icon.position.lng], {
+          icon: leafletIcon
+        });
+        
+        // Store icon data on the marker instance
+        (marker as any)._iconData = icon;
+        
+        layerRef.current.addMarker(marker);
+        iconsRef.current.set(icon.id, marker);
       });
 
-      // Add new marker
-      const marker = L.marker([icon.position.lat, icon.position.lng], {
-        icon: leafletIcon
-      });
+      // Redraw the canvas (guarded - index may not exist before first marker)
+      safeRedraw();
       
-      // Store icon data on the marker instance
-      (marker as any)._iconData = icon;
-      
-      layerRef.current.addMarker(marker);
-      iconsRef.current.set(icon.id, marker);
-    });
+      // Ensure canvas is visible
+      if (layerRef.current._canvas) {
+        layerRef.current._canvas.style.opacity = '1';
+      }
+    };
 
-    // Redraw the canvas (guarded - index may not exist before first marker)
-    safeRedraw();
-    
-    // Ensure canvas is visible
-    if (layerRef.current._canvas) {
-      layerRef.current._canvas.style.opacity = '1';
-    }
+    updateMarkers();
+    return () => { cancelled = true; };
   }, [icons, plane, map, isLibraryLoaded]);
 
   // Update icon sizes on zoom and handle map movement
