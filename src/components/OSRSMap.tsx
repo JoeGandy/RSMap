@@ -118,6 +118,13 @@ export default function OSRSMap({
                   tileSize={256}
                   noWrap={true}
                   opacity={1}
+                  // Perf: don't re-fetch/reposition tiles continuously during
+                  // a drag (updates on moveend instead), keep an extra ring
+                  // of loaded tiles around the viewport so panning back and
+                  // forth doesn't flash, and skip low-res placeholder fills.
+                  updateWhenIdle={true}
+                  keepBuffer={4}
+                  detectRetina={false}
                   attribution="OSRS Map Data"
                 />
               );

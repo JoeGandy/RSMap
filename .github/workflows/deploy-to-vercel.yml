@@ -12,6 +12,10 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -68,12 +72,44 @@ jobs:
         VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
     - name: Deploy to Vercel (Preview)
-      run: vercel --token ${{ secrets.VERCEL_TOKEN }}
+      id: deploy_preview
+      run: |
+        URL=$(vercel --token ${{ secrets.VERCEL_TOKEN }} | tail -1)
+        echo "preview_url=$URL" >> "$GITHUB_OUTPUT"
+        echo "Preview deployed: $URL"
       if: github.ref != 'refs/heads/main' && env.VERCEL_TOKEN != ''
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    - name: Comment preview URL on PR
+      if: github.event_name == 'pull_request' && steps.deploy_preview.outputs.preview_url != ''
+      env:
+        GH_TOKEN: ${{ github.token }}
+        URL: ${{ steps.deploy_preview.outputs.preview_url }}
+        BRANCH: ${{ github.head_ref }}
+        REPO: ${{ github.repository }}
+      run: |
+        PR_NUMBER=$(gh pr list -R "$REPO" --head "$BRANCH" --state open --json number --jq '.[0].number')
+        if [ -z "$PR_NUMBER" ]; then
+          echo "No open PR for branch '$BRANCH' — skipping comment."
+          exit 0
+        fi
+        MARKER='<!-- vercel-preview-url -->'
+        BODY="${MARKER}
+        ## 🔍 Preview deployment
+        Live preview: ${URL}
+        _Re-deploys automatically on every commit to \`${BRANCH}\`. This comment updates in place._"
+        COMMENT_ID=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+          --jq ".[] | select(.user.login==\"github-actions[bot]\") | select(.body | startswith(\"$MARKER\")) | .id" | head -1)
+        if [ -n "$COMMENT_ID" ]; then
+          gh api -X PATCH "repos/$REPO/issues/comments/$COMMENT_ID" -f body="$BODY" >/dev/null
+          echo "Updated existing preview comment on #$PR_NUMBER"
+        else
+          gh pr comment "$PR_NUMBER" -R "$REPO" --body "$BODY"
+          echo "Posted preview comment on #$PR_NUMBER"
+        fi
 
     # Option 2: Simple notification (if secrets not configured)
     - name: Deployment Ready Notification
