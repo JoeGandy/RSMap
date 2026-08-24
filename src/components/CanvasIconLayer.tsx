@@ -39,28 +39,39 @@ export default function CanvasIconLayer({
   const iconsRef = useRef<Map<string, any>>(new Map());
   const [isLibraryLoaded, setIsLibraryLoaded] = useState(false);
   const [popupIcon, setPopupIcon] = useState<MapIcon | null>(null);
+  const popupWrapperRef = useRef<HTMLDivElement | null>(null);
   // Anchor the popup to the icon's geographic position (not a frozen screen
-  // point) so it pans/zooms together with the map.
-  const [popupLatLng, setPopupLatLng] = useState<{ lat: number; lng: number } | null>(null);
-
-  // Project the anchored geographic point to a screen position whenever the
-  // map moves or zooms, so the popup rides along with its icon.
+  // point) so it pans/zooms together with the map. The screen position is
+  // computed ONCE at click time for the initial render; from then on the
+  // popup is re-positioned by directly writing to the DOM on map move —
+  // calling setState per move event caused a React re-render every frame
+  // and made panning stutter.
   const [popupScreen, setPopupScreen] = useState<{ x: number; y: number } | null>(null);
+
   useEffect(() => {
-    if (!popupLatLng) {
-      setPopupScreen(null);
-      return;
-    }
+    if (!popupIcon) return;
     const project = () => {
-      const p = map.latLngToContainerPoint([popupLatLng.lat, popupLatLng.lng]);
-      setPopupScreen({ x: p.x, y: p.y });
+      if (!popupWrapperRef.current) return;
+      const container = popupWrapperRef.current.querySelector('.icon-popup-container') as HTMLElement | null;
+      if (!container || !popupIcon) return;
+      const ll = (popupIcon as any)._anchorLatLng;
+      if (!ll) return;
+      const p = map.latLngToContainerPoint([ll.lat, ll.lng]);
+      container.style.left = `${p.x}px`;
+      container.style.top = `${p.y}px`;
     };
     project();
-    map.on('move zoom viewreset resize', project);
-    return () => {
-      map.off('move zoom viewreset resize', project);
+    let raf = 0;
+    const onMove = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => { raf = 0; project(); });
     };
-  }, [map, popupLatLng]);
+    map.on('move zoom viewreset resize', onMove);
+    return () => {
+      map.off('move zoom viewreset resize', onMove);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [map, popupIcon]);
 
   // Calculate icon size based on zoom
   const getIconSize = (zoom: number) => {
@@ -157,10 +168,13 @@ export default function CanvasIconLayer({
 
             if (iconData) {
               // Anchor popup to the icon's geographic position so it tracks
-              // the map on pan/zoom; convert to screen point for rendering.
+              // the map on pan/zoom. Initial screen point is computed here;
+              // subsequent repositioning happens imperatively in the effect.
               const ll = markerData.getLatLng();
+              const p = map.latLngToContainerPoint([ll.lat, ll.lng]);
+              (iconData as any)._anchorLatLng = { lat: ll.lat, lng: ll.lng };
+              setPopupScreen({ x: p.x, y: p.y });
               setPopupIcon(iconData);
-              setPopupLatLng({ lat: ll.lat, lng: ll.lng });
             }
           }
         });
@@ -238,16 +252,29 @@ export default function CanvasIconLayer({
       const zoom = map.getZoom();
       const iconSize = getIconSize(zoom);
 
-      // Update all marker icon sizes
-      iconsRef.current.forEach((marker, id) => {
-        const iconData = (marker as any)._iconData;
-        if (iconData) {
-          const newIcon = L.icon({
-            iconUrl: iconData.iconPath,
+      // Update all marker icon sizes. Icons are cached per URL+size: the
+      // plugin's _drawMarker keys its image cache by iconUrl, so reusing a
+      // shared L.icon instance per distinct (url, size) pair avoids
+      // allocating thousands of duplicate icon objects on every zoomend.
+      const iconCache = new Map<string, L.Icon>();
+      const getIconFor = (iconPath: string) => {
+        const key = `${iconPath}@${iconSize}`;
+        let ic = iconCache.get(key);
+        if (!ic) {
+          ic = L.icon({
+            iconUrl: iconPath,
             iconSize: [iconSize, iconSize],
             iconAnchor: [iconSize / 2, iconSize / 2],
           });
-          marker.setIcon(newIcon);
+          iconCache.set(key, ic);
+        }
+        return ic;
+      };
+
+      iconsRef.current.forEach((marker, id) => {
+        const iconData = (marker as any)._iconData;
+        if (iconData) {
+          marker.setIcon(getIconFor(iconData.iconPath));
         }
       });
 
@@ -283,7 +310,7 @@ export default function CanvasIconLayer({
       }
       
       setPopupIcon(null);
-      setPopupLatLng(null);
+      setPopupScreen(null);
     };
 
     map.on('click', handleMapClick);
@@ -296,19 +323,21 @@ export default function CanvasIconLayer({
   return (
     <>
       {popupIcon && popupScreen && (
-        <IconPopup
-          icon={popupIcon}
-          position={popupScreen}
-          onEdit={onIconEdit}
-          onDelete={onIconDelete}
-          onCopy={onIconCopy}
-          onMove={onIconMove}
-          onClick={onIconClick}
-          onClose={() => {
-            setPopupIcon(null);
-            setPopupLatLng(null);
-          }}
-        />
+        <div ref={popupWrapperRef}>
+          <IconPopup
+            icon={popupIcon}
+            position={popupScreen}
+            onEdit={onIconEdit}
+            onDelete={onIconDelete}
+            onCopy={onIconCopy}
+            onMove={onIconMove}
+            onClick={onIconClick}
+            onClose={() => {
+              setPopupIcon(null);
+              setPopupScreen(null);
+            }}
+          />
+        </div>
       )}
     </>
   );
