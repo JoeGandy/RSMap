@@ -97,7 +97,22 @@ export default function CanvasIconLayer({
     loadCanvasMarkers().then(() => {
       if (!layerRef.current && (L as any).canvasIconLayer) {
         layerRef.current = (L as any).canvasIconLayer({}).addTo(map);
-        
+
+        // Pre-seed the plugin's spatial indexes. The library only creates
+        // _markers/_latlngMarkers lazily inside addMarker(), but its own
+        // moveend handler (_reset -> _redraw) dereferences them
+        // unconditionally. Any pan/zoom before the first marker is added
+        // crashed the redraw and blanked the canvas (icons disappeared).
+        // The webpack bundle exposes rbush as window.rbush.
+        const layer: any = layerRef.current;
+        const Rbush = (window as any).rbush;
+        if (!layer._latlngMarkers && Rbush) {
+          layer._markers = new Rbush();
+          layer._latlngMarkers = new Rbush();
+          layer._latlngMarkers.dirty = 0;
+          layer._latlngMarkers.total = 0;
+        }
+
         // Hide the marker img elements - we only want canvas rendering
         // The library creates img elements for click detection, but they cause ghost icons
         // We hide them and rely on the canvas click listener instead
