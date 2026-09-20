@@ -56764,6 +56764,15 @@
       "source": "object"
     },
     {
+      "name": "Icon 1454",
+      "worldX": 3054,
+      "worldY": 2639,
+      "plane": 0,
+      "spriteId": 1454,
+      "membersOnly": false,
+      "source": "object"
+    },
+    {
       "name": "Icon 1474",
       "worldX": 3036,
       "worldY": 2834,
@@ -57498,6 +57507,15 @@
       "worldY": 3450,
       "plane": 0,
       "spriteId": 1534,
+      "membersOnly": false,
+      "source": "object"
+    },
+    {
+      "name": "Icon 1454",
+      "worldX": 3036,
+      "worldY": 3455,
+      "plane": 0,
+      "spriteId": 1454,
       "membersOnly": false,
       "source": "object"
     },
@@ -60386,7 +60404,7 @@
     "totalElements": 1272,
     "elementsWithLabels": 1057,
     "elementsWithIcons": 215,
-    "totalAreas": 1266,
+    "totalAreas": 1268,
     "intermapLinkCount": 406,
     "categories": {
       "-1": "Unknown",
