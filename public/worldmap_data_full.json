@@ -6591,6 +6591,16 @@
       "spriteId": -1
     },
     {
+      "name": "Tormented\u003cbr\u003eDemons",
+      "worldX": 4076,
+      "worldY": 4434,
+      "plane": 0,
+      "textColor": 16777215,
+      "textScale": 0,
+      "category": 1129,
+      "spriteId": -1
+    },
+    {
       "name": "Here be a\u003cbr\u003ebig mole",
       "worldX": 1760,
       "worldY": 5188,
@@ -19556,6 +19566,14 @@
       "spriteId": -1,
       "textColor": 16777215,
       "textScale": 0
+    },
+    {
+      "id": 1268,
+      "name": "Tormented\u003cbr\u003eDemons",
+      "category": 1129,
+      "spriteId": -1,
+      "textColor": 16777215,
+      "textScale": 0
     }
   ],
   "intermapLinks": {
@@ -22821,6 +22839,42 @@
       "worldY": 5404,
       "plane": 1,
       "spriteId": 1504,
+      "membersOnly": false,
+      "source": "object"
+    },
+    {
+      "name": "Icon 1453",
+      "worldX": 4121,
+      "worldY": 5553,
+      "plane": 0,
+      "spriteId": 1453,
+      "membersOnly": false,
+      "source": "object"
+    },
+    {
+      "name": "Icon 1453",
+      "worldX": 4134,
+      "worldY": 5553,
+      "plane": 0,
+      "spriteId": 1453,
+      "membersOnly": false,
+      "source": "object"
+    },
+    {
+      "name": "Icon 1456",
+      "worldX": 4113,
+      "worldY": 5536,
+      "plane": 0,
+      "spriteId": 1456,
+      "membersOnly": false,
+      "source": "object"
+    },
+    {
+      "name": "Icon 1533",
+      "worldX": 4137,
+      "worldY": 5548,
+      "plane": 0,
+      "spriteId": 1533,
       "membersOnly": false,
       "source": "object"
     },
@@ -55765,6 +55819,15 @@
       "source": "object"
     },
     {
+      "name": "Icon 1520",
+      "worldX": 2963,
+      "worldY": 3211,
+      "plane": 0,
+      "spriteId": 1520,
+      "membersOnly": false,
+      "source": "object"
+    },
+    {
       "name": "Icon 1512",
       "worldX": 2950,
       "worldY": 3215,
@@ -60401,10 +60464,10 @@
     }
   ],
   "stats": {
-    "totalElements": 1272,
-    "elementsWithLabels": 1057,
+    "totalElements": 1273,
+    "elementsWithLabels": 1058,
     "elementsWithIcons": 215,
-    "totalAreas": 1268,
+    "totalAreas": 1269,
     "intermapLinkCount": 406,
     "categories": {
       "-1": "Unknown",
